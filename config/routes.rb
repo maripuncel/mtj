@@ -1,9 +1,14 @@
 Mtj::Application.routes.draw do
+  resources :interviews
+
   root :to =>  "static_pages#home"
 
   resources :companies
-
   resources :users
+
+  match 'companies/:id/interviews' => 'companies#interview', :as => :interview
+  match 'companies/:id/new_interview', to: 'companies#new_interview', :as => :new_interview
+  match 'add/interview', to: 'interviews#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

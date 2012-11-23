@@ -43,7 +43,6 @@ class InterviewsController < ApplicationController
   def create
     Interview.add_interview(params)
     render :text => 'http://localhost:3000/companies/' + params[:company] + '/interviews'
-    # TODO fix this redirect
   end
 
   # PUT /interviews/1

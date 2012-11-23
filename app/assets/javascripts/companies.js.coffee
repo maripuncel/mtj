@@ -15,3 +15,17 @@ $ ->
       data: query
       success: (data, code, xmlhttp) ->
         window.location = xmlhttp.responseText
+
+$ ->
+  $('#add-offer').click (e) ->
+    e.preventDefault()
+    figure = $('#offer-figure').val()
+    company = $('#offer-company').val()
+    query = 'figure=' + figure + '&company=' + company
+    url = 'http://localhost:3000/add/offer'
+    $.ajax
+      type: 'POST'
+      url: url
+      data: query
+      success: (data, code, xmlhttp) ->
+        window.location = xmlhttp.responseText

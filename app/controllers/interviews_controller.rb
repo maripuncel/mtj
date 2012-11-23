@@ -42,7 +42,7 @@ class InterviewsController < ApplicationController
   # POST /interviews.json
   def create
     Interview.add_interview(params)
-    redirect_to :root
+    render :text => 'http://localhost:3000/companies/' + params[:company] + '/interviews'
     # TODO fix this redirect
   end
 

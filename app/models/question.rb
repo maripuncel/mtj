@@ -1,6 +1,7 @@
 class Question < ActiveRecord::Base
   attr_accessible :company_id, :content, :user_id
   belongs_to :company
+  has_many :answers
 
   def self.add_question(params)
     question = Question.new

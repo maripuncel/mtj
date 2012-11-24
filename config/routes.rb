@@ -1,4 +1,6 @@
 Mtj::Application.routes.draw do
+  resources :answers
+
   resources :questions
 
   resources :offers
@@ -21,6 +23,10 @@ Mtj::Application.routes.draw do
   match 'companies/:id/questions', to: 'companies#question', :as => :question
   match 'companies/:id/new_question', to: 'companies#new_question', :as => :new_question
   match 'add/question', to: 'questions#create'
+
+  match 'questions/:id/answers', to: 'questions#answer', :as => :answer
+  match 'questions/:id/new_answer', to: 'questions#new_answer', :as => :new_answer
+  match 'add/answer', to: 'answers#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

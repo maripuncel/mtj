@@ -12,6 +12,15 @@ class QuestionsController < ApplicationController
     render :text => 'http://localhost:3000/companies/' + params[:company] + '/questions'
   end
 
+  def answer
+    @question = Question.find(params[:id])
+    @answers = @question.answers.all
+  end
+
+  def new_answer
+    @question = Question.find(params[:id])
+  end
+
   # PUT /questions/1
   # PUT /questions/1.json
   def update

@@ -29,3 +29,17 @@ $ ->
       data: query
       success: (data, code, xmlhttp) ->
         window.location = xmlhttp.responseText
+
+$ ->
+  $('#add-question').click (e) ->
+    e.preventDefault()
+    content = $('#question-content').val()
+    company = $('#question-company').val()
+    query = 'content=' + content + '&company=' + company
+    url = 'http://localhost:3000/add/question'
+    $.ajax
+      type: 'POST'
+      url: url
+      data: query
+      success: (data, code, xmlhttp) ->
+        window.location = xmlhttp.responseText

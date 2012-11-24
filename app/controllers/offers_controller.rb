@@ -1,37 +1,4 @@
 class OffersController < ApplicationController
-  # GET /offers
-  # GET /offers.json
-  def index
-    @offers = Offer.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @offers }
-    end
-  end
-
-  # GET /offers/1
-  # GET /offers/1.json
-  def show
-    @company = Company.find(params[:company_id])
-    if @company
-      @offers = Offer.where(:company_id => @company.id).all
-      render :'offers/index'
-    else
-      render :nothing
-    end
-  end
-
-  # GET /offers/new
-  # GET /offers/new.json
-  def new
-    @offer = Offer.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @offer }
-    end
-  end
 
   # GET /offers/1/edit
   def edit

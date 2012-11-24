@@ -40,6 +40,15 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
   end
 
+  def question
+    @company = Company.find(params[:id])
+    @questions = @company.questions.all
+  end
+
+  def new_question
+    @company = Company.find(params[:id])
+  end
+
   # GET /companies/new
   # GET /companies/new.json
   def new

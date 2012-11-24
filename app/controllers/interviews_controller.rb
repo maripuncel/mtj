@@ -1,37 +1,4 @@
 class InterviewsController < ApplicationController
-  # GET /interviews
-  # GET /interviews.json
-  def index
-    @interviews = Interview.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @interviews }
-    end
-  end
-
-  # GET /interviews/1
-  # GET /interviews/1.json
-  def show
-    @company = Company.find(params[:company_id])
-    if @company
-      @interviews = Interview.where(:company_id => @company.id).all
-      render :'interviews/index'
-    else
-      render :nothing
-    end
-  end
-
-  # GET /interviews/new
-  # GET /interviews/new.json
-  def new
-    @interview = Interview.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @interview }
-    end
-  end
 
   # GET /interviews/1/edit
   def edit

@@ -3,4 +3,5 @@ class Company < ActiveRecord::Base
 
   has_many :interviews
   has_many :offers
+  has_many :questions
 end

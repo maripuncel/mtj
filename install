@@ -1528,4 +1528,54 @@ Total 11 (delta 8), reused 0 (delta 0)
 To git@heroku.com:vast-dusk-2147.git
    3d60b6b..901c2cf  master -> master
 ]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku run rakd[Ke db:reset
-Running `rake db:reset` attached to terminal...
+Running `rake db:reset` attached to terminal... up, run.1
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+Connecting to database specified by DATABASE_URL
+Couldn't drop d7164a6cgvl40i : #<PGError: FATAL:  permission denied for database "postgres"
+DETAIL:  User does not have CONNECT privilege.
+>
+d7164a6cgvl40i already exists
+-- create_table("answers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "answers_id_seq" for serial column "answers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "answers_pkey" for table "answers"
+   -> 0.4375s
+-- create_table("companies", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "companies_id_seq" for serial column "companies.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "companies_pkey" for table "companies"
+   -> 0.1096s
+-- create_table("interviews", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "interviews_id_seq" for serial column "interviews.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "interviews_pkey" for table "interviews"
+   -> 0.1822s
+-- create_table("offers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "offers_id_seq" for serial column "offers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "offers_pkey" for table "offers"
+   -> 0.2206s
+-- create_table("questions", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "questions_id_seq" for serial column "questions.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "questions_pkey" for table "questions"
+   -> 0.2294s
+-- create_table("users", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+   -> 0.1713s
+-- initialize_schema_migrations_table()
+   -> 0.0032s
+-- assume_migrated_upto_version(20121125024228, ["/app/db/migrate"])
+   -> 0.0018s
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ gt[Kit add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -am "a"
+[master ad00519] a
+ 3 files changed, 142 insertions(+), 3 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 13, done.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1.76 KiB, done.
+Total 7 (delta 6), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   901c2cf..ad00519  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 13, done.
+Compressi

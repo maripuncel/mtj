@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
 	def login
 	  user = User.find(:first, :conditions => {:email => params[:email]})
 	  if user && !user.activated
-	    flash.now[:notice] = 'Account is not yet activated'
+	    flash[:notice] = 'Account is not yet activated'
 	    redirect_to '/login'
 	  elsif user && user[:password] == params[:password]
 	    session[:user_id] = user.id

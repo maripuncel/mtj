@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    current_user()
   end
 
   def register

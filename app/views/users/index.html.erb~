@@ -4,8 +4,6 @@
   <tr>
     <th>Email</th>
     <th>Password</th>
-    <th>Activated</th>
-    <th>Serial</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,8 +13,6 @@
   <tr>
     <td><%= user.email %></td>
     <td><%= user.password %></td>
-    <td><%= user.activated %></td>
-    <td><%= user.serial %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

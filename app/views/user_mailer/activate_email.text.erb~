@@ -1,0 +1,7 @@
+Welcome to MITJobTalk.mit.edu
+
+You have successfully signed up to MITJobTalk
+
+Please verify your email address by follow this link: <%= @url %>.
+
+Thanks for joining and have a great day!

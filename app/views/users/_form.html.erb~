@@ -19,14 +19,6 @@
     <%= f.label :password %><br />
     <%= f.text_field :password %>
   </div>
-  <div class="field">
-    <%= f.label :activated %><br />
-    <%= f.text_field :activated %>
-  </div>
-  <div class="field">
-    <%= f.label :serial %><br />
-    <%= f.text_field :serial %>
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

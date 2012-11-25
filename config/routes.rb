@@ -1,11 +1,11 @@
 Mtj::Application.routes.draw do
 
-  match '/register' => 'static_pages#register'
-  match '/login' => 'static_pages#login'
-  match '/logout' => 'sessions#destroy'
-  match '/sessions' => 'sessions#login'
-  match '/create_account' => 'sessions#create'
-  match '/activate/:serial' => 'sessions#activate'
+  match 'register' => 'static_pages#register'
+  match 'login' => 'static_pages#login'
+  match 'logout' => 'sessions#destroy'
+  match 'sessions' => 'sessions#login'
+  match 'create_account' => 'sessions#create'
+  match 'activate/:serial' => 'sessions#activate'
 
   resources :answers
 

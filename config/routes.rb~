@@ -1,4 +1,12 @@
 Mtj::Application.routes.draw do
+
+  match '/register' => 'static_pages#register'
+  match '/login' => 'static_pages#login'
+  match '/logout' => 'sessions#destroy'
+  match '/sessions' => 'sessions#login'
+  match '/create_account' => 'sessions#create'
+  match '/activate/:serial' => 'sessions#activate'
+
   resources :answers
 
   resources :questions
@@ -11,13 +19,6 @@ Mtj::Application.routes.draw do
 
   resources :companies
   resources :users
-
-  match '/register' => 'static_pages#register'
-  match '/login' => 'static_pages#login'
-  match '/logout' => 'sessions#destroy'
-  match '/sessions' => 'sessions#login'
-  match '/create_account' => 'sessions#create'
-  match '/activate/:serial' => 'sessions#activate'
 
   match 'companies/:id/interviews', to: 'companies#interview', :as => :interview
   match 'companies/:id/new_interview', to: 'companies#new_interview', :as => :new_interview

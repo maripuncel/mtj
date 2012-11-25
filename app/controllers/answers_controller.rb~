@@ -1,5 +1,4 @@
 class AnswersController < ApplicationController
-  
   before_filter :check_status
 
   def check_status

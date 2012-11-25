@@ -1,14 +1,4 @@
 class CompaniesController < ApplicationController
-
-  before_filter :check_status
-
-  def check_status
-    if !current_user()
-      flash[:notice] = 'You must log in to view that page'
-      redirect_to :root
-    end
-  end
-
   # GET /companies
   # GET /companies.json
   def index

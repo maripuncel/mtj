@@ -1399,4 +1399,133 @@ config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rd
 [0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
 ]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd controllers/
 ]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ ls
-answers_controller.rb       
+answers_controller.rb       interviews_controller.rb  sessions_controller.rb~
+application_controller.rb   offers_controller.rb      static_pages_controller.rb
+application_controller.rb~  questions_controller.rb   static_pages_controller.rb~
+companies_controller.rb     sessions_controller.rb    users_controller.rb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ ls
+answers_controller.rb       interviews_controller.rb  sessions_controller.rb~
+application_controller.rb   offers_controller.rb      static_pages_controller.rb
+application_controller.rb~  questions_controller.rb   static_pages_controller.rb~
+companies_controller.rb     sessions_controller.rb    users_controller.rb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ gedit answers_controller.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ gedit companies_controller.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ gekdt[K[K[Kdit interviews_controller.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ geidt of[K[K[K[K[K[Kdit offers_controller.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ gedit questions_controller.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ gedit users_controller.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rails add .
+Error: Command not recognized
+Usage: rails COMMAND [ARGS]
+
+The most common rails commands are:
+ generate    Generate new code (short-cut alias: "g")
+ console     Start the Rails console (short-cut alias: "c")
+ server      Start the Rails server (short-cut alias: "s")
+ dbconsole   Start a console for the database specified in config/database.yml
+             (short-cut alias: "db")
+ new         Create a new Rails application. "rails new my_app" creates a
+             new application called MyApp in "./my_app"
+
+In addition to those, there are:
+ application  Generate the Rails application code
+ destroy      Undo code generated with "generate" (short-cut alias: "d")
+ benchmarker  See how fast a piece of code runs
+ profiler     Get profile information from a piece of code
+ plugin       Install a plugin
+ runner       Run a piece of code in the application environment (short-cut alias: "r")
+
+All commands can be run with -h (or --help) for more information.
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ r[Kgitad[K[K[K[K[Kgit add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ gi [Kt commit -am "login block"
+[master 901c2cf] login block
+ 11 files changed, 478 insertions(+), 1 deletion(-)
+ create mode 100644 app/controllers/answers_controller.rb~
+ create mode 100644 app/controllers/companies_controller.rb~
+ create mode 100644 app/controllers/interviews_controller.rb~
+ create mode 100644 app/controllers/offers_controller.rb~
+ create mode 100644 app/controllers/questions_controller.rb~
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 16, done.
+Compressing objects:   9% (1/11)   Compressing objects:  18% (2/11)   Compressing objects:  27% (3/11)   Compressing objects:  36% (4/11)   Compressing objects:  45% (5/11)   Compressing objects:  54% (6/11)   Compressing objects:  63% (7/11)   Compressing objects:  72% (8/11)   Compressing objects:  81% (9/11)   Compressing objects:  90% (10/11)   Compressing objects: 100% (11/11)   Compressing objects: 100% (11/11), done.
+Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 3.22 KiB, done.
+Total 11 (delta 8), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   3d60b6b..901c2cf  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 16, done.
+Compressing objects:   9% (1/11)   Compressing objects:  18% (2/11)   Compressing objects:  27% (3/11)   Compressing objects:  36% (4/11)   Compressing objects:  45% (5/11)   Compressing objects:  54% (6/11)   Compressing objects:  63% (7/11)   Compressing objects:  72% (8/11)   Compressing objects:  81% (9/11)   Compressing objects:  90% (10/11)   Compressing objects: 100% (11/11)   Compressing objects: 100% (11/11), done.
+Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 3.22 KiB, done.
+Total 11 (delta 8), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.1
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.1)
+       Using rails (3.2.7)
+       Using raindrops (0.10.0)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (20.09s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 13.4MB
+-----> Launching... done, v18
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   3d60b6b..901c2cf  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku run rakd[Ke db:reset
+Running `rake db:reset` attached to terminal...

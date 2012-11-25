@@ -3,9 +3,9 @@ class CompaniesController < ApplicationController
   before_filter :check_status
 
   def check_status
-    if !current_user()
+    if not current_user()
       flash[:notice] = 'You must log in to view that page'
-      redirect_to :root
+      redirect_to "static_pages/home"
     end
   end
 

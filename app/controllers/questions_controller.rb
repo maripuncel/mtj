@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_filter :check_status
+  #before_filter :check_status
 
   def check_status
     if !current_user()

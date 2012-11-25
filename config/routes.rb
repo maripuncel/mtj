@@ -12,6 +12,13 @@ Mtj::Application.routes.draw do
   resources :companies
   resources :users
 
+  match '/register' => 'static_pages#register'
+  match '/login' => 'static_pages#login'
+  match '/logout' => 'sessions#destroy'
+  match '/sessions' => 'sessions#login'
+  match '/create_account' => 'sessions#create'
+  match '/activate/:serial' => 'sessions#activate'
+
   match 'companies/:id/interviews', to: 'companies#interview', :as => :interview
   match 'companies/:id/new_interview', to: 'companies#new_interview', :as => :new_interview
   match 'add/interview', to: 'interviews#create'
@@ -28,12 +35,7 @@ Mtj::Application.routes.draw do
   match 'questions/:id/new_answer', to: 'questions#new_answer', :as => :new_answer
   match 'add/answer', to: 'answers#create'
 
-  match '/register' => 'static_pages#register'
-  match '/login' => 'static_pages#login'
-  match '/logout' => 'sessions#destroy'
-  match '/sessions' => 'sessions#login'
-  match '/create_account' => 'sessions#create'
-  match '/activate/:serial' => 'sessions#activate'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

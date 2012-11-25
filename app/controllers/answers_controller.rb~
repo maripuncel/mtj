@@ -5,7 +5,7 @@ class AnswersController < ApplicationController
   def check_status
     if !current_user()
       flash[:notice] = 'You must log in to view that page'
-      redirect_to :root
+      render "static_pages/home"
     end
   end
 

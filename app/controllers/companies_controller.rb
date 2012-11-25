@@ -5,7 +5,7 @@ class CompaniesController < ApplicationController
   def check_status
     if not current_user()
       flash[:notice] = 'You must log in to view that page'
-      render "static_pages/home"
+      redirect_to :root
     end
   end
 

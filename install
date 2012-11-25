@@ -1734,4 +1734,74 @@ To git@heroku.com:vast-dusk-2147.git
    ad00519..b4efd86  master -> master
 ]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ r[Kgher[K[K[K[Kheroku run rake db:migrate
 Running `rake db:migrate` attached to terminal... up, run.1
-DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the relea
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+Connecting to database specified by DATABASE_URL
+Migrating to CreateUsers (20121120204733)
+Migrating to CreateCompanies (20121120204837)
+Migrating to CreateInterviews (20121123161314)
+Migrating to CreateOffers (20121123232303)
+Migrating to CreateQuestions (20121123234925)
+Migrating to CreateAnswers (20121124052319)
+Migrating to AddSerialToUser (20121125023644)
+Migrating to AddActivatedToUser (20121125024228)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ gi [Kt commit -am "typo"
+[master 10ceb6f] typo
+ 3 files changed, 168 insertions(+), 2 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 11, done.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 805 bytes, done.
+Total 6 (delta 5), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   b4efd86..10ceb6f  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 11, done.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 805 bytes, done.
+Total 6 (delta 5), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.1
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.1)
+       Using rails (3

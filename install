@@ -3085,4 +3085,127 @@ config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rd
 ]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
 [0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
 [01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
-config.ru  [01;34mdoc[0m           install       [01;
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add ,[K.
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -am "yup"
+[master 72395cb] yup
+ 6 files changed, 132 insertions(+), 18 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 16, done.
+Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
+Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 1.36 KiB, done.
+Total 9 (delta 7), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   37f3e28..72395cb  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 16, done.
+Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
+Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 1.36 KiB, done.
+Total 9 (delta 7), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.1
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.1)
+       Using rails (3.2.7)
+       Using raindrops (0.10.0)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (24.15s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (24.15s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 13.4MB
+-----> Launching... done, v33
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   37f3e28..72395cb  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd app/
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd views/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd user
+bash: cd: user: No such file or directory
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd user
+bash: cd: user: No such file or directory
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd users
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ l;[Ks
+edit.html.erb  _form.html.erb  index.html.erb  new.html.erb  show.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ geid[K[Kdit _form.html.erb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ ls
+edit.html.erb  _form.html.erb  _form.html.erb~  index.html.erb  new.html.erb  show.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ gedit edit.html.erb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ gedit index.html.erb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ gied [K[K[K[Kedit new.html.erb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ git [K[K[K[Kcd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saa

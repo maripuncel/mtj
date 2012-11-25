@@ -1,0 +1,5 @@
+<br />
+<br />
+<p id="notice"><%= notice %></p>
+<br />
+<p>You have been emailed a confirmation email.  Please click the link in the email from activate@mitjobtalk.mit.edu to activate your account.</p>

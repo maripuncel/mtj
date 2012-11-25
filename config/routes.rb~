@@ -31,8 +31,7 @@ Mtj::Application.routes.draw do
   match "/register" => "static_pages#register"
   match "/login" => "static_pages#login"
   match "/logout" => "sessions#destroy"
-  match "/sessions" => "sessions#login"
-  match "/create_account" => "sessions#create"
+  match "/sessions" => "sessions#create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

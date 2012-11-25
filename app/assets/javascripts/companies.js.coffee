@@ -2,13 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+root_url = 'http://localhost:3000'
+
 $ ->
   $('#add-interview').click (e) ->
     e.preventDefault()
     content = $('#interview-content').val()
     company = $('#interview-company').val()
     query = 'content=' + content + '&company=' + company
-    url = 'http://localhost:3000/add/interview'
+    url = root_url + '/add/interview'
     $.ajax
       type: 'POST'
       url: url
@@ -22,7 +24,7 @@ $ ->
     figure = $('#offer-figure').val()
     company = $('#offer-company').val()
     query = 'figure=' + figure + '&company=' + company
-    url = 'http://localhost:3000/add/offer'
+    url = root_url + '/add/offer'
     $.ajax
       type: 'POST'
       url: url
@@ -36,7 +38,7 @@ $ ->
     content = $('#question-content').val()
     company = $('#question-company').val()
     query = 'content=' + content + '&company=' + company
-    url = 'http://localhost:3000/add/question'
+    url = root_url + '/add/question'
     $.ajax
       type: 'POST'
       url: url

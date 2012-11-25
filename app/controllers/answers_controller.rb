@@ -9,7 +9,7 @@ class AnswersController < ApplicationController
   # POST /answers.json
   def create
     Answer.add_answer(params)
-    render :text => 'http://localhost:3000/questions/' + params[:question] + '/answers'
+    render :text => root_url + 'questions/' + params[:question] + '/answers'
   end
 
   # PUT /answers/1

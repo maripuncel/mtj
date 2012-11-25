@@ -2,13 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+root_url = 'http://localhost:3000'
+
 $ ->
   $('#add-answer').click (e) ->
     e.preventDefault()
     content = $('#answer-content').val()
     question = $('#answer-question').val()
     query = 'content=' + content + '&question=' + question
-    url = 'http://localhost:3000/add/answer'
+    url = root_url + '/add/answer'
     $.ajax
       type: 'POST'
       url: url

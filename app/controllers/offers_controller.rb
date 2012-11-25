@@ -9,7 +9,7 @@ class OffersController < ApplicationController
   # POST /offers.json
   def create
     Offer.add_offer(params)
-    render :text => 'http://localhost:3000/companies/' + params[:company] + '/offers'
+    render :text => root_url + 'companies/' + params[:company] + '/offers'
   end
 
   # PUT /offers/1

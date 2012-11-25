@@ -9,7 +9,7 @@ class InterviewsController < ApplicationController
   # POST /interviews.json
   def create
     Interview.add_interview(params)
-    render :text => 'http://localhost:3000/companies/' + params[:company] + '/interviews'
+    render :text => root_url + 'companies/' + params[:company] + '/interviews'
   end
 
   # PUT /interviews/1

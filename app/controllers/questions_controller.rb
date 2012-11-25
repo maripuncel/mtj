@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
   # POST /questions.json
   def create
     Question.add_question(params)
-    render :text => 'http://localhost:3000/companies/' + params[:company] + '/questions'
+    render :text => root_url + 'companies/' + params[:company] + '/questions'
   end
 
   def answer

@@ -10,9 +10,9 @@ class SessionsController < ApplicationController
 	  elsif params[:password] != params[:confirm_password]
 	    flash[:notice] = 'Passwords do not match'
 	    render 'static_pages/register'
-	  #elsif params[:email][-7,7] != 'mit.edu'
-	  #  flash[:notice] = 'Must register with an MIT email address'
-	  #  render 'static_pages/register'
+	  elsif params[:email][-7,7] != 'mit.edu'
+	    flash[:notice] = 'Must register with an MIT email address'
+	    render 'static_pages/register'
 	  else
 	    user = User.create(:email => params[:email], :password => params[:password], :activated => 0, :serial => SecureRandom.hex(10))
 	    send_email(user)
@@ -38,7 +38,13 @@ class SessionsController < ApplicationController
 	  end
 	end
 
-	def unlock
+	def activate
+	  user = User.find(:first, :conditions => {:serial => params[:serial]})
+	  if user && !user.activated
+	    User.update(user.id, :activated => 1)
+	  elsif
+	    flash[:notice] = 'Invalid or expired link'
+	  end
 	  flash[:notice] = 'Successfully registered and logged in'
 	  login()
 	end

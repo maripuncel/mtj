@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    @companies = Company.all(:order => :name)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +14,9 @@ class CompaniesController < ApplicationController
   # GET /companies/1.json
   def show
     @company = Company.find(params[:id])
+    @interviews = Interview.all( :conditions => {:company_id => [@company.id]}, :limit => 3)
+    @offer = @company.offer_average
+    @questions = Question.all( :conditions => {:company_id => [@company.id]}, :limit => 3)
 
     respond_to do |format|
       format.html # show.html.erb

@@ -6,8 +6,6 @@
 <table>
   <tr>
     <th>Content</th>
-    <th>User</th>
-    <th>Company</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,9 +15,7 @@
       <% @questions.each do |question| %>
           <tr>
             <td><%= question.content %></td>
-            <td><%= question.user_id %></td>
-            <td><%= question.company_id %></td>
-            <td><%= link_to 'Show', answer_url(question) %></td>
+            <td><%= link_to 'Show Answers', answer_url(question) %></td>
             <td><%= link_to 'Edit', edit_question_path(question) %></td>
             <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
@@ -29,4 +25,5 @@
 
 <br />
 
-<%= link_to 'New Question', new_question_path %>
+<%= link_to 'New Question', new_question_path %>  |
+<%= link_to 'Back to ' + @company.name, company_url %>

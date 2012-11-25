@@ -3,18 +3,48 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
+<h1>
   <%= @company.name %>
-</p>
+</h1>
 
-<%= link_to 'View Interviews', interview_url %> |
-<%= link_to 'View Offers', offer_url %> |
-<%= link_to 'View Question/Answers', question_url %><br/>
+<br/>
 
-<%= link_to 'Add Interview', new_interview_path %> |
-<%= link_to 'Add Offer', new_offer_path %> |
-<%= link_to 'Add Question', new_question_path %><br/>
+<h3>Interviews</h3>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
+<table>
+  <% if @interviews.any? %>
+      <% @interviews.each do |interview| %>
+          <tr>
+            <td><%= interview.content %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>
+
+<%= link_to 'View More Interviews', interview_url %>
+<br/><br/>
+
+<h3>Offer Average</h3>
+
+<p><%= @offer %></p>
+
+<%= link_to 'View More Offers', offer_url %>
+<br/><br/>
+
+<h3>Questions/Answers</h3>
+
+<table>
+  <% if @questions.any? %>
+      <% @questions.each do |question| %>
+          <tr>
+            <td><%= question.content %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>
+
+<%= link_to 'View More Question/Answers', question_url %>
+
+<br/><br/>
+
 <%= link_to 'Back', companies_path %>

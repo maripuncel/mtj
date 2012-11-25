@@ -1,12 +1,12 @@
 class CompaniesController < ApplicationController
 
-  #before_filter :check_status
+  before_filter :check_status
 
   def check_status
-    #if not current_user()
-      #flash[:notice] = 'You must log in to view that page'
-      redirect_to '/login'
-    #end
+    if !current_user()
+      flash[:notice] = 'You must log in to view that page'
+      render "static_pages/login"
+    end
   end
 
   # GET /companies

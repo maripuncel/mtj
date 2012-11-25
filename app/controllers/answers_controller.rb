@@ -4,7 +4,7 @@ class AnswersController < ApplicationController
 
   def check_status
     if !current_user()
-      flash[:notice] = 'You must log in to view that page'
+      flash.now[:notice] = 'You must log in to view that page'
       render "static_pages/login"
     end
   end

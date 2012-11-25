@@ -2516,4 +2516,178 @@ To git@heroku.com:vast-dusk-2147.git
 [36m2012-11-25T15:29:53+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
 [36m2012-11-25T15:29:54+00:00 app[web.1]:[0m   Rendered static_pages/home.html.erb within layouts/application (102.0ms)
 [36m2012-11-25T15:29:54+00:00 app[web.1]:[0m Completed 200 OK in 660ms (Views: 655.9ms | ActiveRecord: 0.0ms)
-[33m2012-11-25T15:29:54+00:00 heroku[router]:[0m at=info method=GET path=/ host=va
+[33m2012-11-25T15:29:54+00:00 heroku[router]:[0m at=info method=GET path=/ host=va= dyno=web.1 queue=0 wait=0ms connect=2ms service=51ms status=200 bytes=0
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m Started GET "/login" for 18.236.5.43 at 2012-11-25 15:29:55 +0000
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m 
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m 
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m Processing by StaticPagesController#login as HTML
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m 
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m   app/controllers/application_controller.rb:5:in `current_user'
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m   app/controllers/static_pages_controller.rb:14:in `redirect_if_logged_in'
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m   app/controllers/static_pages_controller.rb:10:in `login'
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 405ms
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m 
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+[36m2012-11-25T15:29:56+00:00 app[web.1]:[0m 
+[33m2012-11-25T15:29:56+00:00 heroku[router]:[0m at=info method=GET path=/login host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=3ms service=449ms status=404 bytes=728
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -am "stupid":[K
+[master d28008b] stupid
+ 10 files changed, 261 insertions(+), 18 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 15, done.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 4.23 KiB, done.
+Total 10 (delta 8), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   3df3fad..d28008b  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku naster[K[K[K[K[K[Kmaster
+Counting objects: 15, done.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 4.23 KiB, done.
+Total 10 (delta 8), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.1
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.1)
+       Using rails (3.2.7)
+       Using raindrops (0.10.0)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (25.10s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 13.4MB
+-----> Launching... done, v29
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   3df3fad..d28008b  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake[K[K[K[Kheroku run rake db:reset
+Running `rake db:reset` attached to terminal... up, run.1
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+Connecting to database specified by DATABASE_URL
+Couldn't drop d7164a6cgvl40i : #<PGError: FATAL:  permission denied for database "postgres"
+DETAIL:  User does not have CONNECT privilege.
+>
+d7164a6cgvl40i already exists
+-- create_table("answers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "answers_id_seq" for serial column "answers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "answers_pkey" for table "answers"
+   -> 0.3439s
+-- create_table("companies", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "companies_id_seq" for serial column "companies.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "companies_pkey" for table "companies"
+   -> 0.0798s
+-- create_table("interviews", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "interviews_id_seq" for serial column "interviews.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "interviews_pkey" for table "interviews"
+   -> 0.1136s
+-- create_table("offers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "offers_id_seq" for serial column "offers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implici
+-- create_table("interviews", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "interviews_id_seq" for serial column "interviews.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "interviews_pkey" for table "interviews"
+   -> 0.1136s
+-- create_table("offers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "offers_id_seq" for serial column "offers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "offers_pkey" for table "offers"
+   -> 0.0739s
+-- create_table("questions", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "questions_id_seq" for serial column "questions.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "questions_pkey" for table "questions"
+   -> 0.1935s
+-- create_table("users", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+   -> 0.1157s
+-- initialize_schema_migrations_table()
+   -> 0.0126s
+-- assume_migrated_upto_version(20121125024228, ["/app/db/migrate"])
+   -> 0.0034s
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku run rake db:reset
+Running `rake db:reset` attached to terminal... up, run.1
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+Connecting to database specified by DATABASE_URL
+Couldn't drop d7164a6cgvl40i : #<PGError: FATAL:  permission denied for database "postgres"
+DETAIL:  User does not have CONNECT privilege.
+>
+d7164a6cgvl40i already exists
+-- create_table("answers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "answers_id_seq" for serial column "answers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "answers_pkey" for table "answers"
+   -> 0.2165s
+-- create_table("companies", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "companies_id_seq" for serial column "companies.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "companies_pkey" for table "companies"
+   -> 0.1161s
+-- create_table("interviews", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "interviews_id_seq" for serial column "interviews.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "interviews_pkey" for table "interviews"
+   -> 0.1244s
+-- create_table("offers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "offers_id_seq" for serial column "offers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "offers_pkey" for table "offers"
+   -> 0.1053s
+-- create_table("questions", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "questions_id_seq" for serial column "questions.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "questions_pkey" for table "questions"
+   -> 0.2219s
+-- create_table("users", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+   -> 0.1981s
+-- initialize_schema_migrations_table()

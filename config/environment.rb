@@ -4,14 +4,14 @@ require File.expand_path('../application', __FILE__)
 # Initialize the rails application
 Mtj::Application.initialize!
 
-ActionMailer::Base.smtp_settings = {
-  :address  => "smtp.someserver.net",
-  :port  => 25,
-  :user_name  => "mitjobtalk@gmail.com",
-  :password  => "zxcvbzxcvb",
-  :authentication  => :login
-}
 Mtj::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :user_name            => 'mitjobtalk@gmail.com',
+    :password             => 'zxcvbzxcvb',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
 end

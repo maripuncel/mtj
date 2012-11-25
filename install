@@ -3731,4 +3731,437 @@ index.html.erb  new.html.erb         new_question.html.erb   show.html.erb
 answer.rb  company.rb  interview.rb  offer.rb  question.rb  user.rb  user.rb~
 ]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ geid tin[K[K[K[K[K[Kdit interview.rb 
 ]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ geidt [K[K[K[Kdit answer.rb 
-]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ gedit of
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ gedit offer.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ gedit question.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -am "hi![K!"
+bash: !": event not found
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ got[K[K[Kgit commit -am "hi :)"
+[master 42cc722] hi :)
+ 27 files changed, 788 insertions(+), 48 deletions(-)
+ create mode 100644 app/models/answer.rb~
+ create mode 100644 app/models/interview.rb~
+ create mode 100644 app/models/offer.rb~
+ create mode 100644 app/models/question.rb~
+ create mode 100644 app/views/companies/offer.html.erb~
+ create mode 100644 app/views/companies/question.html.erb~
+ create mode 100644 app/views/companies/show.html.erb~
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 46, done.
+Compressing objects:   3% (1/28)   Compressing objects:   7% (2/28)   Compressing objects:  10% (3/28)   Compressing objects:  14% (4/28)   Compressing objects:  17% (5/28)   Compressing objects:  21% (6/28)   Compressing objects:  25% (7/28)   Compressing objects:  28% (8/28)   Compressing objects:  32% (9/28)   Compressing objects:  35% (10/28)   Compressing objects:  39% (11/28)   Compressing objects:  42% (12/28)   Compressing objects:  46% (13/28)   Compressing objects:  50% (14/28)   Compressing objects:  53% (15/28)   Compressing objects:  57% (16/28)   Compressing objects:  60% (17/28)   Compressing objects:  64% (18/28)   Compressing objects:  67% (19/28)   Compressing objects:  71% (20/28)   Compressing objects:  75% (21/28)   Compressing objects:  78% (22/28)   Compressing objects:  82% (23/28)   Compressing objects:  85% (24/28)   Compressing objects:  89% (25/28)   Compressing objects:  92% (26/28)   Compressing objects:  96% (27/28)   Compressing objects: 100% (28/28)   Compressing objects: 100% (28/28), done.
+Writing objects:   3% (1/28)   Writing objects:   7% (2/28)   Writing objects:  10% (3/28)   Writing objects:  14% (4/28)   Writing objects:  17% (5/28)   Writing objects:  21% (6/28)   Writing objects:  28% (8/28)   Writing objects:  35% (10/28)   Writing objects:  39% (11/28)   Writing objects:  42% (12/28)   Writing objects:  46% (13/28)   Writing objects:  50% (14/28)   Writing objects:  53% (15/28)   Writing objects:  57% (16/28)   Writing objects:  60% (17/28)   Writing objects:  64% (18/28)   Writing objects:  67% (19/28)   Writing objects:  71% (20/28)   Writing objects:  75% (21/28)   Writing objects:  78% (22/28)   Writing objects:  82% (23/28)   Writing objects:  85% (24/28)   Writing objects:  89% (25/28)   Writing objects:  92% (26/28)   Writing objects:  96% (27/28)   Writing objects: 100% (28/28)   Writing objects: 100% (28/28), 12.92 KiB, done.
+Total 28 (delta 21), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   7574d8d..42cc722  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 50, done.
+Compressing objects:   3% (1/30)   Compressing objects:   6% (2/30)   Compressing objects:  10% (3/30)   Compressing objects:  13% (4/30)   Compressing objects:  16% (5/30)   Compressing objects:  20% (6/30)   Compressing objects:  23% (7/30)   Compressing objects:  26% (8/30)   Compressing objects:  30% (9/30)   Compressing objects:  33% (10/30)   Compressing objects:  36% (11/30)   Compressing objects:  40% (12/30)   Compressing objects:  43% (13/30)   Compressing objects:  46% (14/30)   Compressing objects:  50% (15/30)   Compressing objects:  53% (16/30)   Compressing objects:  56% (17/30)   Compressing objects:  60% (18/30)   Compressing objects:  63% (19/30)   Compressing objects:  66% (20/30)   Compressing objects:  70% (21/30)   Compressing objects:  73% (22/30)   Compressing objects:  76% (23/30)   Compressing objects:  80% (24/30)   Compressing objects:  83% (25/30)   Compressing objects:  86% (26/30)   Compressing objects:  90% (27/30)   Compressing objects:  93% (28/30)   Compressing objects:  96% (29/30)   Compressing objects: 100% (30/30)   Compressing objects: 100% (30/30), done.
+Writing objects:   3% (1/31)   Writing objects:   6% (2/31)   Writing objects:   9% (3/31)   Writing objects:  12% (4/31)   Writing objects:  16% (5/31)   Writing objects:  19% (6/31)   Writing objects:  22% (7/31)   Writing objects:  25% (8/31)   Writing objects:  32% (10/31)   Writing objects:  38% (12/31)   Writing objects:  41% (13/31)   Writing objects:  45% (14/31)   Writing objects:  48% (15/31)   Writing objects:  51% (16/31)   Writing objects:  54% (17/31)   Writing objects:  58% (18/31)   Writing objects:  61% (19/31)   Writing objects:  64% (20/31)   Writing objects:  67% (21/31)   Writing objects:  70% (22/31)   Writing objects:  74% (23/31)   Writing objects:  77% (24/31)   Writing objects:  80% (25/31)   Writing objects:  83% (26/31)   Writing objects:  87% (27/31)   Writing objects:  90% (28/31)   Writing objects:  93% (29/31)   Writing objects:  96% (30/31)   Writing objects: 100% (31/31)   Writing objects: 100% (31/31), 13.20 KiB, done.
+Total 31 (delta 22), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.1
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.1)
+       Using rails (3.2.7)
+       Using raindrops (0.10.0)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (21.63s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 13.4MB
+-----> Launching... done, v35
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   ac280b7..42cc722  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ raike d[K[K[K[K[Kke db:migrate[K[K[K[K[K[K[Krenew
+rake aborted!
+Don't know how to build task 'db:renew'
+(See full trace by running task with --trace)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake db:renew[K[K[Kset
+-- create_table("answers", {:force=>true})
+   -> 0.0942s
+-- create_table("companies", {:force=>true})
+   -> 0.0072s
+-- create_table("interviews", {:force=>true})
+   -> 0.0071s
+-- create_table("offers", {:force=>true})
+   -> 0.0057s
+-- create_table("questions", {:force=>true})
+   -> 0.0056s
+-- create_table("users", {:force=>true})
+   -> 0.0098s
+-- initialize_schema_migrations_table()
+   -> 0.0120s
+-- assume_migrated_upto_version(20121125024228, ["/home/ubuntu/6170_projects/mtj/db/migrate"])
+   -> 0.0623s
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake db:reset[K[K[K[K[Kmigrate
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake db:migrate[2Preset
+-- create_table("answers", {:force=>true})
+   -> 0.1001s
+-- create_table("companies", {:force=>true})
+   -> 0.0051s
+-- create_table("interviews", {:force=>true})
+   -> 0.0951s
+-- create_table("offers", {:force=>true})
+   -> 0.0078s
+-- create_table("questions", {:force=>true})
+   -> 0.0084s
+-- create_table("users", {:force=>true})
+   -> 0.0070s
+-- initialize_schema_migrations_table()
+   -> 0.0174s
+-- assume_migrated_upto_version(20121125024228, ["/home/ubuntu/6170_projects/mtj/db/migrate"])
+   -> 0.0625s
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake db:resetmigrate
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git pull
+Already up-to-date.
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd c[Kapp/
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd views/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd companies/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ ls
+edit.html.erb       interview.html.erb~     new_question.html.erb  question.html.erb~
+_form.html.erb      new.html.erb            offer.html.erb         show.html.erb
+index.html.erb      new_interview.html.erb  offer.html.erb~        show.html.erb~
+interview.html.erb  new_offer.html.erb      question.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd answers/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/answerssaasbook@saasbook:~/6170_projects/mtj/app/views/answers$ sl[K[Kls
+edit.html.erb  _form.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/answerssaasbook@saasbook:~/6170_projects/mtj/app/views/answers$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd[K[Kls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd interviews/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/interviewssaasbook@saasbook:~/6170_projects/mtj/app/views/interviews$ ls
+edit.html.erb  _form.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/interviewssaasbook@saasbook:~/6170_projects/mtj/app/views/interviews$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd la[Kayouts/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/layoutssaasbook@saasbook:~/6170_projects/mtj/app/views/layouts$ ls
+application.html.erb  application.html.erb~
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/layoutssaasbook@saasbook:~/6170_projects/mtj/app/views/layouts$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd offers/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/offerssaasbook@saasbook:~/6170_projects/mtj/app/views/offers$ ls
+edit.html.erb  _form.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/offerssaasbook@saasbook:~/6170_projects/mtj/app/views/offers$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd 
+]0;saasbook@saasbook: ~saasbook@saasbook:~$ cd 6170_projects/mtj/app/views/
+answers/      interviews/   offers/       static_pages/ users/        
+companies/    layouts/      questions/    user_mailer/  
+]0;saasbook@saasbook: ~saasbook@saasbook:~$ cd 6170_projects/mtj/app/views/questions/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/questionssaasbook@saasbook:~/6170_projects/mtj/app/views/questions$ ls
+answer.html.erb  edit.html.erb  _form.html.erb  new_answer.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/questionssaasbook@saasbook:~/6170_projects/mtj/app/views/questions$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd static_pages/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ ls
+emailed.html.erb   home.html.erb   login.html.erb~    register.html.erb~
+emailed.html.erb~  login.html.erb  register.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ clar
+ls
+No command 'clar' found, did you mean:
+ Command 'clear' from package 'ncurses-bin' (main)
+clar: command not found
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0s$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd user
+bash: cd: user: No such file or directory
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ lscd users
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ ls
+edit.html.erb   _form.html.erb~  index.html.erb~  show.html.erb
+_form.html.erb  index.html.erb   new.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd helpers/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/helperssaasbook@saasbook:~/6170_projects/mtj/app/helpers$ ls
+answers_helper.rb      companies_helper.rb   offers_helper.rb     static_pages_helper.rb
+application_helper.rb  interviews_helper.rb  questions_helper.rb  users_helper.rb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/helperssaasbook@saasbook:~/6170_projects/mtj/app/helpers$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ clearl[K
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd assets/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/assetssaasbook@saasbook:~/6170_projects/mtj/app/assets$ ls
+[0m[01;34mimages[0m  [01;34mjavascripts[0m  [01;34mstylesheets[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/assetssaasbook@saasbook:~/6170_projects/mtj/app/assets$ cd javascripts/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/assets/javascriptssaasbook@saasbook:~/6170_projects/mtj/app/assets/javascripts$ ls
+answers.js.coffee  companies.js.coffee   offers.js.coffee     static_pages.js.coffee
+application.js     interviews.js.coffee  questions.js.coffee  users.js.coffee
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/assets/javascriptssaasbook@saasbook:~/6170_projects/mtj/app/assets/javascripts$ vim answers.js.coffee 
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"answers.js.coffee" 3L, 229C[>c[1;1H[33m  1 [m[34m# Place all the behaviors and hooks related to the matching controller here.[m[1m[34m$[m
+[33m  2 [m[34m# All this logic will automatically be available in application.js.[m[1m[34m$[m
+[33m  3 [m[34m# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/[m[1m[34m$
+~                                                                                                                       [10;1H~                                                                                              [11;1H~                                                                                              [12;1H~                                                                                              [13;1H~                                                                                              [14;1H~                                                                                              [15;1H~                                                                                              [16;1H~                                                                                              [17;1H~                                                                                              [18;1H~                                                                                              [19;1H~                                                                                              [20;1H~                                                                                              [21;1H~                                                                                              [22;1H~                                                                                              [m[23;1H[1m[7manswers.js.coffee                                                            1,1            All[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/assets/javascriptssaasbook@saasbook:~/6170_projects/mtj/app/assets/javascripts$ vim companies.js.coffee 
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"companies.js.coffee" [noeol] 45L, 1425C[>c[1;1H[33m  1 [m[34m# Place all the behaviors and hooks related to the matching controller here.[m[1m[34m$[m
+[33m  2 [m[34m# All this logic will automatically be available in application.js.[m[1m[34m$[m
+[33m  3 [m[34m# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/[m[1m[34m$[m
+[33m  4 [m[1m[34m$[m
+[33m  5 [m$ ->[1m[34m$[m
+[33m  6 [m  $([31m'#add-interview'[m).click (e) ->[1m[34m$[m
+[33m  7 [m    e.preventDefault()[1m[34m$[m
+[33m  8 [m    content = $([31m'#interview-content'[m).val()[1m[34m$[m
+[33m  9 [m    company = $([31m'#interview-company'[m).val()[1m[34m$[m
+[33m 10 [m    query = [31m'content='[m + content + [31m'&company='[m + company[1m[34m$[m
+[33m 11 [m    url = [31m'http://localhost:3000/add/interview'[m[1m[34m$[m
+[33m 12 [m    $.ajax[1m[34m$[m
+[33m 13 [m      type: [31m'POST'[m[1m[34m$[m
+[33m 14 [m      url: url[1m[34m$[m
+[33m 15 [m      data: query[1m[34m$[m
+[33m 16 [m      success: (data, code, xmlhttp) ->[1m[34m$[m
+[33m 17 [m[7C window.location = xmlhttp.responseText[1m[34m$[m
+[33m 18 [m[1m[34m$[m
+[33m 19 [m$ ->[1m[34m$[m
+[33m 20 [m  $([31m'#add-offer'[m).click (e) ->[1m[34m$[m
+[33m 21 [m    e.preventDefault()[1m[34m$[m
+[33m 22 [m    figure = $([31m'#offer-figure'[m).val()[1m[34m$[m
+[1m[7mcompanies.js.coffee                                                          1,1            Top[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;78H2,[2;5H[?12l[?25h[?25l[23;78H3,[3;5H[?12l[?25h[?25l[23;78H4,0-1[4;5H[?12l[?25h[?25l[23;78H5,1   [5;5H[?12l[?25h[?25l[23;78H6,[6;5H[?12l[?25h[?25l[23;78H7,[7;5H[?12l[?25h[?25l[23;78H8,[8;5H[?12l[?25h[?25l[23;78H9,[9;5H[?12l[?25h[?25l[23;78H10,1[10;5H[?12l[?25h[?25l[23;79H1,[11;5H[?12l[?25h[?25l[23;79H2,[12;5H[?12l[?25h[?25l[23;79H3,[13;5H[?12l[?25h[?25l[23;79H4,[14;5H[?12l[?25h[?25l[23;79H5,[15;5H[?12l[?25h[?25l[23;79H6,[16;5H[?12l[?25h[?25l[23;79H7,[17;5H[?12l[?25h[?25l[23;79H8,0-1[18;5H[?12l[?25h[?25l[23;79H9,1   [19;5H[?12l[?25h[?25l[23;78H20,[20;5H[?12l[?25h[?25l[23;79H1,[21;5H[?12l[?25h[?25l[23;79H2,[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 23 [m    company = $([31m'#offer-company'[m).val()[1m[34m$[m[24;1H[K[23;79H[1m[7m3,[12C 4%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 24 [m    query = [31m'figure='[m + figure + [31m'&company='[m + company[1m[34m$[m[23;79H[1m[7m4,[13C8%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 25 [m    url = [31m'http://localhost:3000/add/offer'[m[1m[34m$[m[23;79H[1m[7m5,[12C13%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 26 [m    $.ajax[1m[34m$[m[23;79H[1m[7m6,[13C7%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 27 [m      type: [31m'POST'[m[1m[34m$[m[23;79H[1m[7m7,[12C21%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 28 [m      url: url[1m[34m$[m[23;79H[1m[7m8,[13C6%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 29 [m      data: query[1m[34m$[m[23;79H[1m[7m9,[12C30%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 30 [m      success: (data, code, xmlhttp) ->[1m[34m$[m[23;78H[1m[7m30,[13C4%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 31 [m[7C window.location = xmlhttp.responseText[1m[34m$[m[23;79H[1m[7m1,[13C9%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 32 [m[1m[34m$[m[23;79H[1m[7m2,0-1[9C43%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 33 [m$ ->[1m[34m$[m[23;79H[1m[7m3,1   [9C7%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 34 [m  $([31m'#add-question'[m).click (e) ->[1m[34m$[m[23;79H[1m[7m4,[12C52%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 35 [m    e.preventDefault()[1m[34m$[m[23;79H[1m[7m5,[13C6%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 36 [m    content = $([31m'#question-content'[m).val()[1m[34m$[m[23;79H[1m[7m6,[12C60%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 37 [m    company = $([31m'#question-company'[m).val()[1m[34m$[m[23;79H[1m[7m7,[13C5%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 38 [m    query = [31m'content='[m + content + [31m'&company='[m + company[1m[34m$[m[23;79H[1m[7m8,[13C9%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 39 [m    url = [31m'http://localhost:3000/add/question'[m[1m[34m$[m[23;79H[1m[7m9,[12C73%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 40 [m    $.ajax[1m[34m$[m[23;78H[1m[7m40,[13C8%[22;5H[?12l[?25h[?25l[23;78H31,11[13;15H[?12l[?25h[?25l[23;79H2,0-1[14;5H[?12l[?25h[?25l[23;79H3,4   [15;8H[?12l[?25h[?25l[23;79H4,11[16;15H[?12l[?25h[?25l[23;79H5,[17;15H[?12l[?25h[?25l[23;79H4,[16;15H[?12l[?25h[?25l[23;79H3,4  [15;8H[?12l[?25h[?25l[23;79H2,0-1[14;5H[?12l[?25h[?25l[23;79H1,11  [13;15H[?12l[?25h[?25l[23;79H0,[12;15H[?12l[?25h[?25l[23;78H29,[11;15H[?12l[?25h[?25l[23;79H8,[10;15H[?12l[?25h[?25l[23;79H7,[9;15H[?12l[?25h[?25l[23;79H6,10 [8;14H[?12l[?25h[?25l[23;79H5,11 [7;15H[?12l[?25h[?25l[23;79H4,[6;15H[?12l[?25h[?25l[23;79H3,[5;15H[?12l[?25h[?25l[23;79H2,[4;15H[?12l[?25h[?25l[23;79H1,[3;15H[?12l[?25h[?25l[23;79H0,[2;15H[?12l[?25h[?25l[23;78H19,4  [1;8H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m 18 [m[1m[34m$[m[23;79H[1m[7m8,0-1[10C3%[1;5H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m 17 [m[7C window.location = xmlhttp.responseText[1m[34m$[m[23;79H[1m[7m7,11  [8C69%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m 16 [m      success: (data, code, xmlhttp) ->[1m[34m$[m[23;79H[1m[7m6,[13C5%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m 15 [m      data: query[1m[34m$[m[23;79H[1m[7m5,[13C0%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m 14 [m      url: url[1m[34m$[m[23;79H[1m[7m4,[12C56%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m 13 [m      type: [31m'POST'[m[1m[34m$[m[23;79H[1m[7m3,[13C2%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m 12 [m    $.ajax[1m[34m$[m[23;79H[1m[7m2,10 [9C47%[1;14H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m 11 [m    url = [31m'http://localhost:3000/add/interview'[m[1m[34m$[m[23;79H[1m[7m1,11 [10C3%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m 10 [m    query = [31m'content='[m + content + [31m'&company='[m + company[1m[34m$[m[23;79H[1m[7m0,[12C39%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  9 [m    company = $([31m'#interview-company'[m).val()[1m[34m$[m[23;78H[1m[7m9,11  [10C4%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  8 [m    content = $([31m'#interview-content'[m).val()[1m[34m$[m[23;78H[1m[7m8,[14C0%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  7 [m    e.preventDefault()[1m[34m$[m[23;78H[1m[7m7,[13C26%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  6 [m  $([31m'#add-interview'[m).click (e) ->[1m[34m$[m[23;78H[1m[7m6,[14C1%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  5 [m$ ->[1m[34m$[m[23;78H[1m[7m5,4  [10C17%[1;8H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  4 [m[1m[34m$[m[23;78H[1m[7m4,0-1[11C3%[1;5H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  3 [m[34m# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/[m[1m[34m$[m[23;78H[1m[7m3,11  [9C 8%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  2 [m[34m# All this logic will automatically be available in application.js.[m[1m[34m$[m[23;78H[1m[7m2,[14C4%[1;15H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  1 [m[34m# Place all the behaviors and hooks related to the matching controller here.[m[1m[34m$[m[23;78H[1m[7m1,[13CTop[1;15H[?12l[?25h[?25l[23;79H7,46[17;50H[?12l[?25h[?25l[24;1H[m:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/assets/javascriptssaasbook@saasbook:~/6170_projects/mtj/app/assets/javascripts$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/assetssaasbook@saasbook:~/6170_projects/mtj/app/assets$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd views/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd u[K[K[K[Kcd static_pages/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ ls
+emailed.html.erb   home.html.erb   login.html.erb~    register.html.erb~
+emailed.html.erb~  login.html.erb  register.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ vim register.html.erb
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"register.html.erb" 18L, 474C[>c[1;1H[33m  1 [m[36m<[m[33mh1[m[36m>[m[35mRegister[m[36m</[m[33mh1[m[36m>[m[1m[34m$[m
+[33m  2 [m[36m<[m[33mp[m[36m [m[32mid[m[36m=[m[31m"notice"[m[36m>[m[35m<%=[m notice [35m%>[m[36m</[m[33mp[m[36m>[m[1m[34m$[m
+[33m  3 [m[36m<[m[33mform[m[36m [m[32maccept[m[36m-[m[32mcharset[m[36m=[m[31m"UTF-8"[m[36m [m[32maction[m[36m=[m[31m"/create_account"[m[36m [m[32mmethod[m[36m=[m[31m"get"[m[36m>[m[1m[34m$[m
+[33m  4 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m  5 [m[35m<%=[m [36mlabel_tag[m [31m:email[m [35m%>[m[1m[34m$[m
+[33m  6 [m[35m<%=[m [36mtext_field_tag[m [31m:email[m, [36mparams[m[[31m:email[m] [35m%>[m[1m[34m$[m
+[33m  7 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m  8 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m  9 [m[35m<%=[m [36mlabel_tag[m [31m:password[m [35m%>[m[1m[34m$[m
+[33m 10 [m[35m<%=[m [36mpassword_field_tag[m [31m:password[m [35m%>[m[1m[34m$[m
+[33m 11 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 12 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m 13 [m[35m<%=[m [36mlabel_tag[m [31m:confirm_password[m [35m%>[m[1m[34m$[m
+[33m 14 [m[35m<%=[m [36mpassword_field_tag[m [31m:confirm_password[m [35m%>[m[1m[34m$[m
+[33m 15 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 16 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m = [m[31m'actions'[m[36m>[m[1m[34m$[m
+[33m 17 [m[35m<%=[m [36msubmit_tag[m [35m'[m[31mRegister[m[35m'[m [35m%>[m[1m[34m$[m
+[33m 18 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$
+~                                                                                              [20;1H~                                                                                              [21;1H~                                                                                              [22;1H~                                                                                              [m[23;1H[1m[7mregister.html.erb                                                            1,1            All[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;78H4,20[4;24H[?12l[?25h[?25l[23;78H3,67 [3;71H[?12l[?25h[?25l[m[24;1H[1m-- INSERT --[m[24;13H[K[3;71H[?12l[?25h[?25l[23;81H[1m[7m6 [3;70H[?12l[?25h[?25l[m[31me"[m[36m>[m[1m[34m$[m[3;72H[K[23;19H[1m[7m[+][59C5 [3;69H[?12l[?25h[?25l[m[31mg"[m[36m>[m[1m[34m$[m[3;71H[K[23;81H[1m[7m4 [3;68H[?12l[?25h[?25l[m[31m""[m[36m>[m[1m[34m$[m[3;70H[K[23;81H[1m[7m3 [3;67H[?12l[?25h[?25l[m[31m"p"[m[36m>[m[1m[34m$[m[23;81H[1m[7m4 [3;68H[?12l[?25h[?25l[m[31mpo"[m[36m>[m[1m[34m$[m[23;81H[1m[7m5 [3;69H[?12l[?25h[?25l[m[31mos"[m[36m>[m[1m[34m$[m[23;81H[1m[7m6 [3;70H[?12l[?25h[?25l[m[31mst"[m[36m>[m[1m[34m$[m[23;81H[1m[7m7 [3;71H[?12l[?25h[m[24;1H[K[3;70H[?25l[23;81H[1m[7m6 [3;70H[?12l[?25h[?25l[24;1H[m:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l"register.html.erb" 18L, 475C written
+[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ ls
+emailed.html.erb   home.html.erb   login.html.erb~    register.html.erb~
+emailed.html.erb~  login.html.erb  register.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ vim login.html.erb
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"login.html.erb" 14L, 357C[>c[1;1H[33m  1 [m[36m<[m[33mh1[m[36m>[m[35mLog in[m[36m</[m[33mh1[m[36m>[m[1m[34m$[m
+[33m  2 [m[36m<[m[33mp[m[36m [m[32mid[m[36m=[m[31m"notice"[m[36m>[m[35m<%=[m notice [35m%>[m[36m</[m[33mp[m[36m>[m[1m[34m$[m
+[33m  3 [m[36m<[m[33mform[m[36m [m[32maccept[m[36m-[m[32mcharset[m[36m=[m[31m"UTF-8"[m[36m [m[32maction[m[36m=[m[31m"/sessions"[m[36m [m[32mmethod[m[36m=[m[31m"get"[m[36m>[m[1m[34m$[m
+[33m  4 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m  5 [m[35m<%=[m [36mlabel_tag[m [31m:email[m [35m%>[m[1m[34m$[m
+[33m  6 [m[35m<%=[m [36mtext_field_tag[m [31m:email[m, [36mparams[m[[31m:email[m] [35m%>[m[1m[34m$[m
+[33m  7 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m  8 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m  9 [m[35m<%=[m [36mlabel_tag[m [31m:password[m [35m%>[m[1m[34m$[m
+[33m 10 [m[35m<%=[m [36mpassword_field_tag[m [31m:password[m [35m%>[m[1m[34m$[m
+[33m 11 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 12 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m = [m[31m'actions'[m[36m>[m[1m[34m$[m
+[33m 13 [m[35m<%=[m [36msubmit_tag[m [35m'[m[31mLog in[m[35m'[m [35m%>[m[1m[34m$[m
+[33m 14 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$
+~                                                                                              [16;1H~                                                                                              [17;1H~                                                                                              [18;1H~                                                                                              [19;1H~                                                                                              [20;1H~                                                                                              [21;1H~                                                                                              [22;1H~                                                                                              [m[23;1H[1m[7mlogin.html.erb                                                               1,1            All[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;78H2,[2;5H[?12l[?25h[?25l[23;78H3,[3;5H[?12l[?25h[?25l[23;80H61[3;65H[?12l[?25h[?25l[m[24;1H[1m-- INSERT --[m[24;13H[K[3;65H[?12l[?25h[?25l[23;81H[1m[7m0 [3;64H[?12l[?25h[?25l[m[31me"[m[36m>[m[1m[34m$[m[3;66H[K[23;16H[1m[7m[+][61C59 [3;63H[?12l[?25h[?25l[m[31mg"[m[36m>[m[1m[34m$[m[3;65H[K[23;81H[1m[7m8 [3;62H[?12l[?25h[?25l[m[31m""[m[36m>[m[1m[34m$[m[3;64H[K[23;81H[1m[7m7 [3;61H[?12l[?25h[?25l[m[31m"p"[m[36m>[m[1m[34m$[m[23;81H[1m[7m8 [3;62H[?12l[?25h[?25l[m[31mpo"[m[36m>[m[1m[34m$[m[23;81H[1m[7m9 [3;63H[?12l[?25h[?25l[m[31mos"[m[36m>[m[1m[34m$[m[23;80H[1m[7m60 [3;64H[?12l[?25h[?25l[m[31mst"[m[36m>[m[1m[34m$[m[23;81H[1m[7m1 [3;65H[?12l[?25h[m[24;1H[K[3;64H[?25l[23;81H[1m[7m0 [3;64H[?12l[?25h[?25l[24;1H[m:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l"login.html.erb" 14L, 358C written
+[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd ..
+]0;saasbook@saasbook: ~/6170_projectssaasbook@saasbook:~/6170_projects$ cp tj [K[K[Kmtj mtj-backup
+cp: omitting directory `mtj'
+]0;saasbook@saasbook: ~/6170_projectssaasbook@saasbook:~/6170_projects$ ls
+[0m[01;34mcertexample[0m  [01;34menv-test-6170[0m  [01;34mjdunc_proj2[0m  [01;34mmtj[0m  [01;34mtgalvin_proj1[0m  [01;34mtgalvin_proj2[0m  [01;34mtgalvin_proj3[0m
+]0;saasbook@saasbook: ~/6170_projectssaasbook@saasbook:~/6170_projects$ cp -r mtj mth-[K[K[Ktj-ba[Kackup
+]0;saasbook@saasbook: ~/6170_projectssaasbook@saasbook:~/6170_projects$ ls
+[0m[01;34mcertexamplemtj'
+]0;saasbook@saasbook: ~/6170_projectssaasbook@saasbook:~/6170_projects$ ls
+[0m[01;34mcertexample[0m  [01;34menv-test-6170[0m  [01;34mjdunc_proj2[0m  [01;34mmtj[0m  [01;34mtgalvin_proj1[0m  [01;34mtgalvin_proj2[0m  [01;34mtgalvin_proj3[0m
+]0;saasbook@saasbook: ~/6170_projectssaasbook@saasbook:~/6170_projects$ cp -r mtj mth-[K[K[Ktj-ba[Kackup
+]0;saasbook@saasbook: ~/6170_projectssaasbook@saasbook:~/6170_projects$ ls
+[0m[01;34mcertexample[0m    [01;34mjdunc_proj2[0m  [01;34mmtj-backup[0m     [01;34mtgalvin_proj2[0m
+[01;34menv-test-6170[0m  [01;34mmtj[0m          [01;34mtgalvin_proj1[0m  [01;34mtgalvin_proj3[0m
+]0;saasbook@saasbook: ~/6170_projectssaasbook@saasbook:~/6170_projects$ cd mtj-backup/
+]0;saasbook@saasbook: ~/6170_projects/mtj-backupsaasbook@saasbook:~/6170_projects/mtj-backup$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj-backupsaasbook@saasbook:~/6170_projects/mtj-backup$ cd app/
+]0;saasbook@saasbook: ~/6170_projects/mtj-backup/appsaasbook@saasbook:~/6170_projects/mtj-backup/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj-backup/appsaasbook@saasbook:~/6170_projects/mtj-backup/app$ cd controllers/
+]0;saasbook@saasbook: ~/6170_projects/mtj-backup/app/controllerssaasbook@saasbook:~/6170_projects/mtj-backup/app/controllers$ ls
+answers_controller.rb       interviews_controller.rb   sessions_controller.rb
+answers_controller.rb~      interviews_controller.rb~  sessions_controller.rb~
+application_controller.rb   offers_controller.rb       static_pages_controller.rb
+application_controller.rb~  offers_controller.rb~      static_pages_controller.rb~
+companies_controller.rb     questions_controller.rb    users_controller.rb
+companies_controller.rb~    questions_controller.rb~   users_controller.rb~
+]0;saasbook@saasbook: ~/6170_projects/mtj-backup/app/controllerssaasbook@saasbook:~/6170_projects/mtj-backup/app/controllers$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj-backup/appsaasbook@saasbook:~/6170_projects/mtj-backup/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj-backupsaasbook@saasbook:~/6170_projects/mtj-backup$ cd ..
+]0;saasbook@saasbook: ~/6170_projectssaasbook@saasbook:~/6170_projects$ cd mtj
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cda[K aa[Kpp/views/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd sat[K[Ktatic_pages/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ ls
+emailed.html.erb   home.html.erb   login.html.erb~    register.html.erb~
+emailed.html.erb~  login.html.erb  register.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ vim register.html.erb
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"register.html.erb" 18L, 475C[>c[1;1H[33m  1 [m[36m<[m[33mh1[m[36m>[m[35mRegister[m[36m</[m[33mh1[m[36m>[m[1m[34m$[m
+[33m  2 [m[36m<[m[33mp[m[36m [m[32mid[m[36m=[m[31m"notice"[m[36m>[m[35m<%=[m notice [35m%>[m[36m</[m[33mp[m[36m>[m[1m[34m$[m
+[33m  3 [m[36m<[m[33mform[m[36m [m[32maccept[m[36m-[m[32mcharset[m[36m=[m[31m"UTF-8"[m[36m [m[32maction[m[36m=[m[31m"/create_account"[m[36m [m[32mmethod[m[36m=[m[31m"post"[m[36m>[m[1m[34m$[m
+[33m  4 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m  5 [m[35m<%=[m [36mlabel_tag[m [31m:email[m [35m%>[m[1m[34m$[m
+[33m  6 [m[35m<%=[m [36mtext_field_tag[m [31m:email[m, [36mparams[m[[31m:email[m] [35m%>[m[1m[34m$[m
+[33m  7 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m  8 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m  9 [m[35m<%=[m [36mlabel_tag[m [31m:password[m [35m%>[m[1m[34m$[m
+[33m 10 [m[35m<%=[m [36mpassword_field_tag[m [31m:password[m [35m%>[m[1m[34m$[m
+[33m 11 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 12 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m 13 [m[35m<%=[m [36mlabel_tag[m [31m:confirm_password[m [35m%>[m[1m[34m$[m
+[33m 14 [m[35m<%=[m [36mpassword_field_tag[m [31m:confirm_password[m [35m%>[m[1m[34m$[m
+[33m 15 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 16 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m = [m[31m'actions'[m[36m>[m[1m[34m$[m
+[33m 17 [m[35m<%=[m [36msubmit_tag[m [35m'[m[31mRegister[m[35m'[m [35m%>[m[1m[34m$[m
+[33m 18 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$
+~                                                                                              [20;1H~                                                                                              [21;1H~                                                                                              [22;1H~                                                                                              [m[23;1H[1m[7mregister.html.erb                                                            1,1            All[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;79H5,6[15;10H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ vim register.html.erb
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"register.html.erb" 18L, 475C[>c[1;1H[33m  1 [m[36m<[m[33mh1[m[36m>[m[35mRegister[m[36m</[m[33mh1[m[36m>[m[1m[34m$[m
+[33m  2 [m[36m<[m[33mp[m[36m [m[32mid[m[36m=[m[31m"notice"[m[36m>[m[35m<%=[m notice [35m%>[m[36m</[m[33mp[m[36m>[m[1m[34m$[m
+[33m  3 [m[36m<[m[33mform[m[36m [m[32maccept[m[36m-[m[32mcharset[m[36m=[m[31m"UTF-8"[m[36m [m[32maction[m[36m=[m[31m"/create_account"[m[36m [m[32mmethod[m[36m=[m[31m"post"[m[36m>[m[1m[34m$[m
+[33m  4 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m  5 [m[35m<%=[m [36mlabel_tag[m [31m:email[m [35m%>[m[1m[34m$[m
+[33m  6 [m[35m<%=[m [36mtext_field_tag[m [31m:email[m, [36mparams[m[[31m:email[m] [35m%>[m[1m[34m$[m
+[33m  7 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m  8 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m  9 [m[35m<%=[m [36mlabel_tag[m [31m:password[m [35m%>[m[1m[34m$[m
+[33m 10 [m[35m<%=[m [36mpassword_field_tag[m [31m:password[m [35m%>[m[1m[34m$[m
+[33m 11 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 12 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m= [m[31m'field'[m[36m>[m[1m[34m$[m
+[33m 13 [m[35m<%=[m [36mlabel_tag[m [31m:confirm_password[m [35m%>[m[1m[34m$[m
+[33m 14 [m[35m<%=[m [36mpassword_field_tag[m [31m:confirm_password[m [35m%>[m[1m[34m$[m
+[33m 15 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 16 [m[36m<[m[33mdiv[m[36m [m[32mclass[m[36m = [m[31m'actions'[m[36m>[m[1m[34m$[m
+[33m 17 [m[35m<%=[m [36msubmit_tag[m [35m'[m[31mRegister[m[35m'[m [35m%>[m[1m[34m$[m
+[33m 18 [m[36m</[m[33mdiv[m[36m>[m[1m[34m$
+~                                                                                              [20;1H~                                                                                              [21;1H~                                                                                              [22;1H~                                                                                              [m[23;1H[1m[7mregister.html.erb                                                            1,1            All[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;79H8,6[18;10H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd se
+bash: cd: se: No such file or directory
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd[K[Kls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git pull
+remote: Counting objects: 38, done.[K
+remote: Compressing objects:  20% (1/5)   [Kremote: Compressing objects:  40% (2/5)   [Kremote: Compressing objects:  60% (3/5)   [Kremote: Compressing objects:  80% (4/5)   [Kremote: Compressing objects: 100% (5/5)   [Kremote: Compressing objects: 100% (5/5), done.[K
+remote: Total 24 (delta 19), reused 24 (delta 19)[K
+Unpacking objects:   4% (1/24)   Unpacking objects:   8% (2/24)   Unpacking objects:  12% (3/24)   Unpacking objects:  16% (4/24)   Unpacking objects:  20% (5/24)   Unpacking objects:  25% (6/24)   Unpacking objects:  29% (7/24)   Unpacking objects:  33% (8/24)   Unpacking objects:  37% (9/24)   Unpacking objects:  41% (10/24)   Unpacking objects:  45% (11/24)   Unpacking objects:  50% (12/24)   Unpacking objects:  54% (13/24)   Unpacking objects:  58% (14/24)   Unpacking objects:  62% (15/24)   Unpacking objects:  66% (16/24)   Unpacking objects:  70% (17/24)   Unpacking objects:  75% (18/24)   Unpacking objects:  79% (19/24)   Unpacking objects:  83% (20/24)   Unpacking objects:  87% (21/24)   Unpacking objects:  91% (22/24)   Unpacking objects:  95% (23/24)   Unpacking objects: 100% (24/24)   Unpacking objects: 100% (24/24), done.
+From github.com:6170/mtj
+   42cc722..bd6d32e  master     -> origin/master
+Updating 42cc722..bd6d32e
+Fast-forward
+ .idea/workspace.xml                        |  190 +++++++++++++++-------------
+ app/assets/javascripts/companies.js.coffee |    8 +-
+ app/assets/javascripts/questions.js.coffee |    4 +-
+ app/controllers/answers_controller.rb      |    2 +-
+ app/controllers/interviews_controller.rb   |    2 +-
+ app/controllers/offers_controller.rb       |    2 +-
+ app/controllers/questions_controller.rb    |    2 +-
+ 7 files changed, 111 insertions(+), 99 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_project

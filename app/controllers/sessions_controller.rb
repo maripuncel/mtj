@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
 
-        #either registers a new account if info is valid and logs that account in, or determines if a user should be logged in with supplied login info
 	def create
 	  flash[:notice] = ''
 	  user = User.find(:first, :conditions => {:email => params[:email]})

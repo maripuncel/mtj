@@ -11,12 +11,16 @@ class InterviewsController < ApplicationController
   # GET /interviews/1/edit
   def edit
     @interview = Interview.find(params[:id])
+    if @interview.user_id != @current_user.id
+      flash[:notice] = 'You don\'t have permission to edit this data.'
+      redirect_to 'http://localhost:3000/companies/' + params[:id] + '/interviews'
+    end
   end
 
   # POST /interviews
   # POST /interviews.json
   def create
-    Interview.add_interview(params)
+    Interview.add_interview(params, @current_user)
     render :text => 'http://localhost:3000/companies/' + params[:company] + '/interviews'
   end
 

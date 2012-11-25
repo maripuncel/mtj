@@ -12,12 +12,16 @@ class QuestionsController < ApplicationController
   # GET /questions/1/edit
   def edit
     @question = Question.find(params[:id])
+    if @question.user_id != @current_user.id
+      flash[:notice] = 'You don\'t have permission to edit this data.'
+      redirect_to 'http://localhost:3000/companies/' + params[:id] + '/questions'
+    end
   end
 
   # POST /questions
   # POST /questions.json
   def create
-    Question.add_question(params)
+    Question.add_question(params, @current_user)
     render :text => 'http://localhost:3000/companies/' + params[:company] + '/questions'
   end
 

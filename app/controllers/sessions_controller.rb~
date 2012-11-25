@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
 	def login
 	  user = User.find(:first, :conditions => {:email => params[:email]})
 	  if user && !user.activated
-	    flash.now[:notice] = 'Account is not yet activated'
+	    flash[:notice] = 'Account is not yet activated'
 	    redirect_to '/login'
 	  elsif user && user[:password] == params[:password]
 	    session[:user_id] = user.id
@@ -47,7 +47,7 @@ class SessionsController < ApplicationController
 	    User.update(user.id, :activated => 1)
 	    flash[:notice] = 'Successfully activated and logged in'
 	    session[:user_id] = user.id
-	    redirect_to :controller => 'companies', :action => 'index'
+	    redirect_to :root'
 	  elsif
 	    flash[:notice] = 'Invalid or expired link'
 	    redirect_to :root

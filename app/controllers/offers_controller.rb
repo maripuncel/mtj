@@ -12,12 +12,16 @@ class OffersController < ApplicationController
   # GET /offers/1/edit
   def edit
     @offer = Offer.find(params[:id])
+    if @offer.user_id != @current_user.id
+      flash[:notice] = 'You don\'t have permission to edit this data.'
+      redirect_to 'http://localhost:3000/companies/' + params[:id] + '/offers'
+    end
   end
 
   # POST /offers
   # POST /offers.json
   def create
-    Offer.add_offer(params)
+    Offer.add_offer(params, @current_user)
     render :text => 'http://localhost:3000/companies/' + params[:company] + '/offers'
   end
 

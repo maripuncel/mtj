@@ -47,7 +47,7 @@ class SessionsController < ApplicationController
 	    User.update(user.id, :activated => 1)
 	    flash[:notice] = 'Successfully activated and logged in'
 	    session[:user_id] = user.id
-	    redirect_to :controller => 'companies', :action => 'index'
+	    redirect_to :root
 	  elsif
 	    flash[:notice] = 'Invalid or expired link'
 	    redirect_to :root

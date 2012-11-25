@@ -1,1 +1,25 @@
+<% provide(:title, @company.name + " | Interviews") %>
 
+<h1>Listing interviews</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+  </tr>
+<% if @interviews.any? %>
+<% @interviews.each do |interview| %>
+  <tr>
+    <td><%= interview.content %></td>
+    <td><%= link_to 'Edit', edit_interview_path(interview) %></td>
+    <td><%= link_to 'Destroy', interview, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Interview', new_interview_url(:id => @company.id) %> |
+<%= link_to 'Back to ' + @company.name, company_url %>

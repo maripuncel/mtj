@@ -3,7 +3,7 @@ class InterviewsController < ApplicationController
 
   def check_status
     if !current_user()
-      flash[:notice] = 'You must log in to view that page'
+      flash.now[:notice] = 'You must log in to view that page'
       render "static_pages/login"
     end
   end
@@ -11,6 +11,10 @@ class InterviewsController < ApplicationController
   # GET /interviews/1/edit
   def edit
     @interview = Interview.find(params[:id])
+    if @interview.user_id != @current_user.id
+      flash[:notice] = 'You don\'t have permission to edit this data.'
+      redirect_to 'http://localhost:3000/companies/' + params[:id] + '/interviews'
+    end
   end
 
   # POST /interviews

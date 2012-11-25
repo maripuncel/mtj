@@ -1,0 +1,50 @@
+<% provide(:title, @company.name) %>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @company.name %>
+</h1>
+
+<br/>
+
+<h3>Interviews</h3>
+
+<table>
+  <% if @interviews.any? %>
+      <% @interviews.each do |interview| %>
+          <tr>
+            <td><%= interview.content %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>
+
+<%= link_to 'View More Interviews', interview_url %>
+<br/><br/>
+
+<h3>Offer Average</h3>
+
+<p><%= @offer %></p>
+
+<%= link_to 'View More Offers', offer_url %>
+<br/><br/>
+
+<h3>Questions/Answers</h3>
+
+<table>
+  <% if @questions.any? %>
+      <% @questions.each do |question| %>
+          <tr>
+            <td><%= question.content %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>
+
+<%= link_to 'View More Question/Answers', question_url %>
+
+<br/><br/>
+
+<%= link_to 'Back', companies_path %>

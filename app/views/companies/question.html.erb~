@@ -2,7 +2,7 @@
 
 
 <h1>Listing questions</h1>
-<p id="notice"><%= notice %></p>
+
 <table>
   <tr>
     <th>Content</th>

@@ -3159,17 +3159,6 @@ Total 9 (delta 7), reused 0 (delta 0)
        Asset precompilation completed (24.15s)
 -----> Rails plugin injection
        Injecting rails_log_stdout
-       Injecting rails3_serve_static (3.2.5)
-       Using uglifier (1.3.0)
-       Using unicorn (4.4.0)
-       Your bundle is complete! It was installed into ./vendor/bundle
-       Cleaning up the bundler cache.
------> Writing config/database.yml to read from DATABASE_URL
------> Preparing app for Rails asset pipeline
-       Running: rake assets:precompile
-       Asset precompilation completed (24.15s)
------> Rails plugin injection
-       Injecting rails_log_stdout
        Injecting rails3_serve_static_assets
 -----> Discovering process types
        Procfile declares types      -> (none)
@@ -3208,4 +3197,538 @@ edit.html.erb  _form.html.erb  _form.html.erb~  index.html.erb  new.html.erb  sh
 ]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/userssaasbook@saasbook:~/6170_projects/mtj/app/views/users$ git [K[K[K[Kcd ..
 ]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
 ]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
-]0;saasbook@saa
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -ma[Ka[Km[K[Kam "mhm"
+[master ac280b7] mhm
+ 5 files changed, 186 insertions(+), 1 deletion(-)
+ create mode 100644 app/views/users/_form.html.erb~
+ create mode 100644 app/views/users/index.html.erb~
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 15, done.
+Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 1.13 KiB, done.
+Total 8 (delta 7), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   72395cb..ac280b7  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 15, done.
+Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 1.13 KiB, done.
+Total 8 (delta 7), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.1
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.1)
+       Using rails (3.2.7)
+       Using raindrops (0.10.0)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (19.31s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 13.4MB
+-----> Launching... done, v34
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   72395cb..ac280b7  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku logs
+[36m2012-11-25T16:02:54+00:00 heroku[router]:[0m at=info method=GET path=/companies/1 host=v     -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 13.4MB
+-----> Launching... done, v34
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   72395cb..ac280b7  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku logs
+[36m2012-11-25T16:02:54+00:00 heroku[router]:[0m at=info method=GET path=/companies/1 host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=1ms connect=4ms service=29ms status=200 bytes=1409
+[33m2012-11-25T16:02:54+00:00 app[web.1]:[0m Completed 200 OK in 11ms (Views: 2.9ms | ActiveRecord: 5.7ms)
+[33m2012-11-25T16:02:54+00:00 app[web.1]:[0m   Rendered companies/show.html.erb within layouts/application (1.4ms)
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m Started GET "/companies/1/offers" for 18.236.5.43 at 2012-11-25 16:02:55 +0000
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m Processing by CompaniesController#offer as HTML
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m   Rendered companies/offer.html.erb within layouts/application (1.2ms)
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 6.2ms)
+[36m2012-11-25T16:02:55+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/offers host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=1ms connect=2ms service=36ms status=200 bytes=1130
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m Started GET "/companies/1/new_offer" for 18.236.5.43 at 2012-11-25 16:02:56 +0000
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m Processing by CompaniesController#new_offer as HTML
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 2.1ms)
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m   Rendered companies/new_offer.html.erb within layouts/application (0.4ms)
+[36m2012-11-25T16:02:56+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/new_offer host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=36ms status=200 bytes=1099
+[36m2012-11-25T16:03:00+00:00 heroku[router]:[0m at=info method=GET path=/favicon.ico host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=4ms service=16ms status=304 bytes=0
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m Started GET "/companies/1/questions" for 18.236.5.43 at 2012-11-25 16:03:02 +0000
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m Processing by CompaniesController#question as HTML
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m   Rendered companies/question.html.erb within layouts/application (2.7ms)
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m Completed 200 OK in 151ms (Views: 5.1ms | ActiveRecord: 46.3ms)
+[36m2012-11-25T16:03:02+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/questions host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=4ms connect=23ms service=298ms status=200 bytes=1157
+[36m2012-11-25T16:03:02+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-492521e08e120144b7e4c251c979f32b.css host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=17ms service=43ms status=304 bytes=0
+[36m2012-11-25T16:03:02+00:00 heroku[router]:[0m at=info method=GET path=/asset
+s/application-80d4a5507aadffdd84868dce988e89b0.js host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=9ms connect=31ms service=40ms status=304 bytes=0
+[33m2012-11-25T16:03:03+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:03:03+00:00 app[web.1]:[0m Started GET "/companies/1/new_question" for 18.236.5.43 at 2012-11-25 16:03:03 +0000
+[33m2012-11-25T16:03:03+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:03:04+00:00 app[web.1]:[0m Processing by CompaniesController#new_question as HTML
+[33m2012-11-25T16:03:04+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:03:04+00:00 app[web.1]:[0m   Rendered companies/new_question.html.erb within layouts/application (0.5ms)
+[33m2012-11-25T16:03:04+00:00 app[web.1]:[0m Completed 200 OK in 343ms (Views: 132.0ms | ActiveRecord: 184.5ms)
+[36m2012-11-25T16:03:04+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/new_question host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=2ms connect=2ms service=870ms status=200 bytes=1125
+[32m2012-11-25T16:08:20+00:00 heroku[slugc]:[0m Slug compilation started
+[35m2012-11-25T16:08:55+00:00 heroku[api]:[0m Release v34 created by tgalvin13@gmail.com
+[35m2012-11-25T16:08:55+00:00 heroku[api]:[0m Deploy ac280b7 by tgalvin13@gmail.com
+[33m2012-11-25T16:08:55+00:00 heroku[web.1]:[0m State changed from up to starting
+[32m2012-11-25T16:08:55+00:00 heroku[slugc]:[0m Slug compilation finished
+[33m2012-11-25T16:08:58+00:00 heroku[web.1]:[0m Stopping all processes with SIGTERM
+[33m2012-11-25T16:08:58+00:00 app[web.1]:[0m [2012-11-25 16:08:58] ERROR SignalException: SIGTERM
+[33m2012-11-25T16:08:58+00:00 app[web.1]:[0m 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+[33m2012-11-25T16:08:59+00:00 heroku[web.1]:[0m Starting process with command `bundle exec rails server -p 37861`
+[33m2012-11-25T16:09:08+00:00 heroku[web.1]:[0m Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+[33m2012-11-25T16:09:08+00:00 heroku[web.1]:[0m Stopping remaining processes with SIGKILL
+[33m2012-11-25T16:09:08+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:18)
+[33m2012-11-25T16:09:08+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:18)
+[33m2012-11-25T16:09:09+00:00 heroku[web.1]:[0m Stopping all processes with SIGTERM
+[33m2012-11-25T16:09:10+00:00 heroku[web.1]:[0m Process exited with status 137
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m => Booting WEBrick
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m => Call with -d to detach
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m => Rails 3.2.7 application starting in production on http://0.0.0.0:37861
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m => Ctrl-C to shutdown server
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m Connecting to database specified by DATABASE_URL
+[33m2012-11-25T16:09:17+00:00 app[web.1]:[0m [2012-11-25 16:09:17] INFO  WEBrick 1.3.1
+[33m2012-11-25T16:09:17+00:00 app[web.1]:[0m [2012-11-25 16:09:17] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+[33m2012-11-25T16:09:17+00:00 app[web.1]:[0m [2012-11-25 16:09:17] INFO  WEBrick::HTTPServer#start: pid=2 port=37861
+[33m2012-11-25T16:09:19+00:00 heroku[web.1]:[0m State changed from starting to up
+[33m2012-11-25T16:10:51+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:51+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:51+00:00 app[web.1]:[0m Started GET "/" for 18.236.5.43 at 2012-11-25 16:10:51 +0000
+[33m2012-11-25T16:10:51+00us=200 bytes=989
+[36m2012-11-25T16:10:51+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-492521e08e120144b7e4c251c979f32b.css host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=3ms service=12ms status=200 bytes=83419
+[36m2012-11-25T16:10:52+00:00 heroku[router]:[0m at=info method=GET path=/favicon.ico host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=5ms service=8ms status=200 bytes=0
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m Started GET "/companies" for 18.236.5.43 at 2012-11-25 16:10:53 +0000
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m Processing by CompaniesController#index as HTML
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m   Rendered companies/index.html.erb within layouts/application (1.8ms)
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m Completed 200 OK in 27ms (Views: 8.3ms | ActiveRecord: 8.6ms)
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m Processing by CompaniesController#show as HTML
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m Started GET "/companies/1" for 18.236.5.43 at 2012-11-25 16:10:55 +0000
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m Completed 200 OK in 134ms (Views: 5.3ms | ActiveRecord: 25.0ms)
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m   Rendered companies/show.html.erb within layouts/application (2.4ms)
+[36m2012-11-25T16:10:55+00:00 heroku[router]:[0m at=info method=GET path=/companies/1 host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=143ms status=304 bytes=0
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m Started GET "/companies/1/interviews" for 18.236.5.43 at 2012-11-25 16:10:56 +0000
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m Processing by CompaniesController#interview as HTML
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m   Rendered companies/interview.html.erb within layouts/application (1.8ms)
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m Completed 200 OK in 12ms (Views: 5.4ms | ActiveRecord: 2.5ms)
+[36m2012-11-25T16:10:56+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/interviews host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=8ms service=24ms status=304 bytes=0
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m Started GET "/companies/1/new_interview" for 18.236.5.43 at 2012-11-25 16:10:58 +0000
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m Processing by CompaniesController#new_interview as HTML
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m   Rendered companies/new_interview.html.erb within layouts/application (0.4ms)
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 1.2ms)
+[36m2012-11-25T16:10:58+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/new_interview host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=4ms service=58ms status=304 bytes=0
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku logs
+[36m2012-11-25T16:02:54+00:00 heroku[router]:[0m at=info method=GET path=/companies/1 host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=1ms connect=4ms service=29ms status=200 bytes=1409
+[33m2012-11-25T16:02:54+00:00 app[web.1]:[0m Completed 200 OK in 11ms (Views: 2.9ms | ActiveRecord: 5.7ms)
+[33m2012-11-25T16:02:54+00:00 app[web.1]:[0m   Rendered companies/show.html.erb within layouts/application (1.4ms)
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m Started GET "/companies/1/offers" for 18.236.5.43 at 2012-11-25 16:02:55 +0000
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m Processing by CompaniesController#offer as HTML
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m   Rendered companies/offer.html.erb within layouts/application (1.2ms)
+[33m2012-11-25T16:02:55+00:00 app[web.1]:[0m Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 6.2ms)
+[36m2012-11-25T16:02:55+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/offers host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=1ms connect=2ms service=36ms status=200 bytes=1130
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m Started GET "/companies/1/new_offer" for 18.236.5.43 at 2012-11-25 16:02:56 +0000
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m Processing by CompaniesController#new_offer as HTML
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 2.1ms)
+[33m2012-11-25T16:02:56+00:00 app[web.1]:[0m   Rendered companies/new_offer.html.erb within layouts/application (0.4ms)
+[36m2012-11-25T16:02:56+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/new_offer host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=36ms status=200 bytes=1099
+[36m2012-11-25T16:03:00+00:00 heroku[router]:[0m at=info method=GET path=/favicon.ico host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=4ms service=16ms status=304 bytes=0
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m Started GET "/companies/1/questions" for 18.236.5.43 at 2012-11-25 16:03:02 +0000
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m Processing by CompaniesController#question as HTML
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m   Rendered companies/question.html.erb within layouts/application (2.7ms)
+[33m2012-11-25T16:03:02+00:00 app[web.1]:[0m Completed 200 OK in 151ms (Views: 5.1ms | ActiveRecord: 46.3ms)
+[36m2012-11-25T16:03:02+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/questions host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=4ms connect=23ms service=298ms status=200 bytes=1157
+[36m2012-11-25T16:03:02+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-492521e08e120144b7e4c251c979f32b.css host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=17ms service=43ms status=304 bytes=0
+[36m2012-11-25T16:03:02+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-80d4a5507aadffdd84868dce988e89b0.js host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=9ms connect=31ms service=40ms status=304 bytes=0
+[33m2012-11-25T16:03:03+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:03:03+00:00 app[web.1]:[0m Started GET "/companies/1/new_question" for 18.236.5.43 at 2012-11-25 16:03:03 +0000
+[33m2012-11-25T16:03:03+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:03:04+00:00 app[web.1]:[0m Processing by CompaniesController#new_question as HTML
+[33m2012-11-25T16:03:04+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:03:04+00:00 app[web.1]:[0m   Rendered companies/new_question.html.erb within layouts/application (0.5ms)
+[33m2012-11-25T16:03:04+00:00 app[web.1]:[0m Completed 200 OK in 343ms (Views: 132.0ms | ActiveRecord: 184.5ms)
+[36m2012-11-25T16:03:04+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/new_question host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=2ms connect=2ms service=870ms status=200 bytes=1125
+[32m2012-11-25T16:08:20+00:00 heroku[slugc]:+00:00 app[web.1]:[0m   Rendered companies/new_question.html.erb within layouts/application (0.5ms)
+[33m2012-11-25T16:03:04+00:00 app[web.1]:[0m Completed 200 OK in 343ms (Views: 132.0ms | ActiveRecord: 184.5ms)
+[36m2012-11-25T16:03:04+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/new_question host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=2ms connect=2ms service=870ms status=200 bytes=1125
+[32m2012-11-25T16:08:20+00:00 heroku[slugc]:[0m Slug compilation started
+[35m2012-11-25T16:08:55+00:00 heroku[api]:[0m Release v34 created by tgalvin13@gmail.com
+[35m2012-11-25T16:08:55+00:00 heroku[api]:[0m Deploy ac280b7 by tgalvin13@gmail.com
+[33m2012-11-25T16:08:55+00:00 heroku[web.1]:[0m State changed from up to starting
+[32m2012-11-25T16:08:55+00:00 heroku[slugc]:[0m Slug compilation finished
+[33m2012-11-25T16:08:58+00:00 heroku[web.1]:[0m Stopping all processes with SIGTERM
+[33m2012-11-25T16:08:58+00:00 app[web.1]:[0m [2012-11-25 16:08:58] ERROR SignalException: SIGTERM
+[33m2012-11-25T16:08:58+00:00 app[web.1]:[0m 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+[33m2012-11-25T16:08:59+00:00 heroku[web.1]:[0m Starting process with command `bundle exec rails server -p 37861`
+[33m2012-11-25T16:09:08+00:00 heroku[web.1]:[0m Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+[33m2012-11-25T16:09:08+00:00 heroku[web.1]:[0m Stopping remaining processes with SIGKILL
+[33m2012-11-25T16:09:08+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:18)
+[33m2012-11-25T16:09:08+00:00 app[web.1]:[0m DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:18)
+[33m2012-11-25T16:09:09+00:00 heroku[web.1]:[0m Stopping all processes with SIGTERM
+[33m2012-11-25T16:09:10+00:00 heroku[web.1]:[0m Process exited with status 137
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m => Booting WEBrick
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m => Call with -d to detach
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m => Rails 3.2.7 application starting in production on http://0.0.0.0:37861
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m => Ctrl-C to shutdown server
+[33m2012-11-25T16:09:15+00:00 app[web.1]:[0m Connecting to database specified by DATABASE_URL
+[33m2012-11-25T16:09:17+00:00 app[web.1]:[0m [2012-11-25 16:09:17] INFO  WEBrick 1.3.1
+[33m2012-11-25T16:09:17+00:00 app[web.1]:[0m [2012-11-25 16:09:17] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+[33m2012-11-25T16:09:17+00:00 app[web.1]:[0m [2012-11-25 16:09:17] INFO  WEBrick::HTTPServer#start: pid=2 port=37861
+[33m2012-11-25T16:09:19+00:00 heroku[web.1]:[0m State changed from starting to up
+[33m2012-11-25T16:10:51+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:51+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:51+00:00 app[web.1]:[0m Started GET "/" for 18.236.5.43 at 2012-11-25 16:10:51 +0000
+[33m2012-11-25T16:10:51+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
+[33m2012-11-25T16:10:51+00:00 app[web.1]:[0m   Rendered static_pages/home.html.erb within layouts/application (43.3ms)
+[33m2012-11-25T16:10:51+00:00 app[web.1]:[0m Completed 200 OK in 320ms (Views: 75.7ms | ActiveRecord: 115.3ms)
+[36m2012-11-25T16:10:51+00:00 heroku[router]:[0m at=info method=GETerokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=5ms service=8ms status=200 bytes=0
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m Started GET "/companies" for 18.236.5.43 at 2012-11-25 16:10:53 +0000
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m Processing by CompaniesController#index as HTML
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m   Rendered companies/index.html.erb within layouts/application (1.8ms)
+[33m2012-11-25T16:10:53+00:00 app[web.1]:[0m Completed 200 OK in 27ms (Views: 8.3ms | ActiveRecord: 8.6ms)
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m Processing by CompaniesController#show as HTML
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m Started GET "/companies/1" for 18.236.5.43 at 2012-11-25 16:10:55 +0000
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m Completed 200 OK in 134ms (Views: 5.3ms | ActiveRecord: 25.0ms)
+[33m2012-11-25T16:10:55+00:00 app[web.1]:[0m   Rendered companies/show.html.erb within layouts/application (2.4ms)
+[36m2012-11-25T16:10:55+00:00 heroku[router]:[0m at=info method=GET path=/companies/1 host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=143ms status=304 bytes=0
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m Started GET "/companies/1/interviews" for 18.236.5.43 at 2012-11-25 16:10:56 +0000
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m Processing by CompaniesController#interview as HTML
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m   Rendered companies/interview.html.erb within layouts/application (1.8ms)
+[33m2012-11-25T16:10:56+00:00 app[web.1]:[0m Completed 200 OK in 12ms (Views: 5.4ms | ActiveRecord: 2.5ms)
+[36m2012-11-25T16:10:56+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/interviews host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=8ms service=24ms status=304 bytes=0
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m Started GET "/companies/1/new_interview" for 18.236.5.43 at 2012-11-25 16:10:58 +0000
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m 
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m Processing by CompaniesController#new_interview as HTML
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m   Rendered companies/new_interview.html.erb within layouts/application (0.4ms)
+[33m2012-11-25T16:10:58+00:00 app[web.1]:[0m Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 1.2ms)
+[36m2012-11-25T16:10:58+00:00 heroku[router]:[0m at=info method=GET path=/companies/1/new_interview host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=4ms service=58ms status=304 bytes=0
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd app/views/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ l
+[0m[01;34manswers[0m/    [01;34minterviews[0m/  [01;34moffers[0m/     [01;34mstatic_pages[0m/  [01;34musers[0m/
+[01;34mcompanies[0m/  [01;34mlayouts[0m/     [01;34mquestions[0m/  [01;34muser_mailer[0m/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projectjects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cl[K[Kls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ geiddt[K[K[K[Kdit [K[K[K[K[K[Kcd interviews/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/interviewssaasbook@saasbook:~/6170_projects/mtj/app/views/interviews$ ls
+edit.html.erb  _form.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/interviewssaasbook@saasbook:~/6170_projects/mtj/app/views/interviews$ geidt [K[K[K[Kdit[K[K[K[K[Kcd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd interviews/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/interviewssaasbook@saasbook:~/6170_projects/mtj/app/views/interviews$ ls
+edit.html.erb  _form.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/interviewssaasbook@saasbook:~/6170_projects/mtj/app/views/interviews$ cd[K[Kls
+edit.html.erb  _form.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/interviewssaasbook@saasbook:~/6170_projects/mtj/app/views/interviews$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd companies/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ ls
+edit.html.erb   interview.html.erb   new_interview.html.erb  offer.html.erb
+_form.html.erb  interview.html.erb~  new_offer.html.erb      question.html.erb
+index.html.erb  new.html.erb         new_question.html.erb   show.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ vim it[Kbt[K[Knterview.html.erb
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"interview.html.erb" 25L, 608C[>c[1;1H[33m  1 [m[35m<%[m provide([31m:title[m, [36m@company[m.name + [35m"[m[31m | Interviews[m[35m"[m) [35m%>[m[1m[34m$[m
+[33m  2 [m[1m[34m$[m
+[33m  3 [m[36m<[m[33mh1[m[36m>[m[35mListing interviews[m[36m</[m[33mh1[m[36m>[m[1m[34m$[m
+[33m  4 [m[1m[34m$[m
+[33m  5 [m[36m<[m[33mtable[m[36m>[m[1m[34m$[m
+[33m  6 [m  [36m<[m[33mtr[m[36m>[m[1m[34m$[m
+[33m  7 [m    [36m<[m[33mth[m[36m>[mContent[36m</[m[33mth[m[36m>[m[1m[34m$[m
+[33m  8 [m    [36m<[m[33mth[m[36m></[m[33mth[m[36m>[m[1m[34m$[m
+[33m  9 [m    [36m<[m[33mth[m[36m></[m[33mth[m[36m>[m[1m[34m$[m
+[33m 10 [m  [36m</[m[33mtr[m[36m>[m[1m[34m$[m
+[33m 11 [m[35m<%[m [33mif[m [36m@interviews[m.any? [35m%>[m[1m[34m$[m
+[33m 12 [m[35m<%[m [36m@interviews[m.each [33mdo[m |[36minterview[m| [35m%>[m[1m[34m$[m
+[33m 13 [m  [36m<[m[33mtr[m[36m>[m[1m[34m$[m
+[33m 14 [m    [36m<[m[33mtd[m[36m>[m[35m<%=[m interview.content [35m%>[m[36m</[m[33mtd[m[36m>[m[1m[34m$[m
+[33m 15 [m    [36m<[m[33mtd[m[36m>[m[35m<%=[m [36mlink_to[m [35m'[m[31mEdit[m[35m'[m, edit_m[34m$[m
+[33m 20 [m[36m</[m[33mtable[m[36m>[m[1m[34m$[m
+[33m 21 [m[1m[34m$[m
+[33m 22 [m[36m<[m[33mbr[m[36m />[m[1m[34m$[m
+[1m[7minterview.html.erb                                                           1,1            Top[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;78H2,0-1[2;5H[?12l[?25h[?25l[23;78H3,1   [3;5H[?12l[?25h[?25l[23;78H4,0-1[4;5H[?12l[?25h[?25l[23;78H5,1   [5;5H[?12l[?25h[?25l[23;78H6,[6;5H[?12l[?25h[?25l[23;78H7,[7;5H[?12l[?25h[?25l[23;78H8,[8;5H[?12l[?25h[?25l[23;78H9,[9;5H[?12l[?25h[?25l[23;78H10,1[10;5H[?12l[?25h[?25l[23;79H1,[11;5H[?12l[?25h[?25l[23;79H2,[12;5H[?12l[?25h[?25l[23;79H3,[13;5H[?12l[?25h[?25l[23;79H4,[14;5H[?12l[?25h[?25l[23;79H5,[15;5H[?12l[?25h[?25l[23;81H2 [15;6H[?12l[?25h[?25l[23;81H3 [15;7H[?12l[?25h[?25l[23;81H4 [15;8H[?12l[?25h[?25l[23;81H5 [15;9H[?12l[?25h[?25l[23;81H6 [15;10H[?12l[?25h[?25l[23;81H7 [15;11H[?12l[?25h[?25l[23;81H8 [15;12H[?12l[?25h[?25l[23;81H9 [15;13H[?12l[?25h[?25l[23;81H10[15;14H[?12l[?25h[?25l[23;82H1 [15;15H[?12l[?25h[?25l[23;82H2 [15;16H[?12l[?25h[?25l[23;82H3 [15;17H[?12l[?25h[?25l[23;82H4 [15;18H[?12l[?25h[?25l[23;82H5 [15;19H[?12l[?25h[?25l[23;82H6 [15;20H[?12l[?25h[?25l[23;82H7 [15;21H[?12l[?25h[?25l[23;82H8 [15;22H[?12l[?25h[?25l[23;82H9 [15;23H[?12l[?25h[?25l[23;81H20 [15;24H[?12l[?25h[?25l[23;82H1 [15;25H[?12l[?25h[?25l[23;82H2 [15;26H[?12l[?25h[?25l[23;82H3 [15;27H[?12l[?25h[?25l[23;82H4 [15;28H[?12l[?25h[?25l[23;82H5 [15;29H[?12l[?25h[?25l[23;82H6 [15;30H[?12l[?25h[?25l[23;82H7 [15;31H[?12l[?25h[?25l[23;82H8 [15;32H[?12l[?25h[?25l[23;82H9 [15;33H[?12l[?25h[?25l[23;81H30 [15;34H[?12l[?25h[?25l[23;82H1 [15;35H[?12l[?25h[?25l[23;82H2 [15;36H[?12l[?25h[?25l[23;82H3 [15;37H[?12l[?25h[?25l[23;82H4 [15;38H[?12l[?25h[?25l[23;82H5 [15;39H[?12l[?25h[?25l[23;82H6 [15;40H[?12l[?25h[?25l[23;82H7 [15;41H[?12l[?25h[?25l[23;82H8 [15;42H[?12l[?25h[?25l[23;82H9 [15;43H[?12l[?25h[?25l[23;81H40 [15;44H[?12l[?25h[?25l[23;82H1 [15;45H[?12l[?25h[?25l[23;82H2 [15;46H[?12l[?25h[?25l[23;82H3 [15;47H[?12l[?25h[?25l[23;82H4 [15;48H[?12l[?25h[?25l[23;82H5 [15;49H[?12l[?25h[?25l[23;82H6 [15;50H[?12l[?25h[?25l[23;82H7 [15;51H[?12l[?25h[?25l[mh[46m([9C)[m[23;82H[1m[7m8 [15;52H[?12l[?25h[?25l[m([9C)[23;82H[1m[7m9 [15;53H[?12l[?25h[?25l[23;79H6,[16;53H[?12l[?25h[?25l[23;81H50 [16;54H[?12l[?25h[?25l[23;82H1 [16;55H[?12l[?25h[?25l[23;82H2 [16;56H[?12l[?25h[?25l[23;82H3 [16;57H[?12l[?25h[?25l[23;82H4 [16;58H[?12l[?25h[?25l[23;82H5 [16;59H[?12l[?25h[?25l[23;82H6 [16;60H[?12l[?25h[?25l[23;82H7 [16;61H[?12l[?25h[?25l[23;82H8 [16;62H[?12l[?25h[?25l[23;82H9 [16;63H[?12l[?25h[?25l[23;81H60 [16;64H[?12l[?25h[?25l[23;82H1 [16;65H[?12l[?25h[?25l[23;82H2 [16;66H[?12l[?25h[?25l[23;82H3 [16;67H[?12l[?25h[?25l[23;82H4 [16;68H[?12l[?25h[?25l[23;82H5 [16;69H[?12l[?25h[?25l[m [46m{[m[23;82H[1m[7m6 [16;70H[?12l[?25h[?25l[m{[23;82H[1m[7m7 [16;71H[?12l[?25h[?25l[23;82H8 [16;72H[?12l[?25h[?25l[23;82H9 [16;73H[?12l[?25h[?25l[23;81H70 [16;74H[?12l[?25h[?25l[23;82H1 [16;75H[?12l[?25h[?25l[23;82H2 [16;76H[?12l[?25h[?25l[23;82H3 [16;77H[?12l[?25h[?25l[23;82H4 [16;78H[?12l[?25h[?25l[23;82H5 [16;79H[?12l[?25h[?25l[23;82H6 [16;80H[?12l[?25h[?25l[23;82H7 [16;81H[?12l[?25h[?25l[23;79H7,7  [17;11H[?12l[?25h[?25l[23;81H6 [17;10H[?12l[?25h[?25l[23;81H5 [17;9H[?12l[?25h[?25l[23;81H4 [17;8H[?12l[?25h[?25l[23;79H6,[16;8H[?12l[?25h[?25l[23;81H5 [16;9H[?12l[?25h[?25l[23;81H6 [16;10H[?12l[?25h[?25l[23;81H7 [16;11H[?12l[?25h[?25l[23;81H8 [16;12H[?12l[?25h[?25l[23;81H9 [16;13H[?12l[?25h[?25l[23;81H10[16;14H[?12l[?25h[?25l[23;82H1 [16;15H[?12l[?25h[?25l[23;82H2 [16;16H[?12l[?25h[?25l[23;82H3 [16;17H[?12l[?25h[?25l[23;82H4 [16;18H[?12l[?25h[?25l[23;82H5 [16;19H[?12l[?25h[?25l[23;82H6 [16;20H[?12l[?25h[?25l[23;82H7 [16;21H[?12l[?25h[?25l[23;82H8 [16;22H[?12l[?25h[?25l[23;82H9 [16;23H[?12l[?25h[?25l[23;81H20 [16;24H[?12l[?25h[?25l[23;82H1 [16;25H[?12l[?25h[?25l[23;82H2 [16;26H[?12l[?25h[?25l[23;82H3 [16;27H[?12l[?25h[?25l[23;82H4 [16;28H[?12l[?25h[?25l[23;82H5 [16;29H[?12l[?25h[?25l[23;82H6 [16;30H[?12l[?25h[?25l[23;82H7 [16;31H[?12l[?25h[?25l[23;82H8 [16;32H[?12l[?25h[?25l[23;82H9 [16;33H[?12l[?25h[?25l[23;81H30 [16;34H[?12l[?25h[?25l[23;82H1 [16;35H[?12l[?25h[?25l[23;82H2 [16;36H[?12l[?25h[?25l[23;82H3 [16;37H[?12l[?25h[?25l[23;82H4 [16;38H[?12l[?25h[?25l[23;82H5 [16;39H[?12l[?25h[?25l[23;82H6 [16;40H[?12l[?25h[?25l[23;82H7 [16;41H[?12l[?25h[?25l[23;82H8 [16;42H[?12l[?25h[?25l[23;82H9 [16;43H[?12l[?25h[?25l[23;81H40 [16;44H[?12l[?25h[?25l[23;82H1 [16;45H[?12l[?25h[?25l[23;82H2 [16;46H[?12l[?25h[?25l[23;82H3 [16;47H[?12l[?25h[?25l[23;82H4 [16;48H[?12l[?25h[?25l[23;82H5 [16;49H[?12l[?25h[?25l[23;82H6 [16;50H[?12l[?25h[?25l[23;82H7 [16;51H[?12l[?25h[?25l[23;82H8 [16;52H[?12l[?25h[?25l[23;82H9 [16;53H[?12l[?25h[?25l[23;81H50 [16;54H[?12l[?25h[?25l[23;82H1 [16;55H[?12l[?25h[?25l[23;82H2 [16;56H[?12l[?25h[?25l[23;82H3 [16;57H[?12l[?25h[?25l[23;82H4 [16;58H[?12l[?25h[?25l[23;82H5 [16;59H[?12l[?25h[?25l[23;82H6 [16;60H[?12l[?25h[?25l[23;82H7 [16;61H[?12l[?25h[?25l[23;82H8 [16;62H[?12l[?25h[?25l[23;82H9 [16;63H[?12l[?25h[?25l[23;81H60 [16;64H[?12l[?25h[?25l[23;82H1 [16;65H[?12l[?25h[?25l[23;82H2 [16;66H[?12l[?25h[?25l[23;82H3 [16;67H[?12l[?25h[?25l[23;82H4 [16;68H[?12l[?25h[?25l[23;82H5 [16;69H[?12l[?25h[?25l[m [46m{[m[23;82H[1m[7m6 [16;70H[?12l[?25h[?25l[m{[23;82H[1m[7m7 [16;71H[?12l[?25h[?25l[23;82H8 [16;72H[?12l[?25h[?25l[23;82H9 [16;73H[?12l[?25h[?25l[23;81H70 [16;74H[?12l[?25h[?25l[23;82H1 [16;75H[?12l[?25h[?25l[23;82H2 [16;76H[?12l[?25h[?25l[23;82H3 [16;77H[?12l[?25h[?25l[23;82H4 [16;78H[?12l[?25h[?25l[23;82H5 [16;79H[?12l[?25h[?25l[23;82H6 [16;80H[?12l[?25h[?25l[23;82H7 [16;81H[?12l[?25h[?25l[23;82H8 [16;82H[?12l[?25h[?25l[23;82H9 [16;83H[?12l[?25h[?25l[23;81H80 [16;84H[?12l[?25h[?25l[23;82H1 [16;85H[?12l[?25h[?25l[23;82H2 [16;86H[?12l[?25h[?25l[23;82H3 [16;87H[?12l[?25h[?25l[23;82H4 [16;88H[?12l[?25h[?25l[23;82H5 [16;89H[?12l[?25h[?25l[23;82H6 [16;90H[?12l[?25h[?25l[23;82H7 [16;91H[?12l[?25h[?25l[23;82H8 [16;92H[?12l[?25h[?25l[23;82H9 [16;93H[?12l[?25h[?25l[23;81H90 [16;94H[?12l[?25h[?25l[23;82H1 [16;95H[?12l[?25h[?25l[m[1;5H[1m[34m<[m[31mws[m[35m"[m) [35m%>[m[1m[34m$[m[1;14H[K[2;4H[33m [m[1m[34m<[3;5H<[m[3;6H[K[4;4H[33m [m[1m[34m<[5;5H<[m[5;6H[K[6;4H[33m [m[1m[34m<[m[6;7H[K[7;4H[33m [m[1m[34m<[m[7;9H[K[8;4H[33m [m[1m[34m<[m[8;9H[K[9;4H[33m [m[1m[34m<[m[9;9H[K[10;4H[33m [m[1m[34m<[m[10;7H[K[11;5H[1m[34m<[m[11;6H[K[12;5H[1m[34m<[m[12;6H[K[13;4H[33m [m[1m[34m<[m[13;7H[K[14;4H[33m [m[1m[34m<[m[14;9H[K[15;4H[33m [m[1m[34m<[m(interview) [35m%>[m[36m</[m[33mtd[m[36m>[m[1m[34m$[m[15;26H[K[16;4H[33m [m[1m[34m<[m[31md[m: [31m:delete[m, [36mdata[m: { [31mconfirm[m: [35m'[m[31mAre you sure?[m[35m'[m } [35m%>[m[36m</[m[33mtd[m[36m>[m[1m[34m$[m[16;61H[K[17;4H[33m [m[1m[34m<[m[17;7H[K[18;5H[1m[34m<[m[18;6H[K[19;5H[1m[34m<[m[19;6H[K[20;5H[1m[34m<[m[20;6H[K[21;4H[33m [m[1m[34m<[22;5H<[m[22;6H[K[23;82H[1m[7m2 [16;50H[?12l[?25h[?25l[m[16;24H[46m{[26C}[m[23;82H[1m[7m3 [16;51H[?12l[?25h[?25l[m[16;24H{[2[34m<[m[31md[m: [31m:delete[m, [36mdata[m: { [31mconfirm[m: [35m'[m[31mAre you sure?[m[35m'[m } [35m%>[m[36m</[m[33mtd[m[36m>[m[1m[34m$[m[16;61H[K[17;4H[33m [m[1m[34m<[m[17;7H[K[18;5H[1m[34m<[m[18;6H[K[19;5H[1m[34m<[m[19;6H[K[20;5H[1m[34m<[m[20;6H[K[21;4H[33m [m[1m[34m<[22;5H<[m[22;6H[K[23;82H[1m[7m2 [16;50H[?12l[?25h[?25l[m[16;24H[46m{[26C}[m[23;82H[1m[7m3 [16;51H[?12l[?25h[?25l[m[16;24H{[26C}[23;82H[1m[7m4 [16;52H[?12l[?25h[?25l[23;82H5 [16;53H[?12l[?25h[?25l[23;82H6 [16;54H[?12l[?25h[?25l[23;82H7 [16;55H[?12l[?25h[?25l[23;82H8 [16;56H[?12l[?25h[?25l[23;82H9 [16;57H[?12l[?25h[?25l[23;81H100[16;58H[?12l[?25h[?25l[23;83H1 [16;59H[?12l[?25h[?25l[23;83H0 [16;58H[?12l[?25h[?25l[23;81H99  [16;57H[?12l[?25h[?25l[23;82H8 [16;56H[?12l[?25h[?25l[23;82H7 [16;55H[?12l[?25h[?25l[23;82H6 [16;54H[?12l[?25h[?25l[23;82H5 [16;53H[?12l[?25h[?25l[23;82H4 [16;52H[?12l[?25h[?25l[m[16;24H[46m{[26C}[m[23;82H[1m[7m3 [16;51H[?12l[?25h[?25l[m[16;24H{[26C}[23;82H[1m[7m2 [16;50H[?12l[?25h[?25l[23;82H1 [16;49H[?12l[?25h[?25l[23;82H0 [16;48H[?12l[?25h[?25l[23;81H89 [16;47H[?12l[?25h[?25l[23;82H8 [16;46H[?12l[?25h[?25l[23;82H7 [16;45H[?12l[?25h[?25l[23;82H6 [16;44H[?12l[?25h[?25l[23;82H5 [16;43H[?12l[?25h[?25l[23;82H4 [16;42H[?12l[?25h[?25l[23;82H3 [16;41H[?12l[?25h[?25l[23;82H2 [16;40H[?12l[?25h[?25l[23;82H1 [16;39H[?12l[?25h[?25l[23;82H0 [16;38H[?12l[?25h[?25l[23;81H79 [16;37H[?12l[?25h[?25l[23;82H8 [16;36H[?12l[?25h[?25l[23;82H7 [16;35H[?12l[?25h[?25l[23;82H6 [16;34H[?12l[?25h[?25l[23;82H5 [16;33H[?12l[?25h[?25l[23;82H4 [16;32H[?12l[?25h[?25l[23;82H3 [16;31H[?12l[?25h[?25l[23;82H2 [16;30H[?12l[?25h[?25l[23;82H1 [16;29H[?12l[?25h[?25l[23;82H0 [16;28H[?12l[?25h[?25l[23;81H69 [16;27H[?12l[?25h[?25l[23;82H8 [16;26H[?12l[?25h[?25l[23;82H7 [16;25H[?12l[?25h[?25l[m[46m{[26C}[m[23;82H[1m[7m6 [16;24H[?12l[?25h[?25l[m{[26C}[23;82H[1m[7m5 [16;23H[?12l[?25h[?25l[23;82H4 [16;22H[?12l[?25h[?25l[23;82H3 [16;21H[?12l[?25h[?25l[23;82H2 [16;20H[?12l[?25h[?25l[23;82H1 [16;19H[?12l[?25h[?25l[23;82H0 [16;18H[?12l[?25h[?25l[23;81H59 [16;17H[?12l[?25h[?25l[23;82H8 [16;16H[?12l[?25h[?25l[23;82H7 [16;15H[?12l[?25h[?25l[23;82H6 [16;14H[?12l[?25h[?25l[23;82H5 [16;13H[?12l[?25h[?25l[23;82H4 [16;12H[?12l[?25h[?25l[23;82H3 [16;11H[?12l[?25h[?25l[23;82H2 [16;10H[?12l[?25h[?25l[23;82H1 [16;9H[?12l[?25h[?25l[23;82H0 [16;8H[?12l[?25h[?25l[23;81H49 [16;7H[?12l[?25h[?25l[23;82H8 [16;6H[?12l[?25h[?25l[23;82H7 [16;5H[?12l[?25h[?25l[m[1;5H[35m<%[m provide([31m:title[m, [36m@company[m.name + [35m"[m[31m | Interviews[m[35m"[m) [35m%>[m[1m[34m$[m[2;4H[33m [m[1m[34m$[m[3;5H[36m<[m[33mh1[m[36m>[m[35mListing interviews[m[36m</[m[33mh1[m[36m>[m[1m[34m$[m[4;4H[33m [m[1m[34m$[m[5;5H[36m<[m[33mtable[m[36m>[m[1m[34m$[m[6;4H[33m [m  [36m<[m[33mtr[m[36m>[m[1m[34m$[m[7;4H[33m [m    [36m<[m[33mth[m[36m>[mContent[36m</[m[33mth[m[36m>[m[1m[34m$[m[8;4H[33m [m    [36m<[m[33mth[m[36m></[m[33mth[m[36m>[m[1m[34m$[m[9;4H[33m [m    [36m<[m[33mth[m[36m></[m[33mth[m[36m>[m[1m[34m$[m[10;4H[33m [m  [36m</[m[33mtr[m[36m>[m[1m[34m$[m[11;5H[35m<%[m [33mif[m [36m@interviews[m.any? [35m%>[m[1m[34m$[m[12;5H[35m<%[m [36m@interviews[m.each [33mdo[m |[36minterview[m| [35m%>[m[1m[34m$[m[13;4H[33m [m  [36m<[m[33mtr[m[36m>[m[1m[34m$[m[14;4H[33m [m    [36m<[m[33mtd[m[36m>[m[35m<%=[m interview.content [35m%>[m[36m</[m[33mtd[m[36m>[m[1m[34m$[m[15;4H[33m [m    [36m<[m[33mtd[m[36m>[m[35m<%=[m [36mlink_to[m [35m'[m[31mEdit[m[35m'[m, edit_interview_path(interview) [35m%>[m[36m</[m[33mtd[m[36m>[m[1m[m$[m[22;5H[36m<[m[33mbr[m[36m />[m[1m[34m$[m[23;82H[1m[7m6 [16;50H[?12l[?25h[?25l[23;82H5 [16;49H[?12l[?25h[?25l[23;82H4 [16;48H[?12l[?25h[?25l[23;82H3 [16;47H[?12l[?25h[?25l[23;82H2 [16;46H[?12l[?25h[?25l[23;82H1 [16;45H[?12l[?25h[?25l[23;82H0 [16;44H[?12l[?25h[?25l[23;81H39 [16;43H[?12l[?25h[?25l[23;82H8 [16;42H[?12l[?25h[?25l[23;82H7 [16;41H[?12l[?25h[?25l[23;82H6 [16;40H[?12l[?25h[?25l[23;82H5 [16;39H[?12l[?25h[?25l[23;82H4 [16;38H[?12l[?25h[?25l[23;82H3 [16;37H[?12l[?25h[?25l[23;82H2 [16;36H[?12l[?25h[?25l[23;82H1 [16;35H[?12l[?25h[?25l[23;82H0 [16;34H[?12l[?25h[?25l[23;81H29 [16;33H[?12l[?25h[?25l[23;82H8 [16;32H[?12l[?25h[?25l[23;82H7 [16;31H[?12l[?25h[?25l[23;82H6 [16;30H[?12l[?25h[?25l[23;82H5 [16;29H[?12l[?25h[?25l[23;82H4 [16;28H[?12l[?25h[?25l[23;82H3 [16;27H[?12l[?25h[?25l[23;82H2 [16;26H[?12l[?25h[?25l[23;82H1 [16;25H[?12l[?25h[?25l[23;82H0 [16;24H[?12l[?25h[?25l[23;81H19 [16;23H[?12l[?25h[?25l[23;82H8 [16;22H[?12l[?25h[?25l[23;82H7 [16;21H[?12l[?25h[?25l[23;82H6 [16;20H[?12l[?25h[?25l[23;82H5 [16;19H[?12l[?25h[?25l[23;82H4 [16;18H[?12l[?25h[?25l[23;82H3 [16;17H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd..
+ cd..: command not found
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$  cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake db:reset
+-- create_table("answers", {:force=>true})
+   -> 0.0700s
+-- create_table("companies", {:force=>true})
+   -> 0.0062s
+-- create_table("interviews", {:force=>true})
+   -> 0.0054s
+-- create_table("offers", {:force=>true})
+   -> 0.0080s
+-- create_table("questions", {:force=>true})
+   -> 0.0126s
+-- create_table("users", {:force=>true})
+   -> 0.0120s
+-- initialize_schema_migrations_table()
+   -> 0.0158s
+-- assume_migrated_upto_version(20121125024228, ["/home/ubuntu/6170_projects/mtj/db/migrate"])
+   -> 0.0431s
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git pull
+remote: Counting objects: 5, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 3 (delta 1), reused 0 (delta 0)[K
+Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
+From github.com:6170/mtj
+   ac280b7..7574d8d  master     -> origin/master
+Updating ac280b7..7574d8d
+Fast-forward
+ README.md |    1 +
+ 1 file changed, 1 insertion(+)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ruake[K[K[K[Kake db:reset
+-- create_table("answers", {:force=>true})
+   -> 0.0578s
+-- create_table("companies", {:force=>true})
+   -> 0.0084s
+-- create_table("interviews", {:force=>true})
+   -> 0.0136s
+-- create_table("offers", {:force=>true})
+   -> 0.0095s
+-- create_table("questions", {:force=>true})
+   -> 0.0068s
+-- create_table("users", {:force=>true})
+   -> 0.0070s
+-- initialize_schema_migrations_table()
+   -> 0.0108s
+-- assume_migrated_upto_version(20121125024228, ["/home/ubuntu/6170_projects/mtj/db/migrate"])
+   -> 0.0523s
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake db:reset
+-- create_table("answers", {:force=>true})
+   -> 0.0662s
+-- create_table("companies", {:force=>true})
+   -> 0.0065s
+-- create_table("interviews", {:force=>true})
+   -> 0.0059s
+-- create_table("offers", {:force=>true})
+   -> 0.0055s
+-- create_table("questions", {:force=>true})
+   -> 0.0075s
+-- create_table("users", {:force=>true})
+   -> 0.0062s
+-- initialize_schema_migrations_table()
+   -> 0.0107s
+-- assume_migrated_upto_version(20121125024228, ["/home/ubuntu/6170_projects/mtj/db/migrate"])
+   -> 0.0440s
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake db:reset[K[K[K[K[Kmigrate
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd apc[Kp/views/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd companies/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ ls
+edit.html.erb   interview.html.erb   new_interview.html.erb  offer.html.erb
+_form.html.erb  interview.html.erb~  new_offer.html.erb      question.html.erb
+index.html.erb  new.html.erb         new_question.html.erb   show.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ geidt in[K[K[K[K[K[Kdit index.html.erb [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Klscd companies/ls[Kcd companies/ls[K[Kcd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake[K[K[K[Kcd co[K[Kapp/c[Kviews/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd controllers/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ ls
+answers_controller.rb       interviews_controller.rb   sessions_controller.rb
+answers_controller.rb~      interviews_controller.rb~  sessions_controller.rb~
+application_controller.rb   offers_controller.rb       static_pages_controller.rb
+application_controller.rb~  offers_controller.rb~      static_pages_controller.rb~
+companies_controller.rb     questions_controller.rb    users_controller.rb
+companies_controller.rb~    questions_controller.rb~   users_controller.rb~
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ ls
+answers_controller.rb       interviews_controller.rb   sessions_controller.rb
+answers_controller.rb~      interviews_controller.rb~  sessions_controller.rb~
+application_controller.rb   offers_controller.rb       static_pages_controller.rb
+application_controller.rb~  offers_controller.rb~      static_pages_controller.rb~
+companies_controller.rb     questions_controller.rb    users_controller.rb
+companies_controller.rb~    questions_controller.rb~   users_controller.rb~
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ gedit [K[K[K[K[K[Kgeidt [K[K[K[Kdit answers_controller.rb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/controllerssaasbook@saasbook:~/6170_projects/mtj/app/controllers$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd views/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd answers/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/answerssaasbook@saasbook:~/6170_projects/mtj/app/views/answers$ ls
+edit.html.erb  _form.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/answerssaasbook@saasbook:~/6170_projects/mtj/app/views/answers$ vo[Kime i[K[K[Ke [K[K edit.html.erb 
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"edit.html.erb" 6L, 116C[>c[1;1H[33m  1 [m[36m<[m[33mh1[m[36m>[m[35mEditing answer[m[36m</[m[33mh1[m[36m>[m[1m[34m$[m
+[33m  2 [m[1m[34m$[m
+[33m  3 [m[35m<%=[m [36mrender[m [35m'[m[31mform[m[35m'[m [35m%>[m[1m[34m$[m
+[33m  4 [m[1m[34m$[m
+[33m  5 [m[35m<%=[m [36mlink_to[m [35m'[m[31mShow[m[35m'[m, [36m@answer[m [35m%>[m |[1m[34m$[m
+[33m  6 [m[35m<%=[m [36mlink_to[m [35m'[m[31mBack[m[35m'[m, answers_path [35m%>[m[1m[34m$
+~                                                                                              [8;1H~                                                                                              [9;1H~                                                                                              [10;1H~                                                                                              [11;1H~                                                                                              [12;1H~                                                                                              [13;1H~                                                                                              [14;1H~                                                                                              [15;1H~                                                                                              [16;1H~                                                                                              [17;1H~                                                                                              [18;1H~                                                                                              [19;1H~                                                                                              [20;1H~                                                                                              [21;1H~                                                                                              [22;1H~                                                                                              [m[23;1H[1m[7medit.html.erb                                                                1,1            All[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;78H6,[6;5H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/answerssaasbook@saasbook:~/6170_projects/mtj/app/views/answers$ vim _form.html.erb 
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"_form.html.erb" 29L, 715C[>c[1;1H[33m  1 [m[35m<%=[m [36mform_for[m([36m@answer[m) [33mdo[m |[36mf[m| [35m%>[m[1m[34m$[m
+[33m  2 [m  [35m<%[m [33mif[m [36m@answer[m.errors.any? [35m%>[m[1m[34m$[m
+[33m  3 [m    [36m<[m[33mdiv[m[36m [m[32mid[m[36m=[m[31m"error_explanation"[m[36m>[m[1m[34m$[m
+[33m  4 [m      [36m<[m[33mh2[m[36m>[m[35m<%=[m [36mpluralize[m([36m@answer[m.errors.count, [35m"[m[31merror[m[35m"[m) [35m%> prohibited this answer from bein[m[1m[34m>[m[5;1H[33m  5 [m[1m[34m$[m
+[33m  6 [m      [36m<[m[33mul[m[36m>[m[1m[34m$[m
+[33m  7 [m      [35m<%[m [36m@answer[m.errors.full_messages.each [33mdo[m |[36mmsg[m| [35m%>[m[1m[34m$[m
+[33m  8 [m[7C [36m<[m[33mli[m[36m>[m[35m<%=[m msg [35m%>[m[36m</[m[33mli[m[36m>[m[1m[34m$[m
+[33m  9 [m      [35m<%[m [33mend[m [35m%>[m[1m[34m$[m
+[33m 10 [m      [36m</[m[33mul[m[36m>[m[1m[34m$[m
+[33m 11 [m    [36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 12 [m  [35m<%[m [33mend[m [35m%>[m[1m[34m$[m
+[33m 13 [m[1m[34m$[m
+[33m 14 [m  [36m<[m[33mdiv[m[36m [m[32mclass[m[36m=[m[31m"field"[m[36m>[m[1m[34m$[m
+[33m 15 [m    [35m<%=[m f.[36mlabel[m [31m:content[m [35m%>[m[36m<[m[33mbr[m[36m />[m[1m[34m$[m
+[33m 16 [m    [35m<%=[m f.[36mtext_area[m [31m:content[m [35m%>[m[1m[34m$[m
+[33m 17 [m  [36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 18 [m  [36m<[m[33mdiv[m[36m [m[32mclass[m[36m=[m[31m"field"[m[36m>[m[1m[34m$[m
+[33m 19 [m    [35m<%=[m f.[36mlabel[m [31m:user_id[m [35m%>[m[36m<[m[33mbr[m[36m />[m[1m[34m$[m
+[33m 20 [m    [35m<%=[m f.[36mnumber_field[m [31m:user_id[m [35m%>[m[1m[34m$[m
+[33m 21 [m  [36m</[m[33mdiv[m[36m>[m[1m[34m$[m
+[33m 22 [m  [36m<[m[33mdiv[m[36m [m[32mclass[m[36m=[m[31m"field"[m[36m>[m[1m[34m$[m
+[1m[7m_form.html.erb                                                               1,1            Top[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;78H2,[2;5H[?12l[?25h[?25l[23;78H3,[3;5H[?12l[?25h[?25l[23;78H4,[4;5H[?12l[?25h[?25l[23;78H5,0-1[5;5H[?12l[?25h[?25l[23;78H6,1   [6;5H[?12l[?25h[?25l[23;78H7,[7;5H[?12l[?25h[?25l[23;78H8,[8;5H[?12l[?25h[?25l[23;78H9,[9;5H[?12l[?25h[?25l[23;78H10,1[10;5H[?12l[?25h[?25l[23;79H1,[11;5H[?12l[?25h[?25l[23;79H2,[12;5H[?12l[?25h[?25l[23;79H3,0-1[13;5H[?12l[?25h[?25l[23;79H4,1   [14;5H[?12l[?25h[?25l[23;79H5,[15;5H[?12l[?25h[?25l[23;79H6,[16;5H[?12l[?25h[?25l[23;79H7,[17;5H[?12l[?25h[?25l[23;79H8,[18;5H[?12l[?25h[?25l[23;79H9,[19;5H[?12l[?25h[?25l[23;78H20,[20;5H[?12l[?25h[?25l[23;79H1,[21;5H[?12l[?25h[?25l[23;79H2,[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 23 [m    [35m<%=[m f.[36mlabel[m [31m:question_id[m [35m%>[m[36m<[m[33mbr[m[36m />[m[1m[34m$[m[24;1H[K[23;79H[1m[7m3,[12C14%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 24 [m    [35m<%=[m f.[36mnumber_field[m [31m:question_id[m [35m%>[m[1m[34m$[m[23;79H[1m[7m4,[12C28%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 25 [m  [36m</[m[33mdiv[m[36m>[m[1m[34m$[m[23;79H[1m[7m5,[12C42%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 26 [m  [36m<[m[33mdiv[m[36m [m[32mclass[m[36m=[m[31m"actions"[m[36m>[m[1m[34m$[m[23;79H[1m[7m6,[12C57%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 27 [m    [35m<%=[m f.submit [35m%>[m[1m[34m$[m[23;79H[1m[7m7,[12C71%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 28 [m  [36m</[m[33mdiv[m[36m>[m[1m[34m$[m[23;79H[1m[7m8,[12C85%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 29 [m[35m<%[m [33mend[m [35m%>[m[1m[34m$[m[23;79H[1m[7m9,[12CBot[22;5H[?12l[?25h,[12C57%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 27 [m    [35m<%=[m f.submit [35m%>[m[1m[34m$[m[23;79H[1m[7m7,[12C71%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 28 [m  [36m</[m[33mdiv[m[36m>[m[1m[34m$[m[23;79H[1m[7m8,[12C85%[22;5H[?12l[?25h[?25l[1;22r[m[22;1H
+[1;24r[22;1H[33m 29 [m[35m<%[m [33mend[m [35m%>[m[1m[34m$[m[23;79H[1m[7m9,[12CBot[22;5H[?12l[?25h[?25l[23;79H8,[21;5H[?12l[?25h[?25l[23;79H7,[20;5H[?12l[?25h[?25l[23;79H6,[19;5H[?12l[?25h[?25l[23;79H5,[18;5H[?12l[?25h[?25l[23;79H4,[17;5H[?12l[?25h[?25l[23;79H3,[16;5H[?12l[?25h[?25l[23;79H2,[15;5H[?12l[?25h[?25l[23;79H1,[14;5H[?12l[?25h[?25l[23;79H0,[13;5H[?12l[?25h[?25l[23;78H19,[12;5H[?12l[?25h[?25l[23;79H8,[11;5H[?12l[?25h[?25l[23;79H7,[10;5H[?12l[?25h[?25l[23;79H6,[9;5H[?12l[?25h[?25l[23;79H5,[8;5H[?12l[?25h[?25l[23;79H4,[7;5H[?12l[?25h[?25l[23;79H3,0-1[6;5H[?12l[?25h[?25l[23;79H2,1   [5;5H[?12l[?25h[?25l[23;79H1,[4;5H[?12l[?25h[?25l[23;79H0,[3;5H[?12l[?25h[?25l[23;78H9,1  [2;5H[?12l[?25h[?25l[23;78H8,[1;5H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  7 [m      [35m<%[m [36m@answer[m.errors.full_messages.each [33mdo[m |[36mmsg[m| [35m%>[m[1m[34m$[m[23;78H[1m[7m7,[13C85%[1;5H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  6 [m      [36m<[m[33mul[m[36m>[m[1m[34m$[m[23;78H[1m[7m6,[13C71%[1;5H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  5 [m[1m[34m$[m[23;78H[1m[7m5,0-1[10C57%[1;5H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  4 [m      [36m<[m[33mh2[m[36m>[m[35m<%=[m [36mpluralize[m([36m@answer[m.errors.count, [35m"[m[31merror[m[35m"[m) [35m%> prohibited this answer from bein[m[1m[34m>[m[23;78H[1m[7m4,1   [9C42%[1;5H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  3 [m    [36m<[m[33mdiv[m[36m [m[32mid[m[36m=[m[31m"error_explanation"[m[36m>[m[1m[34m$[m[23;78H[1m[7m3,[13C28%[1;5H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  2 [m  [35m<%[m [33mif[m [36m@answer[m.errors.any? [35m%>[m[1m[34m$[m[23;78H[1m[7m2,[13C14%[1;5H[?12l[?25h[?25l[1;22r[m[1;1H[L[1;24r[1;1H[33m  1 [m[35m<%=[m [36mform_for[m([36m@answer[m) [33mdo[m |[36mf[m| [35m%>[m[1m[34m$[m[23;78H[1m[7m1,[13CTop[1;5H[?12l[?25h[?25l[24;1H[m:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/answerssaasbook@saasbook:~/6170_projects/mtj/app/views/answers$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd companies/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ ls
+edit.html.erb   interview.html.erb   new_interview.html.erb  offer.html.erb
+_form.html.erb  interview.html.erb~  new_offer.html.erb      question.html.erb
+index.html.erb  new.html.erb         new_question.html.erb   show.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ vim in
+index.html.erb       interview.html.erb   interview.html.erb~  
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ vim interview.html.erb
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"interview.html.erb" 25L, 608C[>c[1;1H[33m  1 [m[35m<%[m provide([31m:title[m, [36m@company[m.name + [35m"[m[31m | Inter[m[1m[34m$[m
+[33m  9 [m    [36m<[m[33mth[m[36m></[m[33mth[m[36m>[m[1m[34m$[m
+[33m 10 [m  [36m</[m[33mtr[m[36m>[m[1m[34m$[m
+[33m 11 [m[35m<%[m [33mif[m [36m@interviews[m.any? [35m%>[m[1m[34m$[m
+[33m 12 [m[35m<%[m [36m@interviews[m.each [33mdo[m |[36minterview[m| [35m%>[m[1m[34m$[m
+[33m 13 [m  [36m<[m[33mtr[m[36m>[m[1m[34m$[m
+[33m 14 [m    [36m<[m[33mtd[m[36m>[m[35m<%=[m interview.content [35m%>[m[36m</[m[33mtd[m[36m>[m[1m[34m$[m
+[33m 15 [m    [36m<[m[33mtd[m[36m>[m[35m<%=[m [36mlink_to[m [35m'[m[31mEdit[m[35m'[m, edit_interview_path(interview) [35m%>[m[36m</[m[33mtd[m[36m>[m[1m[34m$[m
+[33m 16 [m    [36m<[m[33mtd[m[36m>[m[35m<%=[m [36mlink_to[m [35m'[m[31mDestroy[m[35m'[m, interview, [31mmethod[m: [31m:delete[m, [36mdata[m: { [31mconfirm[m: [35m'[m[31mAre you sure?[m[1m[34m>[m[17;1H[33m 17 [m  [36m</[m[33mtr[m[36m>[m[1m[34m$[m
+[33m 18 [m[35m<%[m [33mend[m [35m%>[m[1m[34m$[m
+[33m 19 [m[35m<%[m [33mend[m [35m%>[m[1m[34m$[m
+[33m 20 [m[36m</[m[33mtable[m[36m>[m[1m[34m$[m
+[33m 21 [m[1m[34m$[m
+[33m 22 [m[36m<[m[33mbr[m[36m />[m[1m[34m$[m
+[1m[7minterview.html.erb                                                           1,1            Top[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;78H2,0-1[2;5H[?12l[?25h[?25l[23;78H3,1   [3;5H[?12l[?25h[?25l[23;78H4,0-1[4;5H[?12l[?25h[?25l[23;78H5,1   [5;5H[?12l[?25h[?25l[m[24;1H[1m-- INSERT --[m[24;13H[K[5;4H[33m [md="notice"[1m[37m[41m>[m[35m<%=[m notice [35m%>[m[36m</[m[33mp[m[36m><[m[33mtable[m[36m>[m[1m[34m$[m[23;20H[1m[7m[+][57C29[5;33H[?12l[?25h[?25l[m[36m>[m:[36m<[m[33mtable[m[36m>[m[1m[34m$[m[23;80H[1m[7m30 [5;34H[?12l[?25h[m[24;1H[K[5;33H[?25l[23;80H[1m[7m29 [5;33H[?12l[?25h[?25l[24;1H[m:[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ gedit interview.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ ls
+edit.html.erb   interview.html.erb   new_interview.html.erb  offer.html.erb
+_form.html.erb  interview.html.erb~  new_offer.html.erb      question.html.erb
+index.html.erb  new.html.erb         new_question.html.erb   show.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ vim[K[K[Kgedit offer.html.erb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ geidt [K[K[K[Kdit question.html.erb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ gedit show.html.erb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd models/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ ls
+answer.rb  company.rb  interview.rb  offer.rb  question.rb  user.rb  user.rb~
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ geid tin[K[K[K[K[K[Kdit interview.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ geidt [K[K[K[Kdit answer.rb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/modelssaasbook@saasbook:~/6170_projects/mtj/app/models$ gedit of

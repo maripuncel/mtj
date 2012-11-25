@@ -4,6 +4,7 @@ class Question < ActiveRecord::Base
   has_many :answers
 
   def self.add_question(params, current_user)
+    current_user()
     question = Question.new
     question.content = params[:content]
     question.company_id = params[:company]

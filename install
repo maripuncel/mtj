@@ -658,4 +658,284 @@ SocketError: getaddrinfo: Name or service not known
 	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:546:in `tcp_socket'
 	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:555:in `block in do_start'
 	from /usr/local/lib/ruby/1.9.1/timeout.rb:58:in `timeout'
-	from /us
+	from /usser_mailer/activate_email.text.erb (0.3ms)
+
+Sent mail to tgalvin13@gmail.com (230ms)
+SocketError: getaddrinfo: Name or service not known
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:546:in `initialize'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:546:in `open'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:546:in `tcp_socket'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:555:in `block in do_start'
+	from /usr/local/lib/ruby/1.9.1/timeout.rb:58:in `timeout'
+	from /usr/local/lib/ruby/1.9.1/timeout.rb:89:in `timeout'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:555:in `do_start'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:525:in `start'
+	from /app/vendor/bundle/ruby/1.9.1/gems/mail-2.4.4/lib/mail/network/delivery_methods/smtp.rb:144:in `deliver!'
+	from /app/vendor/bundle/ruby/1.9.1/gems/mail-2.4.4/lib/mail/message.rb:2034:in `do_delivery'
+	from /app/vendor/bundle/ruby/1.9.1/gems/mail-2.4.4/lib/mail/message.rb:229:in `block in deliver'
+	from /app/vendor/bundle/ruby/1.9.1/gems/actionmailer-3.2.7/lib/action_mailer/base.rb:415:in `block in deliver_mail'
+	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+	from /app/vendor/bundle/ruby/1.9.1/gems/actionmailer-3.2.7/lib/action_mailer/base.rb:413:in `deliver_mail'
+	from /app/vendor/bundle/ruby/1.9.1/gems/mail-2.4.4/lib/mail/message.rb:229:in `deliver'
+	from (irb):3
+	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.7/lib/rails/commands/console.rb:47:in `start'
+	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.7/lib/rails/commands/console.rb:8:in `start'
+	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.7/lib/rails/commands.rb:41:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'irb(main):004:0> exit
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git comi[Kmit -am "more env"
+[master 0a2de3a] more env
+ 3 files changed, 148 insertions(+), 9 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 11, done.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 1.54 KiB, done.
+Total 6 (delta 5), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   0eaaa78..0a2de3a  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 11, done.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 1.54 KiB, done.
+Total 6 (delta 5), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.1
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+ 2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.1)
+       Using rails (3.2.7)
+       Using raindrops (0.10.0)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (21.25s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 13.4MB
+-----> Launching... done, v13
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   0eaaa78..0a2de3a  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku run console
+Running `console` attached to terminal... up, run.1
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+Connecting to database specified by DATABASE_URL
+Loading production environment (Rails 3.2.7)
+irb(main):001:0> user = User.create(:email => params[:email], :password => params[:password], :activa ted => 0, :serial => SecureRandom.hex(10))[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C(:email => params[:email], :password => params[:password], :activate[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C(:email => params[:email], :password => params[:password], :activated[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C(:email => params[:email], :password => params[:password], :activated [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C(:email => params[:email], :password => params[:password], :activated =[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C(:email => params[:email], :password => params[:password], :activated =>[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C(:email => params[:email], :password => params[:password], :activated => [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn(:email => params[:email], :password => params[:password], :activated =>[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce(:email => params[:email], :password => params[:password], :activated =[1@>[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cw(:email => params[:email], :password => params[:password], :activated [1@=[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated =[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated =>[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0,[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0, [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0, :[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0, :s[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0, :se[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0, :ser[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0, :seri[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0, :seria[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0, :serial[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => params[:password], :activated => 0, :serial [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C', :password => params[:password], :activated => 0, :serial[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct, :password => params[:password], :activated => 0, :seria[1@l[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg, :password => params[:password], :activated => 0, :seri[1@a[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca, :password => params[:password], :activated => 0, :ser[1@i[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl, :password => params[:password], :activated => 0, :se[1@r[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv, :password => params[:password], :activated => 0, :s[1@e[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci, :password => params[:password], :activated => 0, :[1@s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn, :password => params[:password], :activated => 0, [1@:[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1, :password => params[:password], :activated => 0,[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C3, :password => params[:password], :activated => 0[1@,[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C@, :password => params[:password], :activated => [1@0[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg, :password => params[:password], :activated =>[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm, :password => params[:password], :activated =[1@>[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca, :password => params[:password], :activated [1@=[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci, :password => params[:password], :activated[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl, :password => params[:password], :activate[1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C., :password => params[:password], :activat[1@e[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc, :password => params[:password], :activa[1@t[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co, :password => params[:password], :activ[1@a[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm, :password => params[:password], :acti[1@v[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C', :password => params[:password], :act[1@i[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :acti[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activ[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activa[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activat[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activate[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated =[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated =>[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated => [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated => 0[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated => 0,[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated => 0, [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated => 0, :[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated => 0, :s[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated => 0, :se[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :activated => 0, :ser[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C', :activated => 0, :se[1@r[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cz, :activated => 0, :s[1@e[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx, :activated => 0, :[1@s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc, :activated => 0, [1@:[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv, :activated => 0,[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cb, :activated => 0[1@,[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cz, :activated => [1@0[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx, :activated =>[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc, :activated =[1@>[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv, :activated [1@=[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cb, :activated[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C', :activate[1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)')1)2)3)4)')
+=> #<User id: nil, email: "tgalvin13@gmail.com", password: "zxcvbzxcvb", created_at: nil, updated_at: nil, serial: "1234", activated: false>
+irb(main):002:0> UserMailer.activate_email(user).deliver
+  Rendered user_mailer/activate_email.html.erb (34.3ms)
+  Rendered user_mailer/activate_email.text.erb (0.4ms)
+
+Sent mail to tgalvin13@gmail.com (3085ms)
+Errno::ECONNREFUSED: Connection refused - connect(2)
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:546:in `initialize'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:546:in `open'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:546:in `tcp_socket'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:555:in `block in do_start'
+	from /usr/local/lib/ruby/1.9.1/timeout.rb:58:in `timeout'
+	from /usr/local/lib/ruby/1.9.1/timeout.rb:89:in `timeout'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:555:in `do_start'
+	from /usr/local/lib/ruby/1.9.1/net/smtp.rb:525:in `start'
+	from /app/vendor/bundle/ruby/1.9.1/gems/mail-2.4.4/lib/mail/network/delivery_methods/smtp.rb:144:in `deliver!'
+	from /app/vendor/bundle/ruby/1.9.1/gems/mail-2.4.4/lib/mail/message.rb:2034:in `do_delivery'
+	from /app/vendor/bundle/ruby/1.9.1/gems/mail-2.4.4/lib/mail/message.rb:229:in `block in deliver'
+	from /app/vendor/bundle/ruby/1.9.1/gems/actionmailer-3.2.7/lib/action_mailer/base.rb:415:in `block in deliver_mail'
+	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+	from /app/vendor/bundle/ruby/1.9.1/gems/actionmailer-3.2.7/lib/action_mailer/base.rb:413:in `deliver_mail'
+	from /app/vendor/bundle/ruby/1.9.1/gems/mail-2.4.4/lib/mail/message.rb:229:in `deliver'
+	from (irb):2
+	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.7/lib/rails/commands/console.rb:47:in `start'
+	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.7/lib/rails/commands/console.rb:8:in `start'
+	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.7/lib/rails/commands.rb:41:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'irb(main):003:0> rake sunspot:solr:start
+SyntaxError: (irb):3: syntax error, unexpected tLABEL
+rake sunspot:solr:start
+                  ^
+	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.7/lib/rails/commands/console.rb:47:in `start'
+	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.7/lib/rails/commands/console.rb:8:in `start'
+	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.7/lib/rails/commands.rb:41:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+irb(main):004:0> exit
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake dunsp[K[K[K[K[Ksunspot:solr:sr[Ktart
+rake aborted!
+Don't know how to build task 'sunspot:solr:start'
+(See full trace by running task with --trace)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ rake sunspost:solr:run
+rake aborted!
+Don't know how to build task 'sunspost:solr:run'
+(See full trace by running task with --trace)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku run rake sunspost:solr[K[K[K[K[K[K[K[K[K[Kspot:solr:start
+Running `rake sunspot:solr:start` attached to terminal... up, run.1
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+rake aborted!
+Don't know how to build task 'sunspot:solr:start'
+(See full trace by running task with --trace)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ruby script.[K/conco[K[Ksole
+ruby: No such file or directory -- script/console (LoadError)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd app/
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd vendors
+bash: cd: vendors: No such file or directory
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ lc[K[Kcd .
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd script/
+]0;saasbook@saasbook: ~/6170_projects/mtj/scriptsaasbook@saasbook:~/6170_projects/mtj/script$ ls
+[0m[01;32mrails[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/scriptsaasbook@saasbook:~/6170_projects/mtj/script$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/scriptsaasbook@saasbook:~/6170_projects/mtj/script$ ls
+[0m[01;32mrails[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/scriptsaasbook@saasbook:~/6170_projects/mtj/script$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd app/
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd helpers/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/helperssaasbook@saasbook:~/6170_projects/mtj/app/helpers$ ls
+answers_helper.rb      companies_helper.rb   offers_helper.rb     static_pages_helper.rb
+application_helper.rb  interviews_helper.rb  questions_helper.rb  users_helper.rb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/helperssaasbook@saasbook:~/6170_projects/mtj/app/helpers$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd config/
+]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ ls
+application.rb  database.yml    environment.rb~  [0m[01;34minitializers[0m  routes.rb
+boot.rb         environment.rb  [01;34menvironments[0m     [01;34mlocales[0m       routes.rb~
+]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clearl
+No command 'clearl' found, did you mean:
+ Command 'clear' from package 'ncurses-bin' (main)
+clearl: command not found
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd l
+bash: cd: l: No such file or directory
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd lib/
+]0;saasbook@saasbook: ~/6170_projects/mtj/libsaasbook@saasbook:~/6170_projects/mtj/lib$ ls
+[0m[01;34massets[0m  [01;34mtasks[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/libsaasbook@saasbook:~/6170_projects/mtj/lib$ ccd[K[Kd assets/
+]0;saasbook@saasbook: ~/6170_projects/mtj/lib/assetssaasbook@saasbook:~/6170_projects/mtj/lib/assets$ sl[K[Ksl
+The program 'sl' is currently not installed.  You can install it by typing:
+sudo apt-get install sl
+]0;saasbook@saasbook: ~/6170_projects/mtj/lib/assetssaasbook@saasbook:~/6170_projects/mtj/lib/assets$ ls
+]0;saasbook@saasbook: ~/6170_projects/mtj/lib/assetssaasbook@saasbook:~/6170_projects/mtj/lib/assets$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/libsaasbook@saasbook:~/6170_projects/mtj/lib$ cd tasks/
+]0;saasbook@saasbook: ~/6170_projects/mtj/lib/taskssaasbook@saasbook:~/6170_projects/mtj/lib/tasks$ ls
+]0;saasbook@saasbook: ~/6170_projects/mtj/lib/taskssaasbook@saasbook:~/6170_projects/mtj/lib/tasks$ cd ../,.,
+bash: cd: ../,.,: No such file or directory
+]0;saasbook@saasbook: ~/6170_projects/mtj/lib/taskssaasbook@saasbook:~/6170_projects/mtj/lib/tasks$ cd ../,.,[K[K[K..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cdsc
+No command 'cdsc' found, did you mean:
+ Command 'csc' from package 'chicken-bin' (universe)
+ Command 'dsc' from package 'dsc-statistics-collector' (universe)
+cdsc: command not found
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ l[Ksc[K[Kcd script/
+]0;saasbook@saasbook: ~/6170_projects/mtj/scriptsaasbook@saasbook:~/6170_projects/mtj/script$ ls
+[0m[01;32mrails[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/scriptsaasbook@saasbook:~/6170_projects/mtj/script$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd tmp/
+]0;saasbook@saasbook: ~/6170_projects/mtj/tmpsaasbook@saasbook:~/6170_projects/mtj/tmp$ ls
+[0m[01;34mcache[0m  [01;34mpids[0m  [01;34msessions[0m  [01;34msockets[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/tmpsaasbook@saasbook:~/6170_projects/mtj/tmp$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd cen
+bash: cd: cen: No such file or directory
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd vendor/
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendorsaasbook@saasbook:~/6170_projects/mtj/vendor$ ls
+[0m[01;34massets[0m  [01;34mplugins[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendorsaasbook@saasbook:~/6170_projects/mtj/vendor$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtj/vendorsaasbook@saasbook:~/6170_projects/mtj/vendor$ cd plugins/
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendor/pluginssaasbook@saasbook:~/6170_projects/mtj/vendor/plugins$ ls
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendor/pluginssaasbook@saasbook:~/6170_projects/mtj/vendor/plugins$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendorsaasbook@saasbook:~/6170_projects/mtj/vendor$ ls
+[0m[01;34massets[0m  [01;34mplugins[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendorsaasbook@saasbook:~/6170_projects/mtj/vendor$ cd assets/
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendor/assetssaasbook@saasbook:~/6170_projects/mtj/vendor/assets$ ls
+[0m[01;34mjavascripts[0m  [01;34mstylesheets[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendor/assetssaasbook@saasbook:~/6170_projects/mtj/vendor/assets$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendorsaasbook@saasbook:~/6170_projects/mtj/vendor$ cd plugins/
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendor/pluginssaasbook@saasbook:~/6170_projects/mtj/vendor/plugins$ ;[Kls -a
+[0m[01;34m.[0m  [01;34m..[0m  .gitkeep
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendor/pluginssaasbook@saasbook:~/6170_projects/mtj/vendor/plugins$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/vendorsaasbook@saasbook:~/6170_projects/mtj/vendor$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ gi [K[K[Kcd e[K[K[K[Kls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd config/
+]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ ls[K[Kcd environments/
+]0;saasbook@saasbook: ~/6170_projects/mtj/config/environmentssaasbook@saasbook:~/6170_projects/mtj/config/environments$ ls
+development.rb  production.rb  test.rb
+]0;saasbook@saasbook: ~/6170_projects/mtj/config/environmentssaasbook@saasbook:~/6170_projects/mtj/config/environments$ gedit #R[K[K$RAILS.E[K[K_ENV.rb
+]0;saasbook@saasbook: ~/6170_projects/mtj/config/environmentssaasbook@saasbook:~/6170_projects/mtj/config/environments$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6

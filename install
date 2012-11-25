@@ -2636,13 +2636,6 @@ NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "interviews_pkey"
    -> 0.1136s
 -- create_table("offers", {:force=>true})
 NOTICE:  CREATE TABLE will create implicit sequence "offers_id_seq" for serial column "offers.id"
-NOTICE:  CREATE TABLE / PRIMARY KEY will create implici
--- create_table("interviews", {:force=>true})
-NOTICE:  CREATE TABLE will create implicit sequence "interviews_id_seq" for serial column "interviews.id"
-NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "interviews_pkey" for table "interviews"
-   -> 0.1136s
--- create_table("offers", {:force=>true})
-NOTICE:  CREATE TABLE will create implicit sequence "offers_id_seq" for serial column "offers.id"
 NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "offers_pkey" for table "offers"
    -> 0.0739s
 -- create_table("questions", {:force=>true})
@@ -2690,4 +2683,13 @@ NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "questions_pkey" 
 NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
 NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
    -> 0.1981s
--- initialize_schema_migrations_table()
+-- initialize_schema_migrations_table()
+   -> 0.0038s
+-- assume_migrated_upto_version(20121125024228, ["/app/db/migrate"])
+   -> 0.0025s
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit 0a[K[K-am "stuff
+> gi[K[K"
+[master 99fb25c] stuff
+ 19 files changed, 210 insertions(+), 31 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_proj

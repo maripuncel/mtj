@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
 
-  before_filter :check_status
+  #before_filter :check_status
 
   def check_status
     #if not current_user()

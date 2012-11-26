@@ -4396,4 +4396,373 @@ application.js     interviews.js.coffee  questions.js.coffee  users.js.coffee
 [33m  2 [m[34m# All this logic will automatically be available in application.js.[m[1m[34m$[m
 [33m  3 [m[34m# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/[m[1m[34m$
 ~                                                                                              [5;1H~                                                                                              [6;1H~                                                                                              [7;1H~                                                                                              [8;1H~                                                                                              [9;1H~                                                                                              [10;1H~                                                                                              [11;1H~                                                                                              [12;1H~                                                                                              [13;1H~                                                                                              [14;1H~                                                                                              [15;1H~                                                                                              [16;1H~                                                                                              [17;1H~                                                                                              [18;1H~                                                                                              [19;1H~                                                                                              [20;1H~                                                                                              [21;1H~                                                                                              [22;1H~                                                                                              [m[23;1H[1m[7mstatic_pages.js.coffee                                                       1,1            All[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/assets/javascriptssaasbook@saasbook:~/6170_projects/mtj/app/assets/javascripts$ vim application.js 
-[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"application.js" 15L, 641C[>c[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[1;1H[33m  1 [m[34m// This is a manifest file that'll be compiled into application.js, which will include all[m[1m[34
+[?1000h[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"application.js" 15L, 641C[>c[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[1;1H[33m  1 [m[34m// This is a manifest file that'll be compiled into application.js, which will include all[m[1m[34m>[m[2;1H[33m  2 [m[34m// listed below.[m[1m[34m$[m
+[33m  3 [m[34m//[m[1m[34m$[m
+[33m  4 [m[34m// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets[m[1m[34m>[m[5;1H[33m  5 [m[34m// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relativ[m[1m[34m>[m[6;1H[33m  6 [m[34m//[m[1m[34m$[m
+[33m  7 [m[34m// It's not advisable to add code directly here, but if you do, it'll appear at the bottom[m[1m[34m>[m[8;1H[33m  8 [m[34m// the compiled file.[m[1m[34m$[m
+[33m  9 [m[34m//[m[1m[34m$[m
+[33m 10 [m[34m// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE S[m[1m[34m>[m[11;1H[33m 11 [m[34m// GO AFTER THE REQUIRES BELOW.[m[1m[34m$[m
+[33m 12 [m[34m//[m[1m[34m$[m
+[33m 13 [m[34m//= require jquery[m[1m[34m$[m
+[33m 14 [m[34m//= require jquery_ujs[m[1m[34m$[m
+[33m 15 [m[34m//= require_tree .[m[1m[34m$
+~                                                                                              [17;1H~                                                                                              [18;1H~                                                                                              [19;1H~                                                                                              [20;1H~                                                                                              [21;1H~                                                                                              [22;1H~                                                                                              [m[23;1H[1m[7mapplication.js                                                               1,1            All[1;5H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/assets/javascriptssaasbook@saasbook:~/6170_projects/mtj/app/assets/javascripts$ gedit companies.js.coffee 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/assets/javascriptssaasbook@saasbook:~/6170_projects/mtj/app/assets/javascripts$ geid [K[K[Kdit questions.js.coffee 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/assets/javascriptssaasbook@saasbook:~/6170_projects/mtj/app/assets/javascripts$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/assetssaasbook@saasbook:~/6170_projects/mtj/app/assets$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -am "luanc[K[K[K[Kaunching link changes"
+[master 9161582] launching link changes
+ 6 files changed, 253 insertions(+), 26 deletions(-)
+ create mode 100644 app/assets/javascripts/companies.js.coffee~
+ create mode 100644 app/assets/javascripts/questions.js.coffee~
+ rewrite config/environment.rb~ (73%)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 19, done.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 2.84 KiB, done.
+Total 10 (delta 8), reused 0 (delta 0)
+To git@github.com:6170/mtj.giCompressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 2.84 KiB, done.
+Total 10 (delta 8), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   9f7a3b4..9161582  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 19, done.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 2.84 KiB, done.
+Total 10 (delta 8), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.2
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.2)
+       Using rails (3.2.7)
+       Using raindrops (0.10.0)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (28.63s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 12.4MB
+-----> Launching... done, v37
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   9f7a3b4..9161582  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku run rake db:reset
+Running `rake db:reset` attached to terminal... up, run.4202
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support forout and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+Connecting to database specified by DATABASE_URL
+Couldn't drop d7164a6cgvl40i : #<PGError: FATAL:  permission denied for database "postgres"
+DETAIL:  User does not have CONNECT privilege.
+>
+d7164a6cgvl40i already exists
+-- create_table("answers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "answers_id_seq" for serial column "answers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "answers_pkey" for table "answers"
+   -> 1.2720s
+-- create_table("companies", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "companies_id_seq" for serial column "companies.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "companies_pkey" for table "companies"
+   -> 0.1884s
+-- create_table("interviews", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "interviews_id_seq" for serial column "interviews.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "interviews_pkey" for table "interviews"
+   -> 0.1934s
+-- create_table("offers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "offers_id_seq" for serial column "offers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "offers_pkey" for table "offers"
+   -> 0.1987s
+-- create_table("questions", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "questions_id_seq" for serial column "questions.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "questions_pkey" for table "questions"
+   -> 0.2510s
+-- create_table("users", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+   -> 0.2232s
+-- initialize_schema_migrations_table()
+   -> 0.0013s
+-- assume_migrated_upto_version(20121125024228, ["/app/db/migrate"])
+   -> 0.0168s
+ !    A new version of the Heroku Toolbelt is available, download and install from https://toolbelt.heroku.com.
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku run rake db:reset[K[K[K[K[Kmigrate
+Running `rake db:migrate` attached to terminal... up, run.9606
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+Connecting to database specified by DATABASE_URL
+Migrating to CreateUsers (20121120204733)
+Migrating to CreateCompanies (20121120204837)
+Migrating to CreateInterviews (20121123161314)
+Migrating to CreateOffers (20121123232303)
+Migrating to CreateQuestions (20121123234925)
+Migrating to CreateAnswers (20121124052319)
+Migrating to AddSerialToUser (20121125023644)
+Migrating to AddActivatedToUser (20121125024228)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Everything up-to-date
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku run rake db:reset
+Running `rake db:reset` attached to terminal... up, run.5123
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+Connecting to database specified by DATABASE_URL
+Couldn't drop d7164a6cgvl40i : #<PGError: FATAL:  permission denied for database "postgres"
+DETAIL:  User does not have CONNECT privilege.
+>
+d7164a6cgvl40i already exists
+-- create_table("answers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "answers_id_seq" for serial column "answers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "answers_pkey" for table "answers"
+   -> 0.4155s
+-- create_table("companies", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "companies_id_seq" for serial column "companies.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "companies_pkey" for table "companies"
+   -> 0.1516s
+-- create_table("interviews", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "interviews_id_seq" for serial column "interviews.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "interviews_pkey" for table "interviews"
+   -> 0.2925s
+-- create_table("offers", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "offers_id_seq" for serial column "offers.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "offers_pkey" for table "offers"
+   -> 0.1775s
+-- create_table("questions", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "questions_id_seq" for serial column "questions.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "questions_pkey" for table "questions"
+   -> 0.1199s
+-- create_table("users", {:force=>true})
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+   -> 0.1931s
+-- initialize_schema_migrations_table()
+   -> 0.0014s
+-- assume_migrated_upto_version(20121125024228, ["/app/db/migrate"])
+   -> 0.0026s
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku run rake db:reset[K[K[K[K[Kmigrate
+Running `rake db:migrate` attached to terminal... up, run.3573
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+Connecting to database specified by DATABASE_URL
+Migrating to CreateUsers (20121120204733)
+Migrating to CreateCompanies (20121120204837)
+Migrating to CreateInterviews (20121123161314)
+Migrating to CreateOffers (20121123232303)
+Migrating to CreateQuestions (20121123234925)
+Migrating to CreateAnswers (20121124052319)
+Migrating to AddSerialToUser (20121125023644)
+Migrating to AddActivatedToUser (20121125024228)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear[K[K[K[K[Kls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd 
+]0;saasbook@saasbook: ~saasbook@saasbook:~$ l[Kcd 6a[K170_projects/mtj
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ c d[K[Kd app/
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd views/c[Kstatic_pages/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ ls
+emailed.html.erb   home.html.erb   login.html.erb~    register.html.erb~
+emailed.html.erb~  login.html.erb  register.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ gedit[K[K[K[K[Kgedit home.html.erb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ heroku logs
+ !    No app specified.
+ !    Run this command from an app folder or specify which app to use with --app <app name>
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku logs
+[36m2012-11-27T12:15:02+00:00 heroku[run.4202]:[0m State changed from starting to up
+[36m2012-11-27T12:15:10+00:00 heroku[run.4202]:[0m Process exited with status 0
+[33m2012-11-27T12:15:15+00:00 heroku[api]:[0m Starting process with command `bundle exec rake db:migrate` by tgalvin13@gmail.com
+[36m2012-11-27T12:15:18+00:00 heroku[run.9606]:[0m Awaiting client
+[36m2012-11-27T12:15:18+00:00 heroku[run.9606]:[0m Starting process with command `bundle exec rake db:migrate`
+[36m2012-11-27T12:15:19+00:00 heroku[run.9606]:[0m State changed from starting to up
+[36m2012-11-27T12:15:26+00:00 heroku[run.9606]:[0m Client connection closed. Sending SIGHUP to all processes
+[36m2012-11-27T12:15:27+00:00 heroku[run.9606]:[0m Process exited with status 0
+[36m2012-11-27T12:15:27+00:00 heroku[run.9606]:[0m State changed from up to complete
+[32m2012-11-27T12:21:34+00:00 heroku[router]:[0m at=info method=GET path=/companies/1 host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=7ms service=15ms status=404 bytes=728
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m Started GET "/companies/1" for 18.236.7.2 at 2012-11-27 12:21:34 +0000
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m   Parameters: {"id"=>"1"}
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m Processing by CompaniesController#show as HTML
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m   app/controllers/companies_controller.rb:6:in `check_status'
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m ActiveRecord::RecordNotFound (Couldn't find User
+ with id=1):
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 3ms
+[35m2012-11-27T12:21:34+00:00 app[web.1]:[0m   app/controllers/application_controller.rb:5:in `current_user'
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m Started GET "/" for 18.236.7.2 at 2012-11-27 12:21:37 +0000
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 2ms
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m   app/controllers/application_controller.rb:5:in `current_user'
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m   app/controllers/static_pages_controller.rb:3:in `home'
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:37+00:00 app[web.1]:[0m ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+[32m2012-11-27T12:21:37+00:00 heroku[router]:[0m at=info method=GET path=/ host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=13ms status=404 bytes=728
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m Started GET "/" for 18.236.7.2 at 2012-11-27 12:21:42 +0000
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 1ms
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m   app/controllers/application_controller.rb:5:in `current_user'
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m   app/controllers/static_pages_controller.rb:3:in `home'
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:21:42+00:00 app[web.1]:[0m 
+[33m2012-11-27T12:22:05+00:00 heroku[api]:[0m Starting process with command `bundle exec rake db:reset` by tgalvin13@gmail.com
+[36m2012-11-27T12:22:09+00:00 heroku[run.5123]:[0m Awaiting client
+[36m2012-11-27T12:22:09+00:00 heroku[run.5123]:[0m Starting process with command `bundle exec rake db:reset`
+[36m2012-11-27T12:22:09+00:00 heroku[run.5123]:[0m State changed from starting to up
+[36m2012-11-27T12:22:21+00:00 heroku[run.5123]:[0m Process exited with status 0
+[36m2012-11-27T12:22:21+00:00 heroku[run.5123]:[0m State changed from up to complete
+[33m2012-11-27T12:22:24+00:00 heroku[api]:[0m Starting process with command `bundle exec rake db:migrate` by tgalvin13@gmail.com
+[36m2012-11-27T12:22:28+00:00 heroku[run.3573]:[0m Awaiting client
+[36m2012-11-27T12:22:28+00:00 heroku[run.3573]:[0m Starting process with command `bundle exec rake db:migrate`
+[36m2012-11-27T12:22:28+00:00 heroku[run.3573]:[0m State changed from starting to up
+[36m2012-11-27T12:22:35+00:00 heroku[run.3573]:[0m Process exited with status 0
+[36m2012-11-27T12:22:35+00:00 heroku[run.3573]:[0m State changed from up to complete
+[32m2012-11-27T12:23:15+00:00 heroku[router]:[0m at=info method=GET path=/ host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=11ms status=404 bytes=728
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m Started GET "/" for 18.236.7.2 at 2012-11-27 12:23:15 +0000
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m   app/controllers/static_pages_controller.rb:3:in `home'
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m   app/controllers/application_controller.rb:5:in `current_user'
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 2ms
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:15+00:00 app[web.1]:[0m ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m Started GET "/" for 18.236.7.2 at 2012-11-27 12:23:18 +0000
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 1ms
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m   app/controllers/application_controller.rb:5:in `current_user'
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m   app/controllers/static_pages_controller.rb:3:in `home'
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:18+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:45+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:45+00:00 app[web.1]:[0m Started GET "/users" for 18.236.7.2 at 2012-11-27 12:23:45 +0000
+[35m2012-11-27T12:23:45+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:45+00:00 app[web.1]:[0m Processing by UsersController#index as HTML
+[32m2012-11-27T12:23:45+00:00 heroku[router]:[0m at=info method=GET path=/users host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=0ms service=23ms status=200 bytes=1164
+[35m2012-11-27T12:23:45+00:00 app[web.1]:[0m   Rendered users/index.html.erb within layouts/application (0.8ms)
+[35m2012-11-27T12:23:45+00:00 app[web.1]:[0m Completed 200 OK in 15ms (Views: 3.7ms | ActiveRecord: 10.0ms)
+[32m2012-11-27T12:23:45+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-492521e08e120144b7e4c251c979f32b.css host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=5ms status=304 bytes=0
+[32m2012-11-27T12:23:45+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-9fc5fff608cdba5b94a96f2e165367fd.js host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=0ms service=4ms status=304 bytes=0
+[32m2012-11-27T12:23:47+00:00 heroku[router]:[0m at=info method=GET path=/ host=vast-dusk-2147.herokuapp.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=10ms status=404 bytes=728
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 1ms
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m Started GET "/" for 18.236.7.2 at 2012-11-27 12:23:47 +0000
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m   app/controllers/application_controller.rb:5:in `current_user'
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m   app/controllers/static_pages_controller.rb:3:in `home'
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m 
+[35m2012-11-27T12:23:47+00:00 app[web.1]:[0m 
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd app/v[Kviews/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd static_pages/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ ls
+emailed.html.erb   home.html.erb   login.html.erb~    register.html.erb~
+emailed.html.erb~  login.html.erb  register.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ gedit login.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ kill firefox
+bash: kill: firefox: arguments must be process or job IDs
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ kill
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/static_pagessaasbook@saasbook:~/6170_projects/mtj/app/views/static_pages$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd companies/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ ls
+edit.html.erb       interview.html.erb~     new_question.html.erb  question.html.erb~
+_form.html.erb      new.html.erb            offer.html.erb         show.html.erb
+index.html.erb      new_interview.html.erb  offer.html.erb~        show.html.erb~
+interview.html.erb  new_offer.html.erb      question.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ gedit edit.html.erb 
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ gedit question.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/companiessaasbook@saasbook:~/6170_projects/mtj/app/views/companies$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd answers/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/answerssaasbook@saasbook:~/6170_projects/mtj/app/views/answers$ l
+edit.html.erb  _form.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/answerssaasbook@saasbook:~/6170_projects/mtj/app/views/answers$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd offers/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/offerssaasbook@saasbook:~/6170_projects/mtj/app/views/offers$ ls
+edit.html.erb  _form.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/offerssaasbook@saasbook:~/6170_projects/mtj/app/views/offers$ gedit e

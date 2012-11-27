@@ -11,12 +11,10 @@
 
 <%= javascript_tag  do %>
 $('#search_button').click(function () {
-  load();
+  load_old();
 });
 
-$('#search').keyup(function () {
-  load();
-});
+
 <% end %>
 
 <br>

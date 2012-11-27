@@ -5224,4 +5224,356 @@ companies.js.coffee  questions.js.coffee   static_pages.js.erb
 [33m  2 [m[34m# All this logic will automatically be available in application.js.[m[1m[34m$[m
 [33m  3 [m[34m# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/[m[1m[34m$[m
 [33m  4 [m[1m[34m$[m
-[33m  5 [m[34m#root_url = 'http://localhost:3000'
+[33m  5 [m[34m#root_url = 'http://localhost:3000'+ company[1m[34m$[m
+[33m 13 [m    url = root_url + [31m'/add/interview'[m[1m[34m$[m
+[33m 14 [m    $.ajax[1m[34m$[m
+[33m 15 [m      type: [31m'POST'[m[1m[34m$[m
+[33m 16 [m      url: url[1m[34m$[m
+[33m 17 [m      data: query[1m[34m$[m
+[33m 18 [m      success: (data, code, xmlhttp) ->[1m[34m$[m
+[33m 19 [m[7C window.location = xmlhttp.responseText[1m[34m$[m
+[33m 20 [m[1m[34m$[m
+[33m 21 [m$ ->[1m[34m$[m
+[33m 22 [m  $([31m'#add-offer'[m).click (e) ->[1m[34m$[m
+[1m[7mcompanies.js.coffee                                                          1,1            Top[1;5H[?12l[?25h[?1000l[?1002hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[23;78H22,3[22;7H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;saasbook@saasbook: ~/6170_projects/mtj/app/assets/javascriptssaasbook@saasbook:~/6170_projects/mtj/app/assets/javascripts$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/assetssaasbook@saasbook:~/6170_projects/mtj/app/assets$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd views/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ ls
+[0m[01;34manswers[0m  [01;34mcompanies[0m  [01;34minterviews[0m  [01;34mlayouts[0m  [01;34moffers[0m  [01;34mquestions[0m  [01;34mstatic_pages[0m  [01;34muser_mailer[0m  [01;34musers[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd layouts/
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/layoutssaasbook@saasbook:~/6170_projects/mtj/app/views/layouts$ ls
+application.html.erb  application.html.erb~
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/layoutssaasbook@saasbook:~/6170_projects/mtj/app/views/layouts$ gedit application.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/layoutssaasbook@saasbook:~/6170_projects/mtj/app/views/layouts$ c d[K[Kd [K[K[Kgedit application.html.erb
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/views/layoutssaasbook@saasbook:~/6170_projects/mtj/app/views/layouts$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/app/viewssaasbook@saasbook:~/6170_projects/mtj/app/views$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -am "redone search"
+[master 701b53e] redone search
+ 18 files changed, 518 insertions(+), 109 deletions(-)
+ delete mode 100644 app/assets/javascripts/answers.js.coffee
+ delete mode 100644 app/assets/javascripts/interviews.js.coffee
+ delete mode 100644 app/assets/javascripts/offers.js.coffee
+ delete mode 100644 app/assets/javascripts/static_pages.js.coffee
+ create mode 100644 app/assets/javascripts/static_pages.js.erb
+ create mode 100644 app/assets/javascripts/static_pages.js.erb~
+ delete mode 100644 app/assets/javascripts/users.js.coffee
+ rewrite app/views/companies/search.html.erb (90%)
+ create mode 100644 app/views/companies/search.html.erb~
+ rewrite app/views/static_pages/home.html.erb (73%)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 42, done.
+Compressing objects:   4% (1/23)   Compressing objects:   8% (2/23)   Compressing objects:  13% (3/23)   Compressing objects:  17% (4/23)   Compressing objects:  21% (5/23)   Compressing objects:  26% (6/23)   Compressing objects:  30% (7/23)   Compressing objects:  34% (8/23)   Compressing objects:  39% (9/23)   Compressing objects:  43% (10/23)   Compressing objects:  47% (11/23)   Compressing objects:  52% (12/23)   Compressing objects:  56% (13/23)   Compressing objects:  60% (14/23)   Compressing objects:  65% (15/23)   Compressing objects:  69% (16/23)   Compressing objects:  73% (17/23)   Compressing objects:  78% (18/23)   Compressing objects:  82% (19/23)   Compressing objects:  86% (20/23)   Compressing objects:  91% (21/23)   Compressing objects:  95% (22/23)   Compressing objects: 100% (23/23)   Compressing objects: 100% (23/23), done.
+Writing objects:   4% (1/23)   Writing objects:   8% (2/23)   Writing objects:  13% (3/23)   Writing objects:  17% (4/23)   Writing objects:  21% (5/23)   Writing objects:  30% (7/23)   Writing objects:  34% (8/23)   Writing objects:  39% (9/23)   Writing objects:  43% (10/23)   Writing objects:  47% (11/23)   Writing objects:  52% (12/23)   Writing objects:  56% (13/23)   Writing objects:  60% (14/23)   Writing objects:  65% (15/23)   Writing objects:  69% (16/23)   Writing objects:  73% (17/23)   Writing objects:  78% (18/23)   Writing objects:  82% (19/23)   Writing objects:  86% (20/23)   Writing objects:  91% (21/23)   Writing objects:  95% (22/23)   Writing objects: 100% (23/23)   Writing objects: 100% (23/23), 7.84 KiB, done.
+Total 23 (delta 14), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   0ec83d6..701b53e  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 42, done.
+Compressing objects:   4% (1/23)   Compressing objects:   8% (2/23)   Compressing objects:  13% (3/23)   Compressing objects:  17% (4/23)   Compressing objects:  21% (5/23)   Compressing objects:  26% (6/23)   Compressing objects:  30% (7/23)   Compressing objects:  34% (8/23)   Compressing objects:  39% (9/23)   Compressing objects:  43% (10/23)   Compressing objects:  47% (11/23)   Compressing objects:  52% (12/23)   Compressing objects:  56% (13/23)   Compressing objects:  60% (14/23)   Compressing objects:  65% (15/23)   Compressing objects:  69% (16/23)   Compressing objects:  73% (17/23)   Compressing objects:  78% (18/23)   Compressing objects:  82% (19/23)   Compressing objects:  86% (20/23)   Compressing objects:  91% (21/23)   Compressing objects:  95% (22/23)   Compressing objects: 100% (23/23)   Compressing objects: 100% (23/23), done.
+Writing objects:   4% (1/23)   Writing objects:   8% (2/23)   Writing objects:  13% (3/23)   Writing objects:  17% (4/23)   Writing objects:  21% (5/23)   Writing objects:  30% (7/23)   Writing objects:  34% (8/23)   Writing objects:  39% (9/23)   Writing objects:  43% (10/23)   Writing objects:  47% (11/23)   Writing objects:  52% (12/23)   Writing objects:  56% (13/23)   Writing objects:  60% (14/23)   Writing objects:  65% (15/23)   Writing objects:  69% (16/23)   Writing objects:  73% (17/23)   Writing objects:  78% (18/23)   Writing objects:  82% (19/23)   Writing objects:  86% (20/23)   Writing objects:  91% (21/23)   Writing objects:  95% (22/23)   Writing objects: 100% (23/23)   Writing objects: 100% (23/23), 7.84 KiB, done.
+Total 23 (delta 14), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.2
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.2)
+       Using rails (3.2.7)
+       Using raindrops (0.10.0)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (39.10s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 12.4MB
+-----> Launching... done, v40
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   0ec83d6..701b53e  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku logs
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.4ms)
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m   Parameters: {"id"=>"Gooo"}
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m Started POST "/companies/search/Goo" for 18.236.6.169 at 2012-11-28 01:03:53 +0000
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m   Parameters: {"id"=>"Goo"}
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[33m2012-11-28T01:03:53+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Gooo host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=2ms service=21ms status=200 bytes=1388
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.4ms)
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+[36m2012-11-28T01:03:53+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[33m2012-11-28T01:03:53+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Goo host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=2ms service=19ms status=200 bytes=1388
+[33m2012-11-28T01:03:53+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064633836 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=10ms connect=11ms service=30ms status=200 bytes=101898
+[33m2012-11-28T01:03:53+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064633809 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=2ms service=16ms status=200 bytes=101898
+[36m2012-11-28T01:03:54+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T01:03:54+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:54+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[36m2012-11-28T01:03:54+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:54+00:00 app[web.1]:[0m Started POST "/companies/search/Goog" for 18.236.6.169 at 2012-11-28 01:03:54 +0000
+[36m2012-11-28T01:03:54+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.3ms)
+[36m2012-11-28T01:03:54+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+[36m2012-11-28T01:03:54+00:00 app[web.1]:[0m   Parameters: {"id"=>"Goog"}
+[33m2012-11-28T01:03:54+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Goog host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=4ms service=14ms status=200 bytes=1388
+[33m2012-11-28T01:03:54+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064634762 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=
+web.1 queue=0 wait=0ms connect=2ms service=16ms status=200 bytes=101898
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.3ms)
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m Started POST "/companies/search/Goog" for 18.236.6.169 at 2012-11-28 01:03:55 +0000
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m   Parameters: {"id"=>"Goog"}
+[33m2012-11-28T01:03:55+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Goog host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=27ms connect=22ms service=37ms status=200 bytes=1388
+[33m2012-11-28T01:03:56+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064635756 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=21ms connect=22ms service=27ms status=200 bytes=101898
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m Started POST "/companies/search/Googl" for 18.236.6.169 at 2012-11-28 01:03:56 +0000
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m   Parameters: {"id"=>"Googl"}
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.3ms)
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[33m2012-11-28T01:03:56+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Googl host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=1ms service=13ms status=200 bytes=1388
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+[33m2012-11-28T01:03:56+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064636548 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=1ms service=14ms status=200 bytes=101898
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m Started POST "/companies/search/Google" for 18.236.6.169 at 2012-11-28 01:03:57 +0000
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m   Parameters: {"id"=>"Google"}
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.4ms)
+[36m1ms service=14ms status=200 bytes=101898
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m Started POST "/companies/search/Google" for 18.236.6.169 at 2012-11-28 01:03:57 +0000
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m   Parameters: {"id"=>"Google"}
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.4ms)
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[33m2012-11-28T01:03:57+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Google host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=4ms service=13ms status=200 bytes=1388
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+[33m2012-11-28T01:03:57+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064637859 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=2ms service=17ms status=200 bytes=101898
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m   Parameters: {"id"=>"Google"}
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.3ms)
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m Started GET "/companies/search/Google" for 18.236.6.169 at 2012-11-28 01:03:58 +0000
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+[33m2012-11-28T01:03:58+00:00 heroku[router]:[0m at=info method=GET path=/companies/search/Google host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=2ms service=12ms status=200 bytes=1388
+[33m2012-11-28T01:03:58+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064638865 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=3ms service=13ms status=200 bytes=101898
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m 
+[33m2012-11-28T01:04:03+00:00 heroku[router]:[0m at=info method=GET path=/ host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=11ms service=23ms status=304 bytes=0
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m Started GET "/" for 18.236.6.169 at 2012-11-28 01:04:03 +0000
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m   Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+[33m2012-11-28T01:04:03+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=2ms service=5ms status=304 bytes=0
+[33m2012-11-28T01:04:03+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-492521e08e120144b7e4c251c979f32b.css host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=6ms connect=14ms service=9ms status=304 bytes=0
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m Processing by SessionsController#create as HTML
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m   Parameters: {"email"=>"a@mit.edu", "password"=>"[FILTERED]", "co36m2012-11-28T01:04:04+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 856ms
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m Sent mail to a@mit.edu (824ms)
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m   app/controllers/sessions_controller.rb:17:in `create'
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m ):
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m   app/controllers/sessions_controller.rb:23:in `send_email'
+[33m2012-11-28T01:04:04+00:00 heroku[router]:[0m at=info method=POST path=/create_account host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=871ms status=500 bytes=643
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m Started GET "/register" for 18.236.6.169 at 2012-11-28 01:04:07 +0000
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m Processing by StaticPagesController#register as HTML
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m 
+[33m2012-11-28T01:04:07+00:00 heroku[router]:[0m at=info method=GET path=/register host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=3ms service=25ms status=200 bytes=1527
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m   Rendered static_pages/register.html.erb within layouts/application (0.6ms)
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m 
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku logs
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m Started POST "/companies/search/Goog" for 18.236.6.169 at 2012-11-28 01:03:55 +0000
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T01:03:55+00:00 app[web.1]:[0m   Parameters: {"id"=>"Goog"}
+[33m2012-11-28T01:03:55+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Goog host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=27ms connect=22ms service=37ms status=200 bytes=1388
+[33m2012-11-28T01:03:56+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064635756 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=21ms connect=22ms service=27ms status=200 bytes=101898
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m Started POST "/companies/search/Googl" for 18.236.6.169 at 2012-11-28 01:03:56 +0000
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m   Parameters: {"id"=>"Googl"}
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.3ms)
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[33m2012-11-28T01:03:56+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Googl host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=1ms service=13ms status=200 bytes=1388
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+[33m2012-11-28T01:03:56+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064636548 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=1ms service=14ms status=200 bytes=101898
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m 
+[36m2012-11-28ce=13ms status=200 bytes=1388
+[36m2012-11-28T01:03:56+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+[33m2012-11-28T01:03:56+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064636548 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=1ms service=14ms status=200 bytes=101898
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m Started POST "/companies/search/Google" for 18.236.6.169 at 2012-11-28 01:03:57 +0000
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m   Parameters: {"id"=>"Google"}
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.4ms)
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[33m2012-11-28T01:03:57+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Google host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=4ms service=13ms status=200 bytes=1388
+[36m2012-11-28T01:03:57+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+[33m2012-11-28T01:03:57+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064637859 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=2ms service=17ms status=200 bytes=101898
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m   Parameters: {"id"=>"Google"}
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m   Rendered static_pages/login.html.erb within layouts/application (0.3ms)
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m Filter chain halted as :check_status rendered or redirected
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m Started GET "/companies/search/Google" for 18.236.6.169 at 2012-11-28 01:03:58 +0000
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T01:03:58+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+[33m2012-11-28T01:03:58+00:00 heroku[router]:[0m at=info method=GET path=/companies/search/Google host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=2ms service=12ms status=200 bytes=1388
+[33m2012-11-28T01:03:58+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js?_=1354064638865 host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=3ms service=13ms status=200 bytes=101898
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m 
+[33m2012-11-28T01:04:03+00:00 heroku[router]:[0m at=info method=GET path=/ host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=11ms service=23ms status=304 bytes=0
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m Started GET "/" for 18.236.6.169 at 2012-11-28 01:04:03 +0000
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m   Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+[33m2012-11-28T01:04:03+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=2ms service=5ms status=304 bytes=0
+[33m2012-11-28T01:04:03+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-492521e08e120144b7e4c251c979f32b.css host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=6ms connect=14ms service=9ms status=304 bytes=0
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m Processing by SessionsController#create as HTML
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m   Parameters: {"email"=>"a@mit.edu", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"Register"}
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m WARNING: Can't verify CSRF token authenticity
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m Started POST "/create_account" for 18.236.7.54 at 2012-11-28 01:04:03 +0000
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m   Rendered user_mailer/activate_email.text.erb (0.0ms)
+[36m2012-11-28T01:04:03+00:00 app[web.1]:[0m   Rendered user_mailer/activate_email.html.erb (0.1ms)
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 856ms
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m Sent mail to a@mit.edu (824ms)
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m   app/controllers/sessions_controller.rb:17:in `create'
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m ):
+[36m2012-11-28T01:04:04+00:00 app[web.1]:[0m   app/controllers/sessions_controller.rb:23:in `send_email'
+[33m2012-11-28T01:04:04+00:00 heroku[router]:[0m at=info method=POST path=/create_account host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=871ms status=500 bytes=643
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m Started GET "/register" for 18.236.6.169 at 2012-11-28 01:04:07 +0000
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m Processing by StaticPagesController#register as HTML
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m 
+[33m2012-11-28T01:04:07+00:00 heroku[router]:[0m at=info method=GET path=/register host=vast-dusk-2147.herokuapp.com fwd=18.236.6.169 dyno=web.1 queue=0 wait=0ms connect=3ms service=25ms status=200 bytes=1527
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m   Rendered static_pages/register.html.erb within layouts/application (0.6ms)
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+[36m2012-11-28T01:04:07+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:07:17+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:07:17+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:07:18+00:00 app[web.1]:[0m   Parameters: {"email"=>"a@mit.edu", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"Register"}
+[36m2012-11-28T01:07:18+00:00 app[web.1]:[0m WARNING: Can't verify CSRF token authenticity
+[36m2012-11-28T01:07:17+00:00 app[web.1]:[0m Started POST "/create_account" for 18.236.7.54 at 2012-11-28 01:07:17 +0000
+[36m2012-11-28T01:07:18+00:00 app[web.1]:[0m Processing by SessionsController#create as HTML
+[36m2012-11-28T01:07:18+00:00 app[web.1]:[0m   Rendered static_pages/register.html.erb within layouts/application (1.2ms)
+[36m2012-11-28T01:07:18+00:00 app[web.1]:[0m Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 1.9ms)
+[33m2012-11-28T01:07:18+00:00 heroku[router]:[0m at=info method=POST path=/create_account host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=2ms service=15ms status=200 bytes=1591
+[33m2012-11-28T01:07:18+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-492521e08e120144b7e4c251c979f32b.css host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=13ms status=304 bytes=0
+[33m2012-11-28T01:07:18+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=2ms service=5ms status=304 bytes=0
+[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m Started POST "/create_account" for 18.236.7.54 at 2012-11-28 01:07:23 +0000
+[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m   Parameters: {"email"=>"b@mit.edu", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"Register"}
+[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m WARNING: Can't verify CSRF token authenticity
+[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m Processing by SessionsController#create as HTML
+[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m   Rendered user_mailer/activate_email.html.erb (0.1ms)
+[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m   Rendered user_mailer/activate_email.text.erb (0.0ms)
+[33m2012-11-28T01:07:24+00:00 heroku[router]:[0m at=info method=POST path=/create_account host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=830ms status=500 bytes=643
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m Sent mail to b@mit.edu (786ms)
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m   app/controllers/sessions_controller.rb:23:in `send_email'
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m   app/controllers/sessions_controller.rb:17:in `create'
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 809ms
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m 
+[36m2012-11-28T01:07:24+00:00 app[web.1]:[0m ):
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cda[K app/
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ ls
+[0m[01;34massets[0m  [01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+]0;saasbook@saasbook: ~/6170_projects/mtj/appsaasbook@saasbook:~/6170_projects/mtj/app$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ ls
+[0m[01;34mapp[0m        [01;34mdb[0m            Gemfile       [01;34mlib[0m     Rakefile     [01;34mscript[0m  [01;34mvendor[0m
+[01;34mconfig[0m     [01;34mdeliverables[0m  Gemfile.lock  [01;34mlog[0m     README.md    [01;34mtest[0m
+config.ru  [01;34mdoc[0m           install       [01;34mpublic[0m  README.rdoc  [01;34mtmp[0m
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ cd config/
+]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ ls
+application.rb  database.yml    environment.rb~  [0m[01;34minitializers[0m  routes.rb
+boot.rb         environment.rb  [01;34menvironments[0m     [01;34mlocales[0m       routes.rb~
+]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ gedit environment
+]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ gedit environment.rb
+]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ cd ..
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ gti ad[K[K[K[K[Kit add .
+]0;

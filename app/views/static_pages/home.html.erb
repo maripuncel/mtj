@@ -1,5 +1,27 @@
 <% provide(:title, 'Home') %>
 
 <h1> MITJobTalk </h1>
+<br>
 
+<input id ="search" name="search" type="text" value="Name" />
+<button onclick="load()">Search For Companies</button>
+
+<script language="javascript">
+	function load()
+	{
+		element = document.getElementById('search');
+		value = element.value;
+		value = value.replace(' ','%20');
+		value = value.replace('.','%2E');
+		$('#companies').load("/companies/search/"+value);
+		//$('#companies').load("/Test");
+	}
+
+</script>
+
+
+<div id="companies">
+</div>
+
+<br>
 <%= link_to "Show all companies", companies_url %>

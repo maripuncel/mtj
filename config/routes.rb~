@@ -1,5 +1,18 @@
 Mtj::Application.routes.draw do
 
+  resources :answers
+
+  resources :questions
+
+  resources :offers
+
+  resources :interviews
+
+  root :to =>  "static_pages#home"
+
+  resources :companies
+  resources :users
+  match '/Test', to: "static_pages#Test"
   match 'companies/:id/interviews', to: 'companies#interview', :as => :interview
   match 'companies/:id/new_interview', to: 'companies#new_interview', :as => :new_interview
   match 'add/interview', to: 'interviews#create'
@@ -15,19 +28,6 @@ Mtj::Application.routes.draw do
   match 'questions/:id/answers', to: 'questions#answer', :as => :answer
   match 'questions/:id/new_answer', to: 'questions#new_answer', :as => :new_answer
   match 'add/answer', to: 'answers#create'
-
-  resources :answers
-
-  resources :questions
-
-  resources :offers
-
-  resources :interviews
-
-  root :to =>  "static_pages#home"
-
-  resources :companies
-  resources :users
 
   match 'register' => 'static_pages#register'
   match 'login' => 'static_pages#login'

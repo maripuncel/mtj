@@ -14,7 +14,9 @@ $('#search_button').click(function () {
   load_old();
 });
 
-
+$('#search').keyup(function () {
+  load();
+});
 <% end %>
 
 <br>

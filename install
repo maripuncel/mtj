@@ -5535,12 +5535,7 @@ web.1 queue=0 wait=0ms connect=2ms service=16ms status=200 bytes=101898
 [36m2012-11-28T01:07:18+00:00 app[web.1]:[0m Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 1.9ms)
 [33m2012-11-28T01:07:18+00:00 heroku[router]:[0m at=info method=POST path=/create_account host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=2ms service=15ms status=200 bytes=1591
 [33m2012-11-28T01:07:18+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-492521e08e120144b7e4c251c979f32b.css host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=13ms status=304 bytes=0
-[33m2012-11-28T01:07:18+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=2ms service=5ms status=304 bytes=0
-[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m 
-[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m 
-[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m Started POST "/create_account" for 18.236.7.54 at 2012-11-28 01:07:23 +0000
-[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m   Parameters: {"email"=>"b@mit.edu", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"Register"}
-[36m2012-11-28T01:07:23+00:00 app[web.1]:[0m WARNING: Can't verify CSRF token authenticity
+[33m2012-11-28T01:07:18+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1bdb75e51b5e87054b570270247fca19.js host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=we0:00 app[web.1]:[0m WARNING: Can't verify CSRF token authenticity
 [36m2012-11-28T01:07:23+00:00 app[web.1]:[0m Processing by SessionsController#create as HTML
 [36m2012-11-28T01:07:23+00:00 app[web.1]:[0m   Rendered user_mailer/activate_email.html.erb (0.1ms)
 [36m2012-11-28T01:07:23+00:00 app[web.1]:[0m   Rendered user_mailer/activate_email.text.erb (0.0ms)
@@ -5576,4 +5571,9 @@ boot.rb         environment.rb  [01;34menvironments[0m     [01;34mlocales[0m
 ]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ gedit environment.rb
 ]0;saasbook@saasbook: ~/6170_projects/mtj/configsaasbook@saasbook:~/6170_projects/mtj/config$ cd ..
 ]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ gti ad[K[K[K[K[Kit add .
-]0;
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -am "new email"
+[master a13c402] new email
+ 4 files changed, 357 insertions(+), 7 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git ps[Kush
+Counting objects: 17, done.
+Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (

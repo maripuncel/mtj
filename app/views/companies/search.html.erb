@@ -1,0 +1,54 @@
+
+
+<% if @notice != nil %>
+
+<h4><i><%= @notice %></h4></i>
+<br>
+<% else %>
+<h4><i><%= @notice %></h4></i>
+<% provide(:title, @companies.name) %>
+<h1>
+  <%= @companies.name %>
+
+</h1>
+
+<br/>
+
+<h3>Interviews</h3>
+
+<table>
+  <% if @interviews.any? %>
+      <% @interviews.each do |interview| %>
+          <tr>
+            <td><%= interview.content %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>
+
+<%= link_to 'View More Interviews', '/companies/' + @companies.id.to_s() + '/interviews' %>
+<br/><br/>
+
+<h3>Offer Average</h3>
+
+<p><%= @offer %></p>
+
+<%= link_to 'View More Offers', '/companies/' + @companies.id.to_s() + '/offers'  %>
+<br/><br/>
+
+<h3>Questions/Answers</h3>
+
+<table>
+  <% if @questions.any? %>
+      <% @questions.each do |question| %>
+          <tr>
+            <td><%= question.content %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>
+
+<%= link_to 'View More Question/Answers', '/companies/' + @companies.id.to_s() + '/interviews' %>
+
+<% end %>
+

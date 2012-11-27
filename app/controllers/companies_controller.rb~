@@ -2,6 +2,23 @@ class CompaniesController < ApplicationController
 
   before_filter :check_status
 
+   def search
+    @name = params[:id]
+    @name.gsub("%20", " ")
+    @companies = Company.find(:all, :conditions => {:name => @name})
+    
+    @notice = @name
+    if @companies == []
+	@notice = "No Company named \""+ @name + "\" found."	
+    else
+	@notice = nil
+        #@interviews = Interview.all( :conditions => {:company_id => [@companies.id]}, :limit => 3)
+        #@offer = @companies.offer_average
+        #@questions = Question.all( :conditions => {:company_id => [@companies.id]}, :limit => 3)
+    end
+    
+ end
+	
   def check_status
     if !current_user()
       flash.now[:notice] = 'You must log in to view that page'

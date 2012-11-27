@@ -1,21 +1,22 @@
 class CompaniesController < ApplicationController
 
   before_filter :check_status
+
    def search
     @name = params[:id]
     @name.gsub("%20", " ")
-    @companies = Company.find(:first, :conditions => {:name => @name})
+    @companies = Company.find(:all, :conditions => {:name => @name})
     
     @notice = @name
-    if @companies == nil
+    if @companies == []
 	@notice = "No Company named \""+ @name + "\" found."	
     else
 	@notice = nil
-        @interviews = Interview.all( :conditions => {:company_id => [@companies.id]}, :limit => 3)
-        @offer = @companies.offer_average
-        @questions = Question.all( :conditions => {:company_id => [@companies.id]}, :limit => 3)
+        #@interviews = Interview.all( :conditions => {:company_id => [@companies.id]}, :limit => 3)
+        #@offer = @companies.offer_average
+        #@questions = Question.all( :conditions => {:company_id => [@companies.id]}, :limit => 3)
     end
-
+    render :search, :layout => false
  end
 	
   def check_status

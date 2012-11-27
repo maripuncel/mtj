@@ -1,5 +1,23 @@
 <% provide(:title, 'Home') %>
 
 <h1> MITJobTalk </h1>
+<br>
 
+<input id ="search" name="search" type="text" placeholder="Comany Name" />
+<button id="search_button">Search For Companies</button>
+
+<div id="companies">
+</div>
+
+<%= javascript_tag  do %>
+$('#search_button').click(function () {
+  load();
+});
+
+$('#search').keyup(function () {
+  load();
+});
+<% end %>
+
+<br>
 <%= link_to "Show all companies", companies_url %>

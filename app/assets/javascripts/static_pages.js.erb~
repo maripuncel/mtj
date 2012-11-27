@@ -1,23 +1,31 @@
 
+$('#company_name').keyup(function () {
+  load();
+});
+
 function reload_div(data) {
   $('#companies').html(data);
+}
+
+function empty_div() {
+  $('#companies').html("");
+  $('#add_button').hide();
 }
 
 function load()
 {
 
-  value = $('#search').val();
+  value = $('#company_name').val();
   if(value != "") {
-  $.ajax({
-    type : 'POST',
-    url : '/companies/search/' + value,
-    dataType: 'html',
-    success : function(data) { reload_div(data) },
-    error: function(XMLHttpRequest, testStatus, errorThrown) {
-    }
-  });
-  }
-  else {
+    $.ajax({
+      type : 'POST',
+      url : '/companies/search/' + value,
+      dataType: 'html',
+      success : function(data) { reload_div(data) },
+      error: function(XMLHttpRequest, testStatus, errorThrown) {
+      }
+    });
+  } else {
     empty_div();
   }
 }

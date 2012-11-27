@@ -5,6 +5,11 @@
 
 <h4><i><%= @notice %></h4></i>
 <br />
+
+<%= javascript_tag  do %>
+$('#add_button').toggle(true);
+<% end %>
+
 <% else %>
 <table>
 <% @companies.each do |company| %>

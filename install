@@ -6399,4 +6399,50 @@ Fast-forward
 ]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add ,
 fatal: pathspec ',' did not match any files
 ]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ g[Kgit add .
-]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git c
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git capp/controllers/questions_controller.rb  |    2 +-
+ app/views/companies/question.html.erb    |    2 +
+ 6 files changed, 76 insertions(+), 61 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git add ,
+fatal: pathspec ',' did not match any files
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ g[Kgit add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -am :[K"heroku"
+[master 7652094] heroku
+ 1 file changed, 203 insertions(+), 1 deletion(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 5, done.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 2.14 KiB, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   bd2b2a5..7652094  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 45, done.
+Compressing objects:   3% (1/28)   Compressing objects:   7% (2/28)   Compressing objects:  10% (3/28)   Compressing objects:  14% (4/28)   Compressing objects:  17% (5/28)   Compressing objects:  21% (6/28)   Compressing objects:  25% (7/28)   Compressing objects:  28% (8/28)   Compressing objects:  32% (9/28)   Compressing objects:  35% (10/28)   Compressing objects:  39% (11/28)   Compressing objects:  42% (12/28)   Compressing objects:  46% (13/28)   Compressing objects:  50% (14/28)   Compressing objects:  53% (15/28)   Compressing objects:  57% (16/28)   Compressing objects:  60% (17/28)   Compressing objects:  64% (18/28)   Compressing objects:  67% (19/28)   Compressing objects:  71% (20/28)   Compressing objects:  75% (21/28)   Compressing objects:  78% (22/28)   Compressing objects:  82% (23/28)   Compressing objects:  85% (24/28)   Compressing objects:  89% (25/28)   Compressing objects:  92% (26/28)   Compressing objects:  96% (27/28)   Compressing objects: 100% (28/28)   Compressing objects: 100% (28/28), done.
+Writing objects:   3% (1/28)   Writing objects:   7% (2/28)   Writing objects:  10% (3/28)   Writing objects:  14% (4/28)   Writing objects:  17% (5/28)   Writing objects:  21% (6/28)   Writing objects:  28% (8/28)   Writing objects:  32% (9/28)   Writing objects:  35% (10/28)   Writing objects:  39% (11/28)   Writing objects:  42% (12/28)   Writing objects:  46% (13/28)   Writing objects:  50% (14/28)   Writing objects:  57% (16/28)   Writing objects:  60% (17/28)   Writing objects:  64% (18/28)   Writing objects:  67% (19/28)   Writing objects:  71% (20/28)   Writing objects:  75% (21/28)   Writing objects:  78% (22/28)   Writing objects:  82% (23/28)   Writing objects:  85% (24/28)   Writing objects:  89% (25/28)   Writing objects:  92% (26/28)   Writing objects:  96% (27/28)   Writing objects: 100% (28/28)   Writing objects: 100% (28/28), 5.55 KiB, done.
+Total 28 (delta 22), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.2
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using 

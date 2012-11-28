@@ -33,7 +33,7 @@ class SessionsController < ApplicationController
             if flash[:notice] == ''
 	      flash[:notice] = 'Successfully logged in'
 	    end
-	    redirect_to :controller => 'companies', :action => 'index'
+	    redirect_to '/'
 	  else
 	    flash[:notice] = 'Invalid username or password'
             redirect_to '/login'

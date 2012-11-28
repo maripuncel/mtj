@@ -4,9 +4,9 @@ class CompaniesController < ApplicationController
 
    def search
     @name = params[:id]
-    @name.gsub("%20", " ")
+    #@name.gsub("%20", " ")
     @companies = Company.find(:all, :conditions => {:name => @name})
-    
+    @companies = Company.where("name LIKE :prefix", prefix: "#{@name}%").all(:order => :name)
     @notice = @name
     if @companies == []
 	@notice = "No Company named \""+ @name + "\" found."	
@@ -22,7 +22,7 @@ class CompaniesController < ApplicationController
   def check_status
     if !current_user()
       flash.now[:notice] = 'You must log in to view that page'
-      render "static_pages/login"
+      redirect_to "/login"
     end
   end
 

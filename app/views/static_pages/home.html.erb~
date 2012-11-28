@@ -1,21 +1,33 @@
 <% provide(:title, 'Home') %>
 
 <h1> MITJobTalk </h1>
+<% if !@current_user %>
+<br />
+<h4> The one and only MIT company, job, and interview resource! </h4>
+<% end %>
 <br>
-
-<input id ="search" name="search" type="text" placeholder="Comany Name" />
-<button id="search_button">Search For Companies</button>
+<% if @current_user %>
+<%= form_for(Company.new) do |f| %>
+<input id ="company_name" name="company[name]" type="text" placeholder="Company Name" autocomplete="off" />
+<input type="submit" id="add_button" value="Add Company" name="commit">
+<% end %>
+<% end %>
 
 <div id="companies">
 </div>
 
 <%= javascript_tag  do %>
-$('#search_button').click(function () {
-  load_old();
+
+$('#company_name').keyup(function () {
+  load();
 });
+
+$('#add_button').hide();
 
 
 <% end %>
 
 <br>
+<% if @current_user %>
 <%= link_to "Show all companies", companies_url %>
+<% end %>

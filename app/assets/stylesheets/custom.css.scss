@@ -80,3 +80,37 @@ body {
 #company-btn{
   color: white;
 }
+
+.interview-content {
+  background-color: #f5f5f5;
+  border: 1px;
+  border-radius: 2px;
+  margin-left: 9%;
+  margin-right: 9%;
+  width: 82%;
+  margin-bottom: 10px;
+  padding: 4px 4px;
+  padding-left: 8px;
+}
+
+.interview-date {
+  text-align: right;
+  color: #808080;
+}
+
+.question-content {
+  background-color: #f5f5f5;
+  border: 1px;
+  border-radius: 2px;
+  margin-left: 9%;
+  margin-right: 9%;
+  width: 82%;
+  margin-bottom: 10px;
+  padding: 4px 4px;
+  padding-left: 8px;
+}
+
+.question-date {
+  text-align: right;
+  color: #808080;
+}

@@ -1,25 +1,25 @@
 <% provide(:title, @company.name + " | Interviews") %>
 
-<h1>Listing interviews</h1>
-<p id="notice"><%= notice %></p>
-<table>
-  <tr>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="container interview">
+  <div class="row title">
+    <p id="notice"><%= notice %></p>
+    <h1 id="company-name"><%= @company.name %> Interviews</h1>
+  </div>
+
+  <hr class="company-divider">
+
 <% if @interviews.any? %>
 <% @interviews.each do |interview| %>
-  <tr>
-    <td><%= interview.content %></td>
-    <td><%= link_to 'Edit', edit_interview_path(interview) %></td>
-    <td><%= link_to 'Destroy', interview, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <div class="interview-content"><%= interview.content %>
+    <div class="interview-date"><%= interview.created_at %></div></div>
+
 <% end %>
 <% end %>
-</table>
 
 <br />
+  <hr class="company-divider">
 
 <%= link_to 'New Interview', new_interview_url(:id => @company.id) %> |
 <%= link_to 'Back to ' + @company.name, company_url %>
+
+</div>

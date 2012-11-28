@@ -1,29 +1,28 @@
 <% provide(:title, @company.name + " | Questions") %>
 
+<div class="container question">
+  <div class="row title">
+    <p id="notice"><%= notice %></p>
+    <h1 id="company-name"><%= @company.name %> Questions</h1>
+  </div>
 
-<h1>Listing questions</h1>
-<p id="notice"><%= notice %></p>
-<table>
-  <tr>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <hr class="company-divider">
+
 
   <% if @questions.any? %>
       <% @questions.each do |question| %>
-          <tr>
-            <td><%= question.content %></td>
-            <td><%= link_to 'Show Answers', answer_url(question) %></td>
-            <td><%= link_to 'Edit', edit_question_path(question) %></td>
-            <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+          <div class="question-content"><%= question.content %>
+          <div class="question-date"><%= question.created_at %></div>
+          </div>
+
+
       <% end %>
   <% end %>
-</table>
-
 <br />
+
+  <hr class="company-divider">
 
 <%= link_to 'New Question', new_question_path %>  |
 <%= link_to 'Back to ' + @company.name, company_url %>
+
+</div>

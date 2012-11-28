@@ -1,8 +1,13 @@
 <% provide(:title, @company.name + " | Offers") %>
 
+<div class="container offer">
+  <div class="row title">
+    <p id="notice"><%= notice %></p>
+    <h1 id="company-name"><%= @company.name %> Offers</h1>
+  </div>
 
-<h1>Listing offers</h1>
-<p id="notice"><%= notice %></p>
+  <hr class="company-divider">
+
 <table>
   <tr>
     <th>Figure</th>
@@ -22,6 +27,7 @@
 </table>
 
 <br />
-
+  <hr class="company-divider">
 <%= link_to 'New Offer', new_offer_path %> |
 <%= link_to 'Back to ' + @company.name, company_url %>
+</div>

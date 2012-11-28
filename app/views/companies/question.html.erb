@@ -14,7 +14,13 @@
           <div class="question-content"><%= question.content %>
           <div class="question-date"><%= question.created_at %></div>
           </div>
-
+          <% if question.answers.any? %>
+              <% question.answers.each do |answer| %>
+                  <div class="answer-content"><%= answer.content %>
+                    <div class="answer-date"><%= answer.created_at %></div>
+                  </div>
+              <% end %>
+          <% end %>
 
       <% end %>
   <% end %>

@@ -11,4 +11,5 @@ class Question < ActiveRecord::Base
     question.save!
     return question
   end
+
 end

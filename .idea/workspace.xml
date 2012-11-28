@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12c0e655-d9b3-4049-b94a-7e7599bc319f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/companies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/companies_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/companies/show.html.erb" afterPath="$PROJECT_DIR$/app/views/companies/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/login.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/login.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/register.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/register.html.erb" />
     </list>
     <ignored path="mtj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,19 +22,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="custom.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="18" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.5588235">
+            <state line="66" column="18" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/companies/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="54" selection-start="990" selection-end="990" vertical-scroll-proportion="-16.041666">
+            <state line="44" column="23" selection-start="960" selection-end="960" vertical-scroll-proportion="0.8557692">
               <folding />
             </state>
           </provider>
@@ -48,7 +43,7 @@
       <file leaf-file-name="companies_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/companies_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="88" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0">
+            <state line="45" column="88" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,8 +76,8 @@
         <option value="$PROJECT_DIR$/app/views/static_pages/login.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/register.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/companies_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/companies/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/companies/show.html.erb" />
       </list>
     </option>
   </component>
@@ -815,23 +810,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="18" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/companies_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="88" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0">
+        <state line="45" column="88" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/companies/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="54" selection-start="990" selection-end="990" vertical-scroll-proportion="-16.041666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="18" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.5588235">
+        <state line="44" column="23" selection-start="960" selection-end="960" vertical-scroll-proportion="0.8557692">
           <folding />
         </state>
       </provider>

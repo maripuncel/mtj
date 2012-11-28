@@ -4,4 +4,79 @@
 
 body {
   padding-top: 60px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  max-width: 300px;
+  padding: 20px 30px 30px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+#input-block-email,
+#input-block-password,
+#input-block-confirm-password {
+  font-size: 16px;
+  height: auto;
+  padding: 7px 9px;
+}
+
+#actions-btn {
+  color: white;
+  background-color: #006DCC;
+  padding: 11px 19px;
+  font-size: 17.5px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.company .span4 {
+  text-align: center;
+}
+
+.company h2 {
+  font-weight: normal;
+}
+
+.company .span4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.title {
+  margin-left: 9%;
+  margin-right: 9%;
+  margin-bottom: 20px;
+}
+
+.company-divider {
+  margin-bottom: 30px;
+}
+
+.company-btn {
+  background-color: #006DCC;
+  padding: 11px 11px;
+  font-size: 17.5px;
+  border-radius: 6px;
+  margin-bottom: 0;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: 9%;
+  margin-right: 9%;
+  width: 82%;
+}
+
+#company-btn{
+  color: white;
 }

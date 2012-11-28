@@ -1,50 +1,46 @@
 <% provide(:title, @company.name) %>
 
-
+<div class="container company">
+<div class="row title">
 <p id="notice"><%= notice %></p>
+<h1 id="company-name"><%= @company.name %></h1>
+</div>
 
-<h1>
-  <%= @company.name %>
-</h1>
+<hr class="company-divider">
 
-<br/>
+<div class="row">
 
-<h3>Interviews</h3>
+<div class="span4">
+<img class="img-circle" src="http://placehold.it/140x140">
+<h2>Interviews</h2>
 
-<table>
-  <% if @interviews.any? %>
-      <% @interviews.each do |interview| %>
-          <tr>
-            <td><%= interview.content %></td>
-          </tr>
-      <% end %>
-  <% end %>
-</table>
+<p> <%= @interview.first.content %> </p>
 
-<%= link_to 'View More Interviews', interview_url %>
+<%= link_to 'View More Interviews', interview_url, :class=>"btn" %>
 <br/><br/>
+</div>
 
-<h3>Offer Average</h3>
+<div class="span4">
+<img class="img-circle" src="http://placehold.it/140x140">
+<h2>Offer Average</h2>
 
 <p><%= @offer %></p>
 
-<%= link_to 'View More Offers', offer_url %>
+<%= link_to 'View More Offers', offer_url, :class=>"btn" %>
 <br/><br/>
+</div>
 
-<h3>Questions/Answers</h3>
+<div class="span4">
+<img class="img-circle" src="http://placehold.it/140x140">
+<h2>Questions/Answers</h2>
 
-<table>
-  <% if @questions.any? %>
-      <% @questions.each do |question| %>
-          <tr>
-            <td><%= question.content %></td>
-          </tr>
-      <% end %>
-  <% end %>
-</table>
+<p> <%= @question.first.content %></p>
 
-<%= link_to 'View More Question/Answers', question_url %>
+<%= link_to 'View More Question/Answers', question_url, :class=>"btn" %>
 
 <br/><br/>
+</div></div>
+<div class="company-btn">
+<%= link_to 'Back', companies_path, :id=>"company-btn"%>
+</div></div>
 
-<%= link_to 'Back', companies_path %>

@@ -14,7 +14,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     if @question.user_id != @current_user.id
       flash[:notice] = 'You don\'t have permission to edit this data.'
-      redirect_to 'http://localhost:3000/companies/' + params[:id] + '/questions'
+      redirect_to root_url + 'companies/' + params[:id] + '/questions'
     end
   end
 

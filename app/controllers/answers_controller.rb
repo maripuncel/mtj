@@ -14,7 +14,7 @@ class AnswersController < ApplicationController
     @answer = Answer.find(params[:id])
     if @answer.user_id != @current_user.id
       flash[:notice] = 'You don\'t have permission to edit this data.'
-      redirect_to 'http://localhost:3000/questions/' + params[:id] + '/answers' 
+      redirect_to root_url + 'companies/' + params[:id] + '/questions'
     end
   end
 
@@ -22,7 +22,7 @@ class AnswersController < ApplicationController
   # POST /answers.json
   def create
     Answer.add_answer(params, @current_user)
-    render :text => root_url + 'questions/' + params[:question] + '/answers'
+    render :text => root_url + 'companies/' + params[:question] + '/questions'
   end
 
   # PUT /answers/1

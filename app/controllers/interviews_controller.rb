@@ -13,7 +13,7 @@ class InterviewsController < ApplicationController
     @interview = Interview.find(params[:id])
     if @interview.user_id != @current_user.id
       flash[:notice] = 'You don\'t have permission to edit this data.'
-      redirect_to 'http://localhost:3000/companies/' + params[:id] + '/interviews'
+      redirect_to root_url + 'companies/' + params[:id] + '/interviews'
     end
   end
 

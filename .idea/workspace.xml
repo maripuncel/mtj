@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12c0e655-d9b3-4049-b94a-7e7599bc319f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/questions.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/questions.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/answers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/answers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/interviews_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/interviews_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/questions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/questions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/companies/question.html.erb" afterPath="$PROJECT_DIR$/app/views/companies/question.html.erb" />
     </list>
     <ignored path="mtj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +21,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="custom.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="14" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.91346157">
+            <state line="147" column="14" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -44,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questions.js.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="questions.js.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/questions.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+            <state line="5" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.14423077">
               <folding />
             </state>
           </provider>
@@ -94,12 +89,12 @@
         <option value="$PROJECT_DIR$/app/views/companies/interview.html.erb" />
         <option value="$PROJECT_DIR$/app/views/companies/offer.html.erb" />
         <option value="$PROJECT_DIR$/app/models/question.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/questions.js.coffee" />
         <option value="$PROJECT_DIR$/app/controllers/interviews_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/questions_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/answers_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/companies/question.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/questions.js.coffee" />
       </list>
     </option>
   </component>
@@ -850,13 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/questions.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/companies/question.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="82" selection-start="905" selection-end="905" vertical-scroll-proportion="-11.25">
@@ -866,7 +854,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="14" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.91346157">
+        <state line="147" column="14" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/questions.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.14423077">
           <folding />
         </state>
       </provider>

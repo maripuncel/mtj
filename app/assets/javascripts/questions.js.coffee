@@ -9,7 +9,8 @@ $ ->
     e.preventDefault()
     content = $('#answer-content').val()
     question = $('#answer-question').val()
-    query = 'content=' + content + '&question=' + question
+    company = $('#answer-company').val()
+    query = 'content=' + content + '&question=' + question + '&company=' + company
     url = root_url + '/add/answer'
     $.ajax
       type: 'POST'

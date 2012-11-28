@@ -5810,4 +5810,315 @@ To git@heroku.com:vast-dusk-2147.git
 remote: Counting objects: 54, done.[K
 remote: Compressing objects:  12% (1/8)   [Kremote: Compressing objects:  25% (2/8)   [Kremote: Compressing objects:  37% (3/8)   [Kremote: Compressing objects:  50% (4/8)   [Kremote: Compressing objects:  62% (5/8)   [Kremote: Compressing objects:  75% (6/8)   [Kremote: Compressing objects:  87% (7/8)   [Kremote: Compressing objects: 100% (8/8)   [Kremote: Compressing objects: 100% (8/8), done.[K
 remote: Total 28 (delta 20), reused 28 (delta 20)[K
-Unpacking objects:   3% (1/28)   Unpacking objects:   7% (2/28)   Unpacking objects:  10% (3/28)   Unpacking objects:  14% (4/28)   Unpacking objects:  17% (5/28)   Unpacking objects:  21% (6/28)   Unpacking objects:  25% (7/28)   Unpacking objects:  28% (8/28)   Unpacking objects:  32% (9/28)   Unpacking objects:  35% (10/28)   Unpacking objects:  39% (11/28)   Unpacking objects:  42% 
+Unpacking objects:   3% (1/28)   Unpacking objects:   7% (2/28)   Unpacking objects:  10% (3/28)   Unpacking objects:  14% (4/28)   Unpacking objects:  17% (5/28)   Unpacking objects:  21% (6/28)   Unpacking objects:  25% (7/28)   Unpacking objects:  28% (8/28)   Unpacking objects:  32% (9/28)   Unpacking objects:  35% (10/28)   Unpacking objects:  39% (11/28)   Unpacking objects:  42% (12/28)   Unpacking objects:  46% (13/28)   Unpacking objects:  50% (14/28)   Unpacking objects:  53% (15/28)   Unpacking objects:  57% (16/28)   Unpacking objects:  60% (17/28)   Unpacking objects:  64% (18/28)   Unpacking objects:  67% (19/28)   Unpacking objects:  71% (20/28)   Unpacking objects:  75% (21/28)   Unpacking objects:  78% (22/28)   Unpacking objects:  82% (23/28)   Unpacking objects:  85% (24/28)   Unpacking objects:  89% (25/28)   Unpacking objects:  92% (26/28)   Unpacking objects:  96% (27/28)   Unpacking objects: 100% (28/28)   Unpacking objects: 100% (28/28), done.
+From github.com:6170/mtj
+   315ee2a..bdc0e39  master     -> origin/master
+Updating 315ee2a..bdc0e39
+Fast-forward
+ .idea/workspace.xml                      |  231 +++++++++++++++++++++---------
+ app/assets/javascripts/application.js    |    1 +
+ app/assets/stylesheets/custom.css.scss   |   75 ++++++++++
+ app/controllers/companies_controller.rb  |    4 +-
+ app/views/companies/show.html.erb        |   56 ++++----
+ app/views/static_pages/login.html.erb    |   20 +--
+ app/views/static_pages/register.html.erb |   16 ++-
+ 7 files changed, 285 insertions(+), 118 deletions(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ g[Kgit add .
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git p[Kcommit -am "heroku:
+> ^C
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git commit -am "heroku:[K:[K"
+[master 6e3ac8e] heroku
+ 1 file changed, 99 insertions(+), 1 deletion(-)
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push
+Counting objects: 5, done.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 1.03 KiB, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To git@github.com:6170/mtj.git
+   bdc0e39..6e3ac8e  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git push heroku master
+Counting objects: 59, done.
+Compressing objects:   3% (1/31)   Compressing objects:   6% (2/31)   Compressing objects:   9% (3/31)   Compressing objects:  12% (4/31)   Compressing objects:  16% (5/31)   Compressing objects:  19% (6/31)   Compressing objects:  22% (7/31)   Compressing objects:  25% (8/31)   Compressing objects:  29% (9/31)   Compressing objects:  32% (10/31)   Compressing objects:  35% (11/31)   Compressing objects:  38% (12/31)   Compressing objects:  41% (13/31)   Compressing objects:  45% (14/31)   Compressing objects:  48% (15/31)   Compressing objects:  51% (16/31)   Compressing objects:  54% (17/31)   Compressing objects:  58% (18/31)   Compressing objects:  61% (19/31)   Compressing objects:  64% (20/31)   Compressing objects:  67% (21/31)   Compressing objects:  70% (22/31)   Compressing objects:  74% (23/31)   Compressing objects:  77% (24/31)   Compressing objects:  80% (25/31)   Compressing objects:  83% (26/31)   Compressing objects:  87% (27/31)   Compressing objects:  90% (28/31)   Compressing objects:  93% (29/31)   Compressing objects:  96% (30/31)   Compressing objects: 100% (31/31)   Compressing objects: 100% (31/31), done.
+Writing objects:   3% (1/31)   Writing objects:   6% (2/31)   Writing objects:   9% (3/31)   Writing objects:  12% (4/31)   Writing objects:  16% (5/31)   Writing objects:  19% (6/31)   Writing objects:  22% (7/31)   Writing objects:  25% (8/31)   Writing objects:  29% (9/31)   Writing objects:  32% (10/31)   Writing objects:  35% (11/31)   Writing objects:  38% (12/31)   Writing objects:  41% (13/31)   Writing objects:  45% (14/31)   Writing objects:  48% (15/31)   Writing objects:  51% (16/31)   Writing objects:  54% (17/31)   Writing objects:  58% (18/31)   Writing objects:  64% (20/31)   Writing objects:  67% (21/31)   Writing objects:  70% (22/31)   Writing objects:  74% (23/31)   Writing objects:  77% (24/31)   Writing objects:  80% (25/31)   Writing objects:  83% (26/31)   Writing objects:  87% (27/31)   Writing objects:  90% (28/31)   Writing objects:  93% (29/31)   Writing objects:  96% (30/31)   Writing objects: 100% (31/31)   Writing objects: 100% (31/31), 5.78 KiB, done.
+Total 31 (delta 22), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.2.2
+       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+       Using rake (10.0.0)
+       Using i18n (0.6.1)
+       Using multi_json (1.3.7)
+       Using activesupport (3.2.7)
+       Using builder (3.0.4)
+       Using activemodel (3.2.7)
+       Using erubis (2.7.0)
+       Using journey (1.0.4)
+       Using rack (1.4.1)
+       Using rack-cache (1.2)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.3)
+       Using sprockets (2.1.3)
+       Using actionpack (3.2.7)
+       Using mime-types (1.19)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.4.4)
+       Using actionmailer (3.2.7)
+       Using arel (3.0.2)
+       Using tzinfo (0.3.35)
+       Using activerecord (3.2.7)
+       Using activeresource (3.2.7)
+       Using bootstrap-sass (2.0.4.0)
+       Using coffee-script-source (1.4.0)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.2)
+       Using json (1.7.5)
+       Using rdoc (3.12)
+       Using thor (0.16.0)
+       Using railties (3.2.7)
+       Using coffee-rails (3.2.2)
+       Using jquery-rails (2.1.3)
+       Using kgio (2.7.4)
+       Using pg (0.12.2)
+       Using bundler (1.2.2)
+       Using rails (3.2.7)
+       Using raindrops (0.10.0)
+       Using sass (3.2.3)
+       Using sass-rails (3.2.5)
+       Using uglifier (1.3.0)
+       Using unicorn (4.4.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       Asset precompilation completed (22.68s)
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+-----> Compiled slug size: 12.4MB
+-----> Launching... done, v43
+       http://vast-dusk-2147.herokuapp.com deployed to Heroku
+
+To git@heroku.com:vast-dusk-2147.git
+   315ee2a..6e3ac8e  master -> master
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ heroku logs
+[36m2012-11-28T09:15:40+00:00 app[web.1]:[0m Completed 302 Found in 2ms (ActiveRecord: 1.4ms)
+[36m2012-11-28T09:15:40+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:15:40+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:15:40+00:00 app[web.1]:[0m Started GET "/" for 18.236.7.54 at 2012-11-28 09:15:40 +0000
+[36m2012-11-28T09:15:40+00:00 app[web.1]:[0m Processing by StaticPagesController#home as HTML
+[36m2012-11-28T09:15:40+00:00 app[web.1]:[0m   Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+[36m2012-11-28T09:15:40+00:00 app[web.1]:[0m Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+[33m2012-11-28T09:15:40+00:00 heroku[router]:[0m at=info method=GET path=/ host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=11ms status=200 bytes=1678
+[33m2012-11-28T09:15:40+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-db0f52d4335817411aaed048d7dff3a9.js host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=4ms status=304 bytes=0
+[33m2012-11-28T09:15:40+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1eea0ca50f6b8d5d7ba6325b15b64b6b.css host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=5ms status=304 bytes=0
+[36m2012-11-28T09:16:32+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:32+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:32+00:00 app[web.1]:[0m Started POST "/companies/search/g" for 18.236.7.54 at 2012-11-28 09:16:32 +0000
+[36m2012-11-28T09:16:32+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T09:16:32+00:00 app[web.1]:[0m   Parameters: {"id"=>"g"}
+[36m2012-11-28T09:16:32+00:00 app[web.1]:[0m   Rendered companies/search.html.erb (0.9ms)
+[36m2012-11-28T09:16:32+00:00 app[web.1]:[0m Completed 200 OK in 34ms (Views: 15.6ms | ActiveRecord: 13.6ms)
+[33m2012-11-28T09:16:32+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/g host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=80ms status=200 bytes=182
+[36m2012-11-28T09:16:33+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:33+00:00 app[web.1]:[0m Started POST "/companies/search/g" for 18.236.7.54 at 2012-11-28 09:16:33 +0000
+[36m2012-11-28T09:16:33+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Parameters: {"id"=>"g"}
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Rendered companies/search.html.erb (0.2ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 5.5ms)
+[33m2012-11-28T09:16:34+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/g host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=5ms service=124ms status=200 bytes=182
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Started POST "/companies/search/G" for 18.236.7.54 at 2012-11-28 09:16:34 +0000
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Parameters: {"id"=>"G"}
+[33m2012-11-28T09:16:34+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/G host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=25ms status=200 bytes=106
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Completed 200 OK in 15ms (Views: 1.5ms | ActiveRecord: 8.9ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Rendered companies/search.html.erb (0.8ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Started POST "/companies/search/G" for 18.236.7.54 at 2012-11-28 09:16:34 +0000
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Parameters: {"id"=>"G"}
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[33m2012-11-28T09:16:34+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/G host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=5ms service=62ms status=200 bytes=106
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Rendered companies/search.html.erb (0.4ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Completed 200 OK in 53ms (Views: 0.8ms | ActiveRecord: 46.2ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Started POST "/companies/search/Go" for 18.236.7.54 at 2012-11-28 09:16:34 +0000
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Parameters: {"id"=>"Go"}
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Rendered companies/search.html.erb (0.5ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 3.5ms)
+[33m2012-11-28T09:16:34+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Go host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=16ms status=200 bytes=106
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m Processing by CompaniesController#show as HTML
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m   Parameters: {"id"=>"2"}
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m Started GET "/companies/2" for 18.236.7.54 at 2012-11-28 09:16:36 +0000
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 158ms
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m   Rendered companies/show.html.erb within layouts/application (51.4ms)
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m ActionView::Template::Error (undefined method `content' for nil:NilClass):
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     34: <img class="img-circle" src="http://placehold.it/140x140">
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     35: <h2>Questions/Answers</h2>
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     36: 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     37: <p> <%= @question.first.content %></p>
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     38: 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     39: <%= link_to 'View More Question/Answers', question_url, :class=>"btn" %>
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     40: 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m   app/views/companies/show.html.erb:37:in `_app_views_companies_show_html_erb__1992500647359699491_40741440'
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m   app/controllers/companies_controller.rb:48:in `show'
+[33m2012-11-28T09:16:36+00:00 heroku[router]:[0m at=info method=GET path=/companies/2 host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=184ms status=500 bytes=643
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m Started GET "/companies/" for 18.236.7.54 at 2012-11-28 09:16:46 +0000
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m Processing by CompaniesController#index as HTML
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m   Rendered companies/index.html.erb within layouts/application (3.3ms)
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 3.0ms)
+[33m2012-11-28T09:16:46+00:00 heroku[router]:[0m at=info method=GET path=/companies/ host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=24ms status=200 bytes=1295
+[33m2012-11-28T09:16:46+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1eea0ca50f6b8d5d7ba6325b15b64b6b.css host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=5ms status=304 bytes=0
+[33m2012-11-28T09:16:46+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-db0f52d4335817411aaed048d7dff3a9.js host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=4ms status=304 bytes=0
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m Started GET "/companies/5" for 18.236.7.54 at 2012-11-28 09:16:49 +0000
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m Processing by CompaniesController#show as HTML
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m   Parameters: {"id"=>"5"}
+[33m2012-11-28T09:16:49+00:00 heroku[router]:[0m at=info method=GET path=/companies/5 host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=48ms status=500 bytes=643
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     20: <br/><br/>
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m ActionView::Template::Error (undefined method `content' for nil:NilClass):
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     16: 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     19: <%= link_to 'View More Interviews', interview_url, :class=>"btn" %>
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m   app/controllers/companies_controller.rb:48:in `show'
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m   Rendered companies/show.html.erb within layouts/application (0.7ms)
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     14: <img class="img-circle" src="http://placehold.it/140x140">
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     15: <h2>Interviews</h2>
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     17: <p> <%= @interview.first.content %> </p>
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m   app/views/companies/show.html.erb:17:in `_app_views_companies_show_html_erb__1992500647359699491_40741440'
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 38ms
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     18: 
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clear
+[H[2J]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ clearheroku logs
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Parameters: {"id"=>"g"}
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Rendered companies/search.html.erb (0.2ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 5.5ms)
+[33m2012-11-28T09:16:34+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/g host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=5ms service=124ms status=200 bytes=182
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Started POST "/companies/search/G" for 18.236.7.54 at 2012-11-28 09:16:34 +0000
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Parameters: {"id"=>"G"}
+[33m2012-11-28T09:16:34+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/G host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=25ms status=200 bytes=106
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Completed 200 OK in 15ms (Views: 1.5ms | ActiveRecord: 8.9ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Rendered companies/search.html.erb (0.8ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Started POST "/companies/search/G" for 18.236.7.54 at 2012-11-28 09:16:34 +0000
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Parameters: {"id"=>"G"}
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[33m2012-11-28T09:16:34+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/G host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=5ms service=62ms status=200 bytes=106
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Rendered companies/search.html.erb (0.4ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Completed 200 OK in 53ms (Views: 0.8ms | ActiveRecord: 46.2ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Started POST "/companies/search/Go" for 18.236.7.54 at 2012-11-28 09:16:34 +0000
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Processing by CompaniesController#search as HTML
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Parameters: {"id"=>"Go"}
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m   Rendered companies/search.html.erb (0.5ms)
+[36m2012-11-28T09:16:34+00:00 app[web.1]:[0m Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 3.5ms)
+[33m2012-11-28T09:16:34+00:00 heroku[router]:[0m at=info method=POST path=/companies/search/Go host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=16ms status=200 bytes=106
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m Processing by CompaniesController#show as HTML
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m   Parameters: {"id"=>"2"}
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m Started GET
+ "/companies/2" for 18.236.7.54 at 2012-11-28 09:16:36 +0000
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 158ms
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m   Rendered companies/show.html.erb within layouts/application (51.4ms)
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m ActionView::Template::Error (undefined method `content' for nil:NilClass):
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     34: <img class="img-circle" src="http://placehold.it/140x140">
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     35: <h2>Questions/Answers</h2>
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     36: 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     37: <p> <%= @question.first.content %></p>
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     38: 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     39: <%= link_to 'View More Question/Answers', question_url, :class=>"btn" %>
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m     40: 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m   app/views/companies/show.html.erb:37:in `_app_views_companies_show_html_erb__1992500647359699491_40741440'
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:36+00:00 app[web.1]:[0m   app/controllers/companies_controller.rb:48:in `show'
+[33m2012-11-28T09:16:36+00:00 heroku[router]:[0m at=info method=GET path=/companies/2 host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=184ms status=500 bytes=643
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m Started GET "/companies/" for 18.236.7.54 at 2012-11-28 09:16:46 +0000
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m Processing by CompaniesController#index as HTML
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m   Rendered companies/index.html.erb within layouts/application (3.3ms)
+[36m2012-11-28T09:16:46+00:00 app[web.1]:[0m Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 3.0ms)
+[33m2012-11-28T09:16:46+00:00 heroku[router]:[0m at=info method=GET path=/companies/ host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=24ms status=200 bytes=1295
+[33m2012-11-28T09:16:46+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-1eea0ca50f6b8d5d7ba6325b15b64b6b.css host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=1ms service=5ms status=304 bytes=0
+[33m2012-11-28T09:16:46+00:00 heroku[router]:[0m at=info method=GET path=/assets/application-db0f52d4335817411aaed048d7dff3a9.js host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=4ms status=304 bytes=0
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m Started GET "/companies/5" for 18.236.7.54 at 2012-11-28 09:16:49 +0000
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m Processing by CompaniesController#show as HTML
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m   Parameters: {"id"=>"5"}
+[33m2012-11-28T09:16:49+00:00 heroku[router]:[0m at=info method=GET path=/companies/5 host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=48ms status=500 bytes=643
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     20: <br/><br/>
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m ActionView::Template::Error (undefined method `content' for nil:NilClass):
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     16: 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     19: <%= link_to 'View More Interviews', interview_url, :class=>"btn" %>
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m   app/controllers/companies_controller.rb:48:in `show'
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m   Rendered companies/show.html.erb within layouts/application (0.7ms)
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     14: <img class="img-circle" src="http://placehold.it/140x140">
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     15: <h2>Interviews</h2>
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     17: <p> <%= @interview.first.content %> </p>
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m   app/views/companies/show.html.erb:17:in `_app_views_companies_show_html_erb__1992500647359699491_40741440'
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 38ms
+[36m2012-11-28T09:16:49+00:00 app[web.1]:[0m     18: 
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m Started GET "/companies/2" for 18.236.7.54 at 2012-11-28 09:17:19 +0000
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m Processing by CompaniesController#show as HTML
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m   Parameters: {"id"=>"2"}
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m Completed 500 Internal Server Error in 11ms
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m     35: <h2>Questions/Answers</h2>
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m     36: 
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m     34: <img class="img-circle" src="http://placehold.it/140x140">
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m   Rendered companies/show.html.erb within layouts/application (1.3ms)
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m ActionView::Template::Error (undefined method `content' for nil:NilClass):
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m   app/controllers/companies_controller.rb:48:in `show'
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m     40: 
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m     39: <%= link_to 'View More Question/Answers', question_url, :class=>"btn" %>
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m     37: <p> <%= @question.first.content %></p>
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m     38: 
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m 
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m   app/views/companies/show.html.erb:37:in `_app_views_companies_show_html_erb__1992500647359699491_40741440'
+[36m2012-11-28T09:17:19+00:00 app[web.1]:[0m 
+[33m2012-11-28T09:17:19+00:00 heroku[router]:[0m at=info method=GET path=/companies/2 host=vast-dusk-2147.herokuapp.com fwd=18.236.7.54 dyno=web.1 queue=0 wait=0ms connect=0ms service=20ms status=500 bytes=643
+]0;saasbook@saasbook: ~/6170_projects/mtjsaasbook@saasbook:~/6170_projects/mtj$ git pull
+remote: Counting objects: 18, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 10 (delta 8), reused 10 (delta 8)[K
+Unpacking objects:  10% (1/10)   Unpacking objects:  20% (2/10)   Unpacking objects:  30% (3/10)   Unpacking objects:  40% (4/10)   Unpacking objects:  50% (5/10)   Unpacking objects:  60% (6/10)   Unpacking objects:  70% (7/10)   Unpacking objects:  80% (8/10)   Unpacking objects:  90% (9/10)   Unpacking objects: 100% (10/10)   Unpacking objects: 100% (10/10), done.
+From github.com:6170/mtj
+   6e3ac8e..50fd467  master     -> origin/master
+Updati

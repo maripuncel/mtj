@@ -8,24 +8,29 @@
 
   <hr class="company-divider">
 
-
+<div id="accordian">
   <% if @questions.any? %>
       <% @questions.each do |question| %>
-          <div class="question-content"><%= question.content %>
-          <div class="question-date"><%= question.created_at %></div>
-          </div>
+          <h3 id="question-content">
+          <%= question.content %>
+          <span id="question-date"><%= question.created_at %></span>
+          </h3>
+
+          <div>
           <% if question.answers.any? %>
               <% question.answers.each do |answer| %>
-                  <div class="answer-content"><%= answer.content %>
-                    <div class="answer-date"><%= answer.created_at %></div>
+                  <div id="answer-content"><%= answer.content %>
+                    <span id="answer-date"><%= answer.created_at %></span>
                   </div>
               <% end %>
           <% end %>
           <div class="add-answer-btn">
-          <%= link_to "Add Answer", new_answer_url(question), :id=>"add-answer-btn" %></div>
+          <%= link_to "Add Answer", new_answer_url(question), :id=>"add-answer-btn" %></div><br/>
+          </div>
 
       <% end %>
   <% end %>
+</div>
 <br />
 
   <hr class="company-divider">

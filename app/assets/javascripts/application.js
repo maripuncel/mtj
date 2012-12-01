@@ -13,4 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jqueryui
+
+$(function() {
+    $('#back-icon').mouseover(function() {
+        $('#back-icon').css('visibility', 'visible');
+    });
+});
+
+$(function() {
+    $('#back-icon').mouseout(function() {
+        $('#back-icon').css('visibility', 'hidden');
+    });
+});
 

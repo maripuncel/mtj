@@ -45,3 +45,6 @@ $ ->
       data: query
       success: (data, code, xmlhttp) ->
         window.location = xmlhttp.responseText
+
+
+

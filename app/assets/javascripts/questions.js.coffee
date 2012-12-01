@@ -18,3 +18,8 @@ $ ->
       data: query
       success: (data, code, xmlhttp) ->
         window.location = xmlhttp.responseText
+
+$ ->
+  $('#accordian').accordion
+    collapsible: true
+

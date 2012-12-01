@@ -14,16 +14,6 @@
 //= require jquery_ujs
 //= require_tree .
 //= require jqueryui
+//= require jquery.ui.dialog
 
-$(function() {
-    $('#back-icon').mouseover(function() {
-        $('#back-icon').css('visibility', 'visible');
-    });
-});
-
-$(function() {
-    $('#back-icon').mouseout(function() {
-        $('#back-icon').css('visibility', 'hidden');
-    });
-});
 

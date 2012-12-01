@@ -46,5 +46,18 @@ $ ->
       success: (data, code, xmlhttp) ->
         window.location = xmlhttp.responseText
 
+$ ->
+  $('#dialog-form').dialog(
+    autoOpen:false
+    height:300
+    width:350
+    modal:false
+  )
+
+$ ->
+  $('#plus-icon').button()
+    .click ->
+      $('#dialog-form').dialog("open")
+
 
 

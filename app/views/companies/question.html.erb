@@ -1,9 +1,23 @@
 <% provide(:title, @company.name + " | Questions") %>
 
+
+
 <div class="container question">
   <div class="row title">
     <p id="notice"><%= notice %></p>
+
+    <%= link_to(company_url) do %>
+    <div id="back-icon">
+    <i class="foundicon-left-arrow"></i></div>
+    <% end %>
     <h1 id="company-name"><%= @company.name %> Questions</h1>
+        <div id="plus-icon">
+          <i class="foundicon-plus"></i></div>
+  </div>
+  <div id="dialog-form" title="Write a new question">
+    <input id="question-content" name="question-content" class="text ui-widget-content ui-corner-all"/><br/>
+    <input id="question-company" name="question-company" type="hidden" value="<%= @company.id %>" /><br/>
+    <a id="add-question" class="btn spacer">Add Question</a>
   </div>
 
   <hr class="company-divider">
@@ -11,7 +25,7 @@
 <div id="accordian">
   <% if @questions.any? %>
       <% @questions.each do |question| %>
-          <h3 id="question-content">
+          <h3 id="question-cont">
           <%= question.content %>
           <span id="question-date"><%= question.created_at %></span>
           </h3>
@@ -34,8 +48,5 @@
 <br />
 
   <hr class="company-divider">
-
-<%= link_to 'New Question', new_question_path %>  |
-<%= link_to 'Back to ' + @company.name, company_url %>
 
 </div>

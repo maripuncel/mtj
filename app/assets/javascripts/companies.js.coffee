@@ -47,6 +47,21 @@ $ ->
         window.location = xmlhttp.responseText
 
 $ ->
+  $('#add-answer').click (e) ->
+    e.preventDefault()
+    content = $('#answer-content').val()
+    question = $('#answer-question').val()
+    company = $('#answer-company').val()
+    query = 'content=' + content + '&question=' + question + '&company=' + company
+    url = root_url + '/add/answer'
+    $.ajax
+      type: 'POST'
+      url: url
+      data: query
+      success: (data, code, xmlhttp) ->
+        window.location = xmlhttp.responseText
+
+$ ->
   $('#dialog-form').dialog(
     autoOpen:false
     height:300

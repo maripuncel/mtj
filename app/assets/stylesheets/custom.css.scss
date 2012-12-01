@@ -116,7 +116,7 @@ body {
   color: #808080;
 }
 
-#answer-content {
+#answer-cont {
   background-color: #e5e5e5;
   border: 1px;
   border-radius: 2px;
@@ -131,6 +131,13 @@ body {
 #answer-date {
   text-align: right;
   color: #808080;
+}
+
+#answer-content {
+  border: 1px;
+  border-radius: 2px;
+  padding: 4px 4px;
+  width: 90%;
 }
 
 .add-answer-btn {

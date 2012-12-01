@@ -33,13 +33,17 @@
           <div>
           <% if question.answers.any? %>
               <% question.answers.each do |answer| %>
-                  <div id="answer-content"><%= answer.content %>
+                  <div id="answer-cont"><%= answer.content %>
                     <span id="answer-date"><%= answer.created_at %></span>
                   </div>
               <% end %>
           <% end %>
           <div class="add-answer-btn">
-          <%= link_to "Add Answer", new_answer_url(question), :id=>"add-answer-btn" %></div><br/>
+            <input id="answer-content" name="answer-content" placeholder="Your answer..."/>
+            <input id="answer-question" name="answer-question" type="hidden" value="<%= question.id %>" />
+            <input id="answer-company" name="answer-company" type="hidden" value="<%= question.company_id %>" />
+            <a id="add-answer" class="btn spacer">Add</a>
+          </div><br/>
           </div>
 
       <% end %>

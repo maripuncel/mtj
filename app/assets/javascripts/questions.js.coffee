@@ -4,20 +4,6 @@
 
 #root_url = 'http://localhost:3000'
 root_url = 'http://vast-dusk-2147.herokuapp.com'
-$ ->
-  $('#add-answer').click (e) ->
-    e.preventDefault()
-    content = $('#answer-content').val()
-    question = $('#answer-question').val()
-    company = $('#answer-company').val()
-    query = 'content=' + content + '&question=' + question + '&company=' + company
-    url = root_url + '/add/answer'
-    $.ajax
-      type: 'POST'
-      url: url
-      data: query
-      success: (data, code, xmlhttp) ->
-        window.location = xmlhttp.responseText
 
 $ ->
   $('#accordian').accordion

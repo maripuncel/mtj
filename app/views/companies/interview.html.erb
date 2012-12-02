@@ -1,25 +1,43 @@
 <% provide(:title, @company.name + " | Interviews") %>
 
+<div id="dialog-form-i" title="Write a new interview">
+  <textarea id="interview-content" name="interview-content" placeholder="Describe
+your interview experience: walk through the process." rows="5" cols="15" ></textarea><br/>
+  <textarea id="interview-questions" name="interview-questions" placeholder="Write the questions you received during your interview."></textarea><br/>
+  <p>Rate the difficulty from 1-10, 1 being extremely easy and 10 being extremely difficult.</p>
+  <input id="interview-rating" name="interview-rating" type="number" class="text ui-widget-content ui-corner-all"/><br/>
+  <input id="interview-company" name="interview-company" type="hidden" value="<%= @company.id %>" /><br/>
+  <a id="add-interview" class="btn spacer">Add Interview</a>
+</div>
+
 <div class="container interview">
   <div class="row title">
     <p id="notice"><%= notice %></p>
+    <%= link_to(company_url) do %>
+       <div id="back-icon">
+        <i class="foundicon-left-arrow"></i></div>
+    <% end %>
     <h1 id="company-name"><%= @company.name %> Interviews</h1>
+    <div id="plus-icon-i">
+      <i class="foundicon-plus"></i></div>
   </div>
 
   <hr class="company-divider">
 
+<div id="accordian">
 <% if @interviews.any? %>
 <% @interviews.each do |interview| %>
-    <div class="interview-content"><%= interview.content %>
-    <div class="interview-date"><%= interview.created_at %></div></div>
+    <h3 id="interview-cont">
 
+    <span id="interview-rate"><%= interview.rating %></span>
+    <%= interview.content %>
+    <span id="interview-date"><%= interview.created_at %></span>
+    </h3>
+    <div id="interview-q">
+      Questions <br/>
+      <%= interview.questions %></div>
 <% end %>
 <% end %>
-
-<br />
-  <hr class="company-divider">
-
-<%= link_to 'New Interview', new_interview_url(:id => @company.id) %> |
-<%= link_to 'Back to ' + @company.name, company_url %>
+</div>
 
 </div>

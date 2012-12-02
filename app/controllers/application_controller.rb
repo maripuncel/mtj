@@ -9,5 +9,15 @@ session[:user_id]
       end
       return false
     end
+
+    def admin
+      user = User.find(session[:user_id])
+      if user && user.email == "Admin"
+        @admin = true
+      else
+        @admin = false
+      end
+
+    end
     helper_method :current_user
 end

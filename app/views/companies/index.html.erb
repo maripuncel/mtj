@@ -1,9 +1,11 @@
 <% provide(:title, 'Companies') %>
 
 <h1>Companies (A-Z)</h1>
-<hr class="company-divider">
+<br/>
 
 <table>
+
+<% if !@admin %>
 
 <% @companies.each do |company| %>
   <tr>
@@ -12,4 +14,20 @@
 <% end %>
 </table>
 
+<% elsif @admin %>
+
+<% @companies.each do |company| %>
+  <tr>
+    <td><%= link_to company.name, company %></td>
+  
+  <td><%= link_to 'Edit', edit_company_path(company) %></td>
+    <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure you want to delete this Company?' } %></td>
+  </tr>
+<% end %>
+</table>
+<% end %>
+
+
 <br />
+
+<%= link_to 'New Company', new_company_path %>

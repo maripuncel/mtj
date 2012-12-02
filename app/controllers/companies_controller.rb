@@ -4,7 +4,6 @@ class CompaniesController < ApplicationController
 
    def search
     @name = params[:id]
-    #@name.gsub("%20", " ")
     @companies = Company.find(:all, :conditions => {:name => @name})
     @companies = Company.where("name LIKE :prefix", prefix: "#{@name}%").all(:order => :name)
     @notice = @name
@@ -29,6 +28,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
+    admin()
     @companies = Company.all(:order => :name)
 
     respond_to do |format|
@@ -92,6 +92,7 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1/edit
   def edit
+    admin()
     @company = Company.find(params[:id])
   end
 

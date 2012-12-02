@@ -9,7 +9,9 @@ $ ->
     e.preventDefault()
     content = $('#interview-content').val()
     company = $('#interview-company').val()
-    query = 'content=' + content + '&company=' + company
+    questions = $('#interview-questions').val()
+    rating = $('#interview-rating').val()
+    query = 'content=' + content + '&company=' + company + '&questions=' + questions + '&rating=' + rating
     url = root_url + '/add/interview'
     $.ajax
       type: 'POST'
@@ -64,7 +66,7 @@ $ ->
 $ ->
   $('#dialog-form').dialog(
     autoOpen:false
-    height:300
+    height:150
     width:350
     modal:false
   )
@@ -73,6 +75,20 @@ $ ->
   $('#plus-icon').button()
     .click ->
       $('#dialog-form').dialog("open")
+
+$ ->
+  $('#dialog-form-i').dialog(
+    autoOpen:false
+    height:370
+    width:350
+    modal:false
+  )
+
+$ ->
+  $('#plus-icon-i').button()
+    .click ->
+      $('#dialog-form-i').dialog("open")
+
 
 
 

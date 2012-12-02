@@ -1,5 +1,5 @@
 class Interview < ActiveRecord::Base
-  attr_accessible :company_id, :content, :user_id
+  attr_accessible :company_id, :content, :user_id, :rating, :questions
 
   belongs_to :company
 
@@ -7,6 +7,8 @@ class Interview < ActiveRecord::Base
     interview = Interview.new
     interview.content = params[:content]
     interview.company_id = params[:company]
+    interview.questions = params[:questions]
+    interview.rating = params[:rating]
     interview.user_id = current_user.id
     interview.save!
     return interview

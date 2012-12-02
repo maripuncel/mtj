@@ -1,6 +1,11 @@
 <% provide(:title, @company.name + " | Questions") %>
 
 
+<div id="dialog-form" title="Write a new question">
+  <input id="question-content" name="question-content" class="text ui-widget-content ui-corner-all"/><br/>
+  <input id="question-company" name="question-company" type="hidden" value="<%= @company.id %>" /><br/>
+  <a id="add-question" class="btn spacer">Add Question</a>
+</div>
 
 <div class="container question">
   <div class="row title">
@@ -14,11 +19,7 @@
         <div id="plus-icon">
           <i class="foundicon-plus"></i></div>
   </div>
-  <div id="dialog-form" title="Write a new question">
-    <input id="question-content" name="question-content" class="text ui-widget-content ui-corner-all"/><br/>
-    <input id="question-company" name="question-company" type="hidden" value="<%= @company.id %>" /><br/>
-    <a id="add-question" class="btn spacer">Add Question</a>
-  </div>
+
 
   <hr class="company-divider">
 
@@ -49,8 +50,5 @@
       <% end %>
   <% end %>
 </div>
-<br />
-
-  <hr class="company-divider">
 
 </div>

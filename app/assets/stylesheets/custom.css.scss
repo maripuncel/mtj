@@ -82,7 +82,7 @@ body {
   color: white;
 }
 
-.interview-content {
+#interview-cont {
   background-color: #f5f5f5;
   border: 1px;
   border-radius: 2px;
@@ -94,7 +94,7 @@ body {
   padding-left: 8px;
 }
 
-.interview-date {
+#interview-date {
   text-align: right;
   color: #808080;
 }
@@ -131,6 +131,27 @@ body {
 #answer-date {
   text-align: right;
   color: #808080;
+}
+
+#interview-q {
+  background-color: #e5e5e5;
+  border: 1px;
+  border-radius: 2px;
+  margin-left: 15%;
+  margin-right: 9%;
+  width: 76%;
+  margin-bottom: 10px;
+  padding: 4px 4px;
+  padding-left: 8px;
+}
+
+#interview-rate {
+  background-color: black;
+  border-radius: 5px;
+  width: 20px;
+  color: white;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 #answer-content {
@@ -171,32 +192,34 @@ body {
   display:inline-block;
 }
 
-#plus-icon {
+#plus-icon,
+#plus-icon-i {
   display:inline-block;
   margin-left: 10px;
   vertical-align: 30%;
   color:black;
 }
 
-#plus-icon:hover {
+#plus-icon:hover,
+#plus-icon-i:hover {
   color:grey;
   background-color: white;
 }
 
 #dialog-form {
-  height:100px;
+  height:150px;
 }
 
 .ui-dialog{
-  position: absolute;
-  margin-top: 70px;
-  margin-left: 500px;
+  position:absolute;
+  margin-top: 130px;
+  margin-left:520px;
   background: white;
   border: 2px;
   border-color: black;
   border-radius: 2px;
   padding: 10px;
-  height: 100px;
+  height: 150px;
 }
 
 #accordian div {

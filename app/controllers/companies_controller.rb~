@@ -41,9 +41,9 @@ class CompaniesController < ApplicationController
   # GET /companies/1.json
   def show
     @company = Company.find(params[:id])
-    @interviews = Interview.all( :conditions => {:company_id => [@company.id]}, :limit => 3)
+    @interview = Interview.all( :conditions => {:company_id => [@company.id]}, :limit => 1)
     @offer = @company.offer_average
-    @questions = Question.all( :conditions => {:company_id => [@company.id]}, :limit => 3)
+    @question = Question.all( :conditions => {:company_id => [@company.id]}, :limit => 1)
 
     respond_to do |format|
       format.html # show.html.erb

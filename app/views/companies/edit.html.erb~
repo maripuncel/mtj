@@ -1,10 +1,6 @@
 <h1>Editing company</h1>
 
-<% if @admin %>
 <%= render 'form' %>
 
 <%= link_to 'Show', @company %> |
 <%= link_to 'Back', companies_path %>
-<% else %>
-<h4>403 - Forbidden </h4>
-<% end %>

@@ -10,7 +10,7 @@
     <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <%= link_to "MITJobTalk", root_path, class: "brand" %>
+          <%= link_to "MITjobtalk", root_path, class: "brand" %>
           <nav>
             <ul class="nav pull-right">
               <li><%= link_to "Home", root_path %></li>
@@ -29,11 +29,15 @@
     </header>
  <div class="container">
    <%= yield %>
-   <footer>
-     <hr class="company-divider">
-     <p>Made for 6.170</p>
-   </footer>
  </div>
+
+<footer class="navbar navbar-fixed-bottom">
+  <div class="navbar-inner">
+    <div class="navbar-inner">
+      <p class="nav pull-left" id="footer_creds">Created for <span id="class_name">6.170</span> by Mari Miyachi, Timmy Galvin and Josh Duncavage.</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

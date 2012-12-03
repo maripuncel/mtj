@@ -1,20 +1,19 @@
 @import "bootstrap";
 @import "jqueryui";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 /** all pages **/
 
 body {
   padding-top: 60px;
   background-color: #f5f5f5;
+  font-family: "Open Sans";
 }
 
 .form-signin {
   max-width: 300px;
   padding: 20px 30px 30px;
   margin: 0 auto 20px;
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 2px;
   margin-bottom: 10px;
 }
 
@@ -274,4 +273,69 @@ body {
 
 .carousel-caption .btn {
   margin-top: 10px;
+}
+
+
+#home_icon {
+  padding-top: 20px;
+  padding-bottom:20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#info {
+  font-family: "Open Sans";
+}
+
+#info p {
+  font-family: "Open Sans";
+}
+
+#info #join {
+  font-size: 20px;
+  margin-top: 10px;
+
+}
+
+#home_arrow {
+  vertical-align: text-bottom;
+  color:#FF1D25;
+}
+
+#company_search,
+#registration {
+  background-color:#E8E8E8;
+  border:1px;
+  border-radius:5px;
+  height:400px;
+  padding: 10px;
+  font-family: "Open Sans";
+}
+
+#registration h4 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#registration p {
+  text-align: center;
+  margin-bottom: -10px;
+  font-family: "Open Sans";
+}
+
+#reg-btn {
+  color: white;
+  background-color: #FF1D25;
+  padding: 11px 19px;
+  font-size: 17.5px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: "Open Sans";
 }

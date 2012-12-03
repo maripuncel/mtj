@@ -1,4 +1,7 @@
-<% provide(:title, @company.name + " | Offers") %>
+ <% provide(:title, @company.name + " | Offers") %>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
 
 <div class="container offer">
   <div class="row title">
@@ -8,6 +11,8 @@
 
   <hr class="company-divider">
 
+
+<!--
 <table>
   <tr>
     <th>Figure</th>
@@ -25,7 +30,12 @@
       <% end %>
   <% end %>
 </table>
-
+-->
+<div id="graph">
+</div>
+<script>
+create_plot_graph(<%= raw(@offers.to_json) %>);
+</script>
 <br />
   <hr class="company-divider">
 <%= link_to 'New Offer', new_offer_path %> |

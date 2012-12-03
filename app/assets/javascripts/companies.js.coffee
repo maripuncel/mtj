@@ -2,8 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-#root_url = 'http://localhost:3000'
-root_url = 'http://vast-dusk-2147.herokuapp.com'
+root_url = 'http://localhost:3000'
+#root_url = 'http://vast-dusk-2147.herokuapp.com'
 $ ->
   $('#add-interview').click (e) ->
     e.preventDefault()

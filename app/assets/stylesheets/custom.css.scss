@@ -53,7 +53,7 @@ body {
   margin-right: 10px;
 }
 
-.title {
+.title, .search {
   margin-left: 9%;
   margin-right: 9%;
   margin-bottom: 20px;
@@ -193,7 +193,8 @@ body {
 }
 
 #plus-icon,
-#plus-icon-i {
+#plus-icon-i,
+#search-icon-i {
   display:inline-block;
   margin-left: 10px;
   vertical-align: 30%;
@@ -201,7 +202,8 @@ body {
 }
 
 #plus-icon:hover,
-#plus-icon-i:hover {
+#plus-icon-i:hover,
+#search-icon-i:hover {
   color:grey;
   background-color: white;
 }

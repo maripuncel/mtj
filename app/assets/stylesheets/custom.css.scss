@@ -312,6 +312,7 @@ body {
 
 #footer_creds {
   font-family: "Open Sans";
+  text-align: center;
 }
 
 #footer_creds #class_name {
@@ -353,4 +354,29 @@ footer p {
 
 #company_nav {
   font-family: "Open Sans";
+}
+
+#general{
+  font-family: "Open Sans";
+  margin-left:10px;
+}
+
+#sub_general, #sub_general_right {
+  text-align: left;
+}
+
+#interviews {
+  font-family: "Open Sans";
+  margin-left: 10px;
+  margin-right:10px;
+}
+
+#questions {
+  font-family: "Open Sans";
+  margin-left: 10px;
+  margin-right:10px;
+}
+
+#up_arrow {
+  margin-right:5px;
 }

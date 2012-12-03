@@ -21,32 +21,55 @@
   </div>
   <div class="span8 pill-content">
     <div class="pill-pane active" id="general">
-      <p>General info</p>
+      <h4>General information</h4>
+      <div class="row">
+        <div class="span4" id="sub_general">
+          <br/>
+          Website <br/>
+          HQ <br/>
+          Industry <br/>
+          Size <br/>
+          NASDAQ
+        </div>
+        <div class="span3" id="sub_general_right">
+          <h5>MIT statistics at <%= @company.name %></h5>
+          Number of Recent Interviews: <%= @company.interviews.count %> <br/>
+          Average MIT Salary: <%=  @offer %> <br/>
+          Recently asked Questions: <br/>
+          <%= @question.first.content %>
+        </div>
+      </div>
     </div>
     <div class="pill-pane" id="interviews">
       <p> <% if @interview.first %>
-            <%= @interview.first.content %>
-        <% else %>
+            <h5>Product Design Engineer at <%= @company.name %></h5>
+            <hr class="company-divider">
+            <p>No offer </p>
+            <p>Interview Details - <%= @interview.first.content %></p>
+            <p>Interview Question - What is a binary tree?</p>
+            <p>Overall rating - 7.0 Moderately Difficulty </p>
+
+    <% else %>
             No interviews yet...
         <% end %>
       </p>
-
-      <%= link_to 'View More Interviews', interview_url, :class=>"btn" %>
+      <%= link_to 'View More Interviews', interview_url %>
     </div>
     <div class="pill-pane" id="offers">
       <p><%= @offer %></p>
 
-      <%= link_to 'View More Offers', offer_url, :class=>"btn" %>
+      <%= link_to 'View More Offers', offer_url%>
     </div>
     <div class="pill-pane" id="questions">
+      <h5>Recently asked questions</h5>
       <p> <% if @question.first %>
-            <%= @question.first.content %>
+           <%= @question.first.content %> <%= @question.first.answers.count %> answers
         <% else %>
             No questions yet...
         <% end %>
       </p>
 
-      <%= link_to 'View More Question/Answers', question_url, :class=>"btn" %>
+      <%= link_to 'View More Question/Answers', question_url %>
     </div>
   </div>
 </div>

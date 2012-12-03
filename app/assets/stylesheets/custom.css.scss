@@ -189,6 +189,7 @@ body {
 
 #company-name {
   display:inline-block;
+  font-family: "Open Sans";
 }
 
 #plus-icon,
@@ -277,7 +278,23 @@ body {
   font-family: "Open Sans";
 }
 
-#reg-btn {
+#add_button {
+  color: white;
+  background-color: #FF1D25;
+  padding: 11px 19px;
+  font-size: 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: "Open Sans";
+  vertical-align: top;
+}
+
+#reg-btn{
   color: white;
   background-color: #FF1D25;
   padding: 11px 19px;
@@ -309,7 +326,31 @@ header li {
   font-family: "Open Sans";
 }
 
+#nav a:active {
+  color:#FF1D25;
+}
+
 footer p {
   padding-top: 5px;
   padding-left: 5px;
+}
+
+#brand {
+  color:#FF1D25;
+}
+
+.brand {
+  margin: 0;
+}
+
+.pill-content {
+  background-color: #E8E8E8;
+  border-radius:5px;
+  border:1px;
+  padding:10px;
+  height:400px;
+}
+
+#company_nav {
+  font-family: "Open Sans";
 }

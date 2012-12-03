@@ -367,25 +367,28 @@ function iqr(k) {
 
 function create_plot_graph(graph_data) {
 
-var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
+var margin = {top: 20, right: 20, bottom: 30, left: 140},
+    width = 760 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-function x(coord) {
-  var names = [];
-  return names.indexOf(coord);
-}
-var xx = d3.scale.linear()
+var x = d3.scale.linear()
     .range([0, width]);
 
 var y = d3.scale.linear()
     .range([height, 0]);
 
+function c(job) {
+  
+  if(job == null || job === null || job == '') {
+    return color("N/A");
+  }
+  return color(job);
+}
 
 var color = d3.scale.category10();
 
 var xAxis = d3.svg.axis()
-    .scale(xx)
+    .scale(x)
     .orient("bottom");
 
 var yAxis = d3.svg.axis()
@@ -400,18 +403,31 @@ var svg = d3.select("#graph").append("svg")
 
 
 salaries = new Array();
-snp = new Array();
+years = new Array();
+syp = new Array();
 for(var i = 0; i < graph_data.length; i++) {
   temp = new Array();
   temp.push(graph_data[i].figure);
   salaries.push(temp[0]);
+  temp.push(graph_data[i].created_at.substring(0,4));
+  years.push(temp[1]);
   temp.push(graph_data[i].position);
-  snp.push(temp);
+  syp.push(temp);
 }
+  var xd = new Array();
+  xd.push(parseInt(d3.extent(years)[0])-1);
+  xd.push(parseInt(d3.extent(years)[1])+1);
 
-  xx.domain(d3.extent([1,5])).nice();
+  var myears = new Array();
+  for(var v = xd[0]; v <= xd[1]; v++) {
+    myears.push(parseInt(v));
+  }
+
+  x.domain(xd).nice();
   y.domain(d3.extent(salaries)).nice();
 
+  xAxis.tickValues(myears);
+  xAxis.tickFormat(d3.format(".0f"));
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
@@ -421,7 +437,7 @@ for(var i = 0; i < graph_data.length; i++) {
       .attr("x", width)
       .attr("y", -6)
       .style("text-anchor", "end")
-      .text("Sepal Width (cm)");
+      .text("Year");
 
 
   svg.append("g")
@@ -433,16 +449,16 @@ for(var i = 0; i < graph_data.length; i++) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Sepal Length (cm)")
+      .text("Salary")
 
     svg.selectAll(".dot")
-      .data(snp)
+      .data(syp)
       .enter().append("circle")
       .attr("class", "dot")
-      .attr("r", 3.5)
+      .attr("r", 1.5)
       .attr("cx", function(d) { return x(d[1]); })
       .attr("cy", function(d) { return y(d[0]); })
-      .style("fill", function(d) { return color("versicolor"); });
+      .style("fill", function(d) { return c(d[2]); });
 
   var legend = svg.selectAll(".legend")
       .data(color.domain())

@@ -33,8 +33,9 @@
 -->
 <div id="graph">
 </div>
+<%= raw(@offers.to_json) %>
 <script>
-create_scatter_graph(<%= raw(@offers.to_json) %>);
+create_plot_graph(<%= raw(@offers.to_json) %>);
 </script>
 <br />
   <hr class="company-divider">

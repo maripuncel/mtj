@@ -9,6 +9,7 @@ class Interview < ActiveRecord::Base
     interview.company_id = params[:company]
     interview.questions = params[:questions]
     interview.rating = params[:rating]
+    interview.position = params[:position]
     interview.user_id = current_user.id
     interview.save!
     return interview

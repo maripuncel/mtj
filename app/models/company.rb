@@ -13,4 +13,13 @@ class Company < ActiveRecord::Base
       return "No offers yet..."
     end
   end
+
+  def rating_average
+    if self.interviews.any?
+      return self.interviews.all.sum(&:rating)/self.interviews.count
+    else
+      return "No interviews yet..."
+    end
+  end
+
 end

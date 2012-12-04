@@ -11,5 +11,7 @@ class Question < ActiveRecord::Base
     question.save!
     return question
   end
-
+  def edit_content(content)
+    self.update_attribute(:content, content)
+  end
 end

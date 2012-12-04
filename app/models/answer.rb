@@ -10,4 +10,8 @@ class Answer < ActiveRecord::Base
     answer.save!
     return answer
   end
+  
+  def set_content(content)
+    self.update_attribute(:content, content)
+  end
 end

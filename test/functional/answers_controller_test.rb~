@@ -5,21 +5,10 @@ class AnswersControllerTest < ActionController::TestCase
     @answer = answers(:one)
   end
 
-
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
   test "should create answer" do
     assert_difference('Answer.count') do
       post :create, answer: { content: @answer.content, question_id: @answer.question_id, user_id: @answer.user_id }
     end
-  end
-
-  test "should show answer" do
-    get :show, id: @answer
-    assert_response :success
   end
 
   test "should get edit" do
@@ -27,10 +16,6 @@ class AnswersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update answer" do
-    put :update, id: @answer, answer: { content: @answer.content, question_id: @answer.question_id, user_id: @answer.user_id }
-    assert_redirected_to answer_path(assigns(:answer))
-  end
 
   test "should destroy answer" do
     assert_difference('Answer.count', -1) do

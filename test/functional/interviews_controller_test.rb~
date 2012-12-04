@@ -18,10 +18,6 @@ class InterviewsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update interview" do
-    put :update, id: @interview, interview: { company_id: @interview.company_id, content: @interview.content, user_id: @interview.user_id }
-    assert_redirected_to interview_path(assigns(:interview))
-  end
 
   test "should destroy interview" do
     assert_difference('Interview.count', -1) do

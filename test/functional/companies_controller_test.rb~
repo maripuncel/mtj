@@ -34,6 +34,11 @@ class CompaniesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should update company" do
+    put :update, id: @company, company: { name: @company.name }
+    assert_redirected_to company_path(assigns(:company))
+  end
+
   test "should destroy company" do
     assert_difference('Company.count', -1) do
       delete :destroy, id: @company

@@ -49,7 +49,7 @@ class UsersController < ApplicationController
   end
 
   def change_password
-    if !check_admin()
+    if !check_logged_in()
       return
     end
     if @current_user.password == params[:old_password]

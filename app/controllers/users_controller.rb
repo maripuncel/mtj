@@ -6,7 +6,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'You must be an administrator to access this page.'
       redirect_to('/')
     end
-    return is_admin
+    return !is_admin
   end
 
   def check_logged_in

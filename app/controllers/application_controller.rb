@@ -13,7 +13,7 @@ session[:user_id]
 
     def admin
       current_user()
-      return (@current_user and @current_user.admin)
+      is_admin ||= @current_user.admin if @current_user
     end
     helper_method :admin
 end

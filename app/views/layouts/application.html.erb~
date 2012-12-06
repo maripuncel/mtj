@@ -10,13 +10,19 @@
     <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <%= link_to "MITJobTalk", root_path, class: "brand" %>
+          <h4 class="brand">MIT<span id="brand">jobtalk</span></h4>
           <nav>
             <ul class="nav pull-right">
+              <% if @current_user %>
+		<li><%= link_to "Welcome, @current_user.email!", "#" %></li>
+              <% end %>
               <li><%= link_to "Home", root_path %></li>
               <% if @current_user %>
-                <li><%= link_to "Logout", "/logout" %></li>
-              <% elsif %>
+                <li><%= link_to "Companies", companies_url %></li>
+		<li><%= link_to "Settings", "/settings" %></li>                
+		<li><%= link_to "Logout", "/logout" %></li>
+              <% else %>
+
                 <li><%= link_to "Login", "/login" %></li>
                 <li><%= link_to "Register", "/register" %></li>
               <% end %>
@@ -28,5 +34,12 @@
  <div class="container">
    <%= yield %>
  </div>
+
+<footer class="navbar navbar-fixed-bottom">
+  <div class="navbar-inner">
+    <p id="footer_creds">Created for <span id="class_name">6.170</span> by Mari Miyachi, Timmy Galvin and Josh Duncavage.</p>
+  </div>
+</footer>
+
 </body>
 </html>

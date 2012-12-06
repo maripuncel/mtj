@@ -1,13 +1,12 @@
 <h1>Listing users</h1>
-
-<% if @admin%>
-<table>
+<p id="notice"><%= notice %></p>
+<table border='1'>
   <tr>
     <th>Email</th>
     <th>Password</th>
     <th>Activated</th>
     <th>Serial</th>
-    <th></th>
+    <th>Admin</th>
     <th></th>
     <th></th>
   </tr>
@@ -18,18 +17,16 @@
     <td><%= user.password %></td>
     <td><%= user.activated %></td>
     <td><%= user.serial %></td>
-    <td><%= link_to 'Show', user %></td>
+    <td><%= user.admin %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<br>
 
 <% end %>
-<%= link_to 'New User', new_user_path %>
-<% else %>
-Admin access required
-<%end%>
 </table>
+
+
+<%= link_to 'Create New User', new_user_path %>
 
 <br />
 

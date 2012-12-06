@@ -13,10 +13,14 @@
           <h4 class="brand">MIT<span id="brand">jobtalk</span></h4>
           <nav>
             <ul class="nav pull-right">
+              <% if @current_user %>
+		<li><a href='#'>Welcome, <%= @current_user.email %>!</a></li>
+              <% end %>
               <li><%= link_to "Home", root_path %></li>
               <% if @current_user %>
                 <li><%= link_to "Companies", companies_url %></li>
-                <li><%= link_to "Logout", "/logout" %></li>
+		<li><%= link_to "Settings", "/settings" %></li>                
+		<li><%= link_to "Logout", "/logout" %></li>
               <% else %>
 
                 <li><%= link_to "Login", "/login" %></li>

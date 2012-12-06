@@ -1,31 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-
-
-<% if @admin %>
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-
-<p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-
-<% elsif @current_user.id == @user.id %>
 <p>
   <b>Email:</b>
   <%= @user.email %>
 </p>
 
 <%= link_to 'Change Password', edit_user_path(@user) %> |
-<%= link_to 'Back', root_url %>
+<%= link_to 'Back', users_path %>
 
-<% else %>
-Admin Access Required
-<BR>
-<%= link_to 'Back', root_url %>
-<% end %>

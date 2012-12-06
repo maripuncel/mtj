@@ -1,38 +1,6 @@
 
-<% if @admin %>
 <h1>Editing user</h1>
 <%= render 'form' %>
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
 
-<% elsif @current_user.id == @user.id %>
-<div class="container">
-<p id="notice"><%= notice %></p>
-<form class="changepassword" accept-charset="UTF-8" action="/change_password" method="post">
-
-<div class= 'field' id="input-block-email">
-<%= label_tag :email %>
-<%= text_field_tag :email %>
-</div>
-
-<div class= 'field' id="input-block-password">
-<%= label_tag :old_password %>
-<%= password_field_tag :old_password %>
-</div>
-
-<div class= 'field'  id="input-block-confirm-password">
-<%= label_tag :new_password %>
-<%= password_field_tag :new_password %>
-</div>
-
-<div class= 'field'  id="input-block-confirm-password">
-<%= label_tag :confirm_new_password %>
-<%= password_field_tag :confirm_new_password %>
-</div>
-
-<div class = 'actions'>
-<%= submit_tag 'Change Password', :id=>"actions-btn" %>
-</div>
-</form>
-</div>
-<% end %>

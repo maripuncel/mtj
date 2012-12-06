@@ -1,5 +1,9 @@
 <h1>New user</h1>
-
+<% if @admin %>
 <%= render 'form' %>
 
 <%= link_to 'Back', users_path %>
+
+<% else %>
+Admin access required
+<% end %>

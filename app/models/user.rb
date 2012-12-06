@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password, :activated, :serial
+  attr_accessible :email, :password, :activated, :serial, :admin
 
   def activate()
     self.update_attribute(:activated, true)

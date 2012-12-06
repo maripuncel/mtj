@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    admin()
+    current_user()
     @users = User.all
 
     respond_to do |format|
@@ -13,6 +15,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    current_user()
     @user = User.find(params[:id])
 
     respond_to do |format|
@@ -21,9 +24,36 @@ class UsersController < ApplicationController
     end
   end
 
+  def changepass
+    
+    @user = User.find(:first, :conditions => {:email => params[:email]})
+    if @user == nil
+	flash[:notice] = 'No such user'
+        render edit_user_path(@user)
+    end
+
+    if @user[:password] == params[:old_password]
+      if params[:new_password] == params[:confirm_new_password]
+	@user.change_password(params[:new_password])
+        flash[:notice] = 'Password Changed Successfully'
+        render 'static_pages/login'
+
+      else
+        flash[:notice] = 'New Passwords do not match'
+        render 'static_pages/login'
+      end
+
+    else
+      flash[:notice] = 'Invalid Password'
+      render 'static_pages/login'
+    end
+    
+  end
+  
   # GET /users/new
   # GET /users/new.json
   def new
+    admin()
     @user = User.new
 
     respond_to do |format|
@@ -34,6 +64,8 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    admin()
+    current_user()
     @user = User.find(params[:id])
   end
 

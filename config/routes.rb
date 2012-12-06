@@ -34,6 +34,7 @@ Mtj::Application.routes.draw do
   match 'logout' => 'sessions#destroy'
   match 'sessions' => 'sessions#login'
   match 'create_account' => 'sessions#create'
+  match 'change_password' => 'users#changepass'
   match 'activate/:serial' => 'sessions#activate'
 
   # The priority is based upon order of creation:

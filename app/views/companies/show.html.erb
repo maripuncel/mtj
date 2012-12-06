@@ -36,7 +36,11 @@
           Number of Recent Interviews: <%= @company.interviews.count %> <br/>
           Average MIT Salary: <%=  @offer %> <br/>
           Recently asked Questions: <br/>
-          <%= @question.first.content %>
+	  <% if @question.first != nil%>
+          	<%= @question.first.content %>
+	  <% else %>
+          	No Questions Yet...
+	  <% end %>
         </div>
       </div>
     </div>

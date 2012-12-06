@@ -21,6 +21,11 @@
   <%= @user.email %>
 </p>
 
+<p>
+  <b>Password:</b>
+  <%= @user.password %>
+</p>
+
 <%= link_to 'Change Password', edit_user_path(@user) %> |
 <%= link_to 'Back', root_url %>
 

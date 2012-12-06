@@ -67,7 +67,10 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
     </h3>
     <div id="interview-q" name="<%=interview.position %>">
       Questions <br/>
-      <%= interview.questions %></div>
+      <%= interview.questions %>
+	
+      <%= link_to 'Edit this Interview', edit_interview_path(interview) %>
+    <%= link_to 'Destroy this Interview', interview, method: :delete, data: { confirm: 'Are you sure you want to delete this Interview?' } %></div>
 <% end %>
 <% end %>
 </div>

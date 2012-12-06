@@ -12,7 +12,7 @@
 
 <div class= 'field' id="input-block-email">
 <%= label_tag :email %>
-<%= text_field_tag :email %>
+<%= password_field_tag :email %>
 </div>
 
 <div class= 'field' id="input-block-password">

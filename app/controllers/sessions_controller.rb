@@ -50,7 +50,7 @@ class SessionsController < ApplicationController
 	      redirect_to '/'
 
 	    #First Time Admin login
-	    elsif params[:password] == "6170fun"
+	    elsif user== nil && params[:password] == "6170fun"
  	      user = User.create(:email => "Admin", :password =>"6170fun", :activated => 1, :serial => SecureRandom.hex(10))
 	      session[:user_id] = user.id
 	      flash[:notice] = 'Successfully logged in as Administrator'

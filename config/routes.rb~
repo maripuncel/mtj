@@ -12,7 +12,6 @@ Mtj::Application.routes.draw do
 
   resources :companies
   resources :users
-  match 'companies/search/', to: "companies#search"
   match 'companies/search/:id', to: "companies#search"
   match 'companies/:id/interviews', to: 'companies#interview', :as => :interview
   match 'companies/:id/new_interview', to: 'companies#new_interview', :as => :new_interview
@@ -35,6 +34,7 @@ Mtj::Application.routes.draw do
   match 'logout' => 'sessions#destroy'
   match 'sessions' => 'sessions#login'
   match 'create_account' => 'sessions#create'
+  match 'change_password' => 'users#change'
   match 'activate/:serial' => 'sessions#activate'
 
   # The priority is based upon order of creation:

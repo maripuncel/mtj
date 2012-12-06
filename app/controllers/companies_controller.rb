@@ -11,9 +11,6 @@ class CompaniesController < ApplicationController
 	@notice = "No Company named \""+ @name + "\" found."	
     else
 	@notice = nil
-        #@interviews = Interview.all( :conditions => {:company_id => [@companies.id]}, :limit => 3)
-        #@offer = @companies.offer_average
-        #@questions = Question.all( :conditions => {:company_id => [@companies.id]}, :limit => 3)
     end
     render :search, :layout => false
  end

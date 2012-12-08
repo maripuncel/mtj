@@ -194,7 +194,8 @@ body {
 
 #plus-icon,
 #plus-icon-i,
-#search-icon-i {
+#search-icon-i,
+#plus-icon-question {
   display:inline-block;
   margin-left: 10px;
   vertical-align: 30%;
@@ -203,7 +204,8 @@ body {
 
 #plus-icon:hover,
 #plus-icon-i:hover,
-#search-icon-i:hover {
+#search-icon-i:hover,
+#plus-icon-question:hover {
   color:grey;
   background-color: white;
 }
@@ -380,3 +382,5 @@ footer p {
 #up_arrow {
   margin-right:5px;
 }
+
+

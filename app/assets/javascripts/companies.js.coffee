@@ -65,19 +65,6 @@ $ ->
         window.location = xmlhttp.responseText
 
 $ ->
-  $('#dialog-form').dialog(
-    autoOpen:false
-    height:150
-    width:350
-    modal:false
-  )
-
-$ ->
-  $('#plus-icon').button()
-    .click ->
-      $('#dialog-form').dialog("open")
-
-$ ->
   $('#dialog-form-i').dialog(
     autoOpen:false
     height:370
@@ -123,6 +110,11 @@ $ ->
           $(e_array).each ->
             element = $(this)
             $(element).show())
+
+$ ->
+  $('#accordian').accordion
+    collapsible: true
+    autoHeight: false
 
 
 

@@ -1,11 +1,12 @@
 class CompaniesController < ApplicationController
 
   before_filter :check_status
-
+   
    def search
     if params[:id] == nil
       @notice = "All Companies"
       @companies = Company.all(:order => :name)
+      
     
     else
       @name = params[:id]

@@ -1,29 +1,6 @@
 <% provide(:title, @company.name + " | Offers") %>
 
 
-
-<table border='1'>
-<tr>
-<th>Figure</th>
-<th></th>
-<th></th>
-</tr>
-
-<% if @offers.any? %>
-<% @offers.each do |offer| %>
-<tr>
-<td><%= offer.figure %></td>
-<td><%= offer.position %></td>
-<td><%= link_to 'Edit', edit_offer_path(offer) %></td>
-<td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
-<% end %>
-<% end %>
-</table>
-
-
-
-
 <div id="dialog-form-i" title="Submit a new offer" xmlns="http://www.w3.org/1999/html">
   <p>Salary:</p>
   <input id="offer-figure" name="offer-figure" type="number" class="text ui-widget-content ui-corner-all"/><br/>

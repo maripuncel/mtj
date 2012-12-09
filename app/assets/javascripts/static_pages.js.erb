@@ -1,30 +1,35 @@
 
-function reload_div(data) {
-  $('#companies').html(data);
-}
-
-function empty_div() {
-  $('#companies').html("");
-  $('#add_button').hide();
-}
-
-function load()
+function loaddata(url)
 {
-
-  value = $('#company_name').val();
-  if(value != "") {
-    $.ajax({
+      $.ajax({
       type : 'POST',
-      url : '/companies/search/' + value,
+      url : url,
       dataType: 'html',
-      success : function(data) { reload_div(data) },
+      success : function(data) { $('#companies').html(data); },
       error: function(XMLHttpRequest, testStatus, errorThrown) {
       }
     });
-  } else {
-    empty_div();
-  }
+    
+    $('#add_button').hide();
+    $('#companies').html(data);
 }
+
+function load()
+  {
+     if ($('#company_name').val() == "")
+	{
+	  url = '/companies/search';
+	}
+     else
+	{
+  	  value = $('#company_name').val();
+  	  url = '/companies/search/' + value;
+	}
+  loaddata(url);
+
+  } 
+
+
 
 function load_old() {
   element = document.getElementById('search');

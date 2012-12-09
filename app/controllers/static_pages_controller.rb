@@ -26,6 +26,7 @@ class StaticPagesController < ApplicationController
       return
     end
   end
+ 
 
   def redirect_if_logged_in()
     if current_user()

@@ -1,8 +1,0 @@
-<% provide(:title, @company.name + " | New offer") %>
-
-
-<h1>New offer</h1>
-
-<input id="offer-figure" name="offer-figure" /><br/>
-<input id="offer-company" name="offer-company" type="hidden" value="<%= @company.id %>" /><br/>
-<a id="add-offer" class="btn spacer">Add Offer</a>

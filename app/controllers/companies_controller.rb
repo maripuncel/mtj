@@ -11,7 +11,7 @@ class CompaniesController < ApplicationController
     else
       @name = params[:id]
       @companies = Company.find(:all, :conditions => {:name => @name})
-      @companies = Company.where("name ilike :prefix", prefix: "#{@name}%").all(:order => :name)
+      @companies = Company.where("name like :prefix", prefix: "#{@name}%").all(:order => :name)
       @notice = "Companies matching : " + @name
     end
      

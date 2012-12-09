@@ -24,11 +24,8 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
 <div class="container interview">
   <div class="row title">
     <p id="notice"><%= notice %></p>
-    <%= link_to(company_url) do %>
-       <div id="back-icon">
-        <i class="foundicon-left-arrow"></i></div>
-    <% end %>
-    <h1 id="company-name"><%= @company.name %> Interviews</h1>
+
+    <h1 id="company-name"><%= link_to @company.name, company_url(@company) %> Interviews</h1>
     <div id="plus-icon-i">
     <i class="foundicon-plus"></i></div>
     <div data-toggle="collapse" data-target="#search" id="search-icon-i">

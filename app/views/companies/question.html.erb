@@ -35,17 +35,20 @@
           </h3>
 
           <div>
+            <div id=<%= question.id %>>
           <% if question.answers.any? %>
               <% question.answers.each do |answer| %>
+
                   <div id="answer-cont"><%= answer.content %>
                     <span id="answer-date"><%= answer.created_at %></span>
                   </div>
               <% end %>
           <% end %>
-          <%= form_tag(:controller => "questions", :action => "create_answer", :class => "add-answer-btn") do %>
+          </div>
+
+          <%= form_tag(:class => "add-answer-btn") do %>
             <%= text_field_tag 'answer_content', nil, :placeholder => "Your answer...", :class => "add-answer-btn" %>
-            <%= text_field_tag 'answer_question', nil, :type => "hidden", :value => question.id %>
-            <%=  submit_tag("Add", :class => "btn spacer add-answer-btn") %>
+            <input class="btn spacer add-answer-btn new_answer" id="<%= question.id %>" value="Add answer"/>
           <% end %><br/>
           </div>
 

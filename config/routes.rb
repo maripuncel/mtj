@@ -40,7 +40,7 @@ Mtj::Application.routes.draw do
   match 'change_password' => 'users#change_password'
   match 'activate/:serial' => 'sessions#activate'
 
-  match 'questions/:id/create_answer', to: 'questions#create_answer'
+  match 'questions/create_answer', to: 'questions#create_answer'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -32,8 +32,8 @@ class QuestionsController < ApplicationController
 
   def create_answer
     @question = Question.find(params[:answer_question])
-    @question.add_answer(params, @current_user)
-    redirect_to :back
+    @answer = @question.add_answer(params, @current_user)
+    render :answer, :layout => false
   end
 
   # PUT /questions/1

@@ -1,0 +1,46 @@
+
+function loaddata(url)
+{
+      $.ajax({
+      type : 'POST',
+      url : url,
+      dataType: 'html',
+      success : function(data) { $('#companies').html(data); },
+      error: function(XMLHttpRequest, testStatus, errorThrown) {
+      }
+    });
+    
+<<<<<<< HEAD
+    
+=======
+>>>>>>> ad96bf0dbbcc8d3e9ad3f5df59d53522d1c0bf02
+    $('#companies').html(data);
+}
+
+function load()
+  {
+     if ($('#company_name').val() == "")
+	{
+	  url = '/companies/search';
+	  $('#add_button').hide();
+	}
+     else
+	{
+  	  value = $('#company_name').val();
+  	  url = '/companies/search/' + value;
+	}
+  loaddata(url);
+
+  } 
+
+
+
+function load_old() {
+  element = document.getElementById('search');
+  value = element.value;
+  value = value.replace(' ','%20');
+  value = value.replace('.','%2E');
+  $('#companies').load("/companies/search/"+value);
+  //$('#companies').load("/Test");
+
+}

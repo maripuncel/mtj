@@ -2,8 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-root_url = 'http://localhost:3000'
-#root_url = 'http://vast-dusk-2147.herokuapp.com'
+#root_url = 'http://localhost:3000'
+root_url = 'http://vast-dusk-2147.herokuapp.com'
 $ ->
   $('#add-interview').click (e) ->
     e.preventDefault()
@@ -26,7 +26,8 @@ $ ->
     e.preventDefault()
     figure = $('#offer-figure').val()
     company = $('#offer-company').val()
-    query = 'figure=' + figure + '&company=' + company
+    position = $('#offer-position').val()
+    query = 'figure=' + figure + '&company=' + company + '&position=' + position
     url = root_url + '/add/offer'
     $.ajax
       type: 'POST'

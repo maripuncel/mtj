@@ -6,6 +6,7 @@ class Offer < ActiveRecord::Base
     offer = Offer.new
     offer.figure = params[:figure]
     offer.company_id = params[:company]
+    offer.position = params[:position]
     offer.user_id = current_user.id
     offer.save!
     return offer

@@ -23,13 +23,14 @@
 
     </div>
 
-    <hr class="company-divider"></div>
+    <hr class="company-divider">
+  </div>
 
 <div id="accordian">
   <% if @questions.any? %>
       <% @questions.each do |question| %>
           <h3 id="question-cont">
-          <%= question.content %>
+          <%= question.content %><br/>
           <span id="question-date"><%= question.created_at %></span>
           </h3>
 

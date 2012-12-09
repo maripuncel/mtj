@@ -3,20 +3,14 @@ class CompaniesController < ApplicationController
   before_filter :check_status
 
    def search
-    if params[:id] == nil
-      @notice = "All Companies"
-      @companies = Company.all(:order => :name)
-    
-    else
-      @name = params[:id]
-      @companies = Company.find(:all, :conditions => {:name => @name})
-      @companies = Company.where("name LIKE :prefix", prefix: "#{@name}%").all(:order => :name)
-      @notice = "Companies matching : " + @name
-    end
-     
+    @name = params[:id]
+    @companies = Company.find(:all, :conditions => {:name => @name})
+    @companies = Company.where("name LIKE :prefix", prefix: "#{@name}%").all(:order => :name)
+    @notice = @name
     if @companies == []
 	@notice = "No Company named \""+ @name + "\" found."	
-
+    else
+	@notice = nil
     end
     render :search, :layout => false
  end
@@ -31,7 +25,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-   
+    admin()
     @companies = Company.all(:order => :name)
 
     respond_to do |format|
@@ -39,14 +33,13 @@ class CompaniesController < ApplicationController
       format.json { render json: @companies }
     end
   end
-  
 
   # GET /companies/1
   # GET /companies/1.json
   def show
     @company = Company.find(params[:id])
     @interview = Interview.all( :conditions => {:company_id => [@company.id]}, :limit => 1)
-    @offers = @company.offers.all
+    @offer = @company.offer_average
     @question = Question.all( :conditions => {:company_id => [@company.id]}, :limit => 1)
 
     respond_to do |format|

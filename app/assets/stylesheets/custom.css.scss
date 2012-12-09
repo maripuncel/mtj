@@ -113,6 +113,7 @@ body {
 #question-date {
   text-align: right;
   color: #808080;
+  margin-left: 75%;
 }
 
 #answer-cont {
@@ -174,6 +175,7 @@ body {
 
 #add-answer-btn{
   color:white;
+  display: inline-block;
 }
 
 #back-icon {
@@ -192,6 +194,16 @@ body {
   font-family: "Open Sans";
 }
 
+#company-name a {
+  color:black;
+}
+
+#company-name a:hover {
+  background-color: white;
+  color: #006DCC;
+  text-decoration: none;
+}
+
 #plus-icon,
 #plus-icon-i,
 #search-icon-i,
@@ -206,8 +218,9 @@ body {
 #plus-icon-i:hover,
 #search-icon-i:hover,
 #plus-icon-question:hover {
-  color:grey;
+  color:#006DCC;
   background-color: white;
+  cursor: pointer;
 }
 
 #dialog-form {

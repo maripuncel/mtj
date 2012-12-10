@@ -39,7 +39,7 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
     @interview = Interview.all( :conditions => {:company_id => [@company.id]}, :limit => 1)
-    @offers = @company.offers.all
+    @offer = @company.offer_average
     @question = Question.all( :conditions => {:company_id => [@company.id]}, :limit => 1)
 
     respond_to do |format|

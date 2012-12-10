@@ -368,7 +368,7 @@ function iqr(k) {
 function create_plot_graph(graph_data, div) {
 
 var margin = {top: 20, right: 20, bottom: 30, left: 140},
-    width = 620 - margin.left - margin.right,
+    width = 62	0 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 var x = d3.scale.linear()

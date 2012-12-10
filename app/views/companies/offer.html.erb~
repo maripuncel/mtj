@@ -37,7 +37,7 @@
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
-create_plot_graph(<%= raw(@offers.to_json) %>,'graph');
+create_plot_graph(<%= raw(@offers.to_json) %>);
 </script>
 
 <hr class="company-divider">

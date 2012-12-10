@@ -1,6 +1,6 @@
 <% provide(:title, 'Home') %>
 
-<div class="row">
+<div class="row" id='homepagemain'>
 <div class="span7">
   <div id="info">
     <h2>MIT is hard. <br/> Finding a job should be easy.</h2>
@@ -87,10 +87,10 @@
 <% end %></div>
 <%= javascript_tag  do %>
 
-$('#Login').click(function () {
+$('#login').click(function () {
           loaduser('login');
         });
-$('#Register').click(function () {
+$('#register').click(function () {
           loaduser('register');
         });
 

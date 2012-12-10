@@ -1,12 +1,15 @@
-<h3 id="interview-cont" class="<%=@interview.get_position %>">
-  <span id="interview-rate"><%= @interview.rating %></span>
-  <%= @interview.content %>
-  <span id="interview-pos"><%= @interview.position %></span>
-  <span id="interview-date"><%= @interview.created_at %></span>
-</h3>
-<div id="interview-q" class="<%=@interview.get_position %>">
-  Questions <br/>
-  <%= @interview.questions %>
+<h5 id="interview-cont" class="<%=interview.get_position %>">
+  <span id="interview-rate"><%= interview.rating %></span><span id="interview-pos">&nbsp;&nbsp;<%= interview.position %></span>
 
-  <%= link_to 'Edit this Interview', edit_interview_path(@interview) %>
-  <%= link_to 'Destroy this Interview', @interview, method: :delete, data: { confirm: 'Are you sure you want to delete this Interview?' } %></div>
+  <div id="interview-date"><p align="right"><%= interview.created_at %></p></div>
+
+  <%= interview.content %>
+
+</h5>
+
+<div id="interview-q" class="<%=interview.get_position %>">
+  Questions <br/>
+  <%= interview.questions %>
+
+  <%= link_to 'Edit this Interview', edit_interview_path(interview) %>
+  <%= link_to 'Destroy this Interview', interview, method: :delete, data: { confirm: 'Are you sure you want to delete this Interview?' } %></div>

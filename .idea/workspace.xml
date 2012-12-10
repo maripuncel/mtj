@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75604033-ad37-41c6-a170-f2fe2f6438e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/interviews/interview.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/companies.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/companies.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/interviews_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/interviews_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/interviews/interview.html.erb" afterPath="$PROJECT_DIR$/app/views/interviews/interview.html.erb" />
     </list>
     <ignored path="mtj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,28 +21,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="interviews_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="interviews_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/interviews_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="39" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
+            <state line="20" column="39" selection-start="715" selection-end="715" vertical-scroll-proportion="0.30737704">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interview.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/interviews/interview.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="41" selection-start="505" selection-end="505" vertical-scroll-proportion="-6.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="companies.js.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="companies.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/companies.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="24" selection-start="5097" selection-end="5097" vertical-scroll-proportion="0.8897059">
+            <state line="176" column="24" selection-start="5097" selection-end="5097" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -63,7 +51,7 @@
       <file leaf-file-name="interview.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/companies/interview.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="18" selection-start="2525" selection-end="2525" vertical-scroll-proportion="-22.5">
+            <state line="79" column="147" selection-start="4067" selection-end="4745" vertical-scroll-proportion="-31.166666">
               <folding />
             </state>
           </provider>
@@ -113,9 +101,9 @@
         <option value="$PROJECT_DIR$/app/models/interview.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/app/views/companies/interview.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/interviews/interview.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/interviews_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/companies.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/interviews/interview.html.erb" />
       </list>
     </option>
   </component>
@@ -635,30 +623,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/interviews_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/companies.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/interviews/interview.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="41" selection-start="505" selection-end="505" vertical-scroll-proportion="-6.875">
+        <state line="176" column="24" selection-start="5097" selection-end="5097" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/companies/interview.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="18" selection-start="2525" selection-end="2525" vertical-scroll-proportion="-22.5">
+        <state line="79" column="147" selection-start="4067" selection-end="4745" vertical-scroll-proportion="-31.166666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/companies.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/interviews/interview.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="24" selection-start="5097" selection-end="5097" vertical-scroll-proportion="0.8897059">
+        <state line="14" column="145" selection-start="633" selection-end="633" vertical-scroll-proportion="0.2262931">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/interviews_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="39" selection-start="715" selection-end="715" vertical-scroll-proportion="0.30737704">
           <folding />
         </state>
       </provider>

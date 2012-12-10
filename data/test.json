@@ -1,0 +1,12 @@
+[{"name": "Wetpaint",
+  "permalink": "wetpaint",
+  "category_code": "web"},
+ {"name": "AdventNet",
+  "permalink": "adventnet",
+  "category_code": "enterprise"},
+ {"name": "Zoho",
+  "permalink": "zoho",
+  "category_code": "software"},
+ {"name": "Digg",
+  "permalink": "digg",
+  "category_code": "web"}]

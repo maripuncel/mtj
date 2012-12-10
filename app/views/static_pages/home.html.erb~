@@ -17,16 +17,16 @@
 </div>
 
 <% if !@current_user %>
-    
- <div id="main">
-    
-    <div class="span5">
+ <div class="span5">
     <% if notice != nil %>
     <div class="alert alert-notice">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <b><%= notice %></b>
     </div>
     <%end%>
+ <div id="main">
+    
+    
     <div class="span5">
 <div id="registration">
 <h4>Login</h4>

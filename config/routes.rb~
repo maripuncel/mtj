@@ -1,7 +1,7 @@
 Mtj::Application.routes.draw do
 
   match 'generate', to: 'info#get_companies'
-  match 'get_company_info', to: 'info#get_company_info'
+  match 'receive_company_info/:company_info', to: 'info#receive_company_info'
 
   resources :answers
 
@@ -34,7 +34,7 @@ Mtj::Application.routes.draw do
   match 'questions/:id/new_answer', to: 'questions#new_answer', :as => :new_answer
   match 'add/answer', to: 'answers#create'
 
-  match 'register' => 'static_pages#register', :format => :false
+  match 'register' => 'static_pages#register', :format => "false"
   match 'login' => 'static_pages#login', :format => false
   match 'logout' => 'sessions#destroy'
   match 'sessions' => 'sessions#login'

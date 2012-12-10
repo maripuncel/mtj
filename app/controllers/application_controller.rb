@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   def check_status
     if !current_user()
       flash.now[:notice] = 'You must log in to view that page'
-      redirect_to "/login"
+      redirect_to "/"
     end
   end
 

@@ -1,29 +1,18 @@
 class InfoController < ApplicationController
 
 require 'net/http'
+require 'json'
 
-def get_companies(result)
-  parsed_json = JSON.parse(result)
-  companies = []
-  a = 0
-  parsed_json do |k|
-    companies << k.name
-    a += 1
-    if a > 1
-      break
+def get_companies()
+  @a = 0
+  json = ActiveSupport::JSON.decode(File.read(File.join(Rails.root, 'data', 'companies.json')))
+  json.each do |j|
+  @a += 1	
+    if @a % 100 == 0
+      name = JSON.parse(j.to_json)["name"]
+      c = Company.create(:name => name)    
     end
   end
-
 end
-
-def get_company_info(result)
-  companies do |k|
-    companyname = k
-    parsed_json = JSON.parse(result)
-    a = Company.create(:name => parsed_json.name)
-  end
-  render :root
-end
-
 
 end

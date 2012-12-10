@@ -147,6 +147,7 @@ b = (event, button) ->
         ajax('up',button,event)
 
 ajax = (prefix, button, event) ->
+        alert(event)
         event.preventDefault()
         event.stopPropagation()
         question_id = $(button).attr('id')

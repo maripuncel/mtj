@@ -228,8 +228,8 @@ body {
 
 .ui-dialog{
   position:absolute;
-  margin-top: 130px;
-  margin-left: 520px;
+  margin-top: 40%;
+  margin-left: 40%;
   background: white;
   border: 2px;
   border-color: black;

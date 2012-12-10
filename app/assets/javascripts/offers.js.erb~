@@ -368,7 +368,7 @@ function iqr(k) {
 function create_plot_graph(graph_data, div) {
 
 var margin = {top: 20, right: 20, bottom: 30, left: 140},
-    width = 62	0 - margin.left - margin.right,
+    width = 620 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 var x = d3.scale.linear()
@@ -398,6 +398,7 @@ var yAxis = d3.svg.axis()
 var svg = d3.select("#" + div).append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
+    .attr("id","graph)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 

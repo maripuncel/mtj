@@ -40,6 +40,7 @@ Mtj::Application.routes.draw do
   match 'change_password' => 'users#change_password'
   match 'activate/:serial' => 'sessions#activate'
   match 'deactivate/:serial' => 'sessions#deactivate'
+  match 'reactivate/:serial' => 'sessions#reactivate'
 
   match 'questions/create_answer', to: 'questions#create_answer'
 

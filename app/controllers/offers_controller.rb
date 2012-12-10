@@ -1,15 +1,9 @@
 class OffersController < ApplicationController
   before_filter :check_status
 
-  def check_status
-    if !current_user()
-      flash.now[:notice] = 'You must log in to view that page'
-      redirect_to "/login"
-    end
-  end
-
-
   # GET /offers/1/edit
+  # requires: logged in as admin
+  # effects: returns offer edit page
   def edit
     @offer = Offer.find(params[:id])
     if @offer.user_id != @current_user.id
@@ -19,14 +13,18 @@ class OffersController < ApplicationController
   end
 
   # POST /offers
-  # POST /offers.json
+  # requires: user logged in and valid offer attributes
+  # modifies: Offer table
+  # effects: creates new offer and redirects to company offer page
   def create
     Offer.add_offer(params, @current_user)
     render :text => root_url + 'companies/' + params[:company] + '/offers'
   end
 
   # PUT /offers/1
-  # PUT /offers/1.json
+  # requires: logged in as admin and offer exists with given id
+  # modifies: Offer table
+  # effects: updates offer with given attributes
   def update
     @offer = Offer.find(params[:id])
 
@@ -42,7 +40,9 @@ class OffersController < ApplicationController
   end
 
   # DELETE /offers/1
-  # DELETE /offers/1.json
+  # requires: logged in as admin and offer exists with given id
+  # modifies: Offer table
+  # effects: update destroyed
   def destroy
     @offer = Offer.find(params[:id])
     @offer.destroy

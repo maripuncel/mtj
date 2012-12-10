@@ -2,14 +2,9 @@ class AnswersController < ApplicationController
   
   before_filter :check_status
 
-  def check_status
-    if !current_user()
-      flash.now[:notice] = 'You must log in to view that page'
-      render "static_pages/login"
-    end
-  end
-
   # GET /answers/1/edit
+  # requires: answer exists with given id and owned by user
+  # effects: returns answer edit page
   def edit
     @answer = Answer.find(params[:id])
     if @answer.user_id != @current_user.id
@@ -19,14 +14,18 @@ class AnswersController < ApplicationController
   end
 
   # POST /answers
-  # POST /answers.json
+  # requires: answer content, company name, and user_id
+  # modifies: Answer table
+  # effects: creates new answer and redirects to company's question page
   def create
     Answer.add_answer(params, @current_user)
     render :text => root_url + 'companies/' + params[:company] + '/questions'
   end
 
   # PUT /answers/1
-  # PUT /answers/1.json
+  # requires: answer exists with given id
+  # modifies: Answer table
+  # effects: saves new answer attributes and redirects to answer page
   def update
     @answer = Answer.find(params[:id])
 
@@ -42,7 +41,9 @@ class AnswersController < ApplicationController
   end
 
   # DELETE /answers/1
-  # DELETE /answers/1.json
+  # requires: answer exists with given id
+  # modifies: Answer table
+  # effects: destroys given answer
   def destroy
     @answer = Answer.find(params[:id])
     @answer.destroy

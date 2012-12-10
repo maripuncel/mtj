@@ -65,8 +65,8 @@
         
 	window.onload=function(){load()};
         $('#company_name').keyup(function () {
-          load();
-	  $('#add_button').hide();
+        load();
+	$('#add_button').hide();
         });
 
 

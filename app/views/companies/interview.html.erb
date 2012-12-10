@@ -56,7 +56,7 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
 <div id="accordian">
 <% if @interviews.any? %>
 <% @interviews.each do |interview| %>
-    <h3 id="interview-cont" name="<%=interview.position %>">
+    <h3 id="interview-cont" name="<%=interview.get_position %>">
     <span id="interview-rate"><%= interview.rating %></span>
     <%= interview.content %>
     <span id="interview-pos"><%= interview.position %></span>

@@ -2,6 +2,9 @@ class Answer < ActiveRecord::Base
   attr_accessible :content, :question_id, :user_id
   belongs_to :question
 
+  # requires: answer content, question_id, and current_user
+  # modifies: Answer table
+  # effects: returns new answer created under question
   def self.add_answer(params, current_user)
     answer = Answer.new
     answer.content = params[:content]

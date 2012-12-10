@@ -14,8 +14,6 @@ $ ->
     position = $('#interview-position').val()
     query = 'content=' + content + '&company=' + company + '&questions=' + questions + '&rating=' + rating + '&position=' + position
     url = root_url + '/add/interview'
-    alert(url)
-    alert(query)
     $.ajax
       type: 'POST'
       url: url

@@ -11,11 +11,19 @@ function loaddata(url)
     });
     
 }
-function load1()
+function loaduser(type)
 {
+     if( type == "login")
+     {
+       url = '/login'; 
+     }
+     else
+     {
+       url = '/register';
+     }
       $.ajax({
       type : 'GET',
-      url : '/login',
+      url : url,
       dataType: 'html',
       success : function(data) { $('#main').html(data); },
       error: function(XMLHttpRequest, testStatus, errorThrown) {
@@ -24,18 +32,6 @@ function load1()
     
 }
 
-function load2()
-{
-      $.ajax({
-      type : 'GET',
-      url : '/register',
-      dataType: 'html',
-      success : function(data) { $('#main').html(data); },
-      error: function(XMLHttpRequest, testStatus, errorThrown) {
-      }
-    });
-    
-}
 function load()
   {
      if ($('#company_name').val() == "")
@@ -52,14 +48,3 @@ function load()
 
   } 
 
-
-
-function load_old() {
-  element = document.getElementById('search');
-  value = element.value;
-  value = value.replace(' ','%20');
-  value = value.replace('.','%2E');
-  $('#companies').load("/companies/search/"+value);
-  //$('#companies').load("/Test");
-
-}

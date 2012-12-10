@@ -86,9 +86,14 @@
 
 <% end %></div>
 <%= javascript_tag  do %>
-if(window.location.hash) {
-   $(window.location.hash).click();
-}
+
+$('#login').click(function () {
+          loaduser('login');
+        });
+$('#register').click(function () {
+          loaduser('register');
+        });
+
 <% end %>
 
 

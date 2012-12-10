@@ -86,6 +86,11 @@ $ ->
         button.addClass('active')
 
 $ ->
+  $('#interview-position').keyup ->
+    form = $(this)
+    form.text(form.val())
+
+$ ->
   $('div.btn-group[data-toggle-name=checkbox]').each ->
 
     $('button', $(this)).each ->
@@ -106,6 +111,7 @@ $ ->
           $(e_array).each ->
             element = $(this)
             $(element).show())
+
 
 $ ->
   $('#accordian').accordion

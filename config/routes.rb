@@ -1,7 +1,7 @@
 Mtj::Application.routes.draw do
 
   #route to pull and populate database
-  match 'generate', to: 'info#get_companies'
+  #match 'generate', to: 'info#get_companies'
 
   resources :answers
 

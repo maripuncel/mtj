@@ -21,8 +21,16 @@ $ ->
       url: url
       data: query
       success: (data) ->
-        a = data	
-        
+        $('#accordian').append(data)
+        $('#accordian').accordion('destroy')
+        $('#accordian').accordion
+          collapsible: true
+          autoHeight: false
+          active: false
+        $('#accordian').accordion('option', 'active', ':last')
+        $('#form').modal('hide')
+                
+
       error:(XMLHttpRequest, testStatus, errorThrown) ->
         alert('error: ' + errorThrown)
 

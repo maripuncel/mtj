@@ -3,7 +3,7 @@ Mtj::Application.routes.draw do
   resources :answers
 
   resources :questions
-
+  match 'generate', to: 'info#getinfo'
   resources :offers
 
   resources :interviews

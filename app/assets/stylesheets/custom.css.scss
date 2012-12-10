@@ -212,6 +212,7 @@ body {
   margin-left: 10px;
   vertical-align: 30%;
   color:black;
+  z-index: 1;
 }
 
 #plus-icon:hover,
@@ -424,6 +425,23 @@ footer p {
   display: inline-block;
   vertical-align: top;
   margin-right: 25px;
+}
+
+#form {
+  padding: 10px;
+}
+
+#offer_form {
+  padding: 10px;
+}
+
+#interview-content,
+#interview-questions,
+#interview-rating,
+#interview-position,
+#offer-figure,
+#offer-position {
+  width: 100%;
 }
 
 

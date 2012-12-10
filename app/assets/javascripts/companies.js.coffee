@@ -18,8 +18,16 @@ $ ->
       type: 'POST'
       url: url
       data: query
-      success: (data, code, xmlhttp) ->
-        window.location = xmlhttp.responseText
+      success: (data) ->
+        $('#accordian').append(data)
+        $('#accordian').accordion('destroy')
+        $('#accordian').accordion
+          collapsible: true
+          autoHeight: false
+          active: false
+        $('#accordian').accordion('option', 'active', ':last')
+        $('#form').modal('hide')
+      error:(XMLHttpRequest, testStatus, errorThrown) ->
 
 $ ->
   $('#add-offer').click (e) ->
@@ -33,8 +41,9 @@ $ ->
       type: 'POST'
       url: url
       data: query
-      success: (data, code, xmlhttp) ->
-        window.location = xmlhttp.responseText
+      success: ->
+        $('#offer_form').modal('hide')
+      error:(XMLHttpRequest, testStatus, errorThrown) ->
 
 $ ->
   $('#add-question').click (e) ->
@@ -87,6 +96,23 @@ $ ->
 
 $ ->
   $('#interview-position').keyup ->
+    form = $(this)
+    form.text(form.val())
+
+$ ->
+  $('div.btn-group[data-toggle-name=off]').each ->
+    group = $(this)
+    form = $('#offer-position')
+    $('button', group).each ->
+      button = $(this)
+      button.live('click', ->
+        form.text($(this).val())
+        form.val(form.text()))
+      if(button.val() == form.val())
+        button.addClass('active')
+
+$ ->
+  $('#offer-position').keyup ->
     form = $(this)
     form.text(form.val())
 
@@ -163,3 +189,10 @@ ajax = (prefix, button, event) ->
             $(button).attr('class','voting_' + prefix)
             $('#vote_count'+question_id).replaceWith(data)
           error:(XMLHttpRequest, testStatus, errorThrown) ->
+
+
+$ ->
+  $('#form').modal('hide')
+
+$ ->
+  $('#offer_form').modal('hide')

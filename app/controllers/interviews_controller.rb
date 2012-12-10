@@ -17,9 +17,8 @@ class InterviewsController < ApplicationController
   # modifies: Interview table
   # effects: create new interview and redirects to company's interview page
   def create
-    #@interview = Interview.add_interview(params, @current_user)
-    #render :interview, :layout => false
-    render 'static_pages/home'
+    @interview = Interview.add_interview(params, @current_user)
+    render :interview, :layout => false
   end
 
   # PUT /interviews/1

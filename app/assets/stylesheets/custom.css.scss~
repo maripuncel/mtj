@@ -411,6 +411,7 @@ footer p {
   width: 20px;
   text-align: center;
   color:red;
+  background-color:red;
 }
 
 

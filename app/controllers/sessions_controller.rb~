@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
 	  #Account not activated
 	  if user && !user.activated
 	    flash[:notice] = 'Account is not yet activated'
-            @activation_id = user.serial	
+            @activation_id = user.serial
 	    render 'static_pages/login'
 
 	  #Successful Login

@@ -71,9 +71,9 @@
      <b><i> <%= link_to 'View More Interviews', interview_url %></b></i>
     </div>
     <div class="pill-pane" id="offers">
-      <div id="plus-icon-i">
-        <i class="foundicon-plus"></i>
-      </div>
+      <a id="plus-icon-question" href="#offer_form" role="button" class="btn" data-toggle="modal">
+        <i class="foundicon-plus"></i></a>
+
     </div>
     <div class="pill-pane" id="questions">
       <h5>Recently asked questions</h5>
@@ -97,22 +97,28 @@
 </div>
 </div>
 
-<div id="dialog-form-i" title="Submit a new offer" xmlns="http://www.w3.org/1999/html">
-  <p>Salary:</p>
-  <input id="offer-figure" name="offer-figure" type="number" class="text ui-widget-content ui-corner-all"/><br/>
-  <p>Position:</p>
-  <input id="offer-position" value="" name="offer-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag below or enter your own." type="text" size="80"></input><br/>
-  <div class="btn-group" data-toggle="buttons-radio" data-toggle-name="pos">
-    <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>
-    <button type="button" class="btn btn-mini" name="position" value="Project Manager" id="pm" data-toggle="button">Project Manager</button>
-    <button type="button" class="btn btn-mini" name="position" value="Trader" id="trader" data-toggle="button">Trader</button>
-    </br>
-    <button type="button" class="btn btn-mini" name="position" value="Consultant" id="consultant" data-toggle="button">Consultant</button>
-    <button type="button" class="btn btn-mini" name="position" value="Analyst" id="analyst" data-toggle="button">Analyst</button>
-    <button type="button" class="btn btn-mini" name="position" value="Researcher" id="researcher" data-toggle="button">Researcher</button>
-  </div><br/>
-  <input id="offer-company" name="offer-company" type="hidden" value="<%= @company.id %>" /><br/>
-  <a id="add-offer" class="btn spacer">Add Offer</a>
+<div id="offer_form" class="modal hide fade" tabindex="-1" role="dialog" aria-labeledby="offer_add_label" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+    <h3 id="offer_add_label">Add an offer</h3>
+  </div>
+  <div class="modal-body">
+    <p>Salary:</p>
+    <input id="offer-figure" name="offer-figure" type="number" class="text ui-widget-content ui-corner-all"/><br/>
+    <p>Position:</p>
+    <input id="offer-position" value="" name="offer-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag below or enter your own." type="text" size="80"></input><br/>
+    <div class="btn-group" data-toggle="buttons-radio" data-toggle-name="off">
+      <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>
+      <button type="button" class="btn btn-mini" name="position" value="Project Manager" id="pm" data-toggle="button">Project Manager</button>
+      <button type="button" class="btn btn-mini" name="position" value="Trader" id="trader" data-toggle="button">Trader</button>
+      <button type="button" class="btn btn-mini" name="position" value="Consultant" id="consultant" data-toggle="button">Consultant</button>
+      <button type="button" class="btn btn-mini" name="position" value="Analyst" id="analyst" data-toggle="button">Analyst</button>
+      <button type="button" class="btn btn-mini" name="position" value="Researcher" id="researcher" data-toggle="button">Researcher</button>
+    </div></div>
+  <div class="modal-footer">
+    <input id="offer-company" name="offer-company" type="hidden" value="<%= @company.id %>" /><br/>
+    <a id="add-offer" class="btn spacer">Add Offer</a>
+  </div>
 </div>
 
 

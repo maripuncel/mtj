@@ -18,7 +18,7 @@ class OffersController < ApplicationController
   # effects: creates new offer and redirects to company offer page
   def create
     Offer.add_offer(params, @current_user)
-    render :text => root_url + 'companies/' + params[:company] + '/offers'
+    redirect_to :back
   end
 
   # PUT /offers/1

@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  attr_accessible :company_id, :content, :user_id, :id
+  attr_accessible :company_id, :content, :user_id, :id, :votes
   belongs_to :company
   has_many :answers
 
@@ -8,6 +8,7 @@ class Question < ActiveRecord::Base
     question.content = params[:content]
     question.company_id = params[:company]
     question.user_id = current_user.id
+    question.votes = 0
     question.save!
     return question
   end
@@ -23,6 +24,15 @@ class Question < ActiveRecord::Base
     answer.user_id = current_user.id
     answer.save!
     return answer
+  end
+
+  def vote_count
+    count = Vote.find_all_by_question_id(self.id)
+    if count
+      return count.count
+    else
+      return 0
+    end
   end
 
 end

@@ -48,7 +48,7 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     @interview = Interview.all( :conditions => {:company_id => [@company.id]}, :limit => 1)
     @offers = @company.offers.all
-    @question = Question.all( :conditions => {:company_id => [@company.id]}, :limit => 1)
+    @questions = Question.all( :conditions => {:company_id => [@company.id]}, :limit => 3)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -78,10 +78,7 @@ class CompaniesController < ApplicationController
   def question
     @company = Company.find(params[:id])
     @questions = @company.questions.all
-  end
-
-  def new_question
-    @company = Company.find(params[:id])
+    @current_user = @current_user
   end
 
   # GET /companies/new

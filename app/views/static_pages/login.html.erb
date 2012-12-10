@@ -13,4 +13,8 @@
 <div class = "actions">
 <%= submit_tag 'Log in', :id=>"actions-btn" %> </div>
 </form>
-</div></div>
+<% if @activation_id %>
+  <a href="reactivate/<%= @activation_id %>">Resend activation email</a>
+<% end %>
+</div>
+</div>

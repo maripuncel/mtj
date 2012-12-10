@@ -396,6 +396,39 @@ footer p {
   margin-right:5px;
 }
 
+.vote_container {
+  display: inline-block;
+}
+.voting_up {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+.voting_down {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  text-color:#FF1D25;
+}
+
+.voting_down i,
+.voting_down p {
+  color: #FF1D25;
+}
+
+.voting_up:hover {
+  background-color: #f5f5f5;
+  color:#FF1D25;
+}
+
+#question_stuff {
+  vertical-align: top;
+  display: inline-block;
+  width: 95%;
+  margin-left: 5px;
+}
+
 
 
 

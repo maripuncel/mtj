@@ -41,11 +41,12 @@
         <div class="span12" id="sub_general">
 	  <hr>
           <h5>MIT statistics at <%= @company.name %></h5>
-          <b>Number of Recent Interviews: </b><%= @company.interviews.count %> <br>
-          <b>Average MIT Salary: </b> <%=@company.offer_average %><%=  @offer %> <br/><br>
-          <b>Recently asked Questions: </b><br/>
-	  <% if @question.first != nil%>
-          	<%= @question.first.content %>
+          Number of Recent Interviews: <%= @company.interviews.count %> <br/>
+          Average MIT Salary: <%=  @offer %> <br/>
+          Recently asked Questions: <br/>
+	  <% if @questions.first != nil%>
+          	<%= @questions.first.content %>
+
 	  <% else %>
           	No Questions Yet...
 	  <% end %>
@@ -74,9 +75,11 @@
       </div>
     </div>
     <div class="pill-pane" id="questions">
-      <h5>Recently Asked Questions</h5><hr>
-      <p> <% if @question.first %>
-           <%= @question.first.content %> <br><br><b><%= @question.first.answers.count %> answers </b><hr>
+      <h5>Recently asked questions</h5>
+      <p> <% if @questions.any? %>
+           <% @questions.each do |question| %>
+           <%= question.content %> <%= pluralize(question.answers.count, " answer")%><br/>
+           <% end %>
         <% else %>
             No questions yet...
         <% end %>

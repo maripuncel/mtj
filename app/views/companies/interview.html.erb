@@ -64,7 +64,7 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
 <% @interviews.each do |interview| %>
     
     <h5 id="interview-cont" class="<%=interview.get_position %>">
-    <span id="interview-rate"><%= interview.rating %></span><span id="interview-pos">&nbsp;&nbsp;<%= interview.position %></span>
+    <span id="interview-rate"><%= interview.rating %></span><span id="interview-pos">&nbsp;&nbsp;<%= interview.position %> Interview Description</span>
     
     <div id="interview-date"><p align="right"><%= interview.created_at %></p></div>
     
@@ -73,11 +73,11 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
     </h5>
     
     <div id="interview-q" class="<%=interview.get_position %>">
-      Questions <br/>
+      <b><i>Interview Questions</B></i> <br/><br>
       <%= interview.questions %>
-	
-      <%= link_to 'Edit this Interview', edit_interview_path(interview) %>
-    <%= link_to 'Destroy this Interview', interview, method: :delete, data: { confirm: 'Are you sure you want to delete this Interview?' } %></div>
+      <br><br>
+      <b><i><%= link_to 'Edit this Interview', edit_interview_path(interview) %> |
+    <%= link_to 'Destroy this Interview', interview, method: :delete, data: { confirm: 'Are you sure you want to delete this Interview?' } %></b></i></div>
 <% end %>
 <% end %>
 </div>

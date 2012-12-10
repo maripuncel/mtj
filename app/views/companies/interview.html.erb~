@@ -1,8 +1,14 @@
 <% provide(:title, @company.name + " | Interviews") %>
 
-<div id="dialog-form-i" title="Write a new interview" xmlns="http://www.w3.org/1999/html">
+
+<div id="form" class="modal hide fade" tabindex="-1" role="dialog" aria-labeledby="interview_add_label" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+    <h3 id="interview_add_label">Add an interview</h3>
+  </div>
+  <div class="modal-body">
   <textarea id="interview-content" name="interview-content" placeholder="Describe
-your interview experience: walk through the process." rows="5" cols="15" ></textarea><br/>
+your interview experience: walk through the process." rows="5" cols="35" ></textarea><br/>
   <textarea id="interview-questions" name="interview-questions" placeholder="Write the questions you received during your interview."></textarea><br/>
   <p>Rate the difficulty from 1-10, 1 being extremely easy and 10 being extremely difficult.</p>
   <input id="interview-rating" name="interview-rating" type="number" class="text ui-widget-content ui-corner-all"/><br/>
@@ -12,13 +18,14 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
     <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>
     <button type="button" class="btn btn-mini" name="position" value="Manager" id="pm" data-toggle="button">Manager</button>
     <button type="button" class="btn btn-mini" name="position" value="Trader" id="trader" data-toggle="button">Trader</button>
-    </br>
     <button type="button" class="btn btn-mini" name="position" value="Consultant" id="consultant" data-toggle="button">Consultant</button>
     <button type="button" class="btn btn-mini" name="position" value="Analyst" id="analyst" data-toggle="button">Analyst</button>
     <button type="button" class="btn btn-mini" name="position" value="Researcher" id="researcher" data-toggle="button">Researcher</button>
-  </div><br/>
+  </div></div>
+  <div class="modal-footer">
   <input id="interview-company" name="interview-company" type="hidden" value="<%= @company.id %>" /><br/>
   <a id="add-interview" class="btn spacer">Add Interview</a>
+  </div>
 </div>
 
 <div class="container interview">
@@ -26,8 +33,8 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
     <p id="notice"><%= notice %></p>
 
     <h1 id="company-name"><%= link_to @company.name, company_url(@company) %> Interviews</h1>
-    <div id="plus-icon-i">
-    <i class="foundicon-plus"></i></div>
+    <a id="plus-icon-i" href="#form" role="button" class="btn" data-toggle="modal">
+    <i class="foundicon-plus"></i></a>
     <div data-toggle="collapse" data-target="#search" id="search-icon-i">
     <i class="foundicon-search"></i></div>
   </div>
@@ -57,21 +64,20 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
 <% @interviews.each do |interview| %>
     
     <h5 id="interview-cont" class="<%=interview.get_position %>">
-    <span id="interview-rate"><%= interview.rating %></span><span id="interview-pos">&nbsp;&nbsp;<%= interview.position %></span>
+    <span id="interview-rate"><%= interview.rating %></span><span id="interview-pos">&nbsp;&nbsp;<%= interview.position %> Interview Description</span>
     
     <div id="interview-date"><p align="right"><%= interview.created_at %></p></div>
-    
     
     <%= interview.content %>
     
     </h5>
     
     <div id="interview-q" class="<%=interview.get_position %>">
-      Questions <br/>
+      <b><i>Interview Questions</B></i> <br/><br>
       <%= interview.questions %>
-	
-      <%= link_to 'Edit this Interview', edit_interview_path(interview) %>
-    <%= link_to 'Destroy this Interview', interview, method: :delete, data: { confirm: 'Are you sure you want to delete this Interview?' } %></div>
+      <br><br>
+      <b><i><font color = "#30000"><%= link_to 'Edit this Interview', edit_interview_path(interview) %> |
+    <%= link_to 'Destroy this Interview', interview, method: :delete, data: { confirm: 'Are you sure you want to delete this Interview?' } %></b></i></font></div>
 <% end %>
 <% end %>
 </div>

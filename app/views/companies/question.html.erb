@@ -32,9 +32,9 @@
           <h3 id="question-cont">
           <div class="vote_container">
           <% if @current_user.has_voted(question) %>
-                <div class="voting_down" id="<%= question.id %>">
+                <div class="voting_down" id="q<%= question.id %>">
           <% else %>
-          <div class="voting_up" id="<%= question.id %>">
+          <div class="voting_up" id="q<%= question.id %>">
            <% end %>
             <i class="foundicon-up-arrow"></i>
             <p id="vote_count<%= question.id %>"><%= question.vote_count %></p>

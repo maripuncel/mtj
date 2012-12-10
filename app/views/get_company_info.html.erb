@@ -1,0 +1,11 @@
+<script>
+$.ajax({
+      type : 'POST',
+      url : 'http://api.crunchbase.com/v/1/'+companyname+'.js?api_key=wxqjndu9upq49fwfkh2r6csu',
+      dataType: 'html',
+      success : function(data) { $('#companies').html(data); },
+      error: function(XMLHttpRequest, testStatus, errorThrown) {
+      }
+    });
+</script>
+

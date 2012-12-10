@@ -10,14 +10,12 @@ class CompaniesController < ApplicationController
       @notice = "All Companies"
       @companies = Company.all(:order => :name)
     else
-      @name = params[:id].downcase
-      @companies = Company.find(:all, :conditions => {:name => @name})
-      @companies = Company.where("lower(name) like :prefix", prefix: "#{lower(@name)}%").all(:order => :name)
-      @notice = "Companies matching : " + @name
+      @companies=Company.wide_search(params)
+      @notice = "Companies matching : " + params[:id].downcase
     end
      
     if @companies == []
-	    @notice = "No Company named \""+ @name + "\" found."
+	    @notice = "No Company named \""+ params[:id].downcase + "\" found."
     end
     render :search, :layout => false
   end

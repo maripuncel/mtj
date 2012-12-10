@@ -70,7 +70,7 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
     
     <%= interview.content %>
     
-    <div id="interview-click"><p align="right">click to expand</p></div>
+    <p align="right">click to expand</p>
     </h5>
     
     <div id="interview-q" class="<%=interview.get_position %>">

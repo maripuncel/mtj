@@ -30,8 +30,10 @@ class QuestionsController < ApplicationController
     @answers = @question.answers.all
   end
 
-  def new_answer
-    @question = Question.find(params[:id])
+  def create_answer
+    @question = Question.find(params[:answer_question])
+    @question.add_answer(params, @current_user)
+    redirect_to :back
   end
 
   # PUT /questions/1

@@ -42,12 +42,11 @@
                   </div>
               <% end %>
           <% end %>
-          <div class="add-answer-btn">
-            <input id="answer-content" name="answer-content" placeholder="Your answer..."/>
-            <input id="answer-question" name="answer-question" type="hidden" value="<%= question.id %>" />
-            <input id="answer-company" name="answer-company" type="hidden" value="<%= question.company_id %>" />
-            <a id="add-answer" class="btn spacer">Add</a>
-          </div><br/>
+          <%= form_tag(:controller => "questions", :action => "create_answer", :class => "add-answer-btn") do %>
+            <%= text_field_tag 'answer_content', nil, :placeholder => "Your answer...", :class => "add-answer-btn" %>
+            <%= text_field_tag 'answer_question', nil, :type => "hidden", :value => question.id %>
+            <%=  submit_tag("Add", :class => "btn spacer add-answer-btn") %>
+          <% end %><br/>
           </div>
 
       <% end %>

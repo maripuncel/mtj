@@ -1,16 +1,15 @@
 
-<h3>Results</h3>
-<br />
+
 <% if @notice != nil %>
 
 <h4><i><%= @notice %></h4></i>
 <br />
 
+<% if @notice != "All Companies" %>
 <%= javascript_tag  do %>
 $('#add_button').toggle(true);
 <% end %>
-
-<% else %>
+<% end %>
 <table>
 <% @companies.each do |company| %>
   <tr>

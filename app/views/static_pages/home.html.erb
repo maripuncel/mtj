@@ -57,15 +57,16 @@
               <input type="submit" id="add_button" value="Add Company" name="commit">
           <% end %>
 
-    <div id="companies">
+    <div id="companies", style="width:300px;height:250px;overflow:auto;">
     </div>
 
     <%= javascript_tag  do %>
-
+        
+	window.onload=function(){load()};
         $('#company_name').keyup(function () {
         load();
         });
-
+        
         $('#add_button').hide();
 
 

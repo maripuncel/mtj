@@ -10,7 +10,7 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
   below or enter your own."></textarea><br/>
   <div class="btn-group" data-toggle="buttons-radio" data-toggle-name="pos">
     <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>
-    <button type="button" class="btn btn-mini" name="position" value="Project Manager" id="pm" data-toggle="button">Project Manager</button>
+    <button type="button" class="btn btn-mini" name="position" value="Manager" id="pm" data-toggle="button">Manager</button>
     <button type="button" class="btn btn-mini" name="position" value="Trader" id="trader" data-toggle="button">Trader</button>
     </br>
     <button type="button" class="btn btn-mini" name="position" value="Consultant" id="consultant" data-toggle="button">Consultant</button>
@@ -37,15 +37,14 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
   <div id="search" class="collapse">
   <div class="row search">
 
-    Search by position. <br/>
     <div class="search btn-group" data-toggle="buttons-checkbox" data-toggle-name="checkbox">
-      <button type="button" value="Developer" class="btn active" data-toggle="button">Developer</button>
-      <button type="button" value="Project Manager" class="btn active" data-toggle="button">Project Manager</button>
-      <button type="button" value="Trader" class="btn active" data-toggle="button">Trader</button>
-      <button type="button" value="Consultant" class="btn active" data-toggle="button">Consultant</button>
-      <button type="button" value="Analyst" class="btn active" data-toggle="button">Analyst</button>
-      <button type="button" value="Researcher" class="btn active" data-toggle="button">Researcher</button>
-      <button type="button" value="Other" class="btn active" data-toggle="button">Other</button>
+      <label class="checkbox"><input type="checkbox" value="Developer" class="checkbox" data-toggle="button" checked="true" />Developer</label>
+      <label class="checkbox"><input type="checkbox" value="Manager" class="checkbox " data-toggle="button" checked="true"/>Manager</label>
+      <label class="checkbox"><input type="checkbox" value="Trader" class="checkbox" data-toggle="button" checked="true"/>Trader</label>
+      <label class="checkbox"><input type="checkbox" value="Consultant" class="checkbox" data-toggle="button" checked="true"/>Consultant</label>
+      <label class="checkbox"><input type="checkbox" value="Analyst" class="checkbox" data-toggle="button" checked="true"/>Analyst</label>
+      <label class="checkbox"><input type="checkbox" value="Researcher" class="checkbox" data-toggle="button" checked="true"/>Researcher</label>
+      <label class="checkbox"><input type="checkbox" value="Other" class="checkbox" data-toggle="button"checked="true" />Other</label>
       <input type="hidden" name="checkbox" value="Developer" />
     </div>
 
@@ -56,13 +55,13 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
 <div id="accordian">
 <% if @interviews.any? %>
 <% @interviews.each do |interview| %>
-    <h3 id="interview-cont" name="<%=interview.get_position %>">
+    <h3 id="interview-cont" class="<%=interview.get_position %>">
     <span id="interview-rate"><%= interview.rating %></span>
     <%= interview.content %>
     <span id="interview-pos"><%= interview.position %></span>
     <span id="interview-date"><%= interview.created_at %></span>
     </h3>
-    <div id="interview-q" name="<%=interview.position %>">
+    <div id="interview-q" class="<%=interview.get_position %>">
       Questions <br/>
       <%= interview.questions %>
 	

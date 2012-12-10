@@ -91,26 +91,25 @@ $ ->
     form.text(form.val())
 
 $ ->
-  $('div.btn-group[data-toggle-name=checkbox]').each ->
+  $('.checkbox').click ->
+    checkbox = $(this)
+    position = checkbox.val()
+    if checkbox.prop('checked')
+      $(checkbox).attr('checked', true)
+      elements = $('.'+position)
+      e_array = $.makeArray(elements)
+      $(e_array).each ->
+        element = $(this)
+        $(element).show()
+    else
+      $(checkbox).attr('checked', false)
+      elements = $('.'+position)
+      e_array = $.makeArray(elements)
+      $(e_array).each ->
+        element = $(this)
+        $(element).hide()
 
-    $('button', $(this)).each ->
-      position = $(this).text()
-      all_pos = ["Developer", "Project Manager", "Trader", "Consultant", "Analyst", "Researcher"]
-      $(this).live('click', ->
-        if($(this).hasClass('active'))
-          $(this).removeClass('active')
-          elements = document.getElementsByName(position)
-          e_array = $.makeArray(elements)
-          $(e_array).each ->
-            element = $(this)
-            $(element).hide()
-        else
-          $(this).addClass('active')
-          elements = document.getElementsByName(position)
-          e_array = $.makeArray(elements)
-          $(e_array).each ->
-            element = $(this)
-            $(element).show())
+
 
 
 $ ->

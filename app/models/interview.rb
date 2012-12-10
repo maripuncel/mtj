@@ -22,7 +22,7 @@ class Interview < ActiveRecord::Base
   # Returns the interview position if within the list of common positions
   # Else returns the string "Other"
   def get_position
-    all_pos = ["Developer", "Project Manager", "Trader", "Consultant", "Analyst", "Researcher"]
+    all_pos = ["Developer", "Manager", "Trader", "Consultant", "Analyst", "Researcher"]
     if all_pos.include? self.position
       return self.position
     else

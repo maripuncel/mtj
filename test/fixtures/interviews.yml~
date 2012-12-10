@@ -13,5 +13,5 @@ two:
   questions: "Someone codes and interface that consists of 3 input text boxes and a start button. When the start button is pressed a triangle will be drawn on the screen. Each side of the triangle will correspond to a length in one of the input boxes. How would you test this program?"
   user_id: 1
   company_id: 1
-  rating: 8
+  rating: 9
   position: "Project Manager"

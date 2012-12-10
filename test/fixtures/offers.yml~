@@ -4,91 +4,76 @@ one:
   figure: 85000
   user_id: 1
   company_id: 1
-  position: "Project Manager"
 
 two:
   figure: 80000
   user_id: 1
   company_id: 1
-  position: "Project Manager"
 
 three:
-  figure: 81000
+  figure: 80000
   user_id: 1
   company_id: 1
-  position: "Project Manager"
 
 four:
   figure: 90000
   user_id: 1
   company_id: 1
-  position: "Developer"
-  
+
 five:
-  figure: 87000
+  figure: 77000
   user_id: 1
   company_id: 1
-  position: "Project Manager"
 
 six:
-  figure: 89000
+  figure: 79000
   user_id: 1
   company_id: 1
-  position: "Developer"
 
 seven:
   figure: 100000
   user_id: 1
   company_id: 1
-  position: "Developer"
 
 eight:
   figure: 92000
   user_id: 1
   company_id: 1
-  position: "Developer"
-  
+
 nine:
   figure: 72500
   user_id: 1
   company_id: 1
-  position: "Developer"
 
 ten:
   figure: 78500
   user_id: 1
   company_id: 1
-  position: "Developer"
 
 eleven:
   figure: 84200
   user_id: 1
   company_id: 1
-  position: "Project Manager"
 
 twelve:
   figure: 91400
   user_id: 1
   company_id: 1
-  position: "Project Manager"
 
 thirteen:
   figure: 94500
   user_id: 1
   company_id: 1
-  position: "Project Manager"
 
 fourteen:
   figure: 96200
   user_id: 1
   company_id: 1
-  position: "Developer"
 
 fifteen:
   figure: 98400
   user_id: 1
   company_id: 1
-  position: "Developer"
 
 
 

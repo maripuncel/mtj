@@ -30,8 +30,20 @@
   <% if @questions.any? %>
       <% @questions.each do |question| %>
           <h3 id="question-cont">
+          <div class="vote_container">
+          <% if @current_user.has_voted(question) %>
+                <div class="voting_down" id="<%= question.id %>">
+          <% else %>
+          <div class="voting_up" id="<%= question.id %>">
+           <% end %>
+            <i class="foundicon-up-arrow"></i>
+            <p id="vote_count<%= question.id %>"><%= question.vote_count %></p>
+          </div>
+
+          </div>
+          <div id="question_stuff">
           <%= question.content %><br/>
-          <span id="question-date"><%= question.created_at %></span>
+          <span id="question-date"><%= question.created_at %></span></div>
           </h3>
 
           <div>

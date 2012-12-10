@@ -4,7 +4,7 @@
 <div class="container company">
 <div class="row title">
 <p id="notice"><%= notice %></p>
-<h1 id="company-name"><%= @company.name %></h1>
+<h1 id="company-name"><%= link_to @company.name, company_url(@company) %></h1>
 
 </div>
 
@@ -25,45 +25,47 @@
   <div class="span8 pill-content">
     <div class="pill-pane active" id="general">
       <h4>General information</h4>
-      <div class="row">
-        <div class="span4" id="sub_general">
+      <div class="row-fluid">
+        <div class="span6" id="sub_general_left">
           <br/>
-          Website <br/>
-          HQ <br/>
-          Industry <br/>
-          Size <br/>
-          NASDAQ
-          
+          <b>Website:   </b> www.microsoft.com <br/>
+          <b>Industry:  </b>Diversified Technology
         </div>
-        <div class="span3" id="sub_general_right">
+        <div class="span6" id="sub_general_right">
+          <br/>
+          <b>Size:  </b> Over 100,000 Employees<br/>
+          <b>NASDAQ:  </b> MSFT
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12" id="sub_general">
+	  <hr>
           <h5>MIT statistics at <%= @company.name %></h5>
-          Number of Recent Interviews: <%= @company.interviews.count %> <br/>
-          Average MIT Salary: <%=  @offer %> <br/>
-          Recently asked Questions: <br/>
+          <b>Number of Recent Interviews: </b><%= @company.interviews.count %> <br>
+          <b>Average MIT Salary: </b> <%=@company.offer_average %><%=  @offer %> <br/><br>
+          <b>Recently asked Questions: </b><br/>
 	  <% if @question.first != nil%>
           	<%= @question.first.content %>
 	  <% else %>
           	No Questions Yet...
 	  <% end %>
         </div>
-      </div>
-        <div id="news">
-		
-          </div>
+       </div>
     </div>
     <div class="pill-pane" id="interviews">
       <p> <% if @interview.first %>
-            <h5>Product Design Engineer at <%= @company.name %></h5>
+            <h5> <%= @interview.first.position %> at <%= @company.name %></h5>
             <hr class="company-divider">
-            <p>No offer </p>
-            <p>Interview Details - <%= @interview.first.content %></p>
-            <p>Interview Question - What is a binary tree?</p>
-            <p>Overall rating - 7.0 Moderately Difficulty </p>
-
+            <p><B>Interview Details</b> - <%= @interview.first.content %></p>
+	    <HR>
+            <p><b>Interview Question</B> - <%= @interview.first.questions %></p>
+            <HR>
+            <p><b>Overall rating</B> - <%= @interview.first.rating %></p>
         <% else %>
             No interviews yet...
         <% end %>
       </p>
+      <HR>
       <%= link_to 'View More Interviews', interview_url %>
     </div>
     <div class="pill-pane" id="offers">
@@ -72,15 +74,15 @@
       </div>
     </div>
     <div class="pill-pane" id="questions">
-      <h5>Recently asked questions</h5>
+      <h5>Recently Asked Questions</h5><hr>
       <p> <% if @question.first %>
-           <%= @question.first.content %> <%= @question.first.answers.count %> answers
+           <%= @question.first.content %> <br><br><b><%= @question.first.answers.count %> answers </b><hr>
         <% else %>
             No questions yet...
         <% end %>
       </p>
 
-      <%= link_to 'View More Question/Answers', question_url %>
+      <b><i><%= link_to 'View More Question/Answers', question_url %></b></i>
     </div>
   </div>
 </div>
@@ -108,7 +110,6 @@
 
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
-
 <script>
 create_plot_graph(<%= raw(@offers.to_json) %>,'offers');
 </script>

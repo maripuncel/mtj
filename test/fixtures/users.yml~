@@ -2,7 +2,6 @@
 
 
 josh:
-  id: 1
   email: "jdunc"
   password: "111"
   activated: 1 

@@ -163,3 +163,7 @@ ajax = (prefix, button, event) ->
             $(button).attr('class','voting_' + prefix)
             $('#vote_count'+question_id).replaceWith(data)
           error:(XMLHttpRequest, testStatus, errorThrown) ->
+
+
+$ ->
+  $('#form').modal()

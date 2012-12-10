@@ -64,13 +64,14 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
 <% @interviews.each do |interview| %>
     
     <h5 id="interview-cont" class="<%=interview.get_position %>">
+    <br />
     <span id="interview-rate"><%= interview.rating %></span><span id="interview-pos">&nbsp;&nbsp;<%= interview.position %> Interview Description</span>
     
     <div id="interview-date"><p align="right"><%= interview.created_at %></p></div>
     
     <%= interview.content %>
-    
-    <div id="interview-click"><p align="right">click to expand</p></div>
+	    
+	    <div id="interview-click"><p align="right">click to expand</p></div>
     </h5>
     
     <div id="interview-q" class="<%=interview.get_position %>">

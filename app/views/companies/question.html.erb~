@@ -1,0 +1,71 @@
+<% provide(:title, @company.name + " | Questions") %>
+
+<div class="container question">
+  <div class="row title">
+    <p id="notice"><%= notice %></p>
+
+    <h1 id="company-name"><%= link_to @company.name, company_url(@company) %> Questions</h1>
+    <div data-toggle="collapse" data-target="#question" id="plus-icon-question">
+          <i class="foundicon-plus"></i></div>
+  </div>
+
+
+  <hr class="company-divider">
+
+  <div id="question" class="collapse">
+    <div class="row search">
+
+      <div id="question-form" title="Write a new question">
+        <input id="question-content" name="question-content" class="text ui-widget-content ui-corner-all"/><br/>
+        <input id="question-company" name="question-company" type="hidden" value="<%= @company.id %>" /><br/>
+        <input id="add-question" class="btn spacer" value="Ask Question"/>
+      </div>
+
+    </div>
+
+    <hr class="company-divider">
+  </div>
+
+<div id="accordian", style="overflow:auto; overflow-x:hidden">
+  <% if @questions.any? %>
+      <% @questions.each do |question| %>
+          <h3 id="question-cont">
+          <div class="vote_container">
+          <% if @current_user.has_voted(question) %>
+                <div class="voting_down" id="<%= question.id %>">
+          <% else %>
+          <div class="voting_up" id="<%= question.id %>">
+           <% end %>
+            <i class="foundicon-up-arrow"></i>
+            <p id="vote_count<%= question.id %>"><%= question.vote_count %></p>
+          </div>
+
+          </div>
+          <div id="question_stuff">
+          <%= question.content %><br/>
+          <span id="question-date"><%= question.created_at %></span></div>
+          </h3>
+
+          <div>
+            <div id=<%= question.id %>>
+          <% if question.answers.any? %>
+              <% question.answers.each do |answer| %>
+
+                  <div id="answer-cont"><%= answer.content %>
+                    <span id="answer-date"><%= answer.created_at %></span>
+                  </div>
+              <% end %>
+          <% end %>
+          </div>
+
+          <%= form_tag(:class => "add-answer-btn") do %>
+            <%= text_field_tag 'answer_content', nil, :placeholder => "Your answer...", :class => "add-answer-btn" %>
+            <input class="btn spacer add-answer-btn new_answer" id="<%= question.id %>" value="Add answer"/>
+          <% end %><br/>
+          </div>
+
+      <% end %>
+  <% end %>
+</div>
+
+</div>

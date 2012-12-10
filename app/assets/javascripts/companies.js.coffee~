@@ -14,8 +14,6 @@ $ ->
     position = $('#interview-position').val()
     query = 'content=' + content + '&company=' + company + '&questions=' + questions + '&rating=' + rating + '&position=' + position
     url = root_url + '/add/interview'
-    alert(url)
-    alert(query)
     $.ajax
       type: 'POST'
       url: url
@@ -124,20 +122,25 @@ $ ->
 
 $ ->
   $('.checkbox').click ->
+    alert('clicked')
     checkbox = $(this)
     position = checkbox.val()
     if checkbox.prop('checked')
-      $(checkbox).attr('checked', true)
       elements = $('.'+position)
+      alert('is_checked')
+      alert('pos: ' + position)
       e_array = $.makeArray(elements)
       $(e_array).each ->
+        alert(this)
         element = $(this)
         $(element).show()
     else
-      $(checkbox).attr('checked', false)
       elements = $('.'+position)
+      alert('notchecked')
+      alert('pos: ' + position)
       e_array = $.makeArray(elements)
       $(e_array).each ->
+        alert(this)
         element = $(this)
         $(element).hide()
 
@@ -186,7 +189,7 @@ b = (event, button) ->
 ajax = (prefix, button, event) ->
         event.preventDefault()
         event.stopPropagation()
-        question_id = $(button).attr('id')
+        question_id = $(button).attr('id').substring(1)
         $.ajax
           type: 'POST',
           url: '/questions/' + prefix + 'vote/' + question_id,

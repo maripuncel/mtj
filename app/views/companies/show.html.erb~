@@ -32,7 +32,8 @@
           <b>Website:   </b> www.<%= @company.permalink  %>.com <br/>
         </div>
         <div class="span6" id="sub_general_right">
-          <b>Industry:  </b><%= @company.category_code  %><br />
+          <br />
+          <b>Industry:  </b><%= @company.categorycode  %><br />
         </div>
       </div>
       <div class="row-fluid">

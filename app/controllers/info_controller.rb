@@ -13,7 +13,11 @@ def get_companies()
       name = j["name"]
       permalink = j["permalink"]
       categorycode = j["category_code"]
-      c = Company.create(:name => name, :permalink => permalink, :categorycode => categorycode)    
+      c = Company.new
+      c.name = name
+      c.permalink = permalink
+      c.categorycode = categorycode
+      c.save!
     end
   end
 end

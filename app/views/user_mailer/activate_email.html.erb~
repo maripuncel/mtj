@@ -17,7 +17,7 @@
     <br />
     <br />
     <p>
-    If you did not sign up for an MIT Job Talk account, please click the following link: <%= @destroy %>.
+    If you did not sign up for an MIT Job Talk account, please click the following link: <%= @destory %>.
     </p>
   </body>
 </html>

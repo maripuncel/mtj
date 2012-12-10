@@ -1,16 +1,17 @@
 class CompaniesController < ApplicationController
 
   before_filter :check_status
-
+   
    def search
     if params[:id] == nil
       @notice = "All Companies"
       @companies = Company.all(:order => :name)
+      
     
     else
       @name = params[:id]
       @companies = Company.find(:all, :conditions => {:name => @name})
-      @companies = Company.where("name LIKE :prefix", prefix: "#{@name}%").all(:order => :name)
+      @companies = Company.where("name like :prefix", prefix: "#{@name}%").all(:order => :name)
       @notice = "Companies matching : " + @name
     end
      

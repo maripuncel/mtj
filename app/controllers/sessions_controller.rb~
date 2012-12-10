@@ -79,7 +79,7 @@ class SessionsController < ApplicationController
 	  user = User.find(:first, :conditions => {:serial => params[:serial]})
 	  
 	  #Successful activation link, set User account as activated and login user
-	  diff_seconds = (Time.now - user.created_at).round
+	  diff_seconds = (Time.now - user.created_time).round
           diff_minutes = diff_seconds / 60
 	  if user && !user.activated
             if diff_minutes < 10

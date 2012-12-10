@@ -1,6 +1,5 @@
 class Interview < ActiveRecord::Base
   attr_accessible :company_id, :content, :user_id, :rating, :questions
-
   belongs_to :company
 
   def self.add_interview(params, current_user)

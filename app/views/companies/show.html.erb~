@@ -4,7 +4,7 @@
 <div class="container company">
 <div class="row title">
 <p id="notice"><%= notice %></p>
-<h1 id="company-name"><%= @company.name %></h1>
+<h1 id="company-name"><%= link_to @company.name, company_url(@company) %></h1>
 
 </div>
 
@@ -26,40 +26,46 @@
     <div class="pill-pane active" id="general">
       <h4>General information</h4>
       <div class="row">
-        <div class="span4" id="sub_general">
+        <div class="span3" id="sub_general_left">
           <br/>
-          Website <br/>
-          HQ <br/>
-          Industry <br/>
-          Size <br/>
-          NASDAQ
+          <b>Website:  </b> www.microsoft.com <br/>
+          <b>Industry:  </b>Diversified Technology
         </div>
         <div class="span3" id="sub_general_right">
+          <br/>
+          <b>Size:  </b> Over 100,000 Employees<br/>
+          <b>NASDAQ:  </b> MSFT
+        </div>
+      </div>
+      <div class="row">
+        <div class="span7" id="sub_general">
+	  <hr>
           <h5>MIT statistics at <%= @company.name %></h5>
-          Number of Recent Interviews: <%= @company.interviews.count %> <br/>
-          Average MIT Salary: <%=  @offer %> <br/>
-          Recently asked Questions: <br/>
+          <b>Number of Recent Interviews: </b><%= @company.interviews.count %> <br/>
+          <b>Average MIT Salary: </b> <%=@company.offer_average %><%=  @offer %> <br/>
+          <b>Recently asked Questions: </b><br/>
 	  <% if @question.first != nil%>
           	<%= @question.first.content %>
 	  <% else %>
           	No Questions Yet...
 	  <% end %>
         </div>
-      </div>
+       </div>
     </div>
     <div class="pill-pane" id="interviews">
       <p> <% if @interview.first %>
-            <h5>Product Design Engineer at <%= @company.name %></h5>
+            <h5> <%= @interview.first.position %> at <%= @company.name %></h5>
             <hr class="company-divider">
-            <p>No offer </p>
-            <p>Interview Details - <%= @interview.first.content %></p>
-            <p>Interview Question - What is a binary tree?</p>
-            <p>Overall rating - 7.0 Moderately Difficulty </p>
-
+            <p><B>Interview Details</b> - <%= @interview.first.content %></p>
+	    <HR>
+            <p><b>Interview Question</B> - <%= @interview.first.questions %></p>
+            <HR>
+            <p><b>Overall rating</B> - <%= @interview.first.rating %></p>
         <% else %>
             No interviews yet...
         <% end %>
       </p>
+      <HR>
       <%= link_to 'View More Interviews', interview_url %>
     </div>
     <div class="pill-pane" id="offers">
@@ -88,7 +94,7 @@
   <p>Salary:</p>
   <input id="offer-figure" name="offer-figure" type="number" class="text ui-widget-content ui-corner-all"/><br/>
   <p>Position:</p>
-  <input id="offer-position" value="" name="offer-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag below or enter your own." size="80"></input><br/>
+  <input id="offer-position" value="" name="offer-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag below or enter your own." type="text" size="80"></input><br/>
   <div class="btn-group" data-toggle="buttons-radio" data-toggle-name="pos">
     <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>
     <button type="button" class="btn btn-mini" name="position" value="Project Manager" id="pm" data-toggle="button">Project Manager</button>

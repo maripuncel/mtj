@@ -6,4 +6,6 @@ Please verify your email address by follow this link: <%= @url %>.
 
 Thanks for joining and have a great day!
 
+
+
 If you did not sign up for an MIT Job Talk account, please click the following link: <%= @destroy %>.

@@ -24,5 +24,15 @@ class Company < ActiveRecord::Base
       return "No interviews yet..."
     end
   end
+  
+  #Conducts a case-insensitive search by company name
+  #requires: logged in user, Search parameter
+  #returns: List of companies matching search criteria
+  def self.wide_search(params)
+      @name = params[:id].downcase
+      companies = Company.find(:all, :conditions => {:name => @name})
+      companies = Company.where("lower(name) like :prefix", prefix: "#{@name}%").all(:order => :name)
+      return companies
+  end
 
 end

@@ -4,7 +4,7 @@
 <div class="container company">
 <div class="row title">
 <p id="notice"><%= notice %></p>
-<h1 id="company-name"><%= @company.name %></h1>
+<h1 id="company-name"><%= link_to @company.name, company_url(@company) %></h1>
 
 </div>
 

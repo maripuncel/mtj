@@ -21,11 +21,8 @@
 <div class="container offer">
   <div class="row title">
     <p id="notice"><%= notice %></p>
-    <%= link_to(company_url) do %>
-       <div id="back-icon">
-        <i class="foundicon-left-arrow"></i></div>
-    <% end %>
-    <h1 id="company-name"><%= @company.name %> Offers</h1>
+
+    <h1 id="company-name"><%= link_to @company.name, company_url(@company) %> Offers</h1>
     <div id="plus-icon-i">
     <i class="foundicon-plus"></i></div>
   </div>

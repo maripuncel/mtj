@@ -102,6 +102,21 @@ $ ->
     collapsible: true
     autoHeight: false
 
+$ ->
+    $('.new_answer').click ->
+      button = this
+      answer_content = $(button).siblings('[name="answer_content"]').val()
+      answer_question = $(button).attr('id')
+      if (answer_content != "")
+        $.ajax
+          type:'POST',
+          url:'/questions/create_answer?answer_content=' + answer_content + '&answer_question=' + answer_question,
+          dataType:'html',
+          success: (data) ->
+            $('#'+answer_question).append(data)
+            $(button).siblings('[name="answer_content"]').val('Your answer...').change()
+          error:(XMLHttpRequest, testStatus, errorThrown) ->
+
 
 
 

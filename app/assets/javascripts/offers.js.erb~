@@ -487,8 +487,6 @@ function reset_checked() {
     elements = $('.checkbox');
     e_array = $.makeArray(elements);
     $.each(e_array, function(index, value) {
-      alert(value);
       $(value).attr('checked',true);
-      alert('a');
     });
 }

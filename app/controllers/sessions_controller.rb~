@@ -81,10 +81,14 @@ class SessionsController < ApplicationController
 	  #Successful activation link, set User account as activated and login user
 	  diff_seconds = (Time.now - user.created_time).round
           diff_minutes = diff_seconds / 60
-	  if user && !user.activated && diff_minutes < 10
-	    User.update(user.id, :activated => 1)
-	    flash[:notice] = 'Successfully activated and logged in'
-	    session[:user_id] = user.id
+	  if user && !user.activated
+            if diff_minutes < 10
+	      User.update(user.id, :activated => 1)
+	      flash[:notice] = 'Successfully activated and logged in'
+	      session[:user_id] = user.id
+            else
+              flash[:notice] = 'Expired link'
+            end
 	  #Invalid activation
 	  elsif
 	    flash[:notice] = 'Invalid link'  

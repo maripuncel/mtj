@@ -26,7 +26,7 @@
     <hr class="company-divider">
   </div>
 
-<div id="accordian", style="overflow:auto; overflow-x:hidden">
+<div id="accordian", style="overflow:auto; height: 400px; overflow-x:hidden">
   <% if @questions.any? %>
       <% @questions.each do |question| %>
           <h3 id="question-cont">

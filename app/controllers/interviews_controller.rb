@@ -18,7 +18,7 @@ class InterviewsController < ApplicationController
   # effects: create new interview and redirects to company's interview page
   def create
     @interview = Interview.add_interview(params, @current_user)
-    render :text => root_url + 'companies/' + params[:company] + '/interviews'
+    render :interview, :layout => false
   end
 
   # PUT /interviews/1

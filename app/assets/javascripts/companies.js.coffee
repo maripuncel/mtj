@@ -18,8 +18,16 @@ $ ->
       type: 'POST'
       url: url
       data: query
-      success: (data, code, xmlhttp) ->
-        window.location = xmlhttp.responseText
+      success: (data) ->
+        $('#accordian').append(data)
+        $('#accordian').accordion('destroy')
+        $('#accordian').accordion
+          collapsible: true
+          autoHeight: false
+          active: false
+        $('#accordian').accordion('option', 'active', ':last')
+        $('#form').modal('hide')
+      error:(XMLHttpRequest, testStatus, errorThrown) ->
 
 $ ->
   $('#add-offer').click (e) ->
@@ -166,4 +174,4 @@ ajax = (prefix, button, event) ->
 
 
 $ ->
-  $('#form').modal()
+  $('#form').modal('hide')

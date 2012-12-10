@@ -41,7 +41,7 @@ function load()
      if ($('#company_name').val() == "")
 	{
 	  url = '/companies/search';
-	  $('#add_button').hide();
+	//  $('#add_button').hide();
 	}
      else
 	{

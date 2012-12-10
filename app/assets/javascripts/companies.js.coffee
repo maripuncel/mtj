@@ -21,7 +21,7 @@ $ ->
       url: url
       data: query
       success: (data) ->
-        
+        a = data
         
       error:(XMLHttpRequest, testStatus, errorThrown) ->
         alert('error: ' + errorThrown)

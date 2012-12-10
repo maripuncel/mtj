@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
   # effects: creates and renders new answer
   def create_answer
     @question = Question.find(params[:answer_question])
-    @answer = @question.add_answer(params, @current_user)
+    @newanswer = @question.add_answer(params, @current_user)
     render :answer, :layout => false
   end
 

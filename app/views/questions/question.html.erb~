@@ -1,0 +1,27 @@
+<h3 id="question-cont">
+  <div class="voting">
+    <i class="foundicon-up-arrow"></i>
+    <p id="vote_count"><%= question.votes %></p>
+  </div>
+  <div id="question_stuff">
+    <%= question.content %><br/>
+    <span id="question-date"><%= question.created_at %></span></div>
+</h3>
+
+<div role="tabpanel" style="display: block; ">
+  <div id="<%= @question.id %>" >
+    <% if @question.answers.any? %>
+        <% @question.answers.each do |answer| %>
+
+            <div id="answer-cont"><%= answer.content %>
+              <span id="answer-date"><%= answer.created_at %></span>
+            </div>
+        <% end %>
+    <% end %>
+  </div>
+
+  <%= form_tag(:class => "add-answer-btn") do %>
+      <%= text_field_tag 'answer_content', nil, :placeholder => "Your answer...", :class => "add-answer-btn" %>
+      <input class="btn spacer add-answer-btn new_answer" id="<%= @question.id %>" value="Add answer"/>
+  <% end %><br/>
+</div>

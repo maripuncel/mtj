@@ -12,7 +12,7 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
   <textarea id="interview-questions" name="interview-questions" placeholder="Write the questions you received during your interview."></textarea><br/>
   <p>Rate the difficulty from 1-10, 1 being extremely easy and 10 being extremely difficult.</p>
   <input id="interview-rating" name="interview-rating" type="number" class="text ui-widget-content ui-corner-all" value=5 /><br/>
-  <textarea id="interview-position" value="" name="interview-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag
+  <textarea id="interview-position" name="interview-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag
   below or enter your own."></textarea><br/>
   <div class="btn-group" data-toggle="buttons-radio" data-toggle-name="pos">
     <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>

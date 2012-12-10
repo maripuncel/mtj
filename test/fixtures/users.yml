@@ -3,8 +3,8 @@
 
 josh:
   id: 1
-  email: "jdunc"
-  password: "111"
+  email: "jdunc@mit.edu"
+  password: "11111"
   activated: true 
   serial: 1
   admin: false

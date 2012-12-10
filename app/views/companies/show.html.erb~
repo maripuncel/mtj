@@ -1,0 +1,128 @@
+<% provide(:title, @company.name) %>
+
+
+<div class="container company">
+<div class="row title">
+<p id="notice"><%= notice %></p>
+<h1 id="company-name"><%= link_to @company.name, company_url(@company) %></h1>
+
+</div>
+
+
+
+
+<hr class="company-divider">
+
+<div class="row">
+  <div class="span2 offset1">
+    <ul class="nav nav-pills nav-stacked" id="company_nav">
+      <li class="active"><a href="#general" data-toggle="pill">General</a></li>
+      <li><a href="#interviews" data-toggle="pill">Interviews</a></li>
+      <li><a href="#offers" data-toggle="pill">Offers</a></li>
+      <li><a href="#questions" data-toggle="pill">Questions</a></li>
+    </ul>
+  </div>
+  <div class="span8 pill-content">
+    <div class="pill-pane active" id="general">
+      <h4>General information</h4>
+      
+      <div class="row-fluid">
+        <div class="span6" id="sub_general_left">
+          <br/>
+          <b>Website:   </b> www.microsoft.com <br/>
+          <b>Industry:  </b>Diversified Technology
+        </div>
+        <div class="span6" id="sub_general_right">
+          <br/>
+          <b>Size:  </b> Over 100,000 Employees<br/>
+          <b>NASDAQ:  </b> MSFT
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12" id="sub_general">
+	  <hr>
+          <h4>MIT Statistics at <%= @company.name %></h4>
+          <p><b>Number of Recent Interviews: </b><%= @company.interviews.count %> </p><br/>
+          <p><b>Average MIT Salary: </b> <%=  @company.offer_average() %> </p><br>
+          <p><b>Recently Asked Questions: </b></p>
+	  <% if @questions.first != nil%>
+          	<%= @questions.first.content %>
+
+	  <% else %>
+          	No Questions Yet...
+	  <% end %>
+        </div>
+       </div>
+    </div>
+    <div class="pill-pane" id="interviews">
+      <p> <% if @interview.first %>
+            <h5> <%= @interview.first.position %> at <%= @company.name %></h5>
+            <hr class="company-divider">
+            <p><B>Interview Details</b> - <%= @interview.first.content %></p>
+	    <HR>
+            <p><b>Interview Question</B> - <%= @interview.first.questions %></p>
+            <HR>
+            <p><b>Overall rating</B> - <%= @interview.first.rating %></p>
+        <% else %>
+            No interviews yet...
+        <% end %>
+      </p>
+      <HR>
+     <b><i> <%= link_to 'View More Interviews', interview_url %></b></i>
+    </div>
+    <div class="pill-pane" id="offers">
+      <a id="plus-icon-question" href="#offer_form" role="button" class="btn" data-toggle="modal">
+        <i class="foundicon-plus"></i></a>
+
+    </div>
+    <div class="pill-pane" id="questions">
+      <h5>Recently asked questions</h5>
+      <hr>
+      <p> <% if @questions.any? %>
+           <% @questions.each do |question| %>
+           <%= question.content %> <br>
+	   <b><i><%= pluralize(question.answers.count, " answer")%></b></i><br/>
+           <hr>
+           <% end %>
+        <% else %>
+            No questions yet...
+        <% end %>
+      </p>
+
+      <b><i><%= link_to 'View More Question/Answers', question_url %></b></i>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div id="offer_form" class="modal hide fade" tabindex="-1" role="dialog" aria-labeledby="offer_add_label" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+    <h3 id="offer_add_label">Add an offer</h3>
+  </div>
+  <div class="modal-body">
+    <p>Salary:</p>
+    <input id="offer-figure" name="offer-figure" type="number" class="text ui-widget-content ui-corner-all"/><br/>
+    <p>Position:</p>
+    <input id="offer-position" value="" name="offer-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag below or enter your own." type="text" size="80"></input><br/>
+    <div class="btn-group" data-toggle="buttons-radio" data-toggle-name="off">
+      <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>
+      <button type="button" class="btn btn-mini" name="position" value="Project Manager" id="pm" data-toggle="button">Project Manager</button>
+      <button type="button" class="btn btn-mini" name="position" value="Trader" id="trader" data-toggle="button">Trader</button>
+      <button type="button" class="btn btn-mini" name="position" value="Consultant" id="consultant" data-toggle="button">Consultant</button>
+      <button type="button" class="btn btn-mini" name="position" value="Analyst" id="analyst" data-toggle="button">Analyst</button>
+      <button type="button" class="btn btn-mini" name="position" value="Researcher" id="researcher" data-toggle="button">Researcher</button>
+    </div></div>
+  <div class="modal-footer">
+    <input id="offer-company" name="offer-company" type="hidden" value="<%= @company.id %>" /><br/>
+    <a id="add-offer" class="btn spacer">Add Offer</a>
+  </div>
+</div>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+create_plot_graph(<%= raw(@offers.to_json) %>,'offers');
+</script>

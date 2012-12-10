@@ -1,18 +1,18 @@
 <% provide(:title, @company.name + " | Interviews") %>
 
 
-<div id="form" class="modal hide fade" tabindex="-1" role="dialog" aria-labeledby="interview_add_label" aria-hidden="true">
+<div id="form" class="modal hide fade" tabindex="-1" role="dialog" aria-labeledby="interview_add_label"  aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
     <h3 id="interview_add_label">Add an interview</h3>
   </div>
   <div class="modal-body">
-  <textarea id="interview-content" name="interview-content" placeholder="Describe
+  <textarea id="interview-content" name="interview-content" placeholder="Describe 
 your interview experience: walk through the process." rows="5" cols="35" ></textarea><br/>
   <textarea id="interview-questions" name="interview-questions" placeholder="Write the questions you received during your interview."></textarea><br/>
   <p>Rate the difficulty from 1-10, 1 being extremely easy and 10 being extremely difficult.</p>
-  <input id="interview-rating" name="interview-rating" type="number" class="text ui-widget-content ui-corner-all"/><br/>
-  <textarea id="interview-position" value="" name="interview-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag
+  <input id="interview-rating" name="interview-rating" type="number" class="text ui-widget-content ui-corner-all" value=5 /><br/>
+  <textarea id="interview-position" name="interview-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag
   below or enter your own."></textarea><br/>
   <div class="btn-group" data-toggle="buttons-radio" data-toggle-name="pos">
     <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>
@@ -70,14 +70,14 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
     
     <%= interview.content %>
     
+    <div id="interview-click"><p align="right">click to expand</p></div>
     </h5>
     
     <div id="interview-q" class="<%=interview.get_position %>">
       <b><i>Interview Questions</B></i> <br/><br>
       <%= interview.questions %>
       <br><br>
-      <b><i><%= link_to 'Edit this Interview', edit_interview_path(interview) %> |
-    <%= link_to 'Destroy this Interview', interview, method: :delete, data: { confirm: 'Are you sure you want to delete this Interview?' } %></b></i></div>
+      </div>
 <% end %>
 <% end %>
 </div>

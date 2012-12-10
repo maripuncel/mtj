@@ -79,18 +79,17 @@ class SessionsController < ApplicationController
 	  user = User.find(:first, :conditions => {:serial => params[:serial]})
 	  
 	  #Successful activation link, set User account as activated and login user
-	  if user && !user.activated && 
+	  diff_seconds = (Time.now - user.created_time).round
+          diff_minutes = diff_seconds / 60
+	  if user && !user.activated && diff_minutes < 10
 	    User.update(user.id, :activated => 1)
 	    flash[:notice] = 'Successfully activated and logged in'
 	    session[:user_id] = user.id
-	    redirect_to :root
-
 	  #Invalid activation
 	  elsif
-	    flash[:notice] = 'Invalid or expired link'
-	    redirect_to :root
+	    flash[:notice] = 'Invalid link'  
 	  end
-
+          redirect_to :root
 	end
 
 	def deactivate
@@ -98,7 +97,6 @@ class SessionsController < ApplicationController
 	  User.destroy(user.id)
 	  flash[:notice] = 'Account successfully destroyed'
 	  redirect_to :root
-	  end
 
 	end
 

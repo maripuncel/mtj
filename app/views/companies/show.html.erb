@@ -25,20 +25,20 @@
   <div class="span8 pill-content">
     <div class="pill-pane active" id="general">
       <h4>General information</h4>
-      <div class="row">
-        <div class="span3" id="sub_general_left">
+      <div class="row-fluid">
+        <div class="span6" id="sub_general_left">
           <br/>
-          <b>Website:  </b> www.microsoft.com <br/>
+          <b>Website:   </b> www.microsoft.com <br/>
           <b>Industry:  </b>Diversified Technology
         </div>
-        <div class="span3" id="sub_general_right">
+        <div class="span6" id="sub_general_right">
           <br/>
           <b>Size:  </b> Over 100,000 Employees<br/>
           <b>NASDAQ:  </b> MSFT
         </div>
       </div>
-      <div class="row">
-        <div class="span7" id="sub_general">
+      <div class="row-fluid">
+        <div class="span12" id="sub_general">
 	  <hr>
           <h5>MIT statistics at <%= @company.name %></h5>
           Number of Recent Interviews: <%= @company.interviews.count %> <br/>
@@ -67,7 +67,7 @@
         <% end %>
       </p>
       <HR>
-      <%= link_to 'View More Interviews', interview_url %>
+     <b><i> <%= link_to 'View More Interviews', interview_url %></b></i>
     </div>
     <div class="pill-pane" id="offers">
       <div id="plus-icon-i">
@@ -85,7 +85,7 @@
         <% end %>
       </p>
 
-      <%= link_to 'View More Question/Answers', question_url %>
+      <b><i><%= link_to 'View More Question/Answers', question_url %></b></i>
     </div>
   </div>
 </div>

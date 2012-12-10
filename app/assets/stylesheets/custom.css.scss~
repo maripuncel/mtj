@@ -241,7 +241,6 @@ body {
 
 #accordian div {
   border: none;
-  overflow: hidden;
 }
 
 /* home page */
@@ -395,6 +394,10 @@ footer p {
 
 #up_arrow {
   margin-right:5px;
+}
+
+#sub_general_left {
+margin-right: 20px;
 }
 
 

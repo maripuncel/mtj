@@ -25,24 +25,24 @@
   <div class="span8 pill-content">
     <div class="pill-pane active" id="general">
       <h4>General information</h4>
-      <div class="row">
-        <div class="span3" id="sub_general_left">
+      <div class="row-fluid">
+        <div class="span6" id="sub_general_left">
           <br/>
-          <b>Website:  </b> www.microsoft.com <br/>
+          <b>Website:   </b> www.microsoft.com <br/>
           <b>Industry:  </b>Diversified Technology
         </div>
-        <div class="span3" id="sub_general_right">
+        <div class="span6" id="sub_general_right">
           <br/>
           <b>Size:  </b> Over 100,000 Employees<br/>
           <b>NASDAQ:  </b> MSFT
         </div>
       </div>
-      <div class="row">
-        <div class="span7" id="sub_general">
+      <div class="row-fluid">
+        <div class="span12" id="sub_general">
 	  <hr>
           <h5>MIT statistics at <%= @company.name %></h5>
-          <b>Number of Recent Interviews: </b><%= @company.interviews.count %> <br/>
-          <b>Average MIT Salary: </b> <%=@company.offer_average %><%=  @offer %> <br/>
+          <b>Number of Recent Interviews: </b><%= @company.interviews.count %> <br>
+          <b>Average MIT Salary: </b> <%=@company.offer_average %><%=  @offer %> <br/><br>
           <b>Recently asked Questions: </b><br/>
 	  <% if @question.first != nil%>
           	<%= @question.first.content %>
@@ -66,7 +66,7 @@
         <% end %>
       </p>
       <HR>
-      <%= link_to 'View More Interviews', interview_url %>
+     <b><i> <%= link_to 'View More Interviews', interview_url %></b></i>
     </div>
     <div class="pill-pane" id="offers">
       <div id="plus-icon-i">
@@ -74,15 +74,15 @@
       </div>
     </div>
     <div class="pill-pane" id="questions">
-      <h5>Recently asked questions</h5>
+      <h5>Recently Asked Questions</h5><hr>
       <p> <% if @question.first %>
-           <%= @question.first.content %> <%= @question.first.answers.count %> answers
+           <%= @question.first.content %> <br><br><b><%= @question.first.answers.count %> answers </b><hr>
         <% else %>
             No questions yet...
         <% end %>
       </p>
 
-      <%= link_to 'View More Question/Answers', question_url %>
+      <b><i><%= link_to 'View More Question/Answers', question_url %></b></i>
     </div>
   </div>
 </div>

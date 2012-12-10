@@ -79,7 +79,7 @@ class SessionsController < ApplicationController
 	  user = User.find(:first, :conditions => {:serial => params[:serial]})
 	  
 	  #Successful activation link, set User account as activated and login user
-	  if user && !user.activated && 
+	  if user && !user.activated
 	    User.update(user.id, :activated => 1)
 	    flash[:notice] = 'Successfully activated and logged in'
 	    session[:user_id] = user.id

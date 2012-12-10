@@ -45,7 +45,7 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
   <div class="row search">
 
     <div class="search btn-group" data-toggle="buttons-checkbox" data-toggle-name="checkbox">
-      <label class="checkbox"><input type="checkbox" value="Developer" class="checkbox" data-toggle="button" checked="true" />Developer</label>
+      <label class="checkbox"><input type="checkbox" value="Developer" class="checkbox" data-toggle="button" checked="true" value="true" />Developer</label>
       <label class="checkbox"><input type="checkbox" value="Manager" class="checkbox " data-toggle="button" checked="true"/>Manager</label>
       <label class="checkbox"><input type="checkbox" value="Trader" class="checkbox" data-toggle="button" checked="true"/>Trader</label>
       <label class="checkbox"><input type="checkbox" value="Consultant" class="checkbox" data-toggle="button" checked="true"/>Consultant</label>
@@ -63,7 +63,7 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
 <% if @interviews.any? %>
 <% @interviews.each do |interview| %>
     
-    <h5 id="interview-cont" class="<%=interview.get_position %>">
+    <h5 id="interview-cont" class="<%= interview.position %>">
     <br />
     <span id="interview-rate"><%= interview.rating %></span><span id="interview-pos">&nbsp;&nbsp;<%= interview.position %> Interview Description</span>
     
@@ -74,7 +74,7 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
 	    <div id="interview-click"><p align="right">click to expand</p></div>
     </h5>
     
-    <div id="interview-q" class="<%=interview.get_position %>">
+    <div id="interview-q" class="<%=interview.position %>">
       <b><i>Interview Questions</B></i> <br/><br>
       <%= interview.questions %>
       <br><br>
@@ -84,3 +84,5 @@ your interview experience: walk through the process." rows="5" cols="35" ></text
 </div>
 
 </div>
+
+

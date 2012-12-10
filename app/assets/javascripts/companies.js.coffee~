@@ -122,25 +122,18 @@ $ ->
 
 $ ->
   $('.checkbox').click ->
-    alert('clicked')
     checkbox = $(this)
     position = checkbox.val()
     if checkbox.prop('checked')
       elements = $('.'+position)
-      alert('is_checked')
-      alert('pos: ' + position)
       e_array = $.makeArray(elements)
       $(e_array).each ->
-        alert(this)
         element = $(this)
         $(element).show()
     else
       elements = $('.'+position)
-      alert('notchecked')
-      alert('pos: ' + position)
       e_array = $.makeArray(elements)
       $(e_array).each ->
-        alert(this)
         element = $(this)
         $(element).hide()
 

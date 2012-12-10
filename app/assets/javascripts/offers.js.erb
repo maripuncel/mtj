@@ -482,3 +482,11 @@ for(var i = 0; i < graph_data.length; i++) {
 
 }
 
+
+function reset_checked() {
+    elements = $('.checkbox');
+    e_array = $.makeArray(elements);
+    $.each(e_array, function(index, value) {
+      $(value).attr('checked',true);
+    });
+}

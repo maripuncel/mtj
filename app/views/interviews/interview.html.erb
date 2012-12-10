@@ -1,9 +1,9 @@
 <h5 id="interview-cont" class="<%= @interview.get_position %>">
-  <span id="interview-rate"><%= interview.rating %></span><span id="interview-pos">&nbsp;&nbsp;<%= @interview.position %></span>
+  <span id="interview-rate"><%= @interview.rating %></span><span id="interview-pos">&nbsp;&nbsp;<%= @interview.position %></span>
 
-  <div id="interview-date"><p align="right"><%= interview.created_at %></p></div>
+  <div id="interview-date"><p align="right"><%= @interview.created_at %></p></div>
 
-  <%= interview.content %>
+  <%= @interview.content %>
 
 </h5>
 

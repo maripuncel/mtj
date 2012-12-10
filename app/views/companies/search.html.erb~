@@ -5,11 +5,12 @@
 <h4><i><%= @notice %></h4></i>
 <br />
 
-<% if @companies == []%>
 <%= javascript_tag  do %>
+<% if @companies == []%>
 $('#add_button').toggle(true);
+<% else %>
+$('#add_button').toggle(false);
 <% end %>
-
 <% end %>
 <table>
 <% @companies.each do |company| %>

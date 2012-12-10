@@ -10,7 +10,7 @@ function loaddata(url)
       }
     });
     
-    $('#companies').html(data);
+    
 }
 
 function load()

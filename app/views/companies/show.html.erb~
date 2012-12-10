@@ -61,9 +61,8 @@
     </div>
     <div class="pill-pane" id="offers">
       <p><%= @offer %></p>
-<!--
-      <%= link_to 'View More Offers', offer_url%> 
--->
+
+      <%= link_to 'View More Offers', offer_url%>
     </div>
     <div class="pill-pane" id="questions">
       <h5>Recently asked questions</h5>

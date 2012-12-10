@@ -61,6 +61,7 @@ your interview experience: walk through the process." rows="5" cols="15" ></text
     
     <div id="interview-date"><p align="right"><%= interview.created_at %></p></div>
     
+    
     <%= interview.content %>
     
     </h5>

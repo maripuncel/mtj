@@ -8,6 +8,9 @@
 
 </div>
 
+
+
+
 <hr class="company-divider">
 
 <div class="row">
@@ -53,17 +56,16 @@
             <p>Interview Question - What is a binary tree?</p>
             <p>Overall rating - 7.0 Moderately Difficulty </p>
 
-    <% else %>
+        <% else %>
             No interviews yet...
         <% end %>
       </p>
       <%= link_to 'View More Interviews', interview_url %>
     </div>
     <div class="pill-pane" id="offers">
-      <p><%= @offer %></p>
-<!--
-      <%= link_to 'View More Offers', offer_url%> 
--->
+      <div id="plus-icon-i">
+        <i class="foundicon-plus"></i>
+      </div>
     </div>
     <div class="pill-pane" id="questions">
       <h5>Recently asked questions</h5>
@@ -81,6 +83,26 @@
 
 </div>
 </div>
+
+<div id="dialog-form-i" title="Submit a new offer" xmlns="http://www.w3.org/1999/html">
+  <p>Salary:</p>
+  <input id="offer-figure" name="offer-figure" type="number" class="text ui-widget-content ui-corner-all"/><br/>
+  <p>Position:</p>
+  <input id="offer-position" value="" name="offer-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag below or enter your own." type="text" size="80"></input><br/>
+  <div class="btn-group" data-toggle="buttons-radio" data-toggle-name="pos">
+    <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>
+    <button type="button" class="btn btn-mini" name="position" value="Project Manager" id="pm" data-toggle="button">Project Manager</button>
+    <button type="button" class="btn btn-mini" name="position" value="Trader" id="trader" data-toggle="button">Trader</button>
+    </br>
+    <button type="button" class="btn btn-mini" name="position" value="Consultant" id="consultant" data-toggle="button">Consultant</button>
+    <button type="button" class="btn btn-mini" name="position" value="Analyst" id="analyst" data-toggle="button">Analyst</button>
+    <button type="button" class="btn btn-mini" name="position" value="Researcher" id="researcher" data-toggle="button">Researcher</button>
+  </div><br/>
+  <input id="offer-company" name="offer-company" type="hidden" value="<%= @company.id %>" /><br/>
+  <a id="add-offer" class="btn spacer">Add Offer</a>
+</div>
+
+
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 create_plot_graph(<%= raw(@offers.to_json) %>,'offers');

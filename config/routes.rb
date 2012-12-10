@@ -10,8 +10,10 @@ Mtj::Application.routes.draw do
 
   root :to =>  "static_pages#home"
 
+  match 'companies/search', to: "companies#search"
   resources :companies
   resources :users
+  
   match 'companies/search/:id', to: "companies#search"
   match 'companies/:id/interviews', to: 'companies#interview', :as => :interview
   match 'companies/:id/new_interview', to: 'companies#new_interview', :as => :new_interview

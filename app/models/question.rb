@@ -3,6 +3,9 @@ class Question < ActiveRecord::Base
   belongs_to :company
   has_many :answers
 
+  # requires: question content, company_id, and current_user
+  # modifies: Question table
+  # effects: new question created
   def self.add_question(params, current_user)
     question = Question.new
     question.content = params[:content]
@@ -17,6 +20,9 @@ class Question < ActiveRecord::Base
     self.update_attribute(:content, content)
   end
 
+  # requires: answer content and current_user
+  # modifies: Answer table
+  # effects: creates new answer for given question
   def add_answer(params, current_user)
     answer = Answer.new
     answer.content = params[:answer_content]
@@ -26,6 +32,7 @@ class Question < ActiveRecord::Base
     return answer
   end
 
+  # returns the number of votes for given question
   def vote_count
     count = Vote.find_all_by_question_id(self.id)
     if count

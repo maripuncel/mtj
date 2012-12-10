@@ -2,14 +2,9 @@ class QuestionsController < ApplicationController
 
   before_filter :check_status
 
-  def check_status
-    if !current_user()
-      flash.now[:notice] = 'You must log in to view that page'
-      redirect_to "/login"
-    end
-  end
-
   # GET /questions/1/edit
+  # requires: logged in as admin and question exists with given id
+  # effects: returns question edit form
   def edit
     @question = Question.find(params[:id])
     if @question.user_id != @current_user.id
@@ -19,12 +14,18 @@ class QuestionsController < ApplicationController
   end
 
   # POST /questions
-  # POST /questions.json
+  # requires: user logged in and valid question attributes
+  # modifies: Question table
+  # effects: creates and renders new question
   def create_question
     @question = Question.add_question(params, @current_user)
     render :question, :layout => false
   end
 
+  # POST /questions/:id/answers
+  # requires: user logged in and question exists with given id
+  # modifies: Question and Answer table
+  # effects: creates and renders new answer
   def create_answer
     @question = Question.find(params[:answer_question])
     @answer = @question.add_answer(params, @current_user)
@@ -32,7 +33,9 @@ class QuestionsController < ApplicationController
   end
 
   # PUT /questions/1
-  # PUT /questions/1.json
+  # requires: user logged in as admin and question exists with given id
+  # modifies: Question table
+  # effects: updates question attributes
   def update
     @question = Question.find(params[:id])
 
@@ -48,7 +51,9 @@ class QuestionsController < ApplicationController
   end
 
   # DELETE /questions/1
-  # DELETE /questions/1.json
+  # requires: user logged in as admin and question exists with given id
+  # modifies: Question table
+  # effects: question destroyed
   def destroy
     @question = Question.find(params[:id])
     @question.destroy
@@ -59,12 +64,21 @@ class QuestionsController < ApplicationController
     end
   end
 
+  # POST /questions/upvote/:id
+  # requires: user logged in and question exists with given id
+  # modifies: Vote table
+  # effects: vote for given question and user logged
   def upvote
     @question = Question.find(params[:id])
     @current_user.upvote(@question)
     render :upvote, :layout => false
   end
 
+  # POST /questions/downvote/:id
+  # requires: user logged in and question exists with given id
+  # and user vote for given question exists
+  # modifies: Vote table
+  # effects: vote for given question and user removed
   def downvote
     @question = Question.find(params[:id])
     @current_user.downvote(@question)

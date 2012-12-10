@@ -1,13 +1,14 @@
 class CompaniesController < ApplicationController
 
   before_filter :check_status
-   
-   def search
+
+  # POST /companies/search/:id
+  # requires: user logged in
+  # effects: prefix search for :id and returns any matching companies
+  def search
     if params[:id] == nil
       @notice = "All Companies"
       @companies = Company.all(:order => :name)
-      
-    
     else
       @name = params[:id]
       @companies = Company.find(:all, :conditions => {:name => @name})
@@ -16,23 +17,15 @@ class CompaniesController < ApplicationController
     end
      
     if @companies == []
-	@notice = "No Company named \""+ @name + "\" found."	
-
+	    @notice = "No Company named \""+ @name + "\" found."
     end
     render :search, :layout => false
- end
-	
-  def check_status
-    if !current_user()
-      flash.now[:notice] = 'You must log in to view that page'
-      redirect_to "/login"
-    end
   end
 
   # GET /companies
-  # GET /companies.json
+  # requires: user logged in
+  # effects: returns all companies in db, ordered alphabetically
   def index
-   
     @companies = Company.all(:order => :name)
 
     respond_to do |format|
@@ -40,10 +33,10 @@ class CompaniesController < ApplicationController
       format.json { render json: @companies }
     end
   end
-  
 
   # GET /companies/1
-  # GET /companies/1.json
+  # requires: company exists with given id
+  # effects: returns company landing page, with interview, offer, and question info
   def show
     @company = Company.find(params[:id])
     @interview = Interview.all( :conditions => {:company_id => [@company.id]}, :limit => 1)
@@ -56,25 +49,39 @@ class CompaniesController < ApplicationController
     end
   end
 
-  # Show company interviews
+  # GET /companies/:id/interviews
+  # requires: company exists with given id
+  # effects: returns interview landing page
   def interview
     @company = Company.find(params[:id])
     @interviews = @company.interviews.all
   end
 
+  # GET /companies/:id/new_interview
+  # requires: company exists with given id
+  # effects: returns new interview form
   def new_interview
     @company = Company.find(params[:id])
   end
 
+  # GET /companies/:id/offers
+  # requires: company exists with given id
+  # effects: returns offer landing page
   def offer
     @company = Company.find(params[:id])
     @offers = @company.offers.all
   end
 
+  # GET /companies/:id/new_offer
+  # requires: company exists with given id
+  # effects: returns new offer form
   def new_offer
     @company = Company.find(params[:id])
   end
 
+  # GET /companies/:id/questions
+  # requires: company exists with given id
+  # effects: returns offer question page
   def question
     @company = Company.find(params[:id])
     @questions = @company.questions.all
@@ -82,7 +89,9 @@ class CompaniesController < ApplicationController
   end
 
   # GET /companies/new
-  # GET /companies/new.json
+  # requires: user logged in
+  # modifies: Company table
+  # effects: returns new company form
   def new
     @company = Company.new
 
@@ -93,13 +102,17 @@ class CompaniesController < ApplicationController
   end
 
   # GET /companies/1/edit
+  # requires: user logged in as admin
+  # effects: returns company edit form
   def edit
     admin()
     @company = Company.find(params[:id])
   end
 
   # POST /companies
-  # POST /companies.json
+  # requires: company attributes valid
+  # modifies: Company table
+  # effects: new company created and redirect to company landing page
   def create
     @company = Company.new(params[:company])
 
@@ -115,7 +128,9 @@ class CompaniesController < ApplicationController
   end
 
   # PUT /companies/1
-  # PUT /companies/1.json
+  # requires: logged in as admin
+  # modifies: Company table
+  # effects: company attributes updated and redirect to company landing page
   def update
     @company = Company.find(params[:id])
 
@@ -131,7 +146,9 @@ class CompaniesController < ApplicationController
   end
 
   # DELETE /companies/1
-  # DELETE /companies/1.json
+  # requires: logged in as admin
+  # modifies: Company table
+  # effects: company destroyed
   def destroy
     @company = Company.find(params[:id])
     @company.destroy

@@ -32,9 +32,9 @@
           <h3 id="question-cont">
           <div class="vote_container">
           <% if @current_user.has_voted(question) %>
-                <div class="voting_down" id="<%= question.id %>">
+                <div class="voting_down" id="q<%= question.id %>">
           <% else %>
-          <div class="voting_up" id="<%= question.id %>">
+          <div class="voting_up" id="q<%= question.id %>">
            <% end %>
             <i class="foundicon-up-arrow"></i>
             <p id="vote_count<%= question.id %>"><%= question.vote_count %></p>
@@ -59,8 +59,8 @@
           </div>
 
           <%= form_tag(:class => "add-answer-btn") do %>
-            <%= text_field_tag 'answer_content', nil, :placeholder => "Your answer...", :class => "add-answer-btn" %>
-            <input class="btn spacer add-answer-btn new_answer" id="<%= question.id %>" value="Add answer"/>
+            <%= text_field_tag 'answer_content', nil, :placeholder => 'Your answer...', :class => "add-answer-btn" %>
+            <input class="btn spacer add-answer-btn new_answer" id="<%= question.id %>" placeholder="Add answer"/>
           <% end %><br/>
           </div>
 

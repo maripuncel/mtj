@@ -134,7 +134,7 @@ body {
 }
 
 #interview-q {
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   border: 1px;
   border-radius: 2px;
   margin-left: 15%;
@@ -174,7 +174,7 @@ body {
 }
 
 #add-answer-btn{
-  color:white;
+  color:gray;
   display: inline-block;
 }
 

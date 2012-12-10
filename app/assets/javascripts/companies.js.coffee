@@ -19,6 +19,7 @@ $ ->
       url: url
       data: query
       success: (data) ->
+        $('#form').modal('hide')
         $('#accordian').append(data)
         $('#accordian').accordion('destroy')
         $('#accordian').accordion
@@ -26,7 +27,7 @@ $ ->
           autoHeight: false
           active: false
         $('#accordian').accordion('option', 'active', ':last')
-        $('#form').modal('hide')
+        
       error:(XMLHttpRequest, testStatus, errorThrown) ->
 
 $ ->

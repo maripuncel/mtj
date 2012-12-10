@@ -41,10 +41,10 @@
       <div class="row-fluid">
         <div class="span12" id="sub_general">
 	  <hr>
-          <h5>MIT statistics at <%= @company.name %></h5>
-          Number of Recent Interviews: <%= @company.interviews.count %> <br/>
-          Average MIT Salary: <%=  @offer %> <br/>
-          Recently asked Questions: <br/>
+          <h4>MIT statistics at <%= @company.name %></h4>
+          <b>Number of Recent Interviews: </b><%= @company.interviews.count %> <br/>
+          <b>Average MIT Salary: </b> <%=  @company.offer_average() %> <br/><br>
+          <b>Recently asked Questions: </b><br/>
 	  <% if @questions.first != nil%>
           	<%= @questions.first.content %>
 

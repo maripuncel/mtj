@@ -20,6 +20,7 @@ class StaticPagesController < ApplicationController
 
   def login
     redirect_if_logged_in()
+    redirect_to :root
     render :layout => false
   end
 

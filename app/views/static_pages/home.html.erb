@@ -17,30 +17,39 @@
 </div>
 
 <% if !@current_user %>
-
-  <div class="span5">
-    <div id="registration">
-      <h4>Registration</h4>
-      <p>Only users valid MIT addresses can register.</p>
-      <form class="form-signin" accept-charset="UTF-8" action="/create_account" method="post">
-        <div class= 'field' id="input-block-email">
-          <%= label_tag :email %>
-          <%= text_field_tag :email, params[:email] %>
-        </div>
-        <div class= 'field' id="input-block-password">
-          <%= label_tag :password %>
-          <%= password_field_tag :password %>
-        </div>
-        <div class= 'field'  id="input-block-confirm-password">
-          <%= label_tag :confirm_password %>
-          <%= password_field_tag :confirm_password %>
-        </div>
-        <div class = 'actions'>
-          <%= submit_tag 'Register', :id=>"reg-btn" %>
-        </div>
-      </form>
+ <div class="span5">
+    <% if notice != nil %>
+    <div class="alert alert-notice">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <b><%= notice %></b>
     </div>
-  </div>
+    <%end%>
+ <div id="main">
+    
+    
+    <div class="span5">
+<div id="registration">
+<h4>Login</h4>
+<p>Please Enter Your Email and Password to Continue</p>
+<form class="form-signin" accept-charset="UTF-8" action="/sessions" method="post">
+<div class= 'field' id="input-block-email">
+<%=  label_tag :email %>
+<%= text_field_tag :email, params[:email] %>
+</div>
+<div class= 'field' id="input-block-password">
+<%= label_tag :password %>
+<%= password_field_tag :password  %>
+</div>
+<div class = "actions">
+<%= submit_tag 'Log in', :id=>"actions-btn" %> </div>
+</form>
+<% if @activation_id %>
+  <a href="reactivate/<%= @activation_id %>">Resend activation email</a>
+<% end %>
+</div>
+</div>
+</div>
+</div>
 
 
 <% end %>
@@ -68,7 +77,7 @@
           load();
 	  $('#add_button').hide();
         });
-
+	
 
 
     <% end %>
@@ -76,5 +85,10 @@
 
 
 <% end %></div>
+<%= javascript_tag  do %>
+if(window.location.hash) {
+   $(window.location.hash).click();
+}
+<% end %>
 
 

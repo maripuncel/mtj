@@ -2,7 +2,7 @@
 
 one:
   id: 1
-  content: "How was the work environment at the Company?  I am most concerned about whether most entry-level employees or interns are stationed in cubicles or in some other configuration.  Also, is there a rigid schedule for hours, or is it pretty flexible"
+  content: "How was the work environment at the Company?  I am most concerned about whether most entry-level employees or interns are stationed in cubicles or in some other configuration.  Also, is there a rigid schedule for hours, or is it pretty flexible?"
   user_id: 1
   company_id: 1
 

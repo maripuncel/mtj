@@ -1,21 +1,26 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
-<form class="form-signin" accept-charset="UTF-8" action="/create_account" method="post">
-<h2 class="form-signin-heading">Register</h2>
-<div class= 'field' id="input-block-email">
-<%= label_tag :email %>
-<%= text_field_tag :email, params[:email] %>
-</div>
-<div class= 'field' id="input-block-password">
-<%= label_tag :password %>
-<%= password_field_tag :password %>
-</div>
-<div class= 'field'  id="input-block-confirm-password">
-<%= label_tag :confirm_password %>
-<%= password_field_tag :confirm_password %>
-</div>
-<div class = 'actions'>
-<%= submit_tag 'Register', :id=>"actions-btn" %>
-</div>
-</form>
-</div>
+
+<div class="span5">
+    
+    <div id="registration">
+      <h4>Registration</h4>
+      <p>Only users valid MIT addresses can register.</p>
+     
+      <form class="form-signin" accept-charset="UTF-8" action="/create_account" method="post">
+        <div class= 'field' id="input-block-email">
+          <%= label_tag :email %>
+          <%= text_field_tag :email, params[:email] %>
+        </div>
+        <div class= 'field' id="input-block-password">
+          <%= label_tag :password %>
+          <%= password_field_tag :password %>
+        </div>
+        <div class= 'field'  id="input-block-confirm-password">
+          <%= label_tag :confirm_password %>
+          <%= password_field_tag :confirm_password %>
+        </div>
+        <div class = 'actions'>
+          <%= submit_tag 'Register', :id=>"reg-btn" %>
+        </div>
+      </form>
+    </div>
+  </div>

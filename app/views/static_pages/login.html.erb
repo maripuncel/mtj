@@ -1,7 +1,8 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
+<div class="span5">
+<div id="registration">
+<h4>Login</h4>
+<p>Please Enter Your Email and Password to Continue</p>
 <form class="form-signin" accept-charset="UTF-8" action="/sessions" method="post">
-<h2 class="form-signin-heading">Log in</h2>
 <div class= 'field' id="input-block-email">
 <%=  label_tag :email %>
 <%= text_field_tag :email, params[:email] %>
@@ -16,5 +17,6 @@
 <% if @activation_id %>
   <a href="reactivate/<%= @activation_id %>">Resend activation email</a>
 <% end %>
+</div>
 </div>
 </div>

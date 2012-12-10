@@ -34,8 +34,8 @@ Mtj::Application.routes.draw do
   match 'questions/:id/new_answer', to: 'questions#new_answer', :as => :new_answer
   match 'add/answer', to: 'answers#create'
 
-  match 'register' => 'static_pages#register'
-  match 'login' => 'static_pages#login'
+  match 'register' => 'static_pages#register', :format => :false
+  match 'login' => 'static_pages#login', :format => false
   match 'logout' => 'sessions#destroy'
   match 'sessions' => 'sessions#login'
   match 'create_account' => 'sessions#create'

@@ -11,7 +11,31 @@ function loaddata(url)
     });
     
 }
+function load1()
+{
+      $.ajax({
+      type : 'GET',
+      url : '/login',
+      dataType: 'html',
+      success : function(data) { $('#main').html(data); },
+      error: function(XMLHttpRequest, testStatus, errorThrown) {
+      }
+    });
+    
+}
 
+function load2()
+{
+      $.ajax({
+      type : 'GET',
+      url : '/register',
+      dataType: 'html',
+      success : function(data) { $('#main').html(data); },
+      error: function(XMLHttpRequest, testStatus, errorThrown) {
+      }
+    });
+    
+}
 function load()
   {
      if ($('#company_name').val() == "")

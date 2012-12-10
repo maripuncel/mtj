@@ -10,7 +10,11 @@ function loaddata(url)
       }
     });
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> ad96bf0dbbcc8d3e9ad3f5df59d53522d1c0bf02
+    $('#companies').html(data);
 }
 
 function load()
@@ -18,6 +22,7 @@ function load()
      if ($('#company_name').val() == "")
 	{
 	  url = '/companies/search';
+	  $('#add_button').hide();
 	}
      else
 	{

@@ -20,14 +20,9 @@ class QuestionsController < ApplicationController
 
   # POST /questions
   # POST /questions.json
-  def create
-    Question.add_question(params, @current_user)
-    render :text => root_url + 'companies/' + params[:company] + '/questions'
-  end
-
-  def answer
-    @question = Question.find(params[:id])
-    @answers = @question.answers.all
+  def create_question
+    @question = Question.add_question(params, @current_user)
+    render :question, :layout => false
   end
 
   def create_answer

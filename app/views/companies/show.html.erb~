@@ -33,6 +33,7 @@
           Industry <br/>
           Size <br/>
           NASDAQ
+          
         </div>
         <div class="span3" id="sub_general_right">
           <h5>MIT statistics at <%= @company.name %></h5>
@@ -46,6 +47,9 @@
 	  <% end %>
         </div>
       </div>
+        <div id="news">
+		
+          </div>
     </div>
     <div class="pill-pane" id="interviews">
       <p> <% if @interview.first %>
@@ -88,7 +92,7 @@
   <p>Salary:</p>
   <input id="offer-figure" name="offer-figure" type="number" class="text ui-widget-content ui-corner-all"/><br/>
   <p>Position:</p>
-  <input id="offer-position" value="" name="offer-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag below or enter your own." size="80"></input><br/>
+  <input id="offer-position" value="" name="offer-position" class="text ui-widget-content ui-corner-all" placeholder="Click a suggested tag below or enter your own." type="text" size="80"></input><br/>
   <div class="btn-group" data-toggle="buttons-radio" data-toggle-name="pos">
     <button type="button" class="btn btn-mini" name="position" value="Developer" id="developer" data-toggle="button">Developer</button>
     <button type="button" class="btn btn-mini" name="position" value="Project Manager" id="pm" data-toggle="button">Project Manager</button>
@@ -104,6 +108,7 @@
 
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
+
 <script>
 create_plot_graph(<%= raw(@offers.to_json) %>,'offers');
 </script>

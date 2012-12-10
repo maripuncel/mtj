@@ -20,7 +20,7 @@ class InterviewsController < ApplicationController
   # POST /interviews
   # POST /interviews.json
   def create
-    Interview.add_interview(params, @current_user)
+    @interview = Interview.add_interview(params, @current_user)
     render :text => root_url + 'companies/' + params[:company] + '/interviews'
   end
 

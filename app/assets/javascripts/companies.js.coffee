@@ -47,8 +47,18 @@ $ ->
       type: 'POST'
       url: url
       data: query
-      success: (data, code, xmlhttp) ->
-        window.location = xmlhttp.responseText
+      success: (data) ->
+        $('#accordian').append(data)
+        $('#question-content').val('').change()
+        $('#accordian').accordion('destroy')
+        $('#accordian').accordion
+          collapsible: true
+          autoHeight: false
+          active: false
+        $('#accordian').accordion('option', 'active', ':last')
+        $('#question').removeClass('in')
+        $('#question').css('height', 0)
+      error:(XMLHttpRequest, testStatus, errorThrown) ->
 
 $ ->
   $('#dialog-form-i').dialog(
@@ -101,6 +111,7 @@ $ ->
   $('#accordian').accordion
     collapsible: true
     autoHeight: false
+    active: false
 
 $ ->
     $('.new_answer').click ->

@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  figure: 85000
+  id: 1
+  figure: 85001
   user_id: 1
   company_id: 1
+  created_at: 2011-12-10
   position: "Project Manager"
 
 two:
@@ -16,6 +18,7 @@ three:
   figure: 81000
   user_id: 1
   company_id: 1
+  created_at: 2011-12-10
   position: "Project Manager"
 
 four:
@@ -37,7 +40,7 @@ six:
   position: "Developer"
 
 seven:
-  figure: 100000
+  figure: 95200
   user_id: 1
   company_id: 1
   position: "Developer"
@@ -52,12 +55,14 @@ nine:
   figure: 72500
   user_id: 1
   company_id: 1
+  created_at: 2011-12-10
   position: "Developer"
 
 ten:
   figure: 78500
   user_id: 1
   company_id: 1
+  created_at: 2011-12-10
   position: "Developer"
 
 eleven:
@@ -76,6 +81,7 @@ thirteen:
   figure: 94500
   user_id: 1
   company_id: 1
+  created_at: 2011-12-10
   position: "Project Manager"
 
 fourteen:
@@ -88,7 +94,76 @@ fifteen:
   figure: 98400
   user_id: 1
   company_id: 1
+  created_at: 2011-12-10
   position: "Developer"
 
+sixteen:
+  figure: 79900
+  user_id: 1
+  company_id: 1
+  created_at: 2010-12-10
+  position: "Developer"
 
+seventeen:
+  figure: 81400
+  user_id: 1
+  company_id: 1
+  created_at: 2010-12-10
+  position: "Project Manager"
+
+eighteen:
+  figure: 91200
+  user_id: 1
+  company_id: 1
+  created_at: 2010-12-10
+  position: "Project Manager"
+
+nineteen:
+  figure: 95400
+  user_id: 1
+  company_id: 1
+  created_at: 2011-12-10
+  position: "Project Manager"
+
+twenty:
+  figure: 94100
+  user_id: 1
+  company_id: 1
+  created_at: 2010-12-10
+  position: "Developer"
+
+twentyone:
+  figure: 96200
+  user_id: 1
+  company_id: 1
+  created_at: 2010-12-10
+  position: "Developer"
+
+twentythree:
+  figure: 92200
+  user_id: 1
+  company_id: 1
+  created_at: 2011-12-10
+  position: "Project Manager"
+
+twentyfour:
+  figure: 97400
+  user_id: 1
+  company_id: 1
+  created_at: 2012-12-10
+  position: "Project Manager"
+
+twentyfive:
+  figure: 94600
+  user_id: 1
+  company_id: 1
+  created_at: 2010-12-10
+  position: "Developer"
+
+twentysix:
+  figure: 93100
+  user_id: 1
+  company_id: 1
+  created_at: 2011-12-10
+  position: "Developer"
 

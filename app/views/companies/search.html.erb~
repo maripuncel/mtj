@@ -9,7 +9,7 @@
 <% if @companies == []%>
 $('#add_button').toggle(true);
 <% else %>
-$('#add_button').toggle(false);
+//$('#add_button').toggle(false);
 <% end %>
 <% end %>
 

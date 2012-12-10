@@ -76,7 +76,7 @@
         $('#company_name').keyup(function () {
           load();
         });
-
+ 
 	load();	
 	$('#add_button').hide();
 

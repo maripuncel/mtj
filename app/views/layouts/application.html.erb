@@ -23,8 +23,8 @@
 		<li><%= link_to "Logout", "/logout" %></li>
               <% else %>
 
-                <li><a id="login" href="javascript:void(0)" onclick="load1();">Login</a></li>
-                <li><a id="register" href="javascript:void(0)" onclick="load2();">Register</a></li>
+                <li><a id="login">Login</a></li>
+                <li><a id="register">Register</a></li>
               <% end %>
             </ul>
           </nav>
@@ -34,7 +34,11 @@
  <div class="container">
    <%= yield %>
  </div>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <footer class="navbar navbar-fixed-bottom">
   <div class="navbar-inner">
     <p id="footer_creds">Created for <span id="class_name">6.170</span> by Mari Miyachi, Timmy Galvin and Josh Duncavage.</p>

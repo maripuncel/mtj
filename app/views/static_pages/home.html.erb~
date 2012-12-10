@@ -76,7 +76,7 @@
         $('#company_name').keyup(function () {
           load();
         });
- 
+
 	load();	
 	$('#add_button').hide();
 
@@ -86,9 +86,14 @@
 
 <% end %></div>
 <%= javascript_tag  do %>
-if(window.location.hash) {
-   $(window.location.hash).click();
-}
+
+$('#Login').click(function () {
+          loaduser('login');
+        });
+$('#Register').click(function () {
+          loaduser('register');
+        });
+
 <% end %>
 
 

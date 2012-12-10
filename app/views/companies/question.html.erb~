@@ -52,7 +52,7 @@
               <% question.answers.each do |answer| %>
 
                   <div id="answer-cont"><%= answer.content %>
-                    <span align="right" id="answer-date"><%= answer.created_at %></span>
+                    <span id="answer-date"><%= answer.created_at %></span>
                   </div>
               <% end %>
           <% end %>

@@ -1,0 +1,3 @@
+<div id="answer-cont"><%= @newanswer.content %>
+  <span id="answer-date"><%= @newanswer.created_at %></span>
+</div>

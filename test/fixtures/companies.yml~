@@ -3,6 +3,8 @@
 one:
   id: 1
   name: Microsoft
+  permalink: microsoft
+  categorycode: Technologies
 
 
 

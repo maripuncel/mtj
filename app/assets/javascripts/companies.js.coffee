@@ -15,7 +15,6 @@ $ ->
     query = 'content=' + content + '&company=' + company + '&questions=' + questions + '&rating=' + rating + '&position=' + position
 
     url = root_url + '/add/interview'
-    alert(url + '?' + query)
     
     $.ajax
       type: 'POST'

@@ -3,6 +3,9 @@ class InfoController < ApplicationController
 require 'net/http'
 require 'json'
 
+# requires: activated route by developer
+# modifies: companies
+# effects: reads and populates company table
 def get_companies()
   @a = 0
   json = ActiveSupport::JSON.decode(File.read(File.join(Rails.root, 'data', 'companies.json')))

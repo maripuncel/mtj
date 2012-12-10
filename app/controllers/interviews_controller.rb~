@@ -1,6 +1,16 @@
 class InterviewsController < ApplicationController
   before_filter :check_status
 
+  # GET /interviews/1/edit
+  # requires: logged in as admin
+  # effects: returns interview edit form
+  def edit
+    @interview = Interview.find(params[:id])
+    if @interview.user_id != @current_user.id
+      flash[:notice] = 'You don\'t have permission to edit this data.'
+      redirect_to root_url + 'companies/' + params[:id] + '/interviews'
+    end
+  end
 
   # POST /interviews
   # requires: user logged in
@@ -26,6 +36,20 @@ class InterviewsController < ApplicationController
         format.html { render action: "edit" }
         format.json { render json: @interview.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  # DELETE /interviews/1
+  # requires: logged in as admin and interview with given id
+  # modifies: Interview table
+  # effects: destroys interview
+  def destroy
+    @interview = Interview.find(params[:id])
+    @interview.destroy
+
+    respond_to do |format|
+      format.html { redirect_to interviews_url }
+      format.json { head :no_content }
     end
   end
 

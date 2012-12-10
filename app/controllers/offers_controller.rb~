@@ -1,6 +1,8 @@
 class OffersController < ApplicationController
   before_filter :check_status
 
+
+
   # POST /offers
   # requires: user logged in and valid offer attributes
   # modifies: Offer table

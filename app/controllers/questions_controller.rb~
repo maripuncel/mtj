@@ -2,6 +2,16 @@ class QuestionsController < ApplicationController
 
   before_filter :check_status
 
+  # GET /questions/1/edit
+  # requires: logged in as admin and question exists with given id
+  # effects: returns question edit form
+  def edit
+    @question = Question.find(params[:id])
+    if @question.user_id != @current_user.id
+      flash[:notice] = 'You don\'t have permission to edit this data.'
+      redirect_to root_url + 'companies/' + params[:id] + '/questions'
+    end
+  end
 
   # POST /questions
   # requires: user logged in and valid question attributes
@@ -20,6 +30,38 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:answer_question])
     @newanswer = @question.add_answer(params, @current_user)
     render :answer, :layout => false
+  end
+
+  # PUT /questions/1
+  # requires: user logged in as admin and question exists with given id
+  # modifies: Question table
+  # effects: updates question attributes
+  def update
+    @question = Question.find(params[:id])
+
+    respond_to do |format|
+      if @question.update_attributes(params[:question])
+        format.html { redirect_to @question, notice: 'Question was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @question.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /questions/1
+  # requires: user logged in as admin and question exists with given id
+  # modifies: Question table
+  # effects: question destroyed
+  def destroy
+    @question = Question.find(params[:id])
+    @question.destroy
+
+    respond_to do |format|
+      format.html { redirect_to questions_url }
+      format.json { head :no_content }
+    end
   end
 
   # POST /questions/upvote/:id

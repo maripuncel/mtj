@@ -3,6 +3,9 @@ class InfoController < ApplicationController
 require 'net/http'
 require 'json'
 
+# requires: logged in as admin
+# modifies: companies
+# effects: returns interview edit form
 def get_companies()
   @a = 0
   json = ActiveSupport::JSON.decode(File.read(File.join(Rails.root, 'data', 'companies.json')))
@@ -13,7 +16,11 @@ def get_companies()
       name = j["name"]
       permalink = j["permalink"]
       categorycode = j["category_code"]
-      c = Company.create(:name => name, :permalink => permalink, :categorycode => categorycode)    
+      c = Company.new
+      c.name = name
+      c.permalink = permalink
+      c.categorycode = categorycode
+      c.save!
     end
   end
 end

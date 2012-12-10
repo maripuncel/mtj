@@ -119,6 +119,22 @@ class CompaniesController < ApplicationController
     end
   end
 
+  # PUT /companies/1
+  # requires: logged in as admin
+  # modifies: Company table
+  # effects: company attributes updated and redirect to company landing page
+  def update
+    @company = Company.find(params[:id])
 
+    respond_to do |format|
+      if @company.update_attributes(params[:company])
+        format.html { redirect_to @company, notice: 'Company was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @company.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
 end

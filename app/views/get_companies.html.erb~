@@ -1,0 +1,30 @@
+<script>
+
+function send(data) {
+  $.ajax({
+      type : 'POST',
+      url : '/',
+      dataType: 'html',
+      success : function(data) { 
+                   var company_list = JSON.parse(data); 
+                   send(company_list);
+                               },
+      error: function(XMLHttpRequest, testStatus, errorThrown) {
+      }
+    });
+
+}
+
+$.ajax({
+      type : 'POST',
+      url : 'http://api.crunchbase.com/v/1/companies.js?api_key=wxqjndu9upq49fwfkh2r6csu',
+      dataType: 'html',
+      success : function(data) { 
+                   var company_list = JSON.parse(data); 
+                   send(company_list);
+                               },
+      error: function(XMLHttpRequest, testStatus, errorThrown) {
+      }
+    });
+</script>
+

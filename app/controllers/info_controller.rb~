@@ -2,10 +2,7 @@ class InfoController < ApplicationController
 
 require 'net/http'
 
-def getinfo()
-  uri = URI('http://api.crunchbase.com/v/1/companies.js?api_key=wxqjndu9upq49fwfkh2r6csu')
-  result = Net::HTTP.get(uri)
-  
+def get_companies(result)
   parsed_json = JSON.parse(result)
   companies = []
   a = 0
@@ -19,7 +16,7 @@ def getinfo()
 
 end
 
-def getinfo2(result)
+def get_company_info(result)
   companies do |k|
     companyname = k
     result = Net::HTTP.get(URI.parse('http://api.crunchbase.com/v/1/'+companyname+'.js?api_key=wxqjndu9upq49fwfkh2r6csu'))

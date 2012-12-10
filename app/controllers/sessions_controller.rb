@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
 
+  # creates user account
+  # requires: valid username, password and MIT email
+  # effects: sends confirmation email
 	def create
 	  flash[:notice] = ''
 	  user = User.find(:first, :conditions => {:email => params[:email]})
@@ -32,6 +35,9 @@ class SessionsController < ApplicationController
 	  UserMailer.activate_email(user).deliver
 	end
 
+  # requires: activated account and valid username/password
+  # modifies: Sessions table
+  # effect: creates new user session and redirects to homepage
 	def login
 	  user = User.find(:first, :conditions => {:email => params[:email]})
 	  

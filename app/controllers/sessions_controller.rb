@@ -44,30 +44,10 @@ class SessionsController < ApplicationController
 	  #Account not activated
 	  if user && !user.activated
 	    flash[:notice] = 'Account is not yet activated'
-	    redirect_to '/login'
+            @activation_id = user.serial	
+	    render 'static_pages/login'
 
-	  #Admin Login
-	  elsif params[:email] == "Admin"
-
-	    #Verify Credentials
-	    if user && user[:password] == params[:password]
-	      session[:user_id] = user.id
-	      flash[:notice] = 'Successfully logged in as Administrator'
-	      redirect_to '/'
-
-	    #First Time Admin login
-	    elsif user== nil && params[:password] == "6170fun"
- 	      user = User.create(:email => "Admin", :password =>"6170fun", :activated => 1, :serial => SecureRandom.hex(10))
-	      session[:user_id] = user.id
-	      flash[:notice] = 'Successfully logged in as Administrator'
-	      redirect_to '/'
-
-            else
-    	      flash[:notice] = 'Invalid username or password'
-	      redirect_to '/login'
-	    end
-
-	  #Successful Login (non-admin)
+	  #Successful Login
 	  elsif user && user[:password] == params[:password]
 	    session[:user_id] = user.id
             if flash[:notice] == ''
@@ -80,6 +60,13 @@ class SessionsController < ApplicationController
             redirect_to '/login'
 	  end
 	end
+
+        def reactivate
+          user = User.find(:first, :conditions => {:serial => params[:serial]})
+          User.update(user.id, :serial => SecureRandom.hex(10))
+          send_email(user)
+          render 'static_pages/emailed'
+        end
 
 	def activate
 	  user = User.find(:first, :conditions => {:serial => params[:serial]})

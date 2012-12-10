@@ -403,24 +403,17 @@ footer p {
   display: inline-block;
   width: 20px;
   text-align: center;
+  color:black;
 }
 
 .voting_down {
   display: inline-block;
   width: 20px;
   text-align: center;
-  text-color:#FF1D25;
+  color:red;
 }
 
-.voting_down i,
-.voting_down p {
-  color: #FF1D25;
-}
 
-.voting_up:hover {
-  background-color: #f5f5f5;
-  color:#FF1D25;
-}
 
 #question_stuff {
   vertical-align: top;

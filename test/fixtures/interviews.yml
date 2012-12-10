@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  content: "My first round interview was a one hour on-campus interview with a MIT graduate (Class of 2005).  We started with basic information; he had me walk through my resume and explain each of my previous internships.  Additionally, he asked my motivation for picking each of my previous internships, and then asked me what position (Developer, Test, Project Manager, that I was interested in applying for."
+  content: "My first round interview was a one hour on-campus interview with a MIT graduate (Class of 2005).  We started with basic information; he had me walk through my resume and explain each of my previous internships.  Additionally, he asked my motivation for picking each of my previous internships, and then asked me what position (Developer, Test, Project Manager), that I was interested in applying for."
   questions: "Write a function that when given a string will return the position of the starting point of the largest reoccurring character. (ie. given: \"AAABBCCCCD\" would return 5 (starting point of C))"
   user_id: 1
   company_id: 1

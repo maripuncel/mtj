@@ -129,31 +129,32 @@ $ ->
           error:(XMLHttpRequest, testStatus, errorThrown) ->
 
 $ ->
-      $('.voting_up').click ->
-        button = this
-        question_id = $(button).attr('id')
-        $.ajax
-          type: 'POST',
-          url: '/questions/upvote/' + question_id,
-          dataType: 'html'
-          success: (data) ->
-            alert(button)
-            $(button).attr('class','voting_down')
-            $('#vote_count'+question_id).replaceWith(data)
-          error:(XMLHttpRequest, testStatus, errorThrown) ->
+  $('.voting_up').toggle( 
+        (event) -> a(event, this)
+        (event) -> b(event, this) 
+   )
 
 $ ->
-      $('.voting_down').click ->
-        button = this
+  $('.voting_down').toggle( 
+        (event) -> b(event, this)
+        (event) -> a(event, this) 
+   )
+
+a = (event, button) ->
+        ajax('down',button,event)
+
+b = (event, button) ->
+        ajax('up',button,event)
+
+ajax = (prefix, button, event) ->
+        event.preventDefault()
+        event.stopPropagation()
         question_id = $(button).attr('id')
         $.ajax
           type: 'POST',
-          url: '/questions/downvote/' + question_id,
+          url: '/questions/' + prefix + 'vote/' + question_id,
           dataType: 'html'
           success: (data) ->
-            alert('youre a dumb bitch')
-            $(button).attr('class','voting_up')
-            alert('youre a dumb bitch')
+            $(button).attr('class','voting_' + prefix)
             $('#vote_count'+question_id).replaceWith(data)
           error:(XMLHttpRequest, testStatus, errorThrown) ->
-

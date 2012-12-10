@@ -41,6 +41,8 @@ Mtj::Application.routes.draw do
   match 'activate/:serial' => 'sessions#activate'
 
   match 'questions/create_answer', to: 'questions#create_answer'
+  match 'questions/upvote/:id', to: 'questions#upvote'
+  match 'questions/downvote/:id', to: 'questions#downvote'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

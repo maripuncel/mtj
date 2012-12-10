@@ -128,10 +128,32 @@ $ ->
             $(button).siblings('[name="answer_content"]').val('Your answer...').change()
           error:(XMLHttpRequest, testStatus, errorThrown) ->
 
+$ ->
+      $('.voting_up').click ->
+        button = this
+        question_id = $(button).attr('id')
+        $.ajax
+          type: 'POST',
+          url: '/questions/upvote/' + question_id,
+          dataType: 'html'
+          success: (data) ->
+            alert(button)
+            $(button).attr('class','voting_down')
+            $('#vote_count'+question_id).replaceWith(data)
+          error:(XMLHttpRequest, testStatus, errorThrown) ->
 
-
-
-
-
-
+$ ->
+      $('.voting_down').click ->
+        button = this
+        question_id = $(button).attr('id')
+        $.ajax
+          type: 'POST',
+          url: '/questions/downvote/' + question_id,
+          dataType: 'html'
+          success: (data) ->
+            alert('youre a dumb bitch')
+            $(button).attr('class','voting_up')
+            alert('youre a dumb bitch')
+            $('#vote_count'+question_id).replaceWith(data)
+          error:(XMLHttpRequest, testStatus, errorThrown) ->
 

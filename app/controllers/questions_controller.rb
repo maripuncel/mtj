@@ -58,4 +58,16 @@ class QuestionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def upvote
+    @question = Question.find(params[:id])
+    @current_user.upvote(@question)
+    render :upvote, :layout => false
+  end
+
+  def downvote
+    @question = Question.find(params[:id])
+    @current_user.downvote(@question)
+    render :upvote, :layout => false
+  end
 end
